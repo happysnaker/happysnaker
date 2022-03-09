@@ -28,7 +28,7 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=happysnaker&repo=StudentsManageSystem" />
 </a>
 
-<a href="https://github.com/happysnaker/JavaLearningNotes">
+<a href="https://github.com/happysnaker/HRpc">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=happysnaker&repo=HRpc" />
 </a>
 
