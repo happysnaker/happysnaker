@@ -33,9 +33,6 @@
 </a>
 
 
-<a href="https://github.com/happysnaker/JavaLearningNotes">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=happysnaker&repo=JavaLearningNotes" />
-</a>
 
 
 
