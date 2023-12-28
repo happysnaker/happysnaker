@@ -6,8 +6,8 @@
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=happysnaker&show_icons=true&theme=merko)](https://github.com/anuraghazra/github-readme-stats)
 
-<a href="https://github.com/happysnaker/mirai-plugin-HRobot">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=happysnaker&repo=mirai-plugin-HRobot" />
+<a href="https://github.com/happysnaker/hbot">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=happysnaker&repo=hbot" />
 </a>
 
 <a href="https://github.com/happysnaker/CSAPPLabsAndNotes">
