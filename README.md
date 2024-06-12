@@ -11,7 +11,7 @@
 
 
 - 🌱 I’m currently learning Java
-- 🤔 I’m looking for help with looking work
+- 🤔 I’m working hard now
 - 💬 Ask me about study project of java
 - 📫 How to reach me: happysnaker@foxmail.com
 - 😄 Pronouns: Happysnaker
