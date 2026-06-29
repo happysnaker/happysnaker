@@ -14,6 +14,12 @@ Backend / systems-oriented engineer focused on **Go**, **Java**, distributed sys
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CSAPP lab notes and systems-learning material
 - **[Blog](https://happysnaker.github.io/)** — personal technical blog and notes
 
+## Open source contributions
+
+- **[go-chi/chi#1118](https://github.com/go-chi/chi/pull/1118)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
+- **[prometheus/client_golang#2032](https://github.com/prometheus/client_golang/pull/2032)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
+- **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarify `copyto` command documentation with maintainer-aligned wording
+
 ## Focus
 
 ```text
