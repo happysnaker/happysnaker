@@ -20,7 +20,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
 - **[HRpc](https://github.com/happysnaker/HRpc)** — Java / Netty based RPC framework learning project covering custom protocol design, service registry, dynamic proxy invocation, heartbeats, reconnect, and client-side load balancing
-- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 161+ stars
+- **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
 
 ## Building in public
@@ -30,6 +30,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — a concise system design framework for interviews, design docs, and architecture reviews
 - **[HRpc](https://github.com/happysnaker/HRpc)** — a Java / Netty RPC framework learning project that makes registry, transport, retry, and load-balancing internals visible
+- **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — a systems-fundamentals study repo covering CS:APP labs, memory, binaries, shells, and proxies
 - Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
 
 ## Open source contributions
@@ -70,27 +71,10 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support me directly.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
-- **Fastest support path:** scan the WeChat Pay / Alipay QR codes below
-- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99` — any amount helps
-- **Async profile/repo polish:** `¥99` for one public GitHub profile / README / repo positioning / resume-site pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
-- **Sponsor a build:** if you want me to keep shipping backend starter kits, middleware, checklists, and open-source fixes, direct support helps fund that work
-- If a repo helped your interview prep, design review, or implementation work, small direct support is especially appreciated.
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./assets/wechat-pay.jpg" alt="WeChat Pay QR code" width="240" /><br />
-      <strong>WeChat Pay</strong>
-    </td>
-    <td align="center">
-      <img src="./assets/alipay-pay.jpg" alt="Alipay QR code" width="240" /><br />
-      <strong>Alipay</strong>
-    </td>
-  </tr>
-</table>
-
-- **WeChat Pay** — scan the QR code above
-- **Alipay** — scan the QR code above
+- **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
+- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99`
+- **Async profile / README polish:** `¥99` for one public GitHub profile / README / repo-positioning pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
+- If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 
 ## Contact
 
