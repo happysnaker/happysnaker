@@ -34,22 +34,21 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarified that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
 - **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
 
-**Active recent PRs**
-- **[github/docs#44993](https://github.com/github/docs/pull/44993)** — document `Agents secrets` in GitHub secret scanning secret-type reference pages
-- **[github/docs#45000](https://github.com/github/docs/pull/45000)** — document that commit comments can be disabled for organization-owned repositories in REST docs
-- **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
-- **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
+**Selected recent PRs**
+
+**Code / behavior fixes**
+- **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
+- **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
+
+**Docs / developer experience**
+- **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
+- **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 - **[docker/docs#25464](https://github.com/docker/docs/pull/25464)** — add a legacy Docker Desktop Mac troubleshoot alias and fix the related docs-site redirect/build edge case
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
-- **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
-- **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
-- **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
-- **[vuejs/docs#3424](https://github.com/vuejs/docs/pull/3424)** — clarify that `onWatcherCleanup()` in async watchers must be registered before the first `await`, with an example
-- **[vuejs/docs#3425](https://github.com/vuejs/docs/pull/3425)** — clarify that `.once` applies once per listener attachment and runs again after re-attachment
 
 **Contribution focus**
-- Documentation, developer experience, API correctness, and small but high-leverage fixes in widely used engineering repos
-- Recent work spans GitHub Docs, Docker Docs, OpenTelemetry, Prometheus client_golang, go-chi, and Vue Docs
+- Small but real behavior fixes, API correctness, developer experience, and selective documentation where implementation ambiguity causes real user error
+- Recent work spans urfave/cli, go-chi, Prometheus client_golang, OpenTelemetry, Docker Docs, and GitHub Docs
 
 ## Focus
 
@@ -65,7 +64,8 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, docs contributions, or technical writing saves you time, you can support me directly.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
-- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` — any amount helps
+- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99` — any amount helps
+- **Lightweight async feedback:** `¥99` for one public GitHub profile / README / repo positioning / resume-site pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
 - If a repo helped your interview prep, design review, or implementation work, small direct support is especially appreciated.
 
 <table>
