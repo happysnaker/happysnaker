@@ -15,10 +15,15 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 ## Selected work
 
-- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / personal-site template with 160+ stars
-- **[Gobang](https://github.com/happysnaker/Gobang)** — C++ Gomoku project with game AI scoring logic and a complete playable implementation
-- **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CSAPP lab notes and systems-learning material
+- **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
+- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 160+ stars
+- **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — systems-learning notes and lab walkthroughs for CSAPP and interview preparation
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
+
+## Building in public
+
+- **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
+- Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
 
 ## Open source contributions
 
