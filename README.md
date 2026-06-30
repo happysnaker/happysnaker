@@ -25,6 +25,7 @@ Backend / systems-oriented engineer focused on **Go**, **Java**, distributed sys
 - **[cli/cli#13756](https://github.com/cli/cli/pull/13756)** — improve `gh search` help output with examples for passing multiple search qualifiers correctly
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
+- **[vuejs/docs#3422](https://github.com/vuejs/docs/pull/3422)** — clarify that `onWatcherCleanup()` in async watchers must be registered before the first `await`, with an example
 
 ## Focus
 
