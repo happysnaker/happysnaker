@@ -64,6 +64,8 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, docs contributions, or technical writing saves you time, you can support me directly.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` — any amount helps
+- If a repo helped your interview prep, design review, or implementation work, small direct support is especially appreciated.
 
 <table>
   <tr>
