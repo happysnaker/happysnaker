@@ -43,6 +43,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Code / behavior fixes**
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
+- **[hashicorp/go-retryablehttp#206](https://github.com/hashicorp/go-retryablehttp/issues/206)** — investigated the query-string leakage issue and tracked the maintainer-side PR state while lining up a future code contribution area
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
 
 **Docs / developer experience**
@@ -69,9 +70,10 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support me directly.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+- **Fastest support path:** scan the WeChat Pay / Alipay QR codes below
 - **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99` — any amount helps
 - **Async profile/repo polish:** `¥99` for one public GitHub profile / README / repo positioning / resume-site pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
-- **Sponsor a build:** if you want me to keep shipping backend starter kits, checklists, and docs improvements, direct support helps fund that work
+- **Sponsor a build:** if you want me to keep shipping backend starter kits, middleware, checklists, and open-source fixes, direct support helps fund that work
 - If a repo helped your interview prep, design review, or implementation work, small direct support is especially appreciated.
 
 <table>
