@@ -24,6 +24,7 @@ Backend / systems-oriented engineer focused on **Go**, **Java**, distributed sys
 - **[go-chi/chi#1118](https://github.com/go-chi/chi/pull/1118)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[cli/cli#13756](https://github.com/cli/cli/pull/13756)** — improve `gh search` help output with examples for passing multiple search qualifiers correctly
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
+- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
 
 ## Focus
 
