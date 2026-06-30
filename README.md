@@ -66,18 +66,17 @@ Strengths:      CS fundamentals, hands-on implementation, reusable engineering a
 Open to:        Backend / infrastructure / systems engineering opportunities
 ```
 
-## Support my open-source work
+## Support
 
-If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support me directly.
+If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
-- **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99`
-- **Async profile / README polish:** `¥99` for one public GitHub profile / README / repo-positioning pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
+- Details for lightweight async feedback are also listed on the support page.
 
 ## Contact
 
 - Email: `happysnaker@foxmail.com`
-- Resume site: [happysnaker.github.io/Resume](https://happysnaker.github.io/Resume/)
+- Portfolio site: [happysnaker.github.io/Resume](https://happysnaker.github.io/Resume/)
 - Blog: [happysnaker.github.io](https://happysnaker.github.io/)
