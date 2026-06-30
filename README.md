@@ -41,7 +41,6 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
 - **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
 - **[docker/docs#25464](https://github.com/docker/docs/pull/25464)** — add a legacy Docker Desktop Mac troubleshoot alias and fix the related docs-site redirect/build edge case
-- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
