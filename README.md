@@ -43,7 +43,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Code / behavior fixes**
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
-- **[hashicorp/go-retryablehttp#206](https://github.com/hashicorp/go-retryablehttp/issues/206)** — investigated the query-string leakage issue and tracked the maintainer-side PR state while lining up a future code contribution area
+- **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288)** — preserve the final HTTP response in `PassthroughErrorHandler` so `http.Client` / `StandardClient()` callers do not silently lose it on retry exhaustion
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
 
 **Docs / developer experience**
