@@ -18,6 +18,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with structured logging, health endpoints, and graceful shutdown
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
+- **[HRpc](https://github.com/happysnaker/HRpc)** — Java / Netty based RPC framework learning project covering custom protocol design, service registry, dynamic proxy invocation, heartbeats, reconnect, and client-side load balancing
 - **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 161+ stars
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
 
@@ -26,6 +27,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — a lightweight Go service starter aimed at real backend service scaffolding instead of throwaway demos
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — a concise system design framework for interviews, design docs, and architecture reviews
+- **[HRpc](https://github.com/happysnaker/HRpc)** — a Java / Netty RPC framework learning project that makes registry, transport, retry, and load-balancing internals visible
 - Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
 
 ## Open source contributions
