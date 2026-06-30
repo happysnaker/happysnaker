@@ -33,17 +33,22 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Merged**
 - **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
 
-**In progress**
+**Active recent PRs**
 - **[github/docs#44993](https://github.com/github/docs/pull/44993)** — document `Agents secrets` in GitHub secret scanning secret-type reference pages
 - **[github/docs#45000](https://github.com/github/docs/pull/45000)** — document that commit comments can be disabled for organization-owned repositories in REST docs
 - **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
 - **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
-- **[prometheus/client_golang#2032](https://github.com/prometheus/client_golang/pull/2032)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
-- **[go-chi/chi#1118](https://github.com/go-chi/chi/pull/1118)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
-- **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
+- **[docker/docs#25464](https://github.com/docker/docs/pull/25464)** — add a legacy Docker Desktop Mac troubleshoot alias and fix the related docs-site redirect/build edge case
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
-- **[vuejs/docs#3422](https://github.com/vuejs/docs/pull/3422)** — clarify that `onWatcherCleanup()` in async watchers must be registered before the first `await`, with an example
-- **[vuejs/docs#3423](https://github.com/vuejs/docs/pull/3423)** — clarify that `.once` applies once per listener attachment and runs again after re-attachment
+- **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
+- **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
+- **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
+- **[vuejs/docs#3424](https://github.com/vuejs/docs/pull/3424)** — clarify that `onWatcherCleanup()` in async watchers must be registered before the first `await`, with an example
+- **[vuejs/docs#3425](https://github.com/vuejs/docs/pull/3425)** — clarify that `.once` applies once per listener attachment and runs again after re-attachment
+
+**Contribution focus**
+- Documentation, developer experience, API correctness, and small but high-leverage fixes in widely used engineering repos
+- Recent work spans GitHub Docs, Docker Docs, OpenTelemetry, Prometheus client_golang, go-chi, and Vue Docs
 
 ## Focus
 
