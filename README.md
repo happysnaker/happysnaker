@@ -17,6 +17,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with structured logging, health endpoints, and graceful shutdown
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
+- **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
 - **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 160+ stars
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
 
@@ -24,6 +25,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — a lightweight Go service starter aimed at real backend service scaffolding instead of throwaway demos
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
+- **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — a concise system design framework for interviews, design docs, and architecture reviews
 - Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
 
 ## Open source contributions
@@ -33,6 +35,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **In progress**
 - **[github/docs#44993](https://github.com/github/docs/pull/44993)** — document `Agents secrets` in GitHub secret scanning secret-type reference pages
+- **[github/docs#45000](https://github.com/github/docs/pull/45000)** — document that commit comments can be disabled for organization-owned repositories in REST docs
 - **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
 - **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
 - **[prometheus/client_golang#2032](https://github.com/prometheus/client_golang/pull/2032)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
