@@ -1,4 +1,4 @@
-# Haoran Li / happysnaker
+# Shirong Lu / happysnaker
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC infrastructure, and performance-oriented engineering.
 
