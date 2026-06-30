@@ -18,7 +18,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with structured logging, health endpoints, and graceful shutdown
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
-- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 161 stars
+- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 161+ stars
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
 
 ## Building in public
@@ -61,11 +61,12 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 
 ## Support my open-source work
 
-If my open-source work, docs contributions, or technical writing saves you time, you can support me directly.
+If my open-source work, reusable templates, code contributions, or technical writing saves you time, you can support me directly.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 - **Common support amounts:** `¥9.9` / `¥19.9` / `¥49.9` / `¥99` — any amount helps
-- **Lightweight async feedback:** `¥99` for one public GitHub profile / README / repo positioning / resume-site pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
+- **Async profile/repo polish:** `¥99` for one public GitHub profile / README / repo positioning / resume-site pass; `¥199` for a bundled GitHub profile + one repo README + one resume-site packaging pass
+- **Sponsor a build:** if you want me to keep shipping backend starter kits, checklists, and docs improvements, direct support helps fund that work
 - If a repo helped your interview prep, design review, or implementation work, small direct support is especially appreciated.
 
 <table>
