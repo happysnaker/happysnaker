@@ -27,6 +27,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **In progress**
 - **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
+- **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
 - **[prometheus/client_golang#2032](https://github.com/prometheus/client_golang/pull/2032)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[go-chi/chi#1118](https://github.com/go-chi/chi/pull/1118)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[cli/cli#13756](https://github.com/cli/cli/pull/13756)** — improve `gh search` help output with examples for passing multiple search qualifiers correctly
