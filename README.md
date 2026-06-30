@@ -36,7 +36,6 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **Active recent PRs**
 - **[github/docs#44993](https://github.com/github/docs/pull/44993)** — document `Agents secrets` in GitHub secret scanning secret-type reference pages
-- **[github/docs#45001](https://github.com/github/docs/pull/45001)** — clarify that the GitHub Pages quickstart may require creating `_config.yml` before editing title and description
 - **[github/docs#45000](https://github.com/github/docs/pull/45000)** — document that commit comments can be disabled for organization-owned repositories in REST docs
 - **[github/docs#44984](https://github.com/github/docs/pull/44984)** — add a dedicated reference page for GitHub Actions workflow run statuses and conclusions
 - **[github/docs#44992](https://github.com/github/docs/pull/44992)** — use `GiB` instead of `GB` in GitHub-hosted runner capacity tables for technically accurate binary-size units
