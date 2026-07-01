@@ -15,7 +15,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health endpoints, graceful shutdown, and Docker packaging
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, structured logging, panic recovery, timeouts, and real IP handling
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
-- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 160+ stars and GitHub Pages reuse signal
+- **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — practical release-review, launch-gate, and on-call handoff checklist with copy-paste templates for production work
 
 ## Open source contributions
 
