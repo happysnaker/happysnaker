@@ -43,6 +43,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **High-signal open PRs**
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing behavior in chi middleware, with tests
+- **[hashicorp/go-retryablehttp#291](https://github.com/hashicorp/go-retryablehttp/pull/291)** — keep retry response bodies readable inside `Backoff` so custom retry timing can inspect body-carried hints before the next attempt
 - **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics on unsupported logger types in a widely used Go HTTP retry client
 - **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — add `StringMapFlag`-compatible config value support for JSON / YAML / TOML sources in the extracted `cli-altsrc` module
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
@@ -50,6 +51,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Selected recent PRs**
 
 **Code / behavior fixes**
+- **[hashicorp/go-retryablehttp#291](https://github.com/hashicorp/go-retryablehttp/pull/291)** — keep retry response bodies readable during `Backoff`, so custom retry policies can inspect body-based hints before the library drains and closes the response
 - **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics when `Client.Logger` is configured with an unsupported type, with regression coverage
 - **[hashicorp/go-retryablehttp#289](https://github.com/hashicorp/go-retryablehttp/pull/289)** — fix typed-nil request bodies like `*bytes.Buffer(nil)` so request construction does not panic
 - **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288)** — preserve the final HTTP response in `PassthroughErrorHandler` so `http.Client` / `StandardClient()` callers do not silently lose it on retry exhaustion
