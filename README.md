@@ -44,19 +44,15 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
 
 **High-signal open PRs**
+- **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288) / [#289](https://github.com/hashicorp/go-retryablehttp/pull/289) / [#290](https://github.com/hashicorp/go-retryablehttp/pull/290) / [#291](https://github.com/hashicorp/go-retryablehttp/pull/291) / [#292](https://github.com/hashicorp/go-retryablehttp/pull/292)** — five focused Go behavior fixes around final-response preservation, typed-nil request bodies, logger safety, readable `Backoff` bodies, and deadline-aware retry waits
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing behavior in chi middleware, with tests
-- **[hashicorp/go-retryablehttp#291](https://github.com/hashicorp/go-retryablehttp/pull/291)** — keep retry response bodies readable inside `Backoff` so custom retry timing can inspect body-carried hints before the next attempt
-- **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics on unsupported logger types in a widely used Go HTTP retry client
 - **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — add `StringMapFlag`-compatible config value support for JSON / YAML / TOML sources in the extracted `cli-altsrc` module
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 
 **Selected recent PRs**
 
 **Code / behavior fixes**
-- **[hashicorp/go-retryablehttp#291](https://github.com/hashicorp/go-retryablehttp/pull/291)** — keep retry response bodies readable during `Backoff`, so custom retry policies can inspect body-based hints before the library drains and closes the response
-- **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics when `Client.Logger` is configured with an unsupported type, with regression coverage
-- **[hashicorp/go-retryablehttp#289](https://github.com/hashicorp/go-retryablehttp/pull/289)** — fix typed-nil request bodies like `*bytes.Buffer(nil)` so request construction does not panic
-- **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288)** — preserve the final HTTP response in `PassthroughErrorHandler` so `http.Client` / `StandardClient()` callers do not silently lose it on retry exhaustion
+- **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288) / [#289](https://github.com/hashicorp/go-retryablehttp/pull/289) / [#290](https://github.com/hashicorp/go-retryablehttp/pull/290) / [#291](https://github.com/hashicorp/go-retryablehttp/pull/291) / [#292](https://github.com/hashicorp/go-retryablehttp/pull/292)** — a run of focused fixes for final-response preservation, typed-nil request bodies, logger safety, readable retry `Backoff` bodies, and deadline-aware retry waits
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 - **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — make config-backed map/object values round-trip correctly into `StringMapFlag` via the same serialized format used by `urfave/cli/v3`
@@ -65,12 +61,12 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Docs / developer experience**
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
-- **[docker/docs#25464](https://github.com/docker/docs/pull/25464)** — add a legacy Docker Desktop Mac troubleshoot alias and fix the related docs-site redirect/build edge case
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
+- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify version-specific Ubuntu `noble` import guidance in Docker image docs
 
 **Contribution focus**
-- Small but real behavior fixes, API correctness, developer experience, and selective documentation where implementation ambiguity causes real user error
-- Recent work spans cli/cli, urfave/cli, go-chi, Prometheus client_golang, OpenTelemetry, Docker Docs, GitHub Docs, and HashiCorp libraries
+- Small but real behavior fixes, API correctness, retry semantics, edge-case handling, and selective documentation where implementation ambiguity causes real user error
+- Recent work spans HashiCorp libraries, chi, urfave/cli, Prometheus client_golang, OpenTelemetry, GitHub Docs, Docker Docs, and rclone
 
 ## Focus
 
