@@ -19,8 +19,9 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, real IP extraction, structured logs, panic recovery, and timeouts
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
-- **[HRpc](https://github.com/happysnaker/HRpc)** — Java / Netty based RPC framework learning project covering custom protocol design, service registry, dynamic proxy invocation, heartbeats, reconnect, and client-side load balancing
+- **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — production launch, release review, and on-call handoff checklist for backend services
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
+- **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 160+ stars
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
 
 ## Building in public
@@ -29,7 +30,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a focused middleware pack for the boring-but-important HTTP concerns every backend service eventually needs
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — a concise system design framework for interviews, design docs, and architecture reviews
-- **[HRpc](https://github.com/happysnaker/HRpc)** — a Java / Netty RPC framework learning project that makes registry, transport, retry, and load-balancing internals visible
+- **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — a launch / readiness / on-call checklist built for real backend delivery work
+- **[Resume](https://github.com/happysnaker/Resume)** — a public template with strong reuse signal and social proof from developers building portfolio pages
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — a systems-fundamentals study repo covering CS:APP labs, memory, binaries, shells, and proxies
 - Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
 
@@ -38,6 +40,11 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Merged**
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarified that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
 - **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
+
+**High-signal open PRs**
+- **[cli/cli#13756](https://github.com/cli/cli/pull/13756)** — refine `gh search` examples for raw qualifier usage in the GitHub CLI docs, following maintainer review feedback
+- **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics on unsupported logger types in a widely used Go HTTP retry client
+- **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing behavior in chi middleware, with tests
 
 **Selected recent PRs**
 
@@ -57,7 +64,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **Contribution focus**
 - Small but real behavior fixes, API correctness, developer experience, and selective documentation where implementation ambiguity causes real user error
-- Recent work spans urfave/cli, go-chi, Prometheus client_golang, OpenTelemetry, Docker Docs, and GitHub Docs
+- Recent work spans cli/cli, urfave/cli, go-chi, Prometheus client_golang, OpenTelemetry, Docker Docs, GitHub Docs, and HashiCorp libraries
 
 ## Focus
 
