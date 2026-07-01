@@ -17,7 +17,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — practical release-review, launch-gate, and on-call handoff checklist with copy-paste templates for production work
 
-## Open source contributions
+## Selected recent OSS work
 
 **Merged**
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarified that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
@@ -25,6 +25,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **Code / behavior fixes**
 - **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288) / [#289](https://github.com/hashicorp/go-retryablehttp/pull/289) / [#290](https://github.com/hashicorp/go-retryablehttp/pull/290) / [#291](https://github.com/hashicorp/go-retryablehttp/pull/291) / [#292](https://github.com/hashicorp/go-retryablehttp/pull/292) / [#293](https://github.com/hashicorp/go-retryablehttp/pull/293)** — a run of focused fixes for final-response preservation, typed-nil request bodies, logger safety, readable retry `Backoff` bodies, deadline-aware retry waits, and zero-value `Client` safety
+- **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
 - **[golang-jwt/jwt#520](https://github.com/golang-jwt/jwt/pull/520)** — add a required issued-at validation option without changing the existing `WithIssuedAt()` behavior
 - **[spf13/pflag#483](https://github.com/spf13/pflag/pull/483)** — fix `GetIP()` so optional IP flags with a nil default round-trip cleanly instead of erroring on the internal `<nil>` string form
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
@@ -34,17 +35,17 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
 - Packaged and published **[happydb](https://github.com/happysnaker/happydb)** and **[HRpc](https://github.com/happysnaker/HRpc)** as public systems-learning projects around database internals, RPC design, networking, and distributed systems
 
-**Docs / developer experience**
-- **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
-- **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
+**Quality / observability / SDK**
 - **[prometheus/procfs#833](https://github.com/prometheus/procfs/pull/833)** — split proc stat limit coverage by architecture so parser limit checks stay correct on both 32-bit and 64-bit targets
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
+
+**Selective docs / developer experience**
+- **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
-- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify version-specific Ubuntu `noble` import guidance in Docker image docs
 
 **Contribution focus**
-- Small but real behavior fixes, API correctness, retry semantics, edge-case handling, and selective documentation where implementation ambiguity causes real user error
-- Recent work spans HashiCorp libraries, golang-jwt, chi, urfave/cli, Prometheus client_golang, OpenTelemetry, GitHub Docs, Docker Docs, and rclone
+- Small but real behavior fixes, API correctness, retry semantics, parser edge cases, routing behavior, observability/client edge cases, and selective documentation only where implementation ambiguity causes real user error
+- Recent work spans HashiCorp libraries, Prometheus client_golang / procfs, golang-jwt, chi, urfave/cli, GitHub CLI, OpenTelemetry, GitHub Docs, Docker Docs, and rclone
 
 ## Focus
 
@@ -63,6 +64,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
 - **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
 - **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page
+- If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 - Details for lightweight async feedback are also listed on the support page.
 
