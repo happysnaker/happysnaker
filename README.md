@@ -62,7 +62,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **GitHub Sponsor button:** on repos that show **Sponsor**, it routes to the same support page
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
 - **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
-- **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page
+- **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
 - If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 - Details for lightweight async feedback are also listed on the support page.
