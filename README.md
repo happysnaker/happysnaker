@@ -36,6 +36,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 **Docs / developer experience**
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
+- **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify version-specific Ubuntu `noble` import guidance in Docker image docs
