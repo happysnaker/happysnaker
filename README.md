@@ -27,7 +27,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288) / [#289](https://github.com/hashicorp/go-retryablehttp/pull/289) / [#290](https://github.com/hashicorp/go-retryablehttp/pull/290) / [#291](https://github.com/hashicorp/go-retryablehttp/pull/291) / [#292](https://github.com/hashicorp/go-retryablehttp/pull/292) / [#293](https://github.com/hashicorp/go-retryablehttp/pull/293)** — a run of focused fixes for final-response preservation, typed-nil request bodies, logger safety, readable retry `Backoff` bodies, deadline-aware retry waits, and zero-value `Client` safety
 - **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
 - **[golang-jwt/jwt#520](https://github.com/golang-jwt/jwt/pull/520)** — add a required issued-at validation option without changing the existing `WithIssuedAt()` behavior
-- **[spf13/pflag#483](https://github.com/spf13/pflag/pull/483)** — fix `GetIP()` so optional IP flags with a nil default round-trip cleanly instead of erroring on the internal `<nil>` string form
+- **[spf13/pflag#483](https://github.com/spf13/pflag/pull/483) / [#484](https://github.com/spf13/pflag/pull/484) / [#485](https://github.com/spf13/pflag/pull/485)** — fix nil-default `GetIP()` handling, allow hex input in `UintSlice`, and make explicit empty typed slice values round-trip as empty slices instead of parse errors
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 - **[cli/cli#13766](https://github.com/cli/cli/pull/13766)** — fix `gh skill install --dir ...` so a custom install directory no longer still forces an interactive target-agent selection step
@@ -61,6 +61,7 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
+- **GitHub Sponsor button:** on repos that show **Sponsor**, it routes to the same support page
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
 - **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
 - **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page
