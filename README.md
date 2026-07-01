@@ -29,6 +29,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[spf13/pflag#483](https://github.com/spf13/pflag/pull/483)** — fix `GetIP()` so optional IP flags with a nil default round-trip cleanly instead of erroring on the internal `<nil>` string form
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
+- **[cli/cli#13766](https://github.com/cli/cli/pull/13766)** — fix `gh skill install --dir ...` so a custom install directory no longer still forces an interactive target-agent selection step
 - **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — make config-backed map/object values round-trip correctly into `StringMapFlag` via the same serialized format used by `urfave/cli/v3`
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
 - Packaged and published **[happydb](https://github.com/happysnaker/happydb)** and **[HRpc](https://github.com/happysnaker/HRpc)** as public systems-learning projects around database internals, RPC design, networking, and distributed systems
