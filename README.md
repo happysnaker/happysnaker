@@ -20,6 +20,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system design checklist for interviews, architecture reviews, and distributed-systems tradeoff discussions
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — production launch, release review, and on-call handoff checklist for backend services
+- **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist)** — practical checklist for engineers who want a stronger GitHub profile, cleaner proof of work, and a more credible public portfolio
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
 - **[Resume](https://github.com/happysnaker/Resume)** — responsive résumé / portfolio template with 160+ stars
 - **[Blog](https://happysnaker.github.io/)** — technical notes on backend engineering, Java/Go, and CS topics
@@ -31,6 +32,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — a concise system design framework for interviews, design docs, and architecture reviews
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — a launch / readiness / on-call checklist built for real backend delivery work
+- **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist)** — a practical packaging checklist for engineers who want their GitHub to look more intentional, technical, and hireable
 - **[Resume](https://github.com/happysnaker/Resume)** — a public template with strong reuse signal and social proof from developers building portfolio pages
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — a systems-fundamentals study repo covering CS:APP labs, memory, binaries, shells, and proxies
 - Iterating on reusable assets that are actually useful to backend engineers, not just toy demos
