@@ -37,6 +37,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Docs / developer experience**
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
+- **[prometheus/procfs#833](https://github.com/prometheus/procfs/pull/833)** — split proc stat limit coverage by architecture so parser limit checks stay correct on both 32-bit and 64-bit targets
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
 - **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarify version-specific Ubuntu `noble` import guidance in Docker image docs
@@ -60,6 +61,8 @@ If my open-source work, reusable templates, code contributions, or engineering a
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
+- **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
+- **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 - Details for lightweight async feedback are also listed on the support page.
 
