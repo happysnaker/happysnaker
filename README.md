@@ -19,10 +19,6 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 ## Selected recent OSS work
 
-**Merged**
-- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarified that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
-- **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
-
 **Code / behavior fixes**
 - **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288) / [#289](https://github.com/hashicorp/go-retryablehttp/pull/289) / [#290](https://github.com/hashicorp/go-retryablehttp/pull/290) / [#291](https://github.com/hashicorp/go-retryablehttp/pull/291) / [#292](https://github.com/hashicorp/go-retryablehttp/pull/292) / [#293](https://github.com/hashicorp/go-retryablehttp/pull/293)** — a run of focused fixes for final-response preservation, typed-nil request bodies, logger safety, readable retry `Backoff` bodies, deadline-aware retry waits, and zero-value `Client` safety
 - **[prometheus/client_golang#2040](https://github.com/prometheus/client_golang/pull/2040)** — clamp out-of-range formatted timestamps so `model.Earliest` / `model.Latest` no longer serialize into values that can overflow back on the server side
@@ -42,6 +38,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 **Selective docs / developer experience**
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
 - **[github/docs#45002](https://github.com/github/docs/pull/45002)** — add SHA pinning notes to OIDC workflow examples across AWS, Azure, GCP, Vault, and PyPI docs
+- **[docker/docs#25462](https://github.com/docker/docs/pull/25462)** — clarified that the Ubuntu `noble` base-image example is version-specific and should be adjusted for the release being imported
+- **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
 
 **Contribution focus**
 - Small but real behavior fixes, API correctness, retry semantics, parser edge cases, routing behavior, observability/client edge cases, and selective documentation only where implementation ambiguity causes real user error
