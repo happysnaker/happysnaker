@@ -15,6 +15,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 ## Selected work
 
+- **[happydb](https://github.com/happysnaker/happydb)** — learning-oriented relational database implementation in Java covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments
+- **[HRpc](https://github.com/happysnaker/HRpc)** — Java / Netty RPC framework learning project with service registry, dynamic proxy invocation, heartbeats, reconnect, and load balancing
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with structured logging, health endpoints, and graceful shutdown
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, real IP extraction, structured logs, panic recovery, and timeouts
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — practical backend engineer checklist covering Go, Java, distributed systems, databases, networking, observability, and delivery
@@ -27,6 +29,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 
 ## Building in public
 
+- **[happydb](https://github.com/happysnaker/happydb)** — a database internals learning project spanning pages, indexes, MVCC-style visibility, redo/undo logging, query operators, and replication experiments
+- **[HRpc](https://github.com/happysnaker/HRpc)** — a Java / Netty RPC framework exploration with registry, proxy invocation, load balancing, reconnect handling, and service wiring
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — a lightweight Go service starter aimed at real backend service scaffolding instead of throwaway demos
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a focused middleware pack for the boring-but-important HTTP concerns every backend service eventually needs
 - **[backend-engineer-checklist](https://github.com/happysnaker/backend-engineer-checklist)** — a shareable backend engineering roadmap/checklist designed for self-study, onboarding, and interview prep
@@ -57,6 +61,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 - **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — make config-backed map/object values round-trip correctly into `StringMapFlag` via the same serialized format used by `urfave/cli/v3`
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
+- Packaged and published **[happydb](https://github.com/happysnaker/happydb)** and **[HRpc](https://github.com/happysnaker/HRpc)** as public systems-learning projects around database internals, RPC design, networking, and distributed systems
 
 **Docs / developer experience**
 - **[prometheus/client_golang#2034](https://github.com/prometheus/client_golang/pull/2034)** — add an OTLP bridge tutorial for exporting existing Prometheus instrumentation through OpenTelemetry
