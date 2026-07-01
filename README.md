@@ -42,9 +42,10 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[rclone/rclone#9559](https://github.com/rclone/rclone/pull/9559)** — clarified `copyto` command documentation with maintainer-aligned wording
 
 **High-signal open PRs**
-- **[cli/cli#13756](https://github.com/cli/cli/pull/13756)** — refine `gh search` examples for raw qualifier usage in the GitHub CLI docs, following maintainer review feedback
-- **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics on unsupported logger types in a widely used Go HTTP retry client
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing behavior in chi middleware, with tests
+- **[hashicorp/go-retryablehttp#290](https://github.com/hashicorp/go-retryablehttp/pull/290)** — avoid runtime panics on unsupported logger types in a widely used Go HTTP retry client
+- **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — add `StringMapFlag`-compatible config value support for JSON / YAML / TOML sources in the extracted `cli-altsrc` module
+- **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
 
 **Selected recent PRs**
 
@@ -54,6 +55,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - **[hashicorp/go-retryablehttp#288](https://github.com/hashicorp/go-retryablehttp/pull/288)** — preserve the final HTTP response in `PassthroughErrorHandler` so `http.Client` / `StandardClient()` callers do not silently lose it on retry exhaustion
 - **[go-chi/chi#1120](https://github.com/go-chi/chi/pull/1120)** — fix Host-based routing in `RouteHeaders` by using `Request.Host`, plus tests and doc updates
 - **[urfave/cli#2379](https://github.com/urfave/cli/pull/2379)** — prevent v2 shell completion after `--` from accidentally executing command actions, with regression coverage
+- **[urfave/cli-altsrc#50](https://github.com/urfave/cli-altsrc/pull/50)** — make config-backed map/object values round-trip correctly into `StringMapFlag` via the same serialized format used by `urfave/cli/v3`
 - Built and shipped **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — a small Go middleware library for request IDs, logging, panic recovery, real IP extraction, and timeouts
 
 **Docs / developer experience**
