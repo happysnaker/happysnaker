@@ -4,7 +4,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, tagged releases, Docker quickstart, ecosystem placements, and deployment-facing docs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
-> **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. Some other public repos are temporary forks used to land targeted upstream fixes; they are contribution vehicles, not the main body of work I want to be judged on.
+> **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
 ## Focus
 
