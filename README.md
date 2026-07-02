@@ -4,6 +4,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
+> **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. Some other public repos are temporary forks used to land targeted upstream fixes; they are contribution vehicles, not the main body of work I want to be judged on.
+
 ## Focus
 
 - Building reliable backend services and reusable developer tooling
@@ -28,6 +30,13 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - **[Resume](https://github.com/happysnaker/Resume)** — responsive HTML/CSS/JS resume and portfolio template for GitHub Pages, personal sites, and developer landing pages
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system-design checklist, answer sheet, and worked examples for backend interviews, architecture reviews, and distributed-systems tradeoffs
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — practical release-review, launch-gate, and on-call handoff checklist with copy-paste templates for production work
+
+## How to read this profile
+
+- **For strongest signal first** — start with **qq-ai-bot**, **go-service-starter**, **go-http-middleware-kit**, **happydb**, and the linked upstream PRs below
+- **For interview / systems fundamentals** — **CSAPPLabsAndNotes**, **happydb**, and the checklist repos are the fastest read
+- **For portfolio / packaging signal** — **Resume**, **github-profile-checklist**, and the public project pages
+- **What to de-prioritize** — short-lived public forks of external repos usually exist only because I was sending or updating upstream pull requests there
 
 ## Selected recent OSS work
 
