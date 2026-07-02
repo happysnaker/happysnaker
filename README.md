@@ -2,7 +2,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, and **Docker**. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 ## Focus
 
@@ -25,6 +25,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health endpoints, graceful shutdown, and Docker packaging
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, structured logging, panic recovery, timeouts, and real IP handling
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
+- **[Resume](https://github.com/happysnaker/Resume)** — responsive HTML/CSS/JS resume and portfolio template for GitHub Pages, personal sites, and developer landing pages
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system-design checklist, answer sheet, and worked examples for backend interviews, architecture reviews, and distributed-systems tradeoffs
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — practical release-review, launch-gate, and on-call handoff checklist with copy-paste templates for production work
 
@@ -81,6 +82,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Current low-friction offer:** first paid request in July gets **one extra public page / README** in the same pass at no extra charge
 - **Preview first:** redacted sample audit in **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)**
 - If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`.
+- If **Resume (161★)** or **CSAPPLabsAndNotes (70★)** helped, direct support is especially appreciated.
 - If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 - Details for lightweight async feedback are also listed on the support page.
