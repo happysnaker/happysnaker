@@ -1,21 +1,29 @@
 # Shirong Lu / happysnaker
 
-Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
+Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Need the same cleanup on your own GitHub? I offer a **¥29.9 quick blunt first-impression read** and a **¥99 full async packaging pass** for pinned repos, README cleanup, and landing-page positioning. **First paid request in July gets upgraded from one page to two public pages at the same price**. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, and **Docker**. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 ## Focus
 
 - Building reliable backend services and reusable developer tooling
 - Strong interest in distributed systems, storage, networking, performance, and CS fundamentals
 - Shipping practical public assets and selective open-source fixes that are small but real
+- Turning rough engineering ideas into public repos that feel closer to products than class projects
+
+## Current flagship
+
+- **Repo** — [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) · [project page](https://happysnaker.github.io/qq-ai-bot/)
+- **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
+- **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via `ghcr.io/happysnaker/qq-ai-bot:latest`
+- **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
 
 ## Highlighted work
 
+- **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, progress streaming, Docker quickstart, and a public project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
 - **[happydb](https://github.com/happysnaker/happydb)** — learning-oriented relational database implementation in Java covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health endpoints, graceful shutdown, and Docker packaging
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, structured logging, panic recovery, timeouts, and real IP handling
-- **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, and progress streaming; project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes, systems-learning walkthroughs, and low-level computer-systems study material
 - **[system-design-checklist](https://github.com/happysnaker/system-design-checklist)** — practical system-design checklist, answer sheet, and worked examples for backend interviews, architecture reviews, and distributed-systems tradeoffs
 - **[production-readiness-checklist](https://github.com/happysnaker/production-readiness-checklist)** — practical release-review, launch-gate, and on-call handoff checklist with copy-paste templates for production work
@@ -63,6 +71,7 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
+- **Need the same cleanup on your own GitHub?** I offer a **¥29.9** quick blunt first-impression read and a **¥99** async packaging pass for pinned repos, README cleanup, and landing-page positioning. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 - **GitHub Sponsor button:** on repos that show **Sponsor**, it routes to the same support page
 - **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
@@ -71,6 +80,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
 - **Current low-friction offer:** first paid request in July gets **one extra public page / README** in the same pass at no extra charge
 - **Preview first:** redacted sample audit in **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)**
+- If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`.
 - If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
 - Details for lightweight async feedback are also listed on the support page.
