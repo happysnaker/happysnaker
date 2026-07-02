@@ -81,6 +81,8 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
 - **Current low-friction offer:** first paid request in July gets **one extra public page / README** in the same pass at no extra charge
 - **Preview first:** redacted sample audit in **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)**
+- **One-click quick-read email:** [Quick read \| profile / repo / page link](mailto:happysnaker@foxmail.com?subject=Quick%20read%20%7C%20profile%2Frepo%2Fpage%20link&body=Public%20link%3A%0ATarget%20role%20(optional)%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
+- **One-click async-review email:** [Async review \| target role \| repo / profile link](mailto:happysnaker@foxmail.com?subject=Async%20review%20%7C%20target%20role%20%7C%20repo%2Fprofile%20link&body=Public%20link(s)%3A%0ATarget%20role%20or%20use%20case%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
 - If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`.
 - If **Resume (161★)** or **CSAPPLabsAndNotes (70★)** helped, direct support is especially appreciated.
 - If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
