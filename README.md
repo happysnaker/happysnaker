@@ -1,6 +1,6 @@
 # Shirong Lu / happysnaker
 
-Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC infrastructure, and performance-oriented engineering.
+Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
 > Need the same cleanup on your own GitHub? I offer a **¥29.9 quick blunt first-impression read** and a **¥99 full async packaging pass** for pinned repos, README cleanup, and landing-page positioning. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
 
@@ -35,6 +35,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - Packaged and published **[happydb](https://github.com/happysnaker/happydb)** as a public systems-learning project around database internals, storage, recovery, and distributed-systems experiments
 
 **Quality / observability / SDK**
+- **[prometheus/procfs#836](https://github.com/prometheus/procfs/pull/836)** — tolerate wrapped signed `/proc/stat` `processes` counters so `Stat()` consumers do not fail on long-running systems exposing the wrapped fork count as a negative decimal string
 - **[prometheus/procfs#833](https://github.com/prometheus/procfs/pull/833)** — split proc stat limit coverage by architecture so parser limit checks stay correct on both 32-bit and 64-bit targets
 - **[open-telemetry/opentelemetry-go#8527](https://github.com/open-telemetry/opentelemetry-go/pull/8527)** — document supported SDK environment variables across resource, trace, metric, and log package docs
 
@@ -48,7 +49,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC
 - Small but real behavior fixes, API correctness, retry semantics, parser edge cases, routing behavior, observability/client edge cases, and selective documentation only where implementation ambiguity causes real user error
 - Recent work spans HashiCorp libraries, Prometheus client_golang / procfs, golang-jwt, chi, urfave/cli, GitHub CLI, OpenTelemetry, GitHub Docs, Docker Docs, and rclone
 
-## Focus
+## Snapshot
 
 ```text
 Languages:      Go, Java, C/C++, SQL
