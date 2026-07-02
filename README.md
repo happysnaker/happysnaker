@@ -2,7 +2,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Need the same cleanup on your own GitHub? I offer a **¥29.9 quick blunt first-impression read** and a **¥99 full async packaging pass** for pinned repos, README cleanup, and landing-page positioning. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
+> Need the same cleanup on your own GitHub? I offer a **¥29.9 quick blunt first-impression read** and a **¥99 full async packaging pass** for pinned repos, README cleanup, and landing-page positioning. **First paid request in July gets upgraded from one page to two public pages at the same price**. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
 
 ## Focus
 
@@ -68,6 +68,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Cheapest paid option:** `¥29.9` quick GitHub / README first-impression read (one blunt paragraph + top 3 fixes) via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
 - **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
 - **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
+- **Current low-friction offer:** first paid request in July gets **one extra public page / README** in the same pass at no extra charge
 - **Preview first:** redacted sample audit in **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)**
 - If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
 - If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
