@@ -19,7 +19,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
 - **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via `ghcr.io/happysnaker/qq-ai-bot:latest`
 - **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page, posted in the official [OneBot Discussions / 应用 / SDK](https://github.com/orgs/botuniverse/discussions/264), and included in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
-- **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
+- **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132) · [Docker Compose sample PR](https://github.com/docker/awesome-compose/pull/781) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
 - **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
 
 ## Recent ecosystem signal around qq-ai-bot
@@ -30,6 +30,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - Active **[ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592)** to get `qq-ai-bot` listed as a Messaging client in the official ACP docs
 - Active **[LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20)** to document `qq-ai-bot` as an integration path in the official LLOneBot docs
 - **[NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132)**, so `qq-ai-bot` is now also present in NapCat community / integration-facing docs rather than only in outbound showcase threads
+- Active **[docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781)** to place a NapCat + `qq-ai-bot` local stack into a widely browsed Docker Compose samples repo
 
 This is the strongest current “public proof” chain on the profile: a repo, a project page, ecosystem references, and upstream protocol / docs work around the same asset.
 
