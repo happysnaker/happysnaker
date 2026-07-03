@@ -1,5 +1,7 @@
 # Shirong Lu / happysnaker
 
+> 💛 **Sponsorware + 开源支持：** [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) 完全免费，欢迎 [扫码支持](https://happysnaker.github.io/support/#from-qq-ai-bot)（¥9.9 起）。也有付费评审服务 ¥29.9–¥199。
+
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
 > Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.4`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
