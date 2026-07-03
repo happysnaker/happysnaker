@@ -2,7 +2,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, tagged releases, Docker quickstart, ecosystem placements, and deployment-facing docs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, ecosystem references, and active upstream docs PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 > **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
@@ -18,8 +18,19 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - **Repo** — [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) · [project page](https://happysnaker.github.io/qq-ai-bot/)
 - **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
 - **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via `ghcr.io/happysnaker/qq-ai-bot:latest`
-- **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page and in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol); current distribution work is also pushing it through Docker Compose / self-hosted AI channels
+- **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page and in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
+- **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs PR](https://github.com/NapNeko/NapCatDocs/pull/132) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
 - **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
+
+## Recent ecosystem signal around qq-ai-bot
+
+- Public **[OneBot ecosystem](https://onebot.dev/ecosystem)** placement, so the project is no longer only self-claimed
+- Public **[ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)** grounded in a real richer-media / attachment boundary from implementation work
+- Active **[ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592)** to get `qq-ai-bot` listed as a Messaging client in the official ACP docs
+- Active **[LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20)** to document `qq-ai-bot` as an integration path in the official LLOneBot docs
+- Active **[NapCat docs PR](https://github.com/NapNeko/NapCatDocs/pull/132)** to place `qq-ai-bot` in NapCat community / integration-facing docs
+
+This is the strongest current “public proof” chain on the profile: a repo, a project page, ecosystem references, and upstream protocol / docs work around the same asset.
 
 ## Highlighted work
 
@@ -83,22 +94,16 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
-- **Need the same cleanup on your own GitHub?** I offer a **¥29.9** quick blunt first-impression read and a **¥99** async packaging pass for pinned repos, README cleanup, and landing-page positioning. Preview the style in the [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md).
-- **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/)
-- **GitHub Sponsor button:** on repos that show **Sponsor**, it routes to the same support page
-- **Direct support:** WeChat Pay / Alipay QR codes are available on the support page
-- **Cheapest paid option:** `¥29.9` quick GitHub / README first-impression read (one blunt paragraph + top 3 fixes) via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
-- **Fastest low-friction tip:** if one repo, checklist, or contribution saved you 10 minutes, `¥9.9` / `¥19.9` is already meaningful
-- **Best paid option:** `¥99` async review for GitHub profile packaging, pinned repo cleanup, README polish, or one focused landing page via the review page: [happysnaker.github.io/review](https://happysnaker.github.io/review/)
-- **Current low-friction offer:** first paid request in July gets **one extra public page / README** in the same pass at no extra charge
-- **Preview first:** redacted sample audit in **[github-profile-checklist](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)**
+- **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/) — WeChat Pay / Alipay QR codes live there
+- **Fastest low-friction tip:** `¥9.9` / `¥19.9` if one repo, checklist, or OSS fix saved you time
+- **Most useful paid entry:** **`¥29.9` quick read** for a blunt first-impression pass on your profile / repo / landing page — [review page](https://happysnaker.github.io/review/)
+- **Best packaging option:** **`¥99` async review** for pinned repos, README cleanup, landing-page positioning, or profile packaging — [review page](https://happysnaker.github.io/review/)
+- **Preview first:** [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)
+- **Current July offer:** first paid request gets **one extra public page / README** in the same pass at no extra charge
 - **One-click quick-read email:** [Quick read \| profile / repo / page link](mailto:happysnaker@foxmail.com?subject=Quick%20read%20%7C%20profile%2Frepo%2Fpage%20link&body=Public%20link%3A%0ATarget%20role%20(optional)%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
 - **One-click async-review email:** [Async review \| target role \| repo / profile link](mailto:happysnaker@foxmail.com?subject=Async%20review%20%7C%20target%20role%20%7C%20repo%2Fprofile%20link&body=Public%20link(s)%3A%0ATarget%20role%20or%20use%20case%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
-- If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`.
-- If **Resume (161★)** or **CSAPPLabsAndNotes (70★)** helped, direct support is especially appreciated.
-- If **Resume (161★)**, **CSAPPLabsAndNotes (70★)**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated.
-- If a repo helped your interview prep, design review, or implementation work, direct support is especially appreciated.
-- Details for lightweight async feedback are also listed on the support page.
+- If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`
+- If **Resume**, **CSAPPLabsAndNotes**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated
 
 ## Contact
 
