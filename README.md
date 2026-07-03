@@ -115,3 +115,4 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - Email: `happysnaker@foxmail.com`
 - Portfolio site: [happysnaker.github.io/Resume](https://happysnaker.github.io/Resume/)
 - Blog: [happysnaker.github.io](https://happysnaker.github.io/)
+- Support / tip: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
