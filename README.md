@@ -2,7 +2,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, ecosystem references, an official OneBot community discussion, and active upstream docs PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.4`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 > **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
@@ -17,9 +17,9 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 - **Repo** — [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) · [project page](https://happysnaker.github.io/qq-ai-bot/)
 - **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
-- **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via `ghcr.io/happysnaker/qq-ai-bot:latest`
+- **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via both `ghcr.io/happysnaker/qq-ai-bot:v0.1.4` and `ghcr.io/happysnaker/qq-ai-bot:latest`
 - **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page, posted in the official [OneBot Discussions / 应用 / SDK](https://github.com/orgs/botuniverse/discussions/264), and included in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
-- **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132) · [Docker Compose sample PR](https://github.com/docker/awesome-compose/pull/781) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
+- **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132) · [Docker Compose sample PR](https://github.com/docker/awesome-compose/pull/781) · [CasaOS app-store PR](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
 - **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
 
 ## Recent ecosystem signal around qq-ai-bot
@@ -31,6 +31,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - Active **[LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20)** to document `qq-ai-bot` as an integration path in the official LLOneBot docs
 - **[NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132)**, so `qq-ai-bot` is now also present in NapCat community / integration-facing docs rather than only in outbound showcase threads
 - Active **[docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781)** to place a NapCat + `qq-ai-bot` local stack into a widely browsed Docker Compose samples repo
+- Active **[CasaOS-AppStore-Play#42](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42)** to package `qq-ai-bot` as a more browser-first homelab install surface rather than only a README + Compose story
+- Public recommendation / weekly threads are also live in **[HelloGitHub](https://github.com/521xueweihan/HelloGitHub/issues/3403)**, **[GitHubDaily](https://github.com/GitHubDaily/GitHubDaily/issues/906)**, **[阮一峰周刊](https://github.com/ruanyf/weekly/issues/10546)**, **[howie6879/weekly](https://github.com/howie6879/weekly/issues/225)**, and **[developer-plus/weekly](https://github.com/developer-plus/weekly/issues/60)**, so discovery is no longer limited to protocol-native communities
 
 This is the strongest current “public proof” chain on the profile: a repo, a project page, ecosystem references, and upstream protocol / docs work around the same asset.
 
@@ -97,6 +99,7 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/) — WeChat Pay / Alipay QR codes live there
+- **If you came here from `qq-ai-bot`:** the cleanest support note is simply `qq-ai-bot`, and the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page
 - **Fastest low-friction tip:** `¥9.9` / `¥19.9` if one repo, checklist, or OSS fix saved you time
 - **Most useful paid entry:** **`¥29.9` quick read** for a blunt first-impression pass on your profile / repo / landing page — [review page](https://happysnaker.github.io/review/)
 - **Best packaging option:** **`¥99` async review** for pinned repos, README cleanup, landing-page positioning, or profile packaging — [review page](https://happysnaker.github.io/review/)
