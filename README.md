@@ -6,6 +6,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
+> **If you only open three repos:** start with **qq-ai-bot** → **happydb** → **go-service-starter**.
+
 ## Focus
 
 - Building reliable backend services and reusable developer tooling
