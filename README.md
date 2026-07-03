@@ -2,7 +2,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, ecosystem references, and active upstream docs PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, ecosystem references, an official OneBot community discussion, and active upstream docs PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 > **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
@@ -18,13 +18,14 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 - **Repo** — [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) · [project page](https://happysnaker.github.io/qq-ai-bot/)
 - **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
 - **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via `ghcr.io/happysnaker/qq-ai-bot:latest`
-- **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page and in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
+- **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page, posted in the official [OneBot Discussions / 应用 / SDK](https://github.com/orgs/botuniverse/discussions/264), and included in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
 - **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs PR](https://github.com/NapNeko/NapCatDocs/pull/132) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
 - **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
 
 ## Recent ecosystem signal around qq-ai-bot
 
 - Public **[OneBot ecosystem](https://onebot.dev/ecosystem)** placement, so the project is no longer only self-claimed
+- Public **[official OneBot discussion](https://github.com/orgs/botuniverse/discussions/264)** in the protocol community’s own “应用 / SDK” channel, so the repo now has one protocol-native showcase thread instead of only its own outbound links
 - Public **[ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)** grounded in a real richer-media / attachment boundary from implementation work
 - Active **[ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592)** to get `qq-ai-bot` listed as a Messaging client in the official ACP docs
 - Active **[LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20)** to document `qq-ai-bot` as an integration path in the official LLOneBot docs
