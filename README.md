@@ -113,6 +113,8 @@ If you want to support concrete public work instead of sending a vague tip, thes
 
 Best payment note format: `repo #issue`, for example `qq-ai-bot #23` or `RDLeader #2`.
 
+Public readiness note: `RDLeader` license posture is tracked separately in [RDLeader#3](https://github.com/happysnaker/RDLeader/issues/3) before wider reuse/promotion.
+
 ## Support
 
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
