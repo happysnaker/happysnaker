@@ -4,6 +4,8 @@
 
 Support page: <https://happysnaker.github.io/support/>
 
+Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md)
+
 Project-specific support paths:
 
 - `qq-ai-bot`: <https://happysnaker.github.io/support/#from-qq-ai-bot>
