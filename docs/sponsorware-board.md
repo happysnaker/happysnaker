@@ -4,7 +4,7 @@
 
 Support page: <https://happysnaker.github.io/support/>
 
-Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md)
+Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 
 Project-specific support paths:
 

@@ -14,7 +14,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Proof index:** [docs/technical-proof-index.md](docs/technical-proof-index.md) links the CI runs, public docs, upstream PR surfaces, and sponsorware board.
 >
-> **Sponsor one-pager:** [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) is the short shareable brief for sponsors, curators, and people asking what to support.
+> **Sponsor one-pager:** [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) ([frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)) is the short shareable brief for sponsors, curators, and people asking what to support.
 
 > **Portfolio audit:** [docs/portfolio-audit.md](docs/portfolio-audit.md) explains what to promote, what to keep as proof, and what to park.
 
@@ -115,7 +115,7 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 
 ## Current sponsorware board
 
-Full board with notes: [docs/sponsorware-board.md](docs/sponsorware-board.md). Short sponsor brief: [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md).
+Full board with notes: [docs/sponsorware-board.md](docs/sponsorware-board.md). Short sponsor brief: [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager).
 
 If you want to support concrete public work instead of sending a vague tip, these are the clearest current targets:
 

@@ -192,7 +192,7 @@ Profile docs now have public CI for link integrity and sensitive-pattern checks,
 Central board:
 
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
-- Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md)
+- Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 
 Current sponsor targets are intentionally concrete:
 
