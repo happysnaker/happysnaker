@@ -101,6 +101,8 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 
 ## Current sponsorware board
 
+Full board with notes: [docs/sponsorware-board.md](docs/sponsorware-board.md).
+
 If you want to support concrete public work instead of sending a vague tip, these are the clearest current targets:
 
 | Project | Sponsor target | What it funds | Link |
