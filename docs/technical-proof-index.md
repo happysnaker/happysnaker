@@ -22,6 +22,7 @@ Public surfaces:
 
 - Repo: <https://github.com/happysnaker/qq-ai-bot>
 - Project page: <https://happysnaker.github.io/qq-ai-bot/>
+- Public landing / proof ladder: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/landing-page.md>
 - Promo kit: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Sponsorware roadmap: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/sponsorware.md>
 - Sponsorware discussion: <https://github.com/happysnaker/qq-ai-bot/discussions/30>
@@ -38,6 +39,9 @@ Current evidence:
 - Tag CI for v0.1.7: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968030296>
 - Tag Docker image publish for v0.1.7: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968030324>
 - Tag arm64 QEMU smoke for v0.1.7: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968114761>
+- Latest landing/proof-ladder docs CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624185>
+- Latest landing/proof-ladder Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624066>
+- Latest landing/proof-ladder arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968761875>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
 - Latest main Docker publish / multi-arch manifest refresh: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094913>
