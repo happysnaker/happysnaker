@@ -43,6 +43,7 @@ This is the strongest current “public proof” chain on the profile: a repo, a
 ## Highlighted work
 
 - **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, progress streaming, Docker quickstart, and a public project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
+- **[RDLeader](https://github.com/happysnaker/RDLeader)** — local-first AI R&D control plane for multi-agent task ownership, progressive context assembly, ACP runtime dispatch, approval gates, and a React/Fastify manager console
 - **[happydb](https://github.com/happysnaker/happydb)** — learning-oriented relational database implementation in Java covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments
 - **[HRpc](https://github.com/happysnaker/HRpc)** — Java 11 / Netty based RPC framework learning project with custom protocol, service registry, dynamic proxy invocation, heartbeats, reconnect, and load balancing
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health endpoints, graceful shutdown, and Docker packaging
@@ -54,7 +55,7 @@ This is the strongest current “public proof” chain on the profile: a repo, a
 
 ## How to read this profile
 
-- **For strongest signal first** — start with **qq-ai-bot**, **go-service-starter**, **go-http-middleware-kit**, **happydb**, and the linked upstream PRs below
+- **For strongest signal first** — start with **qq-ai-bot**, **RDLeader**, **go-service-starter**, **go-http-middleware-kit**, **happydb**, and the linked upstream PRs below
 - **For interview / systems fundamentals** — **CSAPPLabsAndNotes**, **happydb**, and the checklist repos are the fastest read
 - **For portfolio / packaging signal** — **Resume**, **github-profile-checklist**, and the public project pages
 - **What to de-prioritize** — short-lived public forks of external repos usually exist only because I was sending or updating upstream pull requests there
