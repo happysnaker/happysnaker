@@ -85,6 +85,13 @@ Review lens:
 - Does the patch avoid broad rewrites?
 - Does the PR reduce ambiguity for future users?
 
+## Maintenance proof
+
+Both current flagship repos now have public dependency-maintenance config:
+
+- `qq-ai-bot`: npm and GitHub Actions Dependabot updates are configured. Latest config push passed CI and Docker publish.
+- `RDLeader`: npm and GitHub Actions Dependabot updates are configured. Latest config push passed public CI and Dependabot update jobs.
+
 ## Sponsorware / support proof
 
 Central board:
