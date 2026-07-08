@@ -42,6 +42,7 @@ Current evidence:
 - Latest landing/proof-ladder docs CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624185>
 - Latest landing/proof-ladder Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624066>
 - Latest landing/proof-ladder arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968761875>
+- CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
 - Latest main Docker publish / multi-arch manifest refresh: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094913>
@@ -118,6 +119,7 @@ Current evidence:
 - Public CI after external-submission target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28964342417>
 - Public CI after external/community tracker update: <https://github.com/happysnaker/RDLeader/actions/runs/28964840654>
 - Public CI after external-review target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28964979942>
+- CodeQL after RDLeader security hardening: <https://github.com/happysnaker/RDLeader/actions/runs/28971614737>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3> (now has a decision packet; final owner choice still open)
@@ -179,7 +181,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, narrated video, distribution kit, submission tracker, two submission batches, and external awesome-list PRs are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, narrated video, distribution kit, submission tracker, two submission batches, external awesome-list PRs, and CodeQL hardening are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
