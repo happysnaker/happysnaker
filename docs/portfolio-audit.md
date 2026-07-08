@@ -44,7 +44,7 @@
 
 | Repo | Why parked | Next action before promotion |
 |---|---|---|
-| [`chinese-independent-developer`](https://github.com/happysnaker/chinese-independent-developer) | Interesting topic, but not yet aligned with backend/agent flagship story; no license currently | Decide whether it is a serious content asset or archive/quiet project; add license if promoting |
+| [`chinese-independent-developer`](https://github.com/happysnaker/chinese-independent-developer) | Interesting topic, but not yet aligned with backend/agent flagship story; now has CC0/license, support/security entrypoints, and Discussions enabled | Decide whether it is a serious content asset or keep as quiet support/funnel project before promoting |
 
 ## FORK / ARCHIVE
 
