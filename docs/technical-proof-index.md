@@ -27,6 +27,7 @@ Public surfaces:
 - Sponsorware discussion: <https://github.com/happysnaker/qq-ai-bot/discussions/30>
 - Metadata is aligned for GitHub search/profile cards: bot-infrastructure, metrics, multi-instance, sponsorware.
 - Multi-instance notes: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/multi-instance-notes.md>
+- Deployment validation: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/deployment-validation.md>
 
 Current evidence:
 
@@ -111,7 +112,7 @@ Central board:
 
 Current sponsor targets are intentionally concrete:
 
-- `qq-ai-bot`: arm64 / CasaOS validation remains open; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
+- `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence is documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
 - `RDLeader`: public-safe demo walkthrough, DevPlan bundle sanitization.
 
 Support page:
