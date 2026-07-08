@@ -30,12 +30,15 @@ Public surfaces:
 - Deployment validation: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/deployment-validation.md>
 - arm64 / CasaOS install report template: <https://github.com/happysnaker/qq-ai-bot/blob/main/.github/ISSUE_TEMPLATE/arm64_casaos_report.md>
 - arm64 Compose override: <https://github.com/happysnaker/qq-ai-bot/blob/main/docker-compose.arm64.yml>
+- Reusable arm64 image smoke script: <https://github.com/happysnaker/qq-ai-bot/blob/main/scripts/smoke-arm64-image.sh>
 
 Current evidence:
 
 - Latest feature release: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - CI for v0.1.6: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28954917679>
 - Docker image publish for v0.1.6: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28954917697>
+- Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
+- Latest main Docker publish / multi-arch manifest refresh: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094913>
 - Public OneBot ecosystem placement: <https://onebot.dev/ecosystem>
 - OneBot community discussion: <https://github.com/orgs/botuniverse/discussions/264>
 
@@ -115,7 +118,7 @@ Central board:
 
 Current sponsor targets are intentionally concrete:
 
-- `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence is documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
+- `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, and a reusable smoke script are documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
 - `RDLeader`: public-safe demo walkthrough, DevPlan bundle sanitization.
 
 Support page:

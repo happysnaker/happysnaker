@@ -33,7 +33,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 - **Repo** — [qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) · [project page](https://happysnaker.github.io/qq-ai-bot/)
 - **Why it exists** — keep QQ / OneBot transport, session orchestration, and ACP agent execution clearly separated so the system feels like bot infrastructure rather than a one-off chat demo
-- **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, and public image packaging via both `ghcr.io/happysnaker/qq-ai-bot:v0.1.6` and `ghcr.io/happysnaker/qq-ai-bot:latest`
+- **What it already does** — supports NapCat / LLOneBot, forward / reverse WebSocket wiring, per-chat session reuse, progress messages back to QQ, Docker quickstart, multi-arch public image packaging via both `ghcr.io/happysnaker/qq-ai-bot:v0.1.6` and `ghcr.io/happysnaker/qq-ai-bot:latest`, plus an arm64 smoke script for repeatable host reports
 - **External proof** — already listed on the public [OneBot ecosystem](https://onebot.dev/ecosystem) page, posted in the official [OneBot Discussions / 应用 / SDK](https://github.com/orgs/botuniverse/discussions/264), and included in [awesome-agent-client-protocol](https://github.com/nMaroulis/awesome-agent-client-protocol)
 - **Active ecosystem work** — [official ACP clients docs PR](https://github.com/agentclientprotocol/agent-client-protocol/pull/1592) · [official LLOneBot docs PR](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) · [NapCat docs integration landed](https://github.com/NapNeko/NapCatDocs/pull/132) · [Docker Compose sample PR](https://github.com/docker/awesome-compose/pull/781) · [CasaOS app-store PR](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42) · [ACP protocol discussion](https://github.com/orgs/agentclientprotocol/discussions/1591)
 - **Why it is on this profile** — it best reflects the direction I want to be judged on: protocol integration, transport / agent boundaries, operator-friendly packaging, and reusable engineering assets
@@ -121,7 +121,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 |---|---|---|---|
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
-| `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
+| `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
 | `RDLeader` | Public-safe demo walkthrough | fake-data screenshots / video for the agent-ops control plane | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
 | `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
