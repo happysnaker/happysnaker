@@ -2,6 +2,8 @@
 
 > Purpose: make the ongoing GitHub takeover auditable. This account should keep moving through small, evidence-backed operations instead of relying on a vague “keep improving” promise.
 
+Tracking issue: <https://github.com/happysnaker/happysnaker/issues/2>.
+
 ## Weekly checklist
 
 Run this once per week, or whenever a major public-surface change lands.
