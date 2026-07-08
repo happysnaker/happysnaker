@@ -89,12 +89,12 @@ Review lens:
 
 ## Maintenance proof
 
-Both current flagship repos now have public dependency-maintenance config:
+Both current flagship repos now have public, grouped dependency-maintenance config:
 
 Profile docs now have public CI for link integrity and sensitive-pattern checks: <https://github.com/happysnaker/happysnaker/actions/runs/28951262138>.
 
-- `qq-ai-bot`: npm and GitHub Actions Dependabot updates are configured. Latest config push passed CI and Docker publish.
-- `RDLeader`: npm and GitHub Actions Dependabot updates are configured. Latest config push passed public CI and Dependabot update jobs.
+- `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed CI, Docker publish, and grouped update jobs.
+- `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed public CI and grouped update jobs.
 
 ## Sponsorware / support proof
 
