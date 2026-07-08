@@ -182,7 +182,7 @@ Review lens:
 
 Both current flagship repos now have public, grouped dependency-maintenance config:
 
-Profile docs now have public CI for link integrity and sensitive-pattern checks, CodeQL for the Python verifier, and repository secret scanning / push protection enabled: <https://github.com/happysnaker/happysnaker/actions/runs/28972828743> and <https://github.com/happysnaker/happysnaker/actions/runs/28972828742>.
+Profile docs now have public CI for local link integrity and sensitive-pattern checks, CodeQL for Python tooling, a manual public-link checker for sponsor/proof URLs, and repository secret scanning / push protection enabled: <https://github.com/happysnaker/happysnaker/actions/runs/28981412585> and <https://github.com/happysnaker/happysnaker/actions/runs/28981412535>.
 
 - `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed CI, Docker publish, and grouped update jobs.
 - `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed public CI and grouped update jobs.
@@ -194,6 +194,7 @@ Central board:
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
+- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521))
 
 Current sponsor targets are intentionally concrete:
 
