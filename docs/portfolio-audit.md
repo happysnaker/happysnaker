@@ -26,7 +26,7 @@
 | [`go-service-starter`](https://github.com/happysnaker/go-service-starter) | Production-minded Go service skeleton: config, logging, health, graceful shutdown, Docker | Good backend craft signal | Keep as pinned support proof; avoid overpromoting until it has more users/examples |
 | [`go-http-middleware-kit`](https://github.com/happysnaker/go-http-middleware-kit) | Reusable net/http middleware: request IDs, logging, recovery, timeout, real IP | Good Go library signal | Keep docs/examples sharp; avoid running Go build/test locally per workspace rule |
 | [`CSAPPLabsAndNotes`](https://github.com/happysnaker/CSAPPLabsAndNotes) | Systems fundamentals and CSAPP study proof | Strong stars/forks relative to account; now routes to the frozen sponsor one-pager | Keep as proof of fundamentals; sponsor route should stay light-touch |
-| [`HRpc`](https://github.com/happysnaker/HRpc) | Java / Netty RPC learning project | Mentioned in profile, not audited in this pass | Later: inspect health, README, license, and whether it should remain highlighted |
+| [`HRpc`](https://happysnaker.github.io/hrpc/) | Java / Netty RPC learning project | Public project page exists; source repo is private, so do not link the private GitHub repo from public profile surfaces | Later: decide whether to publish source, keep as page-only proof, or de-emphasize |
 
 ## SUPPORT
 
