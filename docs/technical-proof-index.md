@@ -193,6 +193,7 @@ Central board:
 
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
+- Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
 
 Current sponsor targets are intentionally concrete:
 

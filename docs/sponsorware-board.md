@@ -6,6 +6,8 @@ Support page: <https://happysnaker.github.io/support/>
 
 Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 
+Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
+
 Project-specific support paths:
 
 - `qq-ai-bot`: <https://happysnaker.github.io/support/#from-qq-ai-bot>
