@@ -58,6 +58,8 @@ Rules:
 - Keep the profile README explicit that forks are not the main portfolio surface.
 
 ## Manual pin recommendation
+See also: [manual GitHub actions checklist](manual-github-actions.md).
+
 
 Current pinned repos still include `Resume`. If the goal is strongest technical signal, the best manual pin set is:
 

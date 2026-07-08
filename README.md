@@ -16,6 +16,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Portfolio audit:** [docs/portfolio-audit.md](docs/portfolio-audit.md) explains what to promote, what to keep as proof, and what to park.
 
+> **Manual GitHub checklist:** [docs/manual-github-actions.md](docs/manual-github-actions.md) tracks profile-pin and license actions that require deliberate/manual handling.
+
 > **Public proof hub release:** [https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub) freezes the current proof/sponsor surface.
 
 ## Focus
