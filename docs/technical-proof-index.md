@@ -3,6 +3,7 @@
 > A compact evidence map for the repos and public work I most want reviewed. This is intentionally source-linked: prefer the repo, CI, docs, and issues over broad claims.
 
 Current proof hub release: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub>.
+Portfolio audit: <https://github.com/happysnaker/happysnaker/blob/master/docs/portfolio-audit.md>.
 
 ## Fast read
 

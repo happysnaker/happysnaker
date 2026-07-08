@@ -14,6 +14,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Proof index:** [docs/technical-proof-index.md](docs/technical-proof-index.md) links the CI runs, public docs, upstream PR surfaces, and sponsorware board.
 
+> **Portfolio audit:** [docs/portfolio-audit.md](docs/portfolio-audit.md) explains what to promote, what to keep as proof, and what to park.
+
 > **Public proof hub release:** [https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub) freezes the current proof/sponsor surface.
 
 ## Focus
