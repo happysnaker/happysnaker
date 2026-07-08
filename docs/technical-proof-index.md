@@ -75,6 +75,7 @@ Current evidence:
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
+- Next sponsorware slice: runtime and approval deep dive: <https://github.com/happysnaker/RDLeader/issues/14>
 
 What to look for:
 

@@ -122,10 +122,10 @@ If you want to support concrete public work instead of sending a vague tip, thes
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
-| `RDLeader` | Public-safe demo walkthrough | **shipped:** fake-data SVG assets plus 40-second public walkthrough video | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
+| `RDLeader` | Runtime and approval deep dive | public-safe technical note for task envelopes, runtime result events, approval boundaries, recovery modes, and QA evidence mapping | [#14](https://github.com/happysnaker/RDLeader/issues/14) |
 | `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
-Best payment note format: `repo #issue`, for example `qq-ai-bot #23` or `RDLeader #2`.
+Best payment note format: `repo #issue`, for example `qq-ai-bot #26` or `RDLeader #14`.
 
 Public readiness note: `RDLeader` license posture is tracked separately in [RDLeader#3](https://github.com/happysnaker/RDLeader/issues/3) before wider reuse/promotion.
 
