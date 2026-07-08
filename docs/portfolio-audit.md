@@ -15,7 +15,7 @@
 | Repo | Why it matters | Current posture | Next maintenance move |
 |---|---|---|---|
 | [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) | Flagship bot infrastructure: OneBot, ACP bridge, sessions, progress streaming, metrics, Docker, sponsorware | CI, Docker publish, discussions, sponsorware roadmap, promo kit, multi-instance docs | Implement / fund #23, #24, #26; keep release notes and discussion current |
-| [`RDLeader`](https://github.com/happysnaker/RDLeader) | Agent-ops control plane: runtime dispatch, approvals, QA evidence, public baseline | Public CI, pre-release, sponsorware, QA/runtime docs, discussions | Resolve license posture (#3); publish fake-data screenshots/video (#2); continue DevPlan sanitization (#1) |
+| [`RDLeader`](https://github.com/happysnaker/RDLeader) / [project page](https://happysnaker.github.io/rdleader/) | Agent-ops control plane: runtime dispatch, approvals, QA evidence, public baseline | Public CI, pre-release, sponsorware, QA/runtime docs, discussions | Track external follow-up (#27); resolve license posture (#3); continue DevPlan sanitization (#1) |
 | [`happysnaker`](https://github.com/happysnaker/happysnaker) | Central profile, proof index, sponsorware board | Public docs CI, proof hub pre-release, sponsorware board | Keep links and CI fresh; update proof index after major changes |
 
 ## PROOF

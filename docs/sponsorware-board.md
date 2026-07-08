@@ -89,6 +89,7 @@ Useful links:
 Useful links:
 
 - Repo: <https://github.com/happysnaker/RDLeader>
+- Public project page: <https://happysnaker.github.io/rdleader/>
 - Public release roadmap: <https://github.com/happysnaker/RDLeader/blob/main/docs/public-release-roadmap.md>
 - Public demo walkthrough: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-walkthrough.md>
 - License posture tracker: <https://github.com/happysnaker/RDLeader/issues/3>

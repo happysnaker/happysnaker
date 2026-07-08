@@ -72,6 +72,7 @@ What to look for:
 Public surfaces:
 
 - Repo: <https://github.com/happysnaker/RDLeader>
+- Public project page: <https://happysnaker.github.io/rdleader/>
 - Public baseline pre-release: <https://github.com/happysnaker/RDLeader/releases/tag/v0.1.0-public-baseline>
 - Public release roadmap: <https://github.com/happysnaker/RDLeader/blob/main/docs/public-release-roadmap.md>
 - Public QA evidence: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/qa-evidence.md>
@@ -126,6 +127,8 @@ Current evidence:
 - CodeQL after RDLeader security hardening: <https://github.com/happysnaker/RDLeader/actions/runs/28971614737>
 - Dependabot high-severity drizzle-orm advisory fixed: <https://github.com/happysnaker/RDLeader/actions/runs/28972228715>
 - CodeQL after dependency security fix: <https://github.com/happysnaker/RDLeader/actions/runs/28972228636>
+- Public CI after project-page distribution kit update: <https://github.com/happysnaker/RDLeader/actions/runs/28976906213>
+- CodeQL after project-page distribution kit update: <https://github.com/happysnaker/RDLeader/actions/runs/28976906233>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3> (now has a decision packet; final owner choice still open)
@@ -187,7 +190,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, narrated video, distribution kit, submission tracker, two submission batches, external awesome-list PRs, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, public project page, narrated video, distribution kit, submission tracker, two submission batches, external awesome-list PRs, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
