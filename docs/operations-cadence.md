@@ -79,6 +79,8 @@ Review the manual pinned-repo checklist:
 
 If possible, manually replace `Resume` with `RDLeader` in pinned repos.
 
+Metadata already prepared: RDLeader homepage points to <https://happysnaker.github.io/rdleader/> and profile/RDLeader topics include the current agent-ops/sponsorware positioning.
+
 ### 2. RDLeader license posture
 
 Review:

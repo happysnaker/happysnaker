@@ -4,7 +4,7 @@
 
 ## 1. Pin RDLeader on the profile
 
-Current API check still shows profile pins include `Resume` and do not include `RDLeader`. The available GraphQL mutation surface exposes issue/comment pin mutations, not profile repository pin mutations, so this remains a manual web-UI action.
+Current API check still shows profile pins include `Resume` and do not include `RDLeader`. Re-checked on 2026-07-08 UTC / 2026-07-09 Asia-Shanghai: the current GraphQL mutation surface exposes issue/comment pin mutations, not profile repository pin mutations, so this remains a manual web-UI action.
 
 For the strongest technical first screen, replace `Resume` with `RDLeader`.
 
@@ -25,6 +25,13 @@ Why:
 - `go-service-starter` = Go backend service craft
 - `go-http-middleware-kit` = reusable Go library craft
 - `CSAPPLabsAndNotes` = systems fundamentals proof
+
+Automation already completed around this item:
+
+- RDLeader project page exists: <https://happysnaker.github.io/rdleader/>.
+- RDLeader repository homepage now points to that project page.
+- RDLeader topics include `agent-ops`, `control-plane`, `runtime-orchestration`, `sponsorware`, and `ai-workers`.
+- The profile repo topics include `agent-ops`, `oss-portfolio`, and `sponsorware`.
 
 Manual path:
 
