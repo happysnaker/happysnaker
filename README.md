@@ -42,7 +42,7 @@ This is the strongest current “public proof” chain on the profile: a repo, a
 
 ## Highlighted work
 
-- **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, progress streaming, Docker quickstart, and a public project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
+- **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, progress streaming, Docker quickstart, multi-instance notes, public promo kit, sponsorware roadmap, and a project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
 - **[RDLeader](https://github.com/happysnaker/RDLeader)** — local-first AI R&D control plane for multi-agent task ownership, progressive context assembly, ACP runtime dispatch, approval gates, public-safe QA evidence, runtime endurance notes, and demo/promo assets
 - **[happydb](https://github.com/happysnaker/happydb)** — learning-oriented relational database implementation in Java covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments
 - **[HRpc](https://github.com/happysnaker/HRpc)** — Java 11 / Netty based RPC framework learning project with custom protocol, service registry, dynamic proxy invocation, heartbeats, reconnect, and load balancing
