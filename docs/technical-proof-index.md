@@ -59,6 +59,7 @@ Public surfaces:
 - Public QA evidence: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/qa-evidence.md>
 - Runtime endurance model: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/runtime-endurance.md>
 - Demo walkthrough: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-walkthrough.md>
+- Public-safe SVG demo assets: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-assets.md>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
