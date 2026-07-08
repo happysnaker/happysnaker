@@ -1,5 +1,7 @@
 # Shirong Lu / happysnaker
 
+[![Profile docs CI](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml/badge.svg)](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) [![qq-ai-bot CI](https://github.com/happysnaker/qq-ai-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/happysnaker/qq-ai-bot/actions/workflows/ci.yml) [![RDLeader CI](https://github.com/happysnaker/RDLeader/actions/workflows/ci.yml/badge.svg)](https://github.com/happysnaker/RDLeader/actions/workflows/ci.yml)
+
 > 💛 **Sponsorware + 开源支持：** 当前可赞助任务见下方 **Current sponsorware board**；[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) / [RDLeader](https://github.com/happysnaker/RDLeader) 都在公开推进。也欢迎 [扫码支持](https://happysnaker.github.io/support/)（¥9.9 起）或购买付费评审服务 ¥29.9–¥199。
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
