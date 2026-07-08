@@ -4,15 +4,21 @@
 
 Support page: <https://happysnaker.github.io/support/>
 
+Project-specific support paths:
+
+- `qq-ai-bot`: <https://happysnaker.github.io/support/#from-qq-ai-bot>
+- `RDLeader`: <https://happysnaker.github.io/support/#from-rdleader>
+
 ## How to sponsor a specific item
 
 Use the issue number in the payment note or follow-up email:
 
-- `qq-ai-bot #23`
-- `qq-ai-bot #24`
-- `qq-ai-bot #26`
+- `qq-ai-bot #26 arm64`
 - `RDLeader #27`
 - `RDLeader #1`
+- `RDLeader #3`
+
+Historical shipped notes: `qq-ai-bot #23`, `qq-ai-bot #24`, and the closed RDLeader slices below.
 
 Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`, `RDLeader #22`, `RDLeader #24`, `RDLeader #26`.
 
