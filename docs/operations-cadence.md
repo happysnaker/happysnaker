@@ -67,6 +67,15 @@ Run:
 python3 scripts/verify_public_docs.py
 ```
 
+For sponsor/proof link hygiene, run the narrower external link check manually when support surfaces change:
+
+```bash
+python3 scripts/check_public_links.py
+# Use --scope profile for README + core proof docs, or --scope all for a slower full-doc sweep.
+```
+
+Do not put the external link check in CI unless flakiness is acceptable; it depends on GitHub Pages, GitHub HTML, and third-party network responses.
+
 Then verify profile CI passes after any docs change.
 
 ## Monthly checklist
