@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Current sponsorware board
+    url: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
+    about: See current sponsor targets and payment-note format.
+  - name: Technical proof index
+    url: https://github.com/happysnaker/happysnaker/blob/master/docs/technical-proof-index.md
+    about: Review CI, docs, upstream PR surfaces, and sponsorware evidence.
+  - name: Manual GitHub actions checklist
+    url: https://github.com/happysnaker/happysnaker/blob/master/docs/manual-github-actions.md
+    about: Track manual-only actions such as profile pins and license decisions.
+  - name: Support page
+    url: https://happysnaker.github.io/support/
+    about: Support open-source maintenance or request paid GitHub packaging feedback.

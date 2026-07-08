@@ -74,3 +74,7 @@ Minimum before promotion:
 - README positioning
 - support path
 - proof of maintenance intent
+
+## Tracking
+
+This checklist is mirrored in the profile repository issues once issues are enabled. Keep the issue and this file aligned when a manual item is completed.
