@@ -6,9 +6,9 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.4`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
-> **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
+> **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned / highlighted repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
-> **If you only open three repos:** start with **qq-ai-bot** → **happydb** → **go-service-starter**.
+> **If you only open three repos:** start with **qq-ai-bot** → **RDLeader** → **happydb**.
 
 ## Focus
 
@@ -55,7 +55,7 @@ This is the strongest current “public proof” chain on the profile: a repo, a
 
 ## How to read this profile
 
-- **For strongest signal first** — start with **qq-ai-bot**, **RDLeader**, **go-service-starter**, **go-http-middleware-kit**, **happydb**, and the linked upstream PRs below
+- **For strongest signal first** — start with **qq-ai-bot**, **RDLeader**, **happydb**, **go-service-starter**, **go-http-middleware-kit**, and the linked upstream PRs below
 - **For interview / systems fundamentals** — **CSAPPLabsAndNotes**, **happydb**, and the checklist repos are the fastest read
 - **For portfolio / packaging signal** — **Resume**, **github-profile-checklist**, and the public project pages
 - **What to de-prioritize** — short-lived public forks of external repos usually exist only because I was sending or updating upstream pull requests there
