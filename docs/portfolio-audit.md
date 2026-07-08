@@ -57,6 +57,12 @@ Rules:
 - Use descriptions like “Temporary contribution fork for upstream PR …” when they must remain public.
 - Keep the profile README explicit that forks are not the main portfolio surface.
 
+Current active fork hygiene notes:
+
+- `gin`, `testify`, and `cli` descriptions were normalized to say they are contribution / historical forks, not portfolio centerpieces.
+- `urfave-cli-fork`, `jwt`, `pflag`, and `chi` already have contribution-fork descriptions.
+- Do not archive active forks automatically unless the associated upstream PR/branch no longer needs maintenance.
+
 ## Manual pin recommendation
 See also: [manual GitHub actions checklist](manual-github-actions.md).
 
