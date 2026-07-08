@@ -11,10 +11,10 @@ Use the issue number in the payment note or follow-up email:
 - `qq-ai-bot #23`
 - `qq-ai-bot #24`
 - `qq-ai-bot #26`
-- `RDLeader #22`
+- `RDLeader #24`
 - `RDLeader #1`
 
-Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`.
+Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`, `RDLeader #22`.
 
 If you are not sure which item fits, use `open-source maintenance` or the project name.
 
@@ -25,7 +25,7 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | Multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 install report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
-| `RDLeader` | Public submission batch 1 | First public-safe submission batch using the distribution kit and tracker | [#22](https://github.com/happysnaker/RDLeader/issues/22) |
+| `RDLeader` | Public submission batch 2 | Second public-safe submission batch using the distribution kit and tracker | [#24](https://github.com/happysnaker/RDLeader/issues/24) |
 | `RDLeader` | DevPlan bundle sanitization | Split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
 
@@ -44,7 +44,8 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 | `RDLeader` | Narrated browser walkthrough video/GIF | [narrated-walkthrough-video.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/narrated-walkthrough-video.md), [#19](https://github.com/happysnaker/RDLeader/issues/19) |
 | `RDLeader` | Public demo distribution kit | [distribution-kit.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md), [#20](https://github.com/happysnaker/RDLeader/issues/20) |
 | `RDLeader` | Public submission and follow-up tracker | [submission-tracker.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md), [#21](https://github.com/happysnaker/RDLeader/issues/21) |
-| `RDLeader` | Next sponsorware slice opened: public submission batch 1 | [#22](https://github.com/happysnaker/RDLeader/issues/22) |
+| `RDLeader` | Public submission batch 1 | [release](https://github.com/happysnaker/RDLeader/releases/tag/v0.1.1-public-proof-ladder), [discussion #23](https://github.com/happysnaker/RDLeader/discussions/23), [#22](https://github.com/happysnaker/RDLeader/issues/22) |
+| `RDLeader` | Next sponsorware slice opened: public submission batch 2 | [#24](https://github.com/happysnaker/RDLeader/issues/24) |
 
 ## What sponsorship funds
 
