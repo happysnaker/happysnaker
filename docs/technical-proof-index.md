@@ -23,6 +23,7 @@ Public surfaces:
 - Repo: <https://github.com/happysnaker/qq-ai-bot>
 - Project page: <https://happysnaker.github.io/qq-ai-bot/>
 - Public landing / proof ladder: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/landing-page.md>
+- Ecosystem tracker: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md>
 - Promo kit: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Sponsorware roadmap: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/sponsorware.md>
 - Sponsorware discussion: <https://github.com/happysnaker/qq-ai-bot/discussions/30>
@@ -42,6 +43,9 @@ Current evidence:
 - Latest landing/proof-ladder docs CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624185>
 - Latest landing/proof-ladder Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968624066>
 - Latest landing/proof-ladder arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28968761875>
+- Ecosystem tracker CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28973811909>
+- Ecosystem tracker Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28973812030>
+- Ecosystem tracker arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28973931073>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
