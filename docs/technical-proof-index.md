@@ -20,6 +20,7 @@ Public surfaces:
 - Project page: <https://happysnaker.github.io/qq-ai-bot/>
 - Promo kit: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Sponsorware roadmap: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/sponsorware.md>
+- Sponsorware discussion: <https://github.com/happysnaker/qq-ai-bot/discussions/30>
 - Multi-instance notes: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/multi-instance-notes.md>
 
 Current evidence:
