@@ -4,7 +4,9 @@
 
 ## 1. Pin RDLeader on the profile
 
-Current pinned repos still include `Resume`. For the strongest technical first screen, replace `Resume` with `RDLeader`.
+Current API check still shows profile pins include `Resume` and do not include `RDLeader`. The available GraphQL mutation surface exposes issue/comment pin mutations, not profile repository pin mutations, so this remains a manual web-UI action.
+
+For the strongest technical first screen, replace `Resume` with `RDLeader`.
 
 Recommended pinned set:
 
@@ -48,21 +50,21 @@ Before wider reuse/promotion, choose one of:
 
 Do not imply unrestricted reuse until a license is published.
 
-## 3. Create fake-data RDLeader screenshots / video
+## 3. RDLeader public demo assets — completed
 
 Tracked in:
 
 - <https://github.com/happysnaker/RDLeader/issues/2>
 
-Use only fake/demo identities. Do not show:
+Current status: completed with public-safe SVG demo assets, walkthrough video, browser walkthrough, fake-data reset path, onboarding guide, landing copy, distribution kit, and submission tracker. Keep future assets under the same safety rules:
 
-- private paths
-- live group IDs
-- open IDs
-- message IDs
-- app IDs
-- QR onboarding artifacts
-- raw integration logs
+- no private paths;
+- no live group IDs;
+- no open IDs;
+- no message IDs;
+- no app IDs;
+- no QR onboarding artifacts;
+- no raw integration logs.
 
 ## 4. Review parked repos before promotion
 
