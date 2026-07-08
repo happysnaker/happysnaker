@@ -67,6 +67,7 @@ Public surfaces:
 - Demo walkthrough: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-walkthrough.md>
 - Public-safe SVG demo assets: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-assets.md>
 - Public-safe walkthrough video: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/walkthrough-video.md>
+- Runtime / approval deep dive: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/runtime-approval-deep-dive.md>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
@@ -75,10 +76,13 @@ Current evidence:
 
 - Public CI on latest baseline: <https://github.com/happysnaker/RDLeader/actions/runs/28949090323>
 - Public CI after walkthrough video: <https://github.com/happysnaker/RDLeader/actions/runs/28958624395>
+- Public CI after runtime/approval deep dive: <https://github.com/happysnaker/RDLeader/actions/runs/28959592886>
+- Public CI after next-sponsor-target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28959719430>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
-- Next sponsorware slice: runtime and approval deep dive: <https://github.com/happysnaker/RDLeader/issues/14>
+- Runtime and approval sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/14> (closed with public deep dive)
+- Next sponsorware slice: one-command public demo reset path: <https://github.com/happysnaker/RDLeader/issues/15>
 
 What to look for:
 
@@ -125,7 +129,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, and a reusable smoke script are documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough is shipped; next sponsorable slices are DevPlan bundle sanitization, deeper runtime/approval docs, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough and runtime/approval deep dive are shipped; next sponsorable slices are the one-command public demo reset path, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
