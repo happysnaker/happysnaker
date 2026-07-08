@@ -55,7 +55,7 @@ This is the strongest current “public proof” chain on the profile: a repo, a
 ## Highlighted work
 
 - **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bot scaffold using OneBot 11, ACP-compatible agent bridging, persistent sessions, progress streaming, Docker quickstart, multi-instance notes, public promo kit, sponsorware roadmap, and a project page at [happysnaker.github.io/qq-ai-bot](https://happysnaker.github.io/qq-ai-bot/)
-- **[RDLeader](https://github.com/happysnaker/RDLeader)** — local-first AI R&D control plane for multi-agent task ownership, progressive context assembly, ACP runtime dispatch, approval gates, public CI, public-safe QA evidence, runtime endurance notes, and demo/promo assets
+- **[RDLeader](https://github.com/happysnaker/RDLeader)** — local-first AI R&D control plane for multi-agent task ownership, progressive context assembly, ACP runtime dispatch, approval gates, public CI, public-safe QA evidence, runtime endurance notes, SVG demo assets, and a 40-second walkthrough video
 - **[happydb](https://github.com/happysnaker/happydb)** — learning-oriented relational database implementation in Java covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments
 - **[HRpc](https://github.com/happysnaker/HRpc)** — Java 11 / Netty based RPC framework learning project with custom protocol, service registry, dynamic proxy invocation, heartbeats, reconnect, and load balancing
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health endpoints, graceful shutdown, and Docker packaging
@@ -122,7 +122,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
-| `RDLeader` | Public-safe demo walkthrough | fake-data screenshots / video for the agent-ops control plane | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
+| `RDLeader` | Public-safe demo walkthrough | **shipped:** fake-data SVG assets plus 40-second public walkthrough video | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
 | `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
 Best payment note format: `repo #issue`, for example `qq-ai-bot #23` or `RDLeader #2`.

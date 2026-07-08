@@ -63,6 +63,7 @@ Public surfaces:
 - Runtime endurance model: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/runtime-endurance.md>
 - Demo walkthrough: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-walkthrough.md>
 - Public-safe SVG demo assets: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-assets.md>
+- Public-safe walkthrough video: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/walkthrough-video.md>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
@@ -70,8 +71,9 @@ Public surfaces:
 Current evidence:
 
 - Public CI on latest baseline: <https://github.com/happysnaker/RDLeader/actions/runs/28949090323>
+- Public CI after walkthrough video: <https://github.com/happysnaker/RDLeader/actions/runs/28958624395>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
-- Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2>
+- Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
 
 What to look for:
@@ -119,7 +121,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, and a reusable smoke script are documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, DevPlan bundle sanitization.
+- `RDLeader`: public-safe demo walkthrough is shipped; next sponsorable slices are DevPlan bundle sanitization, deeper runtime/approval docs, and license posture resolution.
 
 Support page:
 
