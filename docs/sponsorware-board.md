@@ -20,11 +20,18 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 
 | Project | Target | Funding use | Public issue |
 |---|---|---|---|
-| `qq-ai-bot` | End-to-end latency histograms | Add receive → agent → reply observability for real bot turns | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
+| `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | Add another external persistence option beyond file / Redis | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | Prove the homelab install path beyond local x86 demos | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
 | `RDLeader` | Public-safe demo walkthrough | Create fake-data screenshots or a short demo video for the agent-ops control plane | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
 | `RDLeader` | DevPlan bundle sanitization | Split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
+
+
+## Recently shipped
+
+| Project | Shipped item | Evidence |
+|---|---|---|
+| `qq-ai-bot` | End-to-end turn / agent / reply latency histograms | [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5), [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 
 ## What sponsorship funds
 

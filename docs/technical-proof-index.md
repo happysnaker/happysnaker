@@ -30,13 +30,15 @@ Public surfaces:
 
 Current evidence:
 
-- CI on latest public support/security baseline: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28948017236>
-- Docker image publish on latest public support/security baseline: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28948017299>
+- Latest feature release: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5>
+- CI for v0.1.5: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28954125641>
+- Docker image publish for v0.1.5: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28954125718>
 - Public OneBot ecosystem placement: <https://onebot.dev/ecosystem>
 - OneBot community discussion: <https://github.com/orgs/botuniverse/discussions/264>
 
 What to look for:
 
+- latency histograms: `qq_ai_bot_turn_duration_seconds`, `qq_ai_bot_agent_roundtrip_seconds`, `qq_ai_bot_reply_send_seconds`;
 - clear separation between QQ / OneBot transport and ACP-compatible agents;
 - persistent sessions and explicit session-store tradeoffs;
 - progress streaming back to QQ;
@@ -108,7 +110,7 @@ Central board:
 
 Current sponsor targets are intentionally concrete:
 
-- `qq-ai-bot`: latency histograms, Postgres session store, arm64 / CasaOS validation;
+- `qq-ai-bot`: Postgres session store and arm64 / CasaOS validation; latency histograms shipped in v0.1.5;
 - `RDLeader`: public-safe demo walkthrough, DevPlan bundle sanitization.
 
 Support page:

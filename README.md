@@ -6,7 +6,7 @@
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
-> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.4`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
+> Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.5`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
 
 > **Reading guide for recruiters / reviewers:** the repos that best represent my current direction are the **pinned / highlighted repositories below** plus the linked **upstream PRs**. If you see many public forks under my account, treat them as temporary contribution vehicles for upstream pull requests, not as portfolio centerpieces.
 
@@ -119,7 +119,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 
 | Project | Sponsor target | What it funds | Link |
 |---|---|---|---|
-| `qq-ai-bot` | End-to-end latency histograms | receive → agent → reply observability for real bot turns | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
+| `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | another external persistence option beyond file / Redis | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | prove the homelab install path beyond local x86 demos | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
 | `RDLeader` | Public-safe demo walkthrough | fake-data screenshots / video for the agent-ops control plane | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
