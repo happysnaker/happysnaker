@@ -52,4 +52,6 @@ For this coverage table, do not infer completion from intention. Evidence should
 - support page live checks when site content changes;
 - security alert checks where the API is available.
 
+Latest broader check: `python3 scripts/check_public_links.py --scope profile --timeout 6` checked 128 public links across README and core proof docs.
+
 Known caveat: some older repos do not have CodeQL analysis configured. Do not describe those as “CodeQL clean”; describe only the checks that were actually available, such as Dependabot and secret-scanning alert state.
