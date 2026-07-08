@@ -43,6 +43,7 @@ What to look for:
 Public surfaces:
 
 - Repo: <https://github.com/happysnaker/RDLeader>
+- Public baseline pre-release: <https://github.com/happysnaker/RDLeader/releases/tag/v0.1.0-public-baseline>
 - Public release roadmap: <https://github.com/happysnaker/RDLeader/blob/main/docs/public-release-roadmap.md>
 - Public QA evidence: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/qa-evidence.md>
 - Runtime endurance model: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/runtime-endurance.md>
