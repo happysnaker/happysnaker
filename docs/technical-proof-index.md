@@ -29,6 +29,7 @@ Public surfaces:
 - Multi-instance notes: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/multi-instance-notes.md>
 - Deployment validation: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/deployment-validation.md>
 - arm64 / CasaOS install report template: <https://github.com/happysnaker/qq-ai-bot/blob/main/.github/ISSUE_TEMPLATE/arm64_casaos_report.md>
+- arm64 Compose override: <https://github.com/happysnaker/qq-ai-bot/blob/main/docker-compose.arm64.yml>
 
 Current evidence:
 
