@@ -39,8 +39,11 @@ Current evidence:
 - Docker image publish for v0.1.6: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28954917697>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
 - Latest main Docker publish / multi-arch manifest refresh: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094913>
+- Latest README state refresh CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28959110625>
+- Latest README state refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28959110697>
 - Public OneBot ecosystem placement: <https://onebot.dev/ecosystem>
 - OneBot community discussion: <https://github.com/orgs/botuniverse/discussions/264>
+- Official ACP clients docs PR merged: <https://github.com/agentclientprotocol/agent-client-protocol/pull/1592>
 
 What to look for:
 
