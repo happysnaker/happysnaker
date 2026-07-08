@@ -99,6 +99,20 @@ Strengths:      CS fundamentals, hands-on implementation, reusable engineering a
 Open to:        Backend / infrastructure / systems engineering opportunities
 ```
 
+## Current sponsorware board
+
+If you want to support concrete public work instead of sending a vague tip, these are the clearest current targets:
+
+| Project | Sponsor target | What it funds | Link |
+|---|---|---|---|
+| `qq-ai-bot` | End-to-end latency histograms | receive → agent → reply observability for real bot turns | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
+| `qq-ai-bot` | Postgres session store | another external persistence option beyond file / Redis | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
+| `qq-ai-bot` | arm64 / CasaOS validation | prove the homelab install path beyond local x86 demos | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
+| `RDLeader` | Public-safe demo walkthrough | fake-data screenshots / video for the agent-ops control plane | [#2](https://github.com/happysnaker/RDLeader/issues/2) |
+| `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
+
+Best payment note format: `repo #issue`, for example `qq-ai-bot #23` or `RDLeader #2`.
+
 ## Support
 
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
