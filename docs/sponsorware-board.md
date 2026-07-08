@@ -11,10 +11,10 @@ Use the issue number in the payment note or follow-up email:
 - `qq-ai-bot #23`
 - `qq-ai-bot #24`
 - `qq-ai-bot #26`
-- `RDLeader #26`
+- `RDLeader #27`
 - `RDLeader #1`
 
-Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`, `RDLeader #22`, `RDLeader #24`.
+Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`, `RDLeader #22`, `RDLeader #24`, `RDLeader #26`.
 
 If you are not sure which item fits, use `open-source maintenance` or the project name.
 
@@ -25,7 +25,7 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
 | `qq-ai-bot` | arm64 / CasaOS validation | Multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 install report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
-| `RDLeader` | External/community submission batch | External or community-maintained submission batch using the distribution kit and tracker | [#26](https://github.com/happysnaker/RDLeader/issues/26) |
+| `RDLeader` | External submission review follow-up | Monitor and respond to external PR review feedback | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 | `RDLeader` | DevPlan bundle sanitization | Split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
 
@@ -46,7 +46,8 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 | `RDLeader` | Public submission and follow-up tracker | [submission-tracker.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md), [#21](https://github.com/happysnaker/RDLeader/issues/21) |
 | `RDLeader` | Public submission batch 1 | [release](https://github.com/happysnaker/RDLeader/releases/tag/v0.1.1-public-proof-ladder), [discussion #23](https://github.com/happysnaker/RDLeader/discussions/23), [#22](https://github.com/happysnaker/RDLeader/issues/22) |
 | `RDLeader` | Public submission batch 2 | [Q&A #25](https://github.com/happysnaker/RDLeader/discussions/25), [profile release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-rdleader-demo-kit), [#24](https://github.com/happysnaker/RDLeader/issues/24) |
-| `RDLeader` | Next sponsorware slice opened: external/community submission batch | [#26](https://github.com/happysnaker/RDLeader/issues/26) |
+| `RDLeader` | External/community submission batch | [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20), [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13), [#26](https://github.com/happysnaker/RDLeader/issues/26) |
+| `RDLeader` | Next sponsorware slice opened: external submission review follow-up | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 
 ## What sponsorship funds
 

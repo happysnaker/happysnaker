@@ -79,6 +79,8 @@ Public surfaces:
 - Public Show-and-tell discussion: <https://github.com/happysnaker/RDLeader/discussions/23>
 - Public demo Q&A: <https://github.com/happysnaker/RDLeader/discussions/25>
 - Profile proof-hub release for RDLeader demo kit: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-rdleader-demo-kit>
+- External PR: awesome-autonomous-agents: <https://github.com/jbesomi/awesome-autonomous-agents/pull/20>
+- External PR: awesome-coding-agents: <https://github.com/kailiu42/awesome-coding-agents/pull/13>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
@@ -106,6 +108,8 @@ Current evidence:
 - Public CI after submission batch 1 tracker update: <https://github.com/happysnaker/RDLeader/actions/runs/28963810853>
 - Public CI after submission batch 2 tracker update: <https://github.com/happysnaker/RDLeader/actions/runs/28964203194>
 - Public CI after external-submission target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28964342417>
+- Public CI after external/community tracker update: <https://github.com/happysnaker/RDLeader/actions/runs/28964840654>
+- Public CI after external-review target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28964979942>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
@@ -119,7 +123,8 @@ Current evidence:
 - Public submission/follow-up tracker sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/21> (closed with tracker and follow-up checklist)
 - Public submission batch 1 sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/22> (closed with proof-ladder release and Show-and-tell discussion)
 - Public submission batch 2 sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/24> (closed with public demo Q&A and profile proof-hub release)
-- Next sponsorware slice: external/community submission batch: <https://github.com/happysnaker/RDLeader/issues/26>
+- External/community submission sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/26> (closed with two external awesome-list PRs)
+- Next sponsorware slice: external submission review follow-up: <https://github.com/happysnaker/RDLeader/issues/27>
 
 What to look for:
 
@@ -166,7 +171,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, and a reusable smoke script are documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, narrated video, distribution kit, submission tracker, and two submission batches are shipped; next sponsorable slices are external/community submissions, DevPlan bundle sanitization, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, narrated video, distribution kit, submission tracker, two submission batches, and external awesome-list PRs are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
