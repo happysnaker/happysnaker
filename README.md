@@ -10,6 +10,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **If you only open three repos:** start with **qq-ai-bot** → **RDLeader** → **happydb**.
 
+> **Proof index:** [docs/technical-proof-index.md](docs/technical-proof-index.md) links the CI runs, public docs, upstream PR surfaces, and sponsorware board.
+
 ## Focus
 
 - Building reliable backend services and reusable developer tooling
