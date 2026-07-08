@@ -169,7 +169,7 @@ Review lens:
 
 Both current flagship repos now have public, grouped dependency-maintenance config:
 
-Profile docs now have public CI for link integrity and sensitive-pattern checks, plus CodeQL for the Python verifier: <https://github.com/happysnaker/happysnaker/actions/runs/28972828743> and <https://github.com/happysnaker/happysnaker/actions/runs/28972828742>.
+Profile docs now have public CI for link integrity and sensitive-pattern checks, CodeQL for the Python verifier, and repository secret scanning / push protection enabled: <https://github.com/happysnaker/happysnaker/actions/runs/28972828743> and <https://github.com/happysnaker/happysnaker/actions/runs/28972828742>.
 
 - `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed CI, Docker publish, and grouped update jobs.
 - `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed public CI and grouped update jobs.
