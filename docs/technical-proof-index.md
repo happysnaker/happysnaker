@@ -84,6 +84,7 @@ Public surfaces:
 - External PR: awesome-coding-agents: <https://github.com/kailiu42/awesome-coding-agents/pull/13>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
+- License decision packet: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
 
 Current evidence:
@@ -113,7 +114,7 @@ Current evidence:
 - Public CI after external-review target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28964979942>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
-- License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
+- License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3> (now has a decision packet; final owner choice still open)
 - Runtime and approval sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/14> (closed with public deep dive)
 - One-command public demo reset sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/15> (closed with `pnpm demo:reset`)
 - Employee-agent onboarding sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/16> (closed with public guide and `pnpm docs:check`)

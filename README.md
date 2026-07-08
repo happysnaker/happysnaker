@@ -127,7 +127,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 
 Best payment note format: `repo #issue`, for example `qq-ai-bot #26` or `RDLeader #27`.
 
-Public readiness note: `RDLeader` license posture is tracked separately in [RDLeader#3](https://github.com/happysnaker/RDLeader/issues/3) before wider reuse/promotion.
+Public readiness note: `RDLeader` license posture is tracked separately in [RDLeader#3](https://github.com/happysnaker/RDLeader/issues/3) before wider reuse/promotion; the decision packet is at [docs/public/license-decision-packet.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md).
 
 ## Support
 
