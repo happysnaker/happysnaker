@@ -14,9 +14,9 @@
 
 | Repo | Why it matters | Current posture | Next maintenance move |
 |---|---|---|---|
-| [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) | Flagship bot infrastructure: OneBot, ACP bridge, sessions, progress streaming, metrics, Docker, sponsorware | CI, Docker publish, discussions, sponsorware roadmap, promo kit, multi-instance docs | Implement / fund #23, #24, #26; keep release notes and discussion current |
+| [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) | Flagship bot infrastructure: OneBot, ACP bridge, sessions, progress streaming, metrics, Docker, sponsorware | CI, Docker publish, discussions, sponsorware roadmap, promo kit, multi-instance docs, sponsor one-pager links | #23 and #24 shipped; keep #26 physical ARM / CasaOS validation moving and keep ecosystem PR status current |
 | [`RDLeader`](https://github.com/happysnaker/RDLeader) / [project page](https://happysnaker.github.io/rdleader/) | Agent-ops control plane: runtime dispatch, approvals, QA evidence, public baseline | Public CI, pre-release, sponsorware, QA/runtime docs, discussions | Track external follow-up (#27); resolve license posture (#3); continue DevPlan sanitization (#1) |
-| [`happysnaker`](https://github.com/happysnaker/happysnaker) | Central profile, proof index, sponsorware board | Public docs CI, proof hub pre-release, sponsorware board | Keep links and CI fresh; update proof index after major changes |
+| [`happysnaker`](https://github.com/happysnaker/happysnaker) | Central profile, proof index, sponsorware board | Public docs CI, proof hub pre-releases, sponsorware board, sponsor one-pager, support-surface coverage | Keep links, release notes, and CI fresh; update proof index / coverage table after major changes |
 
 ## PROOF
 
@@ -25,14 +25,14 @@
 | [`happydb`](https://github.com/happysnaker/happydb) | Java database internals: storage engine, B+ tree, MVCC, recovery, optimizer, Raft experiments | Good systems signal, pinned/highlighted | Consider proof index entry with architecture / tests / design notes |
 | [`go-service-starter`](https://github.com/happysnaker/go-service-starter) | Production-minded Go service skeleton: config, logging, health, graceful shutdown, Docker | Good backend craft signal | Keep as pinned support proof; avoid overpromoting until it has more users/examples |
 | [`go-http-middleware-kit`](https://github.com/happysnaker/go-http-middleware-kit) | Reusable net/http middleware: request IDs, logging, recovery, timeout, real IP | Good Go library signal | Keep docs/examples sharp; avoid running Go build/test locally per workspace rule |
-| [`CSAPPLabsAndNotes`](https://github.com/happysnaker/CSAPPLabsAndNotes) | Systems fundamentals and CSAPP study proof | Strong stars/forks relative to account | Keep as proof of fundamentals; not sponsor-facing |
+| [`CSAPPLabsAndNotes`](https://github.com/happysnaker/CSAPPLabsAndNotes) | Systems fundamentals and CSAPP study proof | Strong stars/forks relative to account; now routes to the frozen sponsor one-pager | Keep as proof of fundamentals; sponsor route should stay light-touch |
 | [`HRpc`](https://github.com/happysnaker/HRpc) | Java / Netty RPC learning project | Mentioned in profile, not audited in this pass | Later: inspect health, README, license, and whether it should remain highlighted |
 
 ## SUPPORT
 
 | Repo | Role | Current posture | Next maintenance move |
 |---|---|---|---|
-| [`Resume`](https://github.com/happysnaker/Resume) | Portfolio template with existing stars/forks | Strong social proof, less aligned with current backend/agent direction | Keep pinned only if social proof matters; otherwise consider replacing with RDLeader manually |
+| [`Resume`](https://github.com/happysnaker/Resume) | Portfolio template with existing stars/forks | Strong social proof, less aligned with current backend/agent direction; now routes to the frozen sponsor one-pager | Keep pinned only if social proof matters; otherwise consider replacing with RDLeader manually |
 | [`github-profile-checklist`](https://github.com/happysnaker/github-profile-checklist) | Supports paid review / profile packaging offer | Useful funnel asset | Keep sample audit linked from profile support section |
 | [`backend-engineer-checklist`](https://github.com/happysnaker/backend-engineer-checklist) | Backend interview / self-review checklist | Support content for profile | Keep as supportive asset, not flagship |
 | [`system-design-checklist`](https://github.com/happysnaker/system-design-checklist) | Architecture / interview / design review checklist | Support content for profile | Keep as supportive asset, not flagship |

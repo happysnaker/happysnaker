@@ -29,9 +29,9 @@ Evidence to record:
 
 Check:
 
-- `qq-ai-bot` sponsor issues: `#23`, `#24`, `#26`
-- `RDLeader` sponsor / public packaging issues: `#1`, `#2`, `#3`
-- profile sponsorware board links
+- `qq-ai-bot` sponsor issues: `#26` open; `#23` / `#24` shipped and should stay in the shipped section
+- `RDLeader` sponsor / public packaging issues: `#1`, `#3`, `#27`; `#2` and later public packaging slices are shipped evidence
+- profile sponsorware board, sponsor one-pager release, and support-surface coverage links
 
 Evidence to record:
 
@@ -89,13 +89,14 @@ Review:
 
 Decide whether RDLeader should be MIT, Apache-2.0, copyleft, or source-available while the public release is still being sanitized.
 
-### 3. Demo assets
+### 3. Support surface coverage
 
 Review:
 
-- <https://github.com/happysnaker/RDLeader/issues/2>
+- <https://github.com/happysnaker/happysnaker/blob/master/docs/support-surface-coverage.md>
+- <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager>
 
-The next useful public artifact is still fake-data screenshots or a short video walkthrough.
+Keep the coverage table aligned when a pinned repo, support route, funding file, or sponsor one-pager link changes. RDLeader demo assets from `#2` are already shipped evidence, not the next action.
 
 ### 4. Fork/archive cleanup
 
@@ -119,6 +120,8 @@ Do not claim “done” for broad goals unless current evidence proves all requi
 
 - Technical proof index: <https://github.com/happysnaker/happysnaker/blob/master/docs/technical-proof-index.md>
 - Sponsorware board: <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
+- Sponsor one-pager release: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager>
+- Support surface coverage: <https://github.com/happysnaker/happysnaker/blob/master/docs/support-surface-coverage.md>
 - Portfolio audit: <https://github.com/happysnaker/happysnaker/blob/master/docs/portfolio-audit.md>
 - Manual GitHub checklist: <https://github.com/happysnaker/happysnaker/blob/master/docs/manual-github-actions.md>
 - Manual tracking issue: <https://github.com/happysnaker/happysnaker/issues/1>
