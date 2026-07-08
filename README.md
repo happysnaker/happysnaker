@@ -121,7 +121,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 |---|---|---|---|
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
-| `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, smoke script, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
+| `qq-ai-bot` | arm64 / CasaOS validation | multi-arch image evidence, arm64 compose override, smoke script, GitHub Actions QEMU arm64 smoke, and report template documented; real CasaOS/arm64 report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
 | `RDLeader` | External submission review follow-up | monitor and respond to external PR review feedback | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 | `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
