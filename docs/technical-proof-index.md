@@ -48,6 +48,7 @@ Public surfaces:
 - Demo walkthrough: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-walkthrough.md>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
+- Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
 
 Current evidence:
 
