@@ -77,4 +77,4 @@ Minimum before promotion:
 
 ## Tracking
 
-This checklist is mirrored in the profile repository issues once issues are enabled. Keep the issue and this file aligned when a manual item is completed.
+This checklist is mirrored in [happysnaker#1](https://github.com/happysnaker/happysnaker/issues/1). Keep the issue and this file aligned when a manual item is completed.
