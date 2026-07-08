@@ -69,6 +69,7 @@ Public surfaces:
 - Public-safe walkthrough video: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/walkthrough-video.md>
 - Runtime / approval deep dive: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/runtime-approval-deep-dive.md>
 - One-command public demo reset: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/demo-reset.md>
+- Employee-agent onboarding guide: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/employee-agent-onboarding.md>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - Public roadmap discussion: <https://github.com/happysnaker/RDLeader/discussions/4>
@@ -81,12 +82,15 @@ Current evidence:
 - Public CI after next-sponsor-target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28959719430>
 - Public CI after demo reset path: <https://github.com/happysnaker/RDLeader/actions/runs/28960253396>
 - Public CI after employee-agent onboarding target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28960377824>
+- Public CI after employee-agent onboarding guide and docs gate: <https://github.com/happysnaker/RDLeader/actions/runs/28960733793>
+- Public CI after browser-walkthrough target link refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28960890911>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3>
 - Runtime and approval sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/14> (closed with public deep dive)
 - One-command public demo reset sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/15> (closed with `pnpm demo:reset`)
-- Next sponsorware slice: employee-agent onboarding guide: <https://github.com/happysnaker/RDLeader/issues/16>
+- Employee-agent onboarding sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/16> (closed with public guide and `pnpm docs:check`)
+- Next sponsorware slice: browser walkthrough over public demo state: <https://github.com/happysnaker/RDLeader/issues/17>
 
 What to look for:
 
@@ -133,7 +137,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, and a reusable smoke script are documented; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, and one-command demo reset are shipped; next sponsorable slices are employee-agent onboarding, DevPlan bundle sanitization, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, and employee-agent onboarding are shipped; next sponsorable slices are browser walkthrough polish, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
