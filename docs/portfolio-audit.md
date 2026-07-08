@@ -79,6 +79,8 @@ Current pinned repos still include `Resume`. If the goal is strongest technical 
 Rationale: this keeps one flagship bot-infra repo, one agent-ops control-plane repo, one Java systems project, two Go/backend craft repos, and one CS fundamentals repo.
 
 ## Operating cadence
+See also: [GitHub operations cadence](operations-cadence.md).
+
 
 Weekly:
 

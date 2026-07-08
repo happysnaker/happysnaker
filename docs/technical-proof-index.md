@@ -4,6 +4,7 @@
 
 Current proof hub release: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub>.
 Portfolio audit: <https://github.com/happysnaker/happysnaker/blob/master/docs/portfolio-audit.md>.
+Operations cadence: <https://github.com/happysnaker/happysnaker/blob/master/docs/operations-cadence.md>.
 
 ## Fast read
 

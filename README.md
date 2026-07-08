@@ -18,6 +18,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Manual GitHub checklist:** [docs/manual-github-actions.md](docs/manual-github-actions.md) tracks profile-pin and license actions that require deliberate/manual handling.
 
+> **Operations cadence:** [docs/operations-cadence.md](docs/operations-cadence.md) defines the weekly/monthly maintenance loop for CI, sponsorware, proof index, and portfolio hygiene.
+
 > **Public proof hub release:** [https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-public-proof-hub) freezes the current proof/sponsor surface.
 
 ## Focus
