@@ -33,7 +33,7 @@
 | Repo | Role | Current posture | Next maintenance move |
 |---|---|---|---|
 | [`Resume`](https://github.com/happysnaker/Resume) | Portfolio template with existing stars/forks | Strong social proof, less aligned with current backend/agent direction; now routes to the frozen sponsor one-pager | Keep pinned only if social proof matters; otherwise consider replacing with RDLeader manually |
-| [`github-profile-checklist`](https://github.com/happysnaker/github-profile-checklist) | Supports paid review / profile packaging offer | Useful funnel asset | Keep sample audit linked from profile support section |
+| [`github-profile-checklist`](https://github.com/happysnaker/github-profile-checklist) | Supports paid review / profile packaging offer | Useful funnel asset; now routes to the frozen sponsor one-pager and has sponsorware / maintenance topics | Keep sample audit linked from profile support section; keep support-surface coverage evidence fresh |
 | [`backend-engineer-checklist`](https://github.com/happysnaker/backend-engineer-checklist) | Backend interview / self-review checklist | Support content for profile | Keep as supportive asset, not flagship |
 | [`system-design-checklist`](https://github.com/happysnaker/system-design-checklist) | Architecture / interview / design review checklist | Support content for profile | Keep as supportive asset, not flagship |
 | [`production-readiness-checklist`](https://github.com/happysnaker/production-readiness-checklist) | Release / launch / on-call checklist | Aligns with reliability/backend positioning | Consider linking from proof index if it gets examples |
