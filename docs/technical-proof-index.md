@@ -193,7 +193,7 @@ Central board:
 
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
-- Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
+- Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md), including the paid [review page](https://happysnaker.github.io/review/) sponsor path ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/8e869fee9383832903e2a766510ce11c54ff4541))
 - Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 128 public links across README and core proof docs.
 
 Current sponsor targets are intentionally concrete:
