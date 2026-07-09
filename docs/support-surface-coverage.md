@@ -18,6 +18,7 @@ Snapshot: 2026-07-09 Asia/Shanghai.
 
 | Repository | Why it matters | Support route | Frozen one-pager evidence | About metadata |
 |---|---|---|---|---|
+| [`profile README`](https://github.com/happysnaker/happysnaker) | main GitHub profile / proof hub entrypoint | README support section, sponsor board, coverage table | [4457f78](https://github.com/happysnaker/happysnaker/commit/4457f789b9c50a0bf7d3fc3060c983df08d070cf) | profile repo; public docs CI |
 | [`support page`](https://happysnaker.github.io/support/) | main support / payment entrypoint | live support page, frozen sponsor release, coverage table | [e11f449](https://github.com/happysnaker/happysnaker.github.io/commit/e11f449486c9d0a7d9d2d95e9421d7009a9285cf) | support homepage; Pages deployment |
 | [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) | flagship bot infrastructure / OneBot + ACP | `SUPPORT.md`, `.github/SUPPORT.md`, funding link, support page | [ed92992](https://github.com/happysnaker/qq-ai-bot/commit/ed9299246e9bfab608985a362baafc305fab3088) | `sponsorware` topic; project homepage |
 | [`RDLeader`](https://github.com/happysnaker/RDLeader) | agent-ops / local-first control plane | `README.md`, `SUPPORT.md`, `.github/SUPPORT.md`, funding link, support page | [9668390](https://github.com/happysnaker/RDLeader/commit/96683908e16210794278518b12fcc931de61345e) | `sponsorware` topic; project homepage |
