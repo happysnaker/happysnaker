@@ -14,6 +14,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Proof index:** [docs/technical-proof-index.md](docs/technical-proof-index.md) links the CI runs, public docs, upstream PR surfaces, and sponsorware board.
 >
+> **Upstream contribution ledger:** [docs/upstream-contribution-ledger.md](docs/upstream-contribution-ledger.md) tracks merged/open/closed upstream PRs and issue follow-up with direct links, CI/review state, and next-action triage.
+>
 > **Sponsor one-pager:** [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) ([frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)) is the short shareable brief for sponsors, curators, and people asking what to support.
 >
 > **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) tracks which repos route visitors to the support page, sponsor one-pager, and sponsorware metadata.
