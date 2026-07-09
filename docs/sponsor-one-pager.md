@@ -44,7 +44,7 @@ Use concrete payment notes instead of a vague donation label:
 - Stable release `v0.1.7`: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.7>
 - Public project page: <https://happysnaker.github.io/qq-ai-bot/>
 - Ecosystem tracker: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md>
-- Arm64 image smoke workflow is live; the latest ecosystem expansion refresh passed CI, CodeQL, Docker publish, and arm64 smoke.
+- Arm64 image smoke workflow is live; the latest promotion-outcome proof-run update passed CI, CodeQL, Docker publish, and arm64 smoke.
 - External surfaces include OneBot ecosystem placement, merged NapCat docs, merged NapCat Docker template, merged ACP clients docs, merged ACP community awesome-list entry, and open LLOneBot / Docker Compose / CasaOS / Umbrel / AwesomeHomelab PRs.
 - Shipped sponsorware slices include latency histograms (`v0.1.5`) and Postgres session store (`v0.1.6`).
 
