@@ -16,6 +16,7 @@ CORE_FILES = [
 ]
 PROFILE_FILES = [
     ROOT / "README.md",
+    ROOT / "docs" / "technical-proof-index.md",
     ROOT / "docs" / "sponsor-one-pager.md",
     ROOT / "docs" / "support-surface-coverage.md",
     ROOT / "docs" / "sponsorware-board.md",
@@ -68,6 +69,7 @@ def should_skip(url: str) -> bool:
     # proof assets. Keep this checker focused on shareable proof/support URLs.
     unstable_fragments = [
         "/issues?q=",
+        "/pulls?q=",
         "/issues/new?",
         "/stargazers",
         "img.shields.io/",

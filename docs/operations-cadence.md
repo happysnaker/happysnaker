@@ -71,7 +71,7 @@ For sponsor/proof link hygiene, run the narrower external link check manually wh
 
 ```bash
 python3 scripts/check_public_links.py
-# Use --scope profile for README + core proof docs, or --scope all for a slower full-doc sweep.
+# Use --scope profile for README + technical proof index + core proof docs, or --scope all for a slower full-doc sweep.
 ```
 
 For public site / project-page hygiene after changing `happysnaker.github.io`, run the site hygiene verifier from this profile repo:

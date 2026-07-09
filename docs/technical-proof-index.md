@@ -181,12 +181,12 @@ Review lens:
 
 ## Maintenance proof
 
-Both current flagship repos now have public, grouped dependency-maintenance config:
+Both current flagship repos have public, grouped dependency-maintenance config and a recent Dependabot queue sweep:
 
-Profile docs now have public CI for local link integrity and sensitive-pattern checks, CodeQL for Python tooling, a manual public-link checker for sponsor/proof URLs, and repository secret scanning / push protection enabled: <https://github.com/happysnaker/happysnaker/actions/runs/28981412585> and <https://github.com/happysnaker/happysnaker/actions/runs/28981412535>.
+Profile docs now have public CI for local link integrity and sensitive-pattern checks, CodeQL for Python tooling, a manual public-link checker for sponsor/proof URLs, a reusable site hygiene verifier for project-page metadata / sitemap / public-repo-link checks, and repository secret scanning / push protection enabled. Latest profile tooling run: [CI](https://github.com/happysnaker/happysnaker/actions/runs/28994249998) and [CodeQL](https://github.com/happysnaker/happysnaker/actions/runs/28994250007).
 
-- `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed CI, Docker publish, and grouped update jobs.
-- `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. Latest config push passed public CI and grouped update jobs.
+- `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. The grouped npm-development PR [#42](https://github.com/happysnaker/qq-ai-bot/pull/42) merged on 2026-07-08 with passing CI; the older individual Dependabot PRs [#31](https://github.com/happysnaker/qq-ai-bot/pull/31)-[#40](https://github.com/happysnaker/qq-ai-bot/pull/40) are closed/superseded. Latest post-merge evidence: [CI](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955760), [CodeQL](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955689), [Docker publish](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955703), and [arm64 image smoke](https://github.com/happysnaker/qq-ai-bot/actions/runs/28989034477).
+- `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. The grouped npm-development PR [#13](https://github.com/happysnaker/RDLeader/pull/13) merged on 2026-07-08 with passing CI. Latest post-merge evidence: [CI](https://github.com/happysnaker/RDLeader/actions/runs/28988111295) and [CodeQL](https://github.com/happysnaker/RDLeader/actions/runs/28988111304).
 
 ## Sponsorware / support proof
 
@@ -195,7 +195,8 @@ Central board:
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md), including the paid [review page](https://happysnaker.github.io/review/) sponsor path ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/8e869fee9383832903e2a766510ce11c54ff4541))
-- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 128 public links across README and core proof docs.
+- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 213 public links across README, this technical proof index, and core proof docs.
+- Public site hygiene verifier: [scripts/check_site_hygiene.py](../scripts/check_site_hygiene.py) ([commit](https://github.com/happysnaker/happysnaker/commit/ef88985863a24042f5f8be35c0b2979e44441d71)); latest live run checked 152 site hygiene assertions across project-page metadata, sitemap, and public repo-link hygiene.
 
 Current sponsor targets are intentionally concrete:
 
