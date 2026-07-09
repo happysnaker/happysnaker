@@ -57,6 +57,7 @@ Current evidence:
 - Latest README state refresh CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28959110625>
 - Latest README state refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28959110697>
 - Main-branch arm64 image smoke workflow: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28965874894>
+- AwesomeHomelab listing PR: <https://github.com/AwesomeHomelab/awesome-homelab/pull/98>
 - Public OneBot ecosystem placement: <https://onebot.dev/ecosystem>
 - OneBot community discussion: <https://github.com/orgs/botuniverse/discussions/264>
 - Official ACP clients docs PR merged: <https://github.com/agentclientprotocol/agent-client-protocol/pull/1592>
