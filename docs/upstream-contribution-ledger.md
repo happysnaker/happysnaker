@@ -5,8 +5,8 @@
 ## Summary
 
 - Merged upstream PRs tracked here: **9**.
-- Open upstream PRs tracked here: **15**.
-- Closed / superseded upstream PRs tracked here: **8**.
+- Open upstream PRs tracked here: **14**.
+- Closed / superseded upstream PRs tracked here: **11**.
 - Do not treat closed PRs as shipped proof; they are included to show honest maintenance follow-up and avoid stale notification drift.
 
 ## Merged proof
@@ -28,7 +28,7 @@
 | Priority | Items | Next action |
 |---|---|---|
 | P1: unblock before nudging maintainers | [`github/docs#44984`](https://github.com/github/docs/pull/44984), [`urfave/cli#2379`](https://github.com/urfave/cli/pull/2379), [`urfave/cli#2381`](https://github.com/urfave/cli/pull/2381), [`urfave/cli#2384`](https://github.com/urfave/cli/pull/2384), [`cli/cli#13788`](https://github.com/cli/cli/pull/13788), [`gin-gonic/gin#4727`](https://github.com/gin-gonic/gin/pull/4727), [`vuejs/docs#3425`](https://github.com/vuejs/docs/pull/3425) | inspect failing checks / requested changes first; do not ping maintainers while evidence is red, conflicting, or changes are requested |
-| P2: green or API-not-reported review queue | [`urfave/cli#2382`](https://github.com/urfave/cli/pull/2382), [`golang-jwt/jwt#524`](https://github.com/golang-jwt/jwt/pull/524), [`hashicorp/go-retryablehttp#288`](https://github.com/hashicorp/go-retryablehttp/pull/288), [`hashicorp/go-retryablehttp#289`](https://github.com/hashicorp/go-retryablehttp/pull/289), [`hashicorp/go-retryablehttp#290`](https://github.com/hashicorp/go-retryablehttp/pull/290), [`open-telemetry/opentelemetry-go#8527`](https://github.com/open-telemetry/opentelemetry-go/pull/8527), [`github/docs#45002`](https://github.com/github/docs/pull/45002), [`vuejs/docs#3424`](https://github.com/vuejs/docs/pull/3424) | monitor maintainer feedback; only follow up if a maintainer asks for changes or the PR becomes stale |
+| P2: green or API-not-reported review queue | [`urfave/cli#2382`](https://github.com/urfave/cli/pull/2382), [`golang-jwt/jwt#524`](https://github.com/golang-jwt/jwt/pull/524), [`hashicorp/go-retryablehttp#288`](https://github.com/hashicorp/go-retryablehttp/pull/288), [`hashicorp/go-retryablehttp#289`](https://github.com/hashicorp/go-retryablehttp/pull/289), [`hashicorp/go-retryablehttp#290`](https://github.com/hashicorp/go-retryablehttp/pull/290), [`open-telemetry/opentelemetry-go#8527`](https://github.com/open-telemetry/opentelemetry-go/pull/8527), [`vuejs/docs#3424`](https://github.com/vuejs/docs/pull/3424) | monitor maintainer feedback; only follow up if a maintainer asks for changes or the PR becomes stale |
 | P3: issue-only follow-up | [`prometheus/procfs#831`](https://github.com/prometheus/procfs/issues/831), [`spf13/pflag#312`](https://github.com/spf13/pflag/issues/312) | keep as open issue context, not shipped proof; revisit only if continuing the related patch line |
 
 ## Open review queue
@@ -38,7 +38,6 @@
 | [`cli/cli#13788`](https://github.com/cli/cli/pull/13788) | open | fix: preserve percent-encoded path in DisplayURL | review: review_required; mergeable: mergeable; has failing/cancelled checks |
 | [`gin-gonic/gin#4727`](https://github.com/gin-gonic/gin/pull/4727) | open | fix: handle bracketed IPv6 and port notation in X-Forwarded-For | review: review_required; mergeable: mergeable; has failing/cancelled checks |
 | [`github/docs#44984`](https://github.com/github/docs/pull/44984) | open | docs(actions): add workflow run status reference | review: review_required; mergeable: conflicting; maintainer requested restoring frontmatter formatting before review; checks green / neutral |
-| [`github/docs#45002`](https://github.com/github/docs/pull/45002) | open | docs(actions): add SHA pinning notes to OIDC examples | review: review_required; checks green / neutral |
 | [`golang-jwt/jwt#524`](https://github.com/golang-jwt/jwt/pull/524) | open | fix: enable IssuedAt verification when WithIssuedAt() is used | review: review_required; mergeable: mergeable; not reported by API |
 | [`hashicorp/go-retryablehttp#288`](https://github.com/hashicorp/go-retryablehttp/pull/288) | open | fix: preserve final response in PassthroughErrorHandler | review: review_required; mergeable: mergeable; not reported by API |
 | [`hashicorp/go-retryablehttp#289`](https://github.com/hashicorp/go-retryablehttp/pull/289) | open | fix: avoid panics on typed nil request bodies | review: review_required; mergeable: mergeable; not reported by API |
@@ -55,7 +54,10 @@
 
 | PR | Status | Contribution | Evidence notes |
 |---|---|---|---|
+| [`github/docs#44992`](https://github.com/github/docs/pull/44992) | closed | docs(actions): use GiB for runner capacity tables | maintainer repeated no-`help wanted` warning; do not count as shipped proof |
 | [`github/docs#44993`](https://github.com/github/docs/pull/44993) | closed | docs(secret-scanning): document Agents secrets type | maintainer warned not to open PRs for untriaged issues without `help wanted`; do not count as shipped proof |
+| [`github/docs#45000`](https://github.com/github/docs/pull/45000) | closed | docs(rest): note when commit comments may be disabled | closed / unmerged; do not count as shipped proof |
+| [`github/docs#45002`](https://github.com/github/docs/pull/45002) | closed | docs(actions): add SHA pinning notes to OIDC examples | maintainer said it did not address the issue discussion; do not count as shipped proof |
 | [`github/docs#45001`](https://github.com/github/docs/pull/45001) | closed | docs(pages): clarify when to create _config.yml | review: review_required; mergeable: mergeable; checks green / neutral |
 | [`go-chi/chi#1125`](https://github.com/go-chi/chi/pull/1125) | closed | fix(middleware): Logger.Panic respects NoColor in DefaultLogFormatter | review: review_required; mergeable: conflicting; not reported by API |
 | [`go-chi/chi#1126`](https://github.com/go-chi/chi/pull/1126) | closed | feat(middleware): add text/xml and application/xml to default compressible types | review: changes_requested; mergeable: mergeable; has failing/cancelled checks |
@@ -81,5 +83,5 @@
 - Update this ledger when an upstream PR/issue merges, closes, receives requested changes, or changes CI state materially.
 - Keep dynamic GitHub search URLs out of this file; use direct PR URLs for durable proof.
 - For Go upstream projects, this profile-maintenance pass only records public GitHub state; do not run `go test` or `go build` from this workflow.
-- For `github/docs`, do not open PRs for untriaged issues unless the issue has `help wanted` / maintainer confirmation; record premature closures as guardrail evidence, not proof.
+- For `github/docs`, do not open PRs for untriaged issues unless the issue has `help wanted` / maintainer confirmation; verify the proposed text addresses the exact issue discussion before opening a PR; record premature or mismatched closures as guardrail evidence, not proof.
 - Prefer source-linked facts over broad claims like “many upstream contributions”.

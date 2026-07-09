@@ -58,7 +58,7 @@ For this coverage table, do not infer completion from intention. Evidence should
 - `scripts/check_site_hygiene.py` for local/live project-page metadata, sitemap, and public repo-link hygiene;
 - security alert checks where the API is available.
 
-Latest broader check: `python3 scripts/check_public_links.py --scope profile --timeout 6` checked 252 public links across README, the technical proof index, the upstream contribution ledger, and core proof docs. Site metadata follow-up also verified canonical, OpenGraph image, Twitter card, JSON-LD, and refreshed sitemap `lastmod` coverage for changed project landing pages. The reusable site hygiene verifier checked 152 assertions with `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --expected-lastmod 2026-07-09 --live --timeout 8`.
+Latest broader check: `python3 scripts/check_public_links.py --scope profile --timeout 6` checked 254 public links across README, the technical proof index, the upstream contribution ledger, and core proof docs. Site metadata follow-up also verified canonical, OpenGraph image, Twitter card, JSON-LD, and refreshed sitemap `lastmod` coverage for changed project landing pages. The reusable site hygiene verifier checked 152 assertions with `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --expected-lastmod 2026-07-09 --live --timeout 8`.
 
 Latest coverage security sweep: 2026-07-09 checked open Dependabot and secret-scanning alerts for all repositories listed above; each returned `[]`. CodeQL open alerts were also `[]` for `happysnaker`, `qq-ai-bot`, and `RDLeader`, where analysis is configured.
 
