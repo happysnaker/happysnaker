@@ -23,6 +23,7 @@ The current flagship line is:
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |
 | `RDLeader` support route | <https://happysnaker.github.io/support/#from-rdleader> |
 | Full proof index | [technical-proof-index.md](technical-proof-index.md) |
+| Upstream contribution ledger | [upstream-contribution-ledger.md](upstream-contribution-ledger.md) |
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 
 ## Current sponsor notes
