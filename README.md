@@ -138,6 +138,7 @@ Public readiness note: `RDLeader` license posture is tracked separately in [RDLe
 If my open-source work, reusable templates, code contributions, or engineering assets save you time, you can support ongoing maintenance here.
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/) — WeChat Pay / Alipay QR codes live there
+- **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) — audit trail for which repos/pages route to the sponsor one-pager and support page
 - **If you came here from `qq-ai-bot`:** the cleanest support note is simply `qq-ai-bot`, and the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page
 - **Fastest low-friction tip:** `¥9.9` / `¥19.9` if one repo, checklist, or OSS fix saved you time
 - **Most useful paid entry:** **`¥29.9` quick read** for a blunt first-impression pass on your profile / repo / landing page — [review page](https://happysnaker.github.io/review/)
