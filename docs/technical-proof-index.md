@@ -50,6 +50,10 @@ Current evidence:
 - Support-funnel refresh CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28977581173>
 - Support-funnel refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28977581093>
 - Support-funnel refresh arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28977689490>
+- Ecosystem expansion refresh CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28996238878>
+- Ecosystem expansion refresh CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28996238891>
+- Ecosystem expansion refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28996238880>
+- Ecosystem expansion refresh arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28996310644>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
@@ -58,6 +62,11 @@ Current evidence:
 - Latest README state refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28959110697>
 - Main-branch arm64 image smoke workflow: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28965874894>
 - AwesomeHomelab listing PR: <https://github.com/AwesomeHomelab/awesome-homelab/pull/98>
+- NapCat Docker compose template merged: <https://github.com/NapNeko/NapCat-Docker/pull/132>
+- ACP community awesome list merged: <https://github.com/nMaroulis/awesome-agent-client-protocol/pull/2>
+- LLOneBot Nix integration PR: <https://github.com/LLOneBot/llonebot.nix/pull/22>
+- Haxxnet Compose example closed/deferred as too young: <https://github.com/Haxxnet/Compose-Examples/pull/137>
+- awesome-selfhosted issue closed/rule-deferred until release age is sufficient: <https://github.com/awesome-selfhosted/awesome-selfhosted-data/issues/2668>
 - Public OneBot ecosystem placement: <https://onebot.dev/ecosystem>
 - OneBot community discussion: <https://github.com/orgs/botuniverse/discussions/264>
 - Official ACP clients docs PR merged: <https://github.com/agentclientprotocol/agent-client-protocol/pull/1592>
@@ -195,7 +204,7 @@ Central board:
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md), including the paid [review page](https://happysnaker.github.io/review/) sponsor path ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/8e869fee9383832903e2a766510ce11c54ff4541))
-- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 213 public links across README, this technical proof index, and core proof docs.
+- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 222 public links across README, this technical proof index, and core proof docs.
 - Public site hygiene verifier: [scripts/check_site_hygiene.py](../scripts/check_site_hygiene.py) ([commit](https://github.com/happysnaker/happysnaker/commit/ef88985863a24042f5f8be35c0b2979e44441d71)); latest live run checked 152 site hygiene assertions across project-page metadata, sitemap, and public repo-link hygiene.
 
 Current sponsor targets are intentionally concrete:
