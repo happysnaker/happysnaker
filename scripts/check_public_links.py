@@ -17,6 +17,7 @@ CORE_FILES = [
 PROFILE_FILES = [
     ROOT / "README.md",
     ROOT / "docs" / "technical-proof-index.md",
+    ROOT / "docs" / "upstream-contribution-ledger.md",
     ROOT / "docs" / "sponsor-one-pager.md",
     ROOT / "docs" / "support-surface-coverage.md",
     ROOT / "docs" / "sponsorware-board.md",

@@ -173,13 +173,16 @@ What to look for:
 
 Recent upstream work is intentionally small but concrete: parser edge cases, retry semantics, CLI behavior, observability docs, and SDK/client correctness.
 
-Representative links:
+Stable ledger:
 
-- HashiCorp retryablehttp fixes: <https://github.com/hashicorp/go-retryablehttp/pulls?q=author%3Ahappysnaker>
-- Prometheus client/procfs work: <https://github.com/pulls?q=author%3Ahappysnaker+prometheus>
-- pflag fixes: <https://github.com/spf13/pflag/pulls?q=author%3Ahappysnaker>
-- urfave/cli work: <https://github.com/urfave/cli/pulls?q=author%3Ahappysnaker>
-- GitHub CLI work: <https://github.com/cli/cli/pulls?q=author%3Ahappysnaker>
+- [Upstream contribution ledger](upstream-contribution-ledger.md) — direct PR URLs, current merged/open/closed state, and CI/review notes for tracked upstream work.
+
+Representative shipped examples from the ledger:
+
+- `spf13/pflag`: nil IP defaults, hex `UintSlice`, custom `IsBoolFlag` compatibility, SortFlags docs, and release-process docs.
+- `cli/cli`: search docs and `gh skill install --dir` behavior.
+- `go-chi/chi`: XML compression media types landed through the follow-up PR.
+- `rclone/rclone`: `copyto` command description clarified.
 
 Review lens:
 
@@ -204,7 +207,7 @@ Central board:
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md), including the paid [review page](https://happysnaker.github.io/review/) sponsor path ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/8e869fee9383832903e2a766510ce11c54ff4541))
-- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 222 public links across README, this technical proof index, and core proof docs.
+- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 239 public links across README, this technical proof index, the upstream contribution ledger, and core proof docs.
 - Public site hygiene verifier: [scripts/check_site_hygiene.py](../scripts/check_site_hygiene.py) ([commit](https://github.com/happysnaker/happysnaker/commit/ef88985863a24042f5f8be35c0b2979e44441d71)); latest live run checked 152 site hygiene assertions across project-page metadata, sitemap, and public repo-link hygiene.
 
 Current sponsor targets are intentionally concrete:

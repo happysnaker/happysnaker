@@ -71,7 +71,7 @@ For sponsor/proof link hygiene, run the narrower external link check manually wh
 
 ```bash
 python3 scripts/check_public_links.py
-# Use --scope profile for README + technical proof index + core proof docs, or --scope all for a slower full-doc sweep.
+# Use --scope profile for README + technical proof index + upstream ledger + core proof docs, or --scope all for a slower full-doc sweep.
 ```
 
 For public site / project-page hygiene after changing `happysnaker.github.io`, run the site hygiene verifier from this profile repo:
@@ -150,6 +150,7 @@ Do not claim “done” for broad goals unless current evidence proves all requi
 ## Current operating surfaces
 
 - Technical proof index: <https://github.com/happysnaker/happysnaker/blob/master/docs/technical-proof-index.md>
+- Upstream contribution ledger: <https://github.com/happysnaker/happysnaker/blob/master/docs/upstream-contribution-ledger.md>
 - Sponsorware board: <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager release: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager>
 - Support surface coverage: <https://github.com/happysnaker/happysnaker/blob/master/docs/support-surface-coverage.md>
