@@ -58,4 +58,6 @@ For this coverage table, do not infer completion from intention. Evidence should
 
 Latest broader check: `python3 scripts/check_public_links.py --scope profile --timeout 6` checked 128 public links across README and core proof docs.
 
+Latest coverage security sweep: 2026-07-09 checked open Dependabot and secret-scanning alerts for all repositories listed above; each returned `[]`. CodeQL open alerts were also `[]` for `happysnaker`, `qq-ai-bot`, and `RDLeader`, where analysis is configured.
+
 Known caveat: some older repos do not have CodeQL analysis configured. Do not describe those as “CodeQL clean”; describe only the checks that were actually available, such as Dependabot and secret-scanning alert state.
