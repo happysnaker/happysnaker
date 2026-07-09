@@ -54,7 +54,7 @@ Use concrete payment notes instead of a vague donation label:
 - Proof-ladder pre-release: <https://github.com/happysnaker/RDLeader/releases/tag/v0.1.1-public-proof-ladder>
 - Public distribution kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md>
 - Public submission tracker: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md>
-- External PRs are open and mergeable in autonomous-agent / coding-agent lists, with the public project page now linked in the PR bodies.
+- External distribution now has one merged coding-agent awesome-list PR and one still-open autonomous-agent PR, with the public project page linked in both PR bodies.
 - Security hardening and dependency remediation are documented in the proof index.
 
 ## Why support helps

@@ -56,7 +56,7 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 | `RDLeader` | Public submission and follow-up tracker | [submission-tracker.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md), [#21](https://github.com/happysnaker/RDLeader/issues/21) |
 | `RDLeader` | Public submission batch 1 | [release](https://github.com/happysnaker/RDLeader/releases/tag/v0.1.1-public-proof-ladder), [discussion #23](https://github.com/happysnaker/RDLeader/discussions/23), [#22](https://github.com/happysnaker/RDLeader/issues/22) |
 | `RDLeader` | Public submission batch 2 | [Q&A #25](https://github.com/happysnaker/RDLeader/discussions/25), [profile release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-rdleader-demo-kit), [#24](https://github.com/happysnaker/RDLeader/issues/24) |
-| `RDLeader` | External/community submission batch | [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20), [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13), [#26](https://github.com/happysnaker/RDLeader/issues/26) |
+| `RDLeader` | External/community submission batch | [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13) merged; [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20) remains open; [#26](https://github.com/happysnaker/RDLeader/issues/26) |
 | `RDLeader` | Next sponsorware slice opened: external submission review follow-up | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 
 ## What sponsorship funds

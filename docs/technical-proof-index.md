@@ -97,7 +97,7 @@ Public surfaces:
 - Public demo Q&A: <https://github.com/happysnaker/RDLeader/discussions/25>
 - Profile proof-hub release for RDLeader demo kit: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-rdleader-demo-kit>
 - External PR: awesome-autonomous-agents: <https://github.com/jbesomi/awesome-autonomous-agents/pull/20>
-- External PR: awesome-coding-agents: <https://github.com/kailiu42/awesome-coding-agents/pull/13>
+- External PR merged: awesome-coding-agents: <https://github.com/kailiu42/awesome-coding-agents/pull/13>
 - Promo kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md>
 - License / reuse note: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision.md>
 - License decision packet: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md>
@@ -148,7 +148,7 @@ Current evidence:
 - Public submission/follow-up tracker sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/21> (closed with tracker and follow-up checklist)
 - Public submission batch 1 sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/22> (closed with proof-ladder release and Show-and-tell discussion)
 - Public submission batch 2 sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/24> (closed with public demo Q&A and profile proof-hub release)
-- External/community submission sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/26> (closed with two external awesome-list PRs)
+- External/community submission sponsorware slice: <https://github.com/happysnaker/RDLeader/issues/26> (closed with one merged coding-agent awesome-list PR and one still-open autonomous-agent PR)
 - Next sponsorware slice: external submission review follow-up: <https://github.com/happysnaker/RDLeader/issues/27>
 
 What to look for:
@@ -199,7 +199,7 @@ Central board:
 Current sponsor targets are intentionally concrete:
 
 - `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, support-funnel refresh, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
-- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, public project page, support-funnel refresh, narrated video, distribution kit, submission tracker, two submission batches, external awesome-list PRs, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
+- `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, public project page, support-funnel refresh, narrated video, distribution kit, submission tracker, two submission batches, one merged coding-agent awesome-list PR, one open autonomous-agent PR, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
 
