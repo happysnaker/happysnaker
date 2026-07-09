@@ -74,7 +74,20 @@ python3 scripts/check_public_links.py
 # Use --scope profile for README + core proof docs, or --scope all for a slower full-doc sweep.
 ```
 
-Do not put the external link check in CI unless flakiness is acceptable; it depends on GitHub Pages, GitHub HTML, and third-party network responses.
+For public site / project-page hygiene after changing `happysnaker.github.io`, run the site hygiene verifier from this profile repo:
+
+```bash
+python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --expected-lastmod 2026-07-09 --live --timeout 8
+```
+
+What it checks:
+
+- local and live canonical / OpenGraph / Twitter Card / JSON-LD metadata on support, review, flagship, and project landing pages;
+- `robots.txt` sitemap pointer and sitemap entries / optional `lastmod`;
+- public-site links to `happysnaker/*` repositories resolve to public repositories;
+- legacy unavailable repository URLs such as old private project CTAs stay out of public pages.
+
+Do not put the external live checks in CI unless flakiness is acceptable; they depend on GitHub Pages, GitHub HTML, and third-party network responses.
 
 Then verify profile CI passes after any docs change.
 
