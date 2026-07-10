@@ -13,10 +13,12 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE_FILES = [
     ROOT / "docs" / "sponsor-one-pager.md",
     ROOT / "docs" / "support-surface-coverage.md",
+    ROOT / "docs" / "flagship-status-snapshot.md",
 ]
 PROFILE_FILES = [
     ROOT / "README.md",
     ROOT / "docs" / "technical-proof-index.md",
+    ROOT / "docs" / "flagship-status-snapshot.md",
     ROOT / "docs" / "upstream-contribution-ledger.md",
     ROOT / "docs" / "sponsor-one-pager.md",
     ROOT / "docs" / "support-surface-coverage.md",

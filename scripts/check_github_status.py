@@ -6,6 +6,7 @@ import json
 import subprocess
 import sys
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Any
 
 
@@ -97,10 +98,88 @@ def alert_count(repo: str, endpoint: str) -> int:
     return len(result)
 
 
+def markdown_link(label: str, url: str | None) -> str:
+    return f"[{label}]({url})" if url else label
+
+
+def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) -> str:
+    lines = [
+        "# Flagship GitHub status snapshot",
+        "",
+        f"> Generated from `scripts/check_github_status.py --markdown` on {as_of}.",
+        "",
+        "This is a point-in-time proof snapshot for sponsor, curator, and reviewer links. It covers the configured flagship surfaces only; do not generalize the CodeQL claim to older repositories without CodeQL configured.",
+        "",
+        "## Workflow state",
+        "",
+        "| Repo | Workflow | Status | Commit | Proof |",
+        "|---|---|---|---|---|",
+    ]
+
+    for repo, data in summary.items():
+        for workflow, run in data["workflows"].items():
+            if run is None:
+                lines.append(f"| `{repo}` | {workflow} | missing | - | - |")
+                continue
+            status = f"{run['status']} / {run['conclusion']}"
+            sha = f"`{run['sha']}`" if run.get("sha") else "-"
+            proof = markdown_link("run", run.get("url"))
+            lines.append(f"| `{repo}` | {workflow} | {status} | {sha} | {proof} |")
+
+    lines.extend([
+        "",
+        "## Configured alert state",
+        "",
+        "| Repo | CodeQL open | Dependabot open | Secret scanning open |",
+        "|---|---:|---:|---:|",
+    ])
+
+    for repo, data in summary.items():
+        alerts = data.get("alerts") or {}
+        if not alerts:
+            continue
+        lines.append(
+            f"| `{repo}` | {alerts.get('codeql')} | {alerts.get('dependabot')} | {alerts.get('secret')} |"
+        )
+
+    lines.extend([
+        "",
+        "## Current support routing",
+        "",
+        "- Main support page: <https://happysnaker.github.io/support/>",
+        "- Current concrete asks: <https://happysnaker.github.io/support/#current-asks>",
+        "- `qq-ai-bot #26 arm64`: <https://github.com/happysnaker/qq-ai-bot/issues/26>",
+        "- `RDLeader #27`: <https://github.com/happysnaker/RDLeader/issues/27>",
+        "- Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md)",
+        "- Technical proof index: [technical-proof-index.md](technical-proof-index.md)",
+        "",
+        "## Caveats",
+        "",
+        "- `qq-ai-bot` has green QEMU / workflow arm64 smoke evidence, but still needs a real physical ARM / CasaOS / NAS / SBC host report before claiming physical-host validation.",
+        "- RDLeader currently exposes clean configured CodeQL / Dependabot / secret-scanning state, but its license posture is still tracked separately and should not be over-claimed.",
+        "- External PRs should be followed through the scheduled queue instead of repeated unsourced bumps: [external-follow-up-queue.md](external-follow-up-queue.md).",
+    ])
+
+    if failures:
+        lines.extend(["", "## Failures", ""])
+        lines.extend(f"- {failure}" for failure in failures)
+
+    return "\n".join(lines) + "\n"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check flagship GitHub workflow and alert state.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON summary.")
+    parser.add_argument("--markdown", action="store_true", help="Emit a shareable Markdown proof snapshot.")
+    parser.add_argument(
+        "--as-of",
+        default=datetime.now().astimezone().strftime("%Y-%m-%d %Z"),
+        help="Timestamp label for --markdown output.",
+    )
     args = parser.parse_args()
+
+    if args.json and args.markdown:
+        parser.error("--json and --markdown are mutually exclusive")
 
     failures: list[str] = []
     summary: dict[str, Any] = {}
@@ -148,6 +227,8 @@ def main() -> int:
 
     if args.json:
         print(json.dumps({"ok": not failures, "summary": summary, "failures": failures}, indent=2, ensure_ascii=False))
+    elif args.markdown:
+        print(format_markdown(summary, failures, args.as_of), end="")
     else:
         for repo, data in summary.items():
             print(f"## {repo} ({data['branch']})")

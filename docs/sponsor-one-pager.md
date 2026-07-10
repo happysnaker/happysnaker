@@ -19,6 +19,7 @@ Current proof snapshot:
 - `qq-ai-bot` latest CI / CodeQL / Docker publish / arm64 smoke are green.
 - `RDLeader` latest CI / CodeQL are green.
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
+- Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
 
 ## Best links to share
 
@@ -30,6 +31,7 @@ Current proof snapshot:
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |
 | `RDLeader` support route | <https://happysnaker.github.io/support/#from-rdleader> |
 | Full proof index | [technical-proof-index.md](technical-proof-index.md) |
+| Flagship status snapshot | [flagship-status-snapshot.md](flagship-status-snapshot.md) |
 | Upstream contribution ledger | [upstream-contribution-ledger.md](upstream-contribution-ledger.md) |
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
