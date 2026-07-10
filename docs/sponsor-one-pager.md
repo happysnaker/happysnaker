@@ -44,6 +44,7 @@ Use concrete payment notes instead of a vague donation label:
 
 - Stable release `v0.1.7`: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.7>
 - Public project page: <https://happysnaker.github.io/qq-ai-bot/>
+- Support issue: <https://github.com/happysnaker/qq-ai-bot/issues/28>
 - Ecosystem tracker: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md>
 - Promo kit / review follow-up snippets: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Arm64 / CasaOS tester pack: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md>
