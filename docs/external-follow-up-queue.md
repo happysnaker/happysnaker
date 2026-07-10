@@ -14,13 +14,28 @@ Tracking issue: <https://github.com/happysnaker/happysnaker/issues/2>.
 - Do not claim physical ARM / CasaOS validation until a real physical-host report lands.
 - Do not imply RDLeader reuse rights until <https://github.com/happysnaker/RDLeader/issues/3> is resolved.
 
+
+## Latest audit snapshot: 2026-07-11 Asia/Shanghai / 2026-07-10 UTC
+
+Current audit result:
+
+- `qq-ai-bot`, `RDLeader`, `happysnaker`, and `happysnaker.github.io` working trees were clean at audit time.
+- `qq-ai-bot` latest CI / CodeQL / Docker publish / arm64 smoke were successful.
+- `RDLeader` latest CI / CodeQL were successful.
+- `happysnaker` profile CI / CodeQL were successful.
+- `happysnaker.github.io` latest Pages deploy was successful.
+- `qq-ai-bot` and `RDLeader` open CodeQL / Dependabot / secret-scanning alerts were all `0`.
+- No new maintainer feedback was found on the tracked external PRs during this audit.
+- No real physical ARM / CasaOS / NAS / SBC report had landed for `qq-ai-bot#26` during this audit.
+- Decision: do not post external follow-up now; keep the next planned review on 2026-07-16 unless a maintainer or tester replies earlier.
+
 ## Next scheduled review: 2026-07-16
 
 Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies.
 
 ### qq-ai-bot surfaces
 
-| Surface | Current state checked 2026-07-10 | Next action on 2026-07-16 | Follow-up material |
+| Surface | Current state checked 2026-07-11 | Next action on 2026-07-16 | Follow-up material |
 |---|---|---|---|
 | [docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781) | open / mergeable; DCO success; review required | If still review-required and no maintainer reply, one short update is acceptable only if it links the project page, stable image, latest Docker publish, and tester pack. Otherwise stay quiet. | [promo kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md), [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md) |
 | [Cp0204/CasaOS-AppStore-Play#42](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42) | open / mergeable; no checks; no maintainer feedback | If still open, update only if a real tester report lands or maintainer asks. Otherwise keep waiting because physical CasaOS validation is still missing. | [tester pack](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md) |
@@ -32,7 +47,7 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 
 ### RDLeader surfaces
 
-| Surface | Current state checked 2026-07-10 | Next action on 2026-07-16 | Follow-up material |
+| Surface | Current state checked 2026-07-11 | Next action on 2026-07-16 | Follow-up material |
 |---|---|---|---|
 | [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20) | open / mergeable; no checks; no maintainer feedback | If still open and no feedback, use the security-proof snippet only once, or stay quiet if the PR was recently touched by maintainers. | [RDLeader promo kit](https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md), [project page](https://happysnaker.github.io/rdleader/) |
 | [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13) | merged; validate-catalog success | No action. Keep as proof surface only. | [submission tracker](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md) |
@@ -53,7 +68,7 @@ for spec in \
   'kailiu42/awesome-coding-agents 13'; do
   set -- $spec
   gh pr view "$2" -R "$1" --json number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup
- done
+done
 
 # Flagship alert state
 gh api repos/happysnaker/qq-ai-bot/code-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
