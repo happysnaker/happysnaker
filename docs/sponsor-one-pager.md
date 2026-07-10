@@ -57,7 +57,7 @@ Use concrete payment notes instead of a vague donation label:
 - Public distribution kit: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md>
 - Public submission tracker: <https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md>
 - External distribution now has one merged coding-agent awesome-list PR and one still-open autonomous-agent PR, with the public project page linked in both PR bodies.
-- Security hardening and dependency remediation are documented in the proof index; latest runtime path hardening passed CI / CodeQL and reduced open CodeQL `js/path-injection` alerts from 30 to 22.
+- Security hardening and dependency remediation are documented in the proof index; latest runtime path hardening, canonical employee-id routing, and Fastify rate limiting passed CI / CodeQL and reduced RDLeader open CodeQL alerts from 30 to 0.
 
 ## Why support helps
 
