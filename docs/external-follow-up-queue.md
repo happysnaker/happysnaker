@@ -1,0 +1,75 @@
+# External Follow-up Queue
+
+> Purpose: keep ecosystem PRs, discussions, tester calls, and sponsor/support updates moving without noisy repeated bumps. Use this queue before posting any external follow-up.
+
+Tracking issue: <https://github.com/happysnaker/happysnaker/issues/2>.
+
+## Rules
+
+- Recheck current state before any comment or PR-body edit.
+- Do not comment externally if there is no maintainer feedback, no failed check, and no new public proof relevant to that surface.
+- Prefer updating internal trackers over bumping external maintainers.
+- Keep every follow-up source-linked and short.
+- Do not paste private QQ data, OneBot tokens, app IDs, chat IDs, open IDs, QR screenshots, private paths, raw live logs, or payment screenshots.
+- Do not claim physical ARM / CasaOS validation until a real physical-host report lands.
+- Do not imply RDLeader reuse rights until <https://github.com/happysnaker/RDLeader/issues/3> is resolved.
+
+## Next scheduled review: 2026-07-16
+
+Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies.
+
+### qq-ai-bot surfaces
+
+| Surface | Current state checked 2026-07-10 | Next action on 2026-07-16 | Follow-up material |
+|---|---|---|---|
+| [docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781) | open / mergeable; DCO success; review required | If still review-required and no maintainer reply, one short update is acceptable only if it links the project page, stable image, latest Docker publish, and tester pack. Otherwise stay quiet. | [promo kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md), [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md) |
+| [Cp0204/CasaOS-AppStore-Play#42](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42) | open / mergeable; no checks; no maintainer feedback | If still open, update only if a real tester report lands or maintainer asks. Otherwise keep waiting because physical CasaOS validation is still missing. | [tester pack](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md) |
+| [getumbrel/umbrel-apps#5834](https://github.com/getumbrel/umbrel-apps/pull/5834) | open / mergeable; lint success; no maintainer feedback | Recheck lint / mergeability. Do not comment unless maintainer asks or checks regress. | [project page](https://happysnaker.github.io/qq-ai-bot/), [ecosystem tracker](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md) |
+| [AwesomeHomelab#98](https://github.com/AwesomeHomelab/awesome-homelab/pull/98) | open / mergeable; no checks; no maintainer feedback | If still no feedback, one short homelab-focused update may be useful, but only after confirming the tester pack and project page still render. | [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md) |
+| [LLOneBot/LuckyLilliaDoc#20](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) | open / mergeable; Sourcery success; no maintainer feedback | Do not bump unless maintainer replies. This is docs, not a support emergency. | [promo kit LLOneBot snippet](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md) |
+| [LLOneBot/llonebot.nix#22](https://github.com/LLOneBot/llonebot.nix/pull/22) | open / mergeable; Sourcery success; no maintainer feedback | Do not bump unless maintainer replies or checks change. | [promo kit LLOneBot snippet](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md) |
+| [qq-ai-bot#26](https://github.com/happysnaker/qq-ai-bot/issues/26) | open; QEMU smoke green; tester pack + outreach kit published; no physical-host report yet | Check for new issue/discussion reports. If none, keep issue open and avoid claiming completion. | [tester pack](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md), [outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md) |
+
+### RDLeader surfaces
+
+| Surface | Current state checked 2026-07-10 | Next action on 2026-07-16 | Follow-up material |
+|---|---|---|---|
+| [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20) | open / mergeable; no checks; no maintainer feedback | If still open and no feedback, use the security-proof snippet only once, or stay quiet if the PR was recently touched by maintainers. | [RDLeader promo kit](https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md), [project page](https://happysnaker.github.io/rdleader/) |
+| [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13) | merged; validate-catalog success | No action. Keep as proof surface only. | [submission tracker](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md) |
+| [RDLeader#27](https://github.com/happysnaker/RDLeader/issues/27) | open; copy kit and submission tracker updated | Update only when an external PR receives feedback or a scheduled recheck finds a meaningful status change. | [submission tracker](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md) |
+
+## Commands for the scheduled check
+
+```bash
+# External PR state
+for spec in \
+  'docker/awesome-compose 781' \
+  'Cp0204/CasaOS-AppStore-Play 42' \
+  'getumbrel/umbrel-apps 5834' \
+  'AwesomeHomelab/awesome-homelab 98' \
+  'LLOneBot/LuckyLilliaDoc 20' \
+  'LLOneBot/llonebot.nix 22' \
+  'jbesomi/awesome-autonomous-agents 20' \
+  'kailiu42/awesome-coding-agents 13'; do
+  set -- $spec
+  gh pr view "$2" -R "$1" --json number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup
+ done
+
+# Flagship alert state
+gh api repos/happysnaker/qq-ai-bot/code-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
+gh api repos/happysnaker/qq-ai-bot/dependabot/alerts --jq '[.[] | select(.state=="open")] | length'
+gh api repos/happysnaker/qq-ai-bot/secret-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
+gh api repos/happysnaker/RDLeader/code-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
+gh api repos/happysnaker/RDLeader/dependabot/alerts --jq '[.[] | select(.state=="open")] | length'
+gh api repos/happysnaker/RDLeader/secret-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
+```
+
+## Evidence to record after the scheduled check
+
+- current PR state and checks;
+- whether any external maintainer replied;
+- whether a real ARM / CasaOS physical-host report landed;
+- whether any flagship alert count became non-zero;
+- whether a new external comment was actually posted, or why no comment was posted.
+
+Record the outcome in <https://github.com/happysnaker/happysnaker/issues/2> and update project trackers only if the state changed.

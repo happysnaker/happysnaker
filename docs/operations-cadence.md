@@ -40,7 +40,15 @@ Evidence to record:
 - newly completed or funded work
 - next concrete sponsor package
 
-### 3. Technical proof index
+### 3. External follow-up queue
+
+Before posting any external PR / discussion / community follow-up, check the queue:
+
+- [external-follow-up-queue.md](external-follow-up-queue.md)
+
+The queue records the next scheduled review date, current PR state, allowed follow-up material, and the conditions for staying quiet.
+
+### 4. Technical proof index
 
 Update `docs/technical-proof-index.md` when any of these change:
 
@@ -50,7 +58,7 @@ Update `docs/technical-proof-index.md` when any of these change:
 - upstream PRs that materially change the proof story
 - dependency maintenance posture
 
-### 4. Portfolio hygiene
+### 5. Portfolio hygiene
 
 Check:
 
@@ -59,7 +67,7 @@ Check:
 - parked repos still should remain parked
 - newly created repos have license / support / security posture appropriate to their role
 
-### 5. Public docs integrity
+### 6. Public docs integrity
 
 Run:
 
@@ -151,6 +159,7 @@ Do not claim “done” for broad goals unless current evidence proves all requi
 
 - Technical proof index: <https://github.com/happysnaker/happysnaker/blob/master/docs/technical-proof-index.md>
 - Upstream contribution ledger: <https://github.com/happysnaker/happysnaker/blob/master/docs/upstream-contribution-ledger.md>
+- External follow-up queue: [external-follow-up-queue.md](external-follow-up-queue.md)
 - Sponsorware board: <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager release: <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager>
 - Support surface coverage: <https://github.com/happysnaker/happysnaker/blob/master/docs/support-surface-coverage.md>
