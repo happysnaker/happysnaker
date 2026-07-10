@@ -48,7 +48,7 @@ Use concrete payment notes instead of a vague donation label:
 - Promo kit / review follow-up snippets: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Arm64 / CasaOS tester pack: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md>
 - Homelab / CasaOS outreach kit: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md>
-- Arm64 image smoke workflow is live; the latest tester/outreach refresh passed CI, CodeQL, Docker publish, arm64 smoke, and is now surfaced from the public project page.
+- Arm64 image smoke workflow is live; the latest tester/outreach refresh passed CI, CodeQL, Docker publish, arm64 smoke, and the project page now exposes both the tester path and copy/paste homelab outreach snippet.
 - External surfaces include OneBot ecosystem placement, merged NapCat docs, merged NapCat Docker template, merged ACP clients docs, merged ACP community awesome-list entry, and open LLOneBot / Docker Compose / CasaOS / Umbrel / AwesomeHomelab PRs.
 - Shipped sponsorware slices include latency histograms (`v0.1.5`) and Postgres session store (`v0.1.6`).
 

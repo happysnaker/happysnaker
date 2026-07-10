@@ -76,6 +76,7 @@ Current evidence:
 - Homelab / CasaOS outreach kit Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776459>
 - Homelab / CasaOS outreach kit arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29102901202>
 - qq-ai-bot project-page tester path Pages deploy: <https://github.com/happysnaker/happysnaker.github.io/actions/runs/29101759975>
+- qq-ai-bot project-page outreach snippet Pages deploy: <https://github.com/happysnaker/happysnaker.github.io/actions/runs/29103814071>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
@@ -247,7 +248,7 @@ Central board:
 
 Current sponsor targets are intentionally concrete:
 
-- `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, a tester pack, a homelab outreach kit, project-page tester path, support-funnel refresh, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
+- `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, a tester pack, a homelab outreach kit, project-page tester path, project-page copy/paste outreach snippet, support-funnel refresh, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
 - `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, public project page, support-funnel refresh, narrated video, distribution kit, submission tracker, two submission batches, one merged coding-agent awesome-list PR, one open autonomous-agent PR, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
