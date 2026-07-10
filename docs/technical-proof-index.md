@@ -157,6 +157,10 @@ Current evidence:
 - CodeQL after project-page distribution kit update: <https://github.com/happysnaker/RDLeader/actions/runs/28976906233>
 - Public CI after RDLeader support-funnel refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28977419611>
 - CodeQL after RDLeader support-funnel refresh: <https://github.com/happysnaker/RDLeader/actions/runs/28977419605>
+- CI restored after DevPlan feature-bundle publish / public docs gate repair: <https://github.com/happysnaker/RDLeader/actions/runs/29092788671>
+- CodeQL after DevPlan feature-bundle publish / public docs gate repair: <https://github.com/happysnaker/RDLeader/actions/runs/29092788589>
+- CI after drizzle-orm advisory remediation: <https://github.com/happysnaker/RDLeader/actions/runs/29092989950>
+- CodeQL after drizzle-orm advisory remediation: <https://github.com/happysnaker/RDLeader/actions/runs/29092989978>
 - Public packaging / DevPlan sanitization tracker: <https://github.com/happysnaker/RDLeader/issues/1>
 - Public-safe demo sponsorware tracker: <https://github.com/happysnaker/RDLeader/issues/2> (closed with a rendered public walkthrough video)
 - License hygiene tracker: <https://github.com/happysnaker/RDLeader/issues/3> (now has a decision packet; final owner choice still open)
@@ -210,7 +214,7 @@ Both current flagship repos have public, grouped dependency-maintenance config a
 Profile docs now have public CI for local link integrity and sensitive-pattern checks, CodeQL for Python tooling, a manual public-link checker for sponsor/proof URLs, a reusable site hygiene verifier for project-page metadata / sitemap / public-repo-link checks, and repository secret scanning / push protection enabled. Latest profile tooling run: [CI](https://github.com/happysnaker/happysnaker/actions/runs/28994249998) and [CodeQL](https://github.com/happysnaker/happysnaker/actions/runs/28994250007).
 
 - `qq-ai-bot`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. The grouped npm-development PR [#42](https://github.com/happysnaker/qq-ai-bot/pull/42) merged on 2026-07-08 with passing CI; the older individual Dependabot PRs [#31](https://github.com/happysnaker/qq-ai-bot/pull/31)-[#40](https://github.com/happysnaker/qq-ai-bot/pull/40) are closed/superseded. Latest post-merge evidence: [CI](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955760), [CodeQL](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955689), [Docker publish](https://github.com/happysnaker/qq-ai-bot/actions/runs/28988955703), and [arm64 image smoke](https://github.com/happysnaker/qq-ai-bot/actions/runs/28989034477).
-- `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. The grouped npm-development PR [#13](https://github.com/happysnaker/RDLeader/pull/13) merged on 2026-07-08 with passing CI. Latest post-merge evidence: [CI](https://github.com/happysnaker/RDLeader/actions/runs/28988111295) and [CodeQL](https://github.com/happysnaker/RDLeader/actions/runs/28988111304).
+- `RDLeader`: npm and GitHub Actions Dependabot updates are grouped to reduce PR/job noise. The grouped npm-development PR [#13](https://github.com/happysnaker/RDLeader/pull/13) merged on 2026-07-08 with passing CI. Latest maintenance evidence: [CI restored after DevPlan feature-bundle publish](https://github.com/happysnaker/RDLeader/actions/runs/29092788671), [CodeQL](https://github.com/happysnaker/RDLeader/actions/runs/29092788589), [drizzle-orm advisory remediation CI](https://github.com/happysnaker/RDLeader/actions/runs/29092989950), and [post-remediation CodeQL](https://github.com/happysnaker/RDLeader/actions/runs/29092989978).
 
 ## Sponsorware / support proof
 
