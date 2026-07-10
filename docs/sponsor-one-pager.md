@@ -2,7 +2,7 @@
 
 > A short, source-linked sponsor brief for `happysnaker` projects. Use this when someone asks what to support, what proof exists, or which link to share.
 
-Snapshot: 2026-07-09 Asia/Shanghai.
+Snapshot: 2026-07-11 Asia/Shanghai.
 
 ## Short pitch
 
@@ -12,6 +12,13 @@ The current flagship line is:
 
 - [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) — self-hosted QQ / OneBot / NapCat / LLOneBot bridge for ACP-compatible agents, with sessions, progress streaming, metrics, Docker, multi-arch image publishing, and arm64 smoke evidence.
 - [`RDLeader`](https://github.com/happysnaker/RDLeader) — local-first AI R&D worker control plane with task ownership, runtime dispatch, approval gates, fake-data demos, public QA evidence, and external submission follow-up.
+
+Current proof snapshot:
+
+- `qq-ai-bot` and `RDLeader` currently have `0` open CodeQL / Dependabot / secret-scanning alerts.
+- `qq-ai-bot` latest CI / CodeQL / Docker publish / arm64 smoke are green.
+- `RDLeader` latest CI / CodeQL are green.
+- Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
 
 ## Best links to share
 
@@ -24,6 +31,7 @@ The current flagship line is:
 | `RDLeader` support route | <https://happysnaker.github.io/support/#from-rdleader> |
 | Full proof index | [technical-proof-index.md](technical-proof-index.md) |
 | Upstream contribution ledger | [upstream-contribution-ledger.md](upstream-contribution-ledger.md) |
+| Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 
 ## Current sponsor notes

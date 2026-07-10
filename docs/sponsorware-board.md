@@ -4,6 +4,8 @@
 
 Support page: <https://happysnaker.github.io/support/>
 
+Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
+
 Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 
 Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
@@ -34,7 +36,7 @@ If you are not sure which item fits, use `open-source maintenance` or the projec
 |---|---|---|---|
 | `qq-ai-bot` | End-to-end latency histograms | **shipped in [v0.1.5](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.5)** | [#23](https://github.com/happysnaker/qq-ai-bot/issues/23) |
 | `qq-ai-bot` | Postgres session store | **shipped in [v0.1.6](https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6)** | [#24](https://github.com/happysnaker/qq-ai-bot/issues/24) |
-| `qq-ai-bot` | arm64 / CasaOS validation | Multi-arch image evidence, arm64 compose override, smoke script, GitHub Actions QEMU arm64 smoke including v0.1.7 tag evidence, AwesomeHomelab PR tracking, and report template documented; real CasaOS/arm64 install report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
+| `qq-ai-bot` | arm64 / CasaOS validation | Multi-arch image evidence, arm64 compose override, smoke script, GitHub Actions QEMU arm64 smoke including v0.1.7 tag evidence, tester pack, homelab outreach kit, project-page tester path, support issue #28, AwesomeHomelab PR tracking, and report template documented; real CasaOS/arm64 install report still open | [#26](https://github.com/happysnaker/qq-ai-bot/issues/26) |
 | `RDLeader` | External submission review follow-up | Monitor and respond to external PR review feedback | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 | `RDLeader` | DevPlan bundle sanitization | Split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 

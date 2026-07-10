@@ -2,7 +2,7 @@
 
 > Public checklist showing which high-signal repositories route visitors to support pages, the frozen sponsor one-pager, and GitHub About metadata. This keeps sponsor routing auditable instead of hidden in one-off issue comments.
 
-Snapshot: 2026-07-09 Asia/Shanghai.
+Snapshot: 2026-07-11 Asia/Shanghai.
 
 ## Canonical support assets
 
