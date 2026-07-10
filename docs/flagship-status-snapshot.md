@@ -8,8 +8,8 @@ This is a point-in-time proof snapshot for sponsor, curator, and reviewer links.
 
 | Repo | Workflow | Status | Commit | Proof |
 |---|---|---|---|---|
-| `happysnaker/happysnaker` | CI | completed / success | `c94c542` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29114730041) |
-| `happysnaker/happysnaker` | CodeQL | completed / success | `c94c542` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29114730043) |
+| `happysnaker/happysnaker` | CI | completed / success | `fcea257` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29116340114) |
+| `happysnaker/happysnaker` | CodeQL | completed / success | `fcea257` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29116339969) |
 | `happysnaker/qq-ai-bot` | CI | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776397) |
 | `happysnaker/qq-ai-bot` | CodeQL | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776374) |
 | `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776459) |
