@@ -30,6 +30,7 @@ Public surfaces:
 - Metadata is aligned for GitHub search/profile cards: bot-infrastructure, metrics, multi-instance, sponsorware.
 - Multi-instance notes: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/multi-instance-notes.md>
 - Deployment validation: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/deployment-validation.md>
+- arm64 / CasaOS tester pack: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md>
 - arm64 / CasaOS install report template: <https://github.com/happysnaker/qq-ai-bot/blob/main/.github/ISSUE_TEMPLATE/arm64_casaos_report.md>
 - arm64 Compose override: <https://github.com/happysnaker/qq-ai-bot/blob/main/docker-compose.arm64.yml>
 - Reusable arm64 image smoke script: <https://github.com/happysnaker/qq-ai-bot/blob/main/scripts/smoke-arm64-image.sh>
@@ -66,6 +67,10 @@ Current evidence:
 - Support proof-link refresh CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072149862>
 - Support proof-link refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072149756>
 - Support proof-link refresh arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072241215>
+- Arm64 / CasaOS tester pack CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29100637570>
+- Arm64 / CasaOS tester pack CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29100637607>
+- Arm64 / CasaOS tester pack Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29100637608>
+- Arm64 / CasaOS tester pack arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29100777408>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
@@ -237,7 +242,7 @@ Central board:
 
 Current sponsor targets are intentionally concrete:
 
-- `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, support-funnel refresh, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
+- `qq-ai-bot`: arm64 / CasaOS validation remains open for a physical host report, but multi-arch GHCR image evidence, an arm64 Compose override, an install report template, a reusable smoke script, a tester pack, support-funnel refresh, and passing GitHub Actions QEMU arm64 smoke runs are documented, including v0.1.7 tag evidence; latency histograms shipped in v0.1.5 and Postgres session store shipped in v0.1.6;
 - `RDLeader`: public-safe demo walkthrough, runtime/approval deep dive, one-command demo reset, employee-agent onboarding, browser walkthrough, landing-page copy, public project page, support-funnel refresh, narrated video, distribution kit, submission tracker, two submission batches, one merged coding-agent awesome-list PR, one open autonomous-agent PR, CodeQL hardening, and Dependabot advisory remediation are shipped; next sponsorable slices are review follow-up, DevPlan bundle sanitization, and license posture resolution.
 
 Support page:
