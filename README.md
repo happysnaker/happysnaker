@@ -4,6 +4,8 @@
 
 > 💛 **Sponsorware + 开源支持：** 当前可赞助任务见下方 **Current sponsorware board**；[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) / [RDLeader](https://github.com/happysnaker/RDLeader) 都在公开推进。也欢迎 [扫码支持](https://happysnaker.github.io/support/)（¥9.9 起）或购买付费评审服务 ¥29.9–¥199。
 
+> **Current proof snapshot (2026-07-11):** `qq-ai-bot` and `RDLeader` currently have **0 open CodeQL / Dependabot / secret-scanning alerts**. The latest `qq-ai-bot` CI / CodeQL / Docker publish / arm64 smoke and the latest `RDLeader` CI / CodeQL are green. Current concrete asks live at [support/#current-asks](https://happysnaker.github.io/support/#current-asks): `qq-ai-bot #26 arm64`, `RDLeader #27`, or the ¥29.9 quick read.
+
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
 > Current flagship: **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — a self-hosted QQ ↔ AI bot scaffold with **OneBot 11**, **NapCat / LLOneBot**, **ACP-compatible agents**, **persistent sessions**, **progress streaming**, **Prometheus-style `/metrics`**, and **Docker**. It now has a public project page, Docker quickstart, a stable public image tag (`v0.1.7`) plus a moving `latest` tag, ecosystem references, an official OneBot community discussion, and active upstream docs / app-directory PRs, so reviewers can judge it as a small operator-facing systems asset rather than a one-night chat demo. Recent OSS work spans HashiCorp retry semantics, Prometheus client edge cases, jwt validation, chi routing, urfave/cli, GitHub CLI, OpenTelemetry, and Docker / GitHub Docs improvements.
@@ -133,7 +135,7 @@ If you want to support concrete public work instead of sending a vague tip, thes
 | `RDLeader` | External submission review follow-up | monitor and respond to external PR review feedback | [#27](https://github.com/happysnaker/RDLeader/issues/27) |
 | `RDLeader` | DevPlan bundle sanitization | split local features into public-safe commits and docs | [#1](https://github.com/happysnaker/RDLeader/issues/1) |
 
-Best payment note format: `repo #issue`, for example `qq-ai-bot #26` or `RDLeader #27`.
+Best payment note format: `repo #issue`, for example `qq-ai-bot #26 arm64` or `RDLeader #27`.
 
 Public readiness note: `RDLeader` license posture is tracked separately in [RDLeader#3](https://github.com/happysnaker/RDLeader/issues/3) before wider reuse/promotion; the decision packet is at [docs/public/license-decision-packet.md](https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md).
 
@@ -143,7 +145,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/) — WeChat Pay / Alipay QR codes live there
 - **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) — audit trail for which repos/pages route to the sponsor one-pager and support page
-- **If you came here from `qq-ai-bot`:** the cleanest support note is simply `qq-ai-bot`, and the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page
+- **If you came here from `qq-ai-bot`:** the cleanest support note is `qq-ai-bot` or `qq-ai-bot #26 arm64`; the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page
 - **Fastest low-friction tip:** `¥9.9` / `¥19.9` if one repo, checklist, or OSS fix saved you time
 - **Most useful paid entry:** **`¥29.9` quick read** for a blunt first-impression pass on your profile / repo / landing page — [review page](https://happysnaker.github.io/review/)
 - **Best packaging option:** **`¥99` async review** for pinned repos, README cleanup, landing-page positioning, or profile packaging — [review page](https://happysnaker.github.io/review/)
@@ -151,7 +153,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **Current July offer:** first paid request gets **one extra public page / README** in the same pass at no extra charge
 - **One-click quick-read email:** [Quick read \| profile / repo / page link](mailto:happysnaker@foxmail.com?subject=Quick%20read%20%7C%20profile%2Frepo%2Fpage%20link&body=Public%20link%3A%0ATarget%20role%20(optional)%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
 - **One-click async-review email:** [Async review \| target role \| repo / profile link](mailto:happysnaker@foxmail.com?subject=Async%20review%20%7C%20target%20role%20%7C%20repo%2Fprofile%20link&body=Public%20link(s)%3A%0ATarget%20role%20or%20use%20case%3A%0AWhat%20feels%20weak%3A%0APayment%20screenshot%3A%20attached)
-- If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is simply `qq-ai-bot`
+- If **qq-ai-bot** helped with OneBot / ACP wiring, the cleanest support note is `qq-ai-bot`; if you want to fund physical ARM / CasaOS validation, use `qq-ai-bot #26 arm64`
 - If **Resume**, **CSAPPLabsAndNotes**, **github-profile-checklist**, or one recent OSS fix helped, direct support is especially appreciated
 
 ## Contact
