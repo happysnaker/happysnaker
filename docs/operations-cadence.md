@@ -10,6 +10,16 @@ Run this once per week, or whenever a major public-surface change lands.
 
 ### 1. Flagship health
 
+Fast path:
+
+```bash
+python3 scripts/check_github_status.py
+```
+
+This checks latest configured workflows for `happysnaker`, `qq-ai-bot`, `RDLeader`, and `happysnaker.github.io`, plus open CodeQL / Dependabot / secret-scanning alerts for the configured flagship repos.
+
+Manual checklist:
+
 Check:
 
 - `qq-ai-bot` CI
@@ -18,6 +28,8 @@ Check:
 - `RDLeader` CI
 - `RDLeader` Dependabot grouped update jobs
 - `happysnaker` profile docs CI
+- `happysnaker.github.io` Pages deploy
+- open CodeQL / Dependabot / secret-scanning alert counts for configured flagship repos
 
 Evidence to record:
 
