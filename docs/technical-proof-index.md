@@ -24,7 +24,7 @@ Public surfaces:
 - Project page: <https://happysnaker.github.io/qq-ai-bot/>
 - Public landing / proof ladder: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/landing-page.md>
 - Ecosystem tracker: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md>
-- Promo kit: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
+- Promo kit with review follow-up snippets: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md>
 - Sponsorware roadmap: <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/sponsorware.md>
 - Sponsorware discussion: <https://github.com/happysnaker/qq-ai-bot/discussions/30>
 - Metadata is aligned for GitHub search/profile cards: bot-infrastructure, metrics, multi-instance, sponsorware.
@@ -58,6 +58,10 @@ Current evidence:
 - Promotion outcome proof-run update CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29026415796>
 - Promotion outcome proof-run update Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29026418551>
 - Promotion outcome proof-run update arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29026549935>
+- Promo follow-up snippets CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070102008>
+- Promo follow-up snippets CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070102007>
+- Promo follow-up snippets Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070102090>
+- Promo follow-up snippets arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070243291>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
@@ -211,7 +215,7 @@ Central board:
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md), including the paid [review page](https://happysnaker.github.io/review/) sponsor path ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/8e869fee9383832903e2a766510ce11c54ff4541))
-- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 254 public links across README, this technical proof index, the upstream contribution ledger, and core proof docs.
+- Public link checker: [scripts/check_public_links.py](../scripts/check_public_links.py) ([commit](https://github.com/happysnaker/happysnaker/commit/6af92879d651342ad5958f45f75981bc0ed08521)); latest profile-scope run checked 258 public links across README, this technical proof index, the upstream contribution ledger, and core proof docs.
 - Public site hygiene verifier: [scripts/check_site_hygiene.py](../scripts/check_site_hygiene.py) ([commit](https://github.com/happysnaker/happysnaker/commit/ef88985863a24042f5f8be35c0b2979e44441d71)); latest live run checked 152 site hygiene assertions across project-page metadata, sitemap, and public repo-link hygiene.
 
 Current sponsor targets are intentionally concrete:
