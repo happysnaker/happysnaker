@@ -62,6 +62,10 @@ Current evidence:
 - Promo follow-up snippets CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070102007>
 - Promo follow-up snippets Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070102090>
 - Promo follow-up snippets arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29070243291>
+- Support proof-link refresh CI: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072149755>
+- Support proof-link refresh CodeQL: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072149862>
+- Support proof-link refresh Docker publish: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072149756>
+- Support proof-link refresh arm64 smoke: <https://github.com/happysnaker/qq-ai-bot/actions/runs/29072241215>
 - CodeQL after transport hardening: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28970038743>
 - Feature release with Postgres session store: <https://github.com/happysnaker/qq-ai-bot/releases/tag/v0.1.6>
 - Latest main CI after arm64 smoke-script docs: <https://github.com/happysnaker/qq-ai-bot/actions/runs/28958094897>
