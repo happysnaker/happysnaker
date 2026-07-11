@@ -6,6 +6,7 @@ If **happysnaker** saved you time, helped your interview prep, or made implement
 - Current concrete asks: https://happysnaker.github.io/support/#current-asks
 - Main support page: https://happysnaker.github.io/support/
 - Sponsor one-pager: https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager
+- Share kit: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md
 - Flagship status snapshot: https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md
 
 If GitHub shows a **Sponsor** button on this repo, it routes to the same support page.

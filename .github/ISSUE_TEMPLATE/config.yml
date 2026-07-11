@@ -9,6 +9,9 @@ contact_links:
   - name: Current sponsorware board
     url: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
     about: See current sponsor targets and payment-note format.
+  - name: Share kit
+    url: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md
+    about: Copy-ready X / LinkedIn / WeChat / curator snippets with proof and sponsor guardrails.
   - name: Technical proof index
     url: https://github.com/happysnaker/happysnaker/blob/master/docs/technical-proof-index.md
     about: Review CI, docs, upstream PR surfaces, and sponsorware evidence.
