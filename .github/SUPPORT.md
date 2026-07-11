@@ -1,10 +1,20 @@
 ## Support
 
-If **happysnaker** saved you time, helped your interview prep, or made implementation work easier, you can support continued maintenance here:
+If **happysnaker** saved you time, helped your interview prep, or made implementation work easier, use one of these public support paths:
 
-- Support page: https://happysnaker.github.io/support/
-- If GitHub shows a **Sponsor** button on this repo, it routes to the same support page
-- Direct support: WeChat Pay / Alipay QR codes are listed on the support page
-- Low-friction thanks: `¥9.9` / `¥19.9` already helps if one repo or note saved you time
-- Async feedback option: `¥99` for one public GitHub profile / README / repo-positioning pass
-- Email for async review: happysnaker@foxmail.com
+- Proof before payment: https://happysnaker.github.io/support/#proof-before-payment
+- Current concrete asks: https://happysnaker.github.io/support/#current-asks
+- Main support page: https://happysnaker.github.io/support/
+- Sponsor one-pager: https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager
+- Flagship status snapshot: https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md
+
+If GitHub shows a **Sponsor** button on this repo, it routes to the same support page.
+
+Best payment notes:
+
+- `qq-ai-bot #26 arm64` — fund / provide real physical ARM, CasaOS, NAS, or SBC validation.
+- `RDLeader #27` — fund external submission review follow-up and public-safe proof packaging.
+- `Quick read` — ¥29.9 for one blunt first-impression pass on a public profile, repo, README, or landing page.
+- `Async review` — ¥99 for one public GitHub profile / README / repo-positioning pass.
+
+Direct support uses WeChat Pay / Alipay QR codes on the support page. Email for async review: happysnaker@foxmail.com.
