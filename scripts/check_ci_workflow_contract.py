@@ -28,6 +28,7 @@ REQUIRED_TEXT = (
     "python3 scripts/check_repo_metadata.py",
     "python3 scripts/check_sponsor_release.py",
     "python3 scripts/check_sponsor_issues.py",
+    "python3 scripts/check_review_funnel.py --site-root site/happysnaker.github.io",
     "python3 scripts/check_ops_issue_log.py",
     "python3 scripts/check_issue_labels.py",
     "python3 scripts/check_profile_pins.py",
