@@ -5,6 +5,7 @@ import argparse
 import json
 import subprocess
 import sys
+from collections import Counter
 from dataclasses import dataclass
 from typing import Any
 
@@ -145,9 +146,29 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
+def format_summary(rows: list[dict[str, Any]]) -> str:
+    counts = Counter(row.get("actionClass") or "unknown" for row in rows)
+    lines = ["## External follow-up summary", ""]
+    lines.append("Action classes: " + ", ".join(f"{key}={counts[key]}" for key in sorted(counts)))
+    optional = [row for row in rows if row.get("actionClass") == "optional-update"]
+    if optional:
+        lines.extend(["", "Optional-update surfaces:"])
+        for row in optional:
+            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}")
+    else:
+        lines.extend(["", "Optional-update surfaces: none"])
+    blockers = [row for row in rows if row.get("actionClass") in {"keep-open", "stay-quiet"}]
+    if blockers:
+        lines.extend(["", "Default quiet / keep-open surfaces:"])
+        for row in blockers:
+            lines.append(f"- {row['repo']}#{row['number']} ({row.get('actionClass')}) — {row.get('nextAction')}")
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Summarize tracked external follow-up PRs and issues.")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of markdown.")
+    parser.add_argument("--summary", action="store_true", help="Emit a compact action-class summary instead of the full markdown table.")
     parser.add_argument(
         "--action-class",
         action="append",
@@ -175,6 +196,8 @@ def main() -> int:
 
     if args.json:
         print(json.dumps({"rows": rows, "failures": failures}, indent=2, ensure_ascii=False))
+    elif args.summary:
+        print(format_summary(rows))
     else:
         print(format_markdown(rows))
 
