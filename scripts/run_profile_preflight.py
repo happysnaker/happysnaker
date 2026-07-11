@@ -51,6 +51,8 @@ def external_step(args: argparse.Namespace) -> Step:
     external_command = ["python3", "scripts/check_external_followups.py"]
     for action_class in args.action_class or []:
         external_command.extend(["--action-class", action_class])
+    if args.external_candidate_comments:
+        external_command.append("--candidate-comments")
     if args.external_summary:
         external_command.append("--summary")
     if args.today:
@@ -124,6 +126,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
     parser.add_argument("--external-only", action="store_true", help="Run only the dynamic external PR/issue summary, preserving action-class filters.")
     parser.add_argument("--external-summary", action="store_true", help="Use compact summary output for the dynamic external PR/issue step.")
+    parser.add_argument("--external-candidate-comments", action="store_true", help="Render prepared external follow-up candidate comments without posting them.")
     parser.add_argument("--today", help="Forward YYYY-MM-DD date to external follow-up review gate.")
     parser.add_argument("--review-date", help="Forward YYYY-MM-DD next scheduled review date to external follow-up checker.")
     parser.add_argument("--enforce-review-due", action="store_true", help="Make the external follow-up step fail before the scheduled review date.")
@@ -184,6 +187,8 @@ def main(argv: Sequence[str] | None = None) -> int:
             print("\nPreflight failures:", file=sys.stderr)
             for result in failures:
                 print(f"- {result.name}: exit {result.returncode}", file=sys.stderr)
+        if args.external_only and len(failures) == 1:
+            return failures[0].returncode
         return 1
 
     if not args.json:
