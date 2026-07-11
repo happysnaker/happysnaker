@@ -79,7 +79,7 @@ REQUIRED = {
     ],
     "docs/operator-handoff.md": [
         "Current source of truth",
-        "python3 scripts/check_github_status.py",
+        "python3 scripts/check_github_status.py --summary",
         "Current flagship state",
         "Proof before payment",
         "qq-ai-bot #26 arm64",
@@ -122,6 +122,7 @@ REQUIRED = {
         "stable profile workflow links",
         "scripts/check_stable_profile_links.py",
         "python3 scripts/check_github_status.py",
+        "--summary",
         "Shared GitHub CLI helper",
         "GitHub CLI usage checker",
         "scripts/github_cli.py",

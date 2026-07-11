@@ -9,7 +9,7 @@ Snapshot: 2026-07-11 Asia/Shanghai.
 Run these from the profile repository before acting:
 
 ```bash
-python3 scripts/check_github_status.py
+python3 scripts/check_github_status.py --summary
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
 python3 scripts/check_manual_blockers.py
 python3 scripts/check_stable_profile_links.py

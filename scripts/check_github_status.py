@@ -110,6 +110,52 @@ def workflow_url(repo: str, workflow: str, run_url: str | None) -> str | None:
     return run_url
 
 
+def compact_summary(summary: dict[str, Any], failures: list[str]) -> dict[str, Any]:
+    workflow_total = 0
+    workflow_success = 0
+    alert_totals = {"codeql": 0, "dependabot": 0, "leak_scan": 0}
+    repos: dict[str, Any] = {}
+    for repo, data in summary.items():
+        workflows = data.get("workflows") or {}
+        alerts = data.get("alerts") or {}
+        workflow_total += len(workflows)
+        workflow_success += sum(1 for run in workflows.values() if run and run.get("status") == "completed" and run.get("conclusion") == "success")
+        for key in alert_totals:
+            value = alerts.get(key)
+            if isinstance(value, int):
+                alert_totals[key] += value
+        repos[repo] = {
+            "branch": data.get("branch"),
+            "workflowCount": len(workflows),
+            "successfulWorkflowCount": sum(1 for run in workflows.values() if run and run.get("status") == "completed" and run.get("conclusion") == "success"),
+            "alerts": alerts,
+        }
+    return {
+        "ok": not failures,
+        "workflowCount": workflow_total,
+        "successfulWorkflowCount": workflow_success,
+        "alertTotals": alert_totals,
+        "repos": repos,
+        "failures": failures,
+    }
+
+
+def format_summary_text(summary: dict[str, Any], failures: list[str]) -> str:
+    compact = compact_summary(summary, failures)
+    alert_totals = compact["alertTotals"]
+    lines = [
+        "## GitHub status summary",
+        "",
+        f"ok: {str(compact['ok']).lower()}",
+        f"workflows: {compact['successfulWorkflowCount']}/{compact['workflowCount']} successful",
+        "alerts: " + ", ".join(f"{ALERT_DISPLAY.get(key, key)}={value}" for key, value in alert_totals.items()),
+    ]
+    if failures:
+        lines.extend(["", "Failures:"])
+        lines.extend(f"- {failure}" for failure in failures)
+    return "\n".join(lines)
+
+
 def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) -> str:
     lines = [
         "# Flagship GitHub status snapshot",
@@ -185,6 +231,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Check flagship GitHub workflow and alert state.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON summary.")
     parser.add_argument("--markdown", action="store_true", help="Emit a shareable Markdown proof snapshot.")
+    parser.add_argument("--summary", action="store_true", help="Emit compact machine-readable status summary JSON.")
     parser.add_argument(
         "--as-of",
         default=datetime.now().astimezone().strftime("%Y-%m-%d %Z"),
@@ -192,8 +239,9 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    if args.json and args.markdown:
-        parser.error("--json and --markdown are mutually exclusive")
+    selected_outputs = sum(1 for enabled in (args.json, args.markdown, args.summary) if enabled)
+    if selected_outputs > 1:
+        parser.error("--json, --markdown, and --summary are mutually exclusive")
 
     failures: list[str] = []
     summary: dict[str, Any] = {}
@@ -241,6 +289,8 @@ def main() -> int:
 
     if args.json:
         print(json.dumps({"ok": not failures, "summary": summary, "failures": failures}, indent=2, ensure_ascii=False))
+    elif args.summary:
+        print(json.dumps(compact_summary(summary, failures), indent=2, ensure_ascii=False))
     elif args.markdown:
         print(format_markdown(summary, failures, args.as_of), end="")
     else:
