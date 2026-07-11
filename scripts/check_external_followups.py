@@ -148,6 +148,12 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Summarize tracked external follow-up PRs and issues.")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of markdown.")
+    parser.add_argument(
+        "--action-class",
+        action="append",
+        choices=("optional-update", "stay-quiet", "recheck-only", "no-action", "keep-open"),
+        help="Filter rows by action class. Can be repeated.",
+    )
     args = parser.parse_args()
 
     failures: list[str] = []
@@ -162,6 +168,10 @@ def main() -> int:
             rows.append(issue_summary(target))
         except RuntimeError as error:
             failures.append(f"{target.repo}#{target.number}: {error}")
+
+    if args.action_class:
+        allowed = set(args.action_class)
+        rows = [row for row in rows if row.get("actionClass") in allowed]
 
     if args.json:
         print(json.dumps({"rows": rows, "failures": failures}, indent=2, ensure_ascii=False))
