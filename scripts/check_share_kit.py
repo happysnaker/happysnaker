@@ -27,6 +27,8 @@ REQUIRED_TEXT = (
     "## Guardrails",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/support/#sponsor-router",
+    "Default support fallback",
+    "https://github.com/happysnaker/.github/commit/0ec8ed7",
     "https://happysnaker.github.io/support/#current-asks",
     "https://happysnaker.github.io/qq-ai-bot/",
     "https://happysnaker.github.io/rdleader/",

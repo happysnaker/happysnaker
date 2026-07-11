@@ -24,7 +24,7 @@ Point-in-time proof snapshot (2026-07-11):
 - Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
 - Technical map: [flagship-technical-map.md](flagship-technical-map.md).
-- Flagship repo support files and issue contact links now route the same proof-before-payment path from `qq-ai-bot` and `RDLeader`.
+- Flagship repo support files and issue contact links now route the same proof-before-payment path from `qq-ai-bot` and `RDLeader`. Repositories without local support files inherit the account-wide `.github` fallback, which now points uncertain visitors to the 10-second support router before generic support.
 
 ## Best links to share
 
@@ -34,6 +34,7 @@ Point-in-time proof snapshot (2026-07-11):
 | Deploy-read sample | <https://happysnaker.github.io/review/deploy-read-sample/> |
 | Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
 | 10-second support router | <https://happysnaker.github.io/support/#sponsor-router> |
+| Default support fallback | <https://github.com/happysnaker/.github/commit/0ec8ed7> |
 | `qq-ai-bot` project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | `qq-ai-bot` support route | <https://happysnaker.github.io/support/#from-qq-ai-bot> |
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |

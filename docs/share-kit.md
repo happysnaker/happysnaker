@@ -4,7 +4,7 @@
 
 ## Core angle
 
-Two public projects are easiest to share right now:
+Two public projects are easiest to share right now; repositories without local support docs now inherit the default `.github` support-router fallback.
 
 - `qq-ai-bot`: self-hosted QQ / OneBot / NapCat / LLOneBot bridge for ACP-compatible agents, with Docker, metrics, persistent sessions, progress streaming, multi-arch image publishing, and QEMU arm64 smoke evidence.
 - `RDLeader`: local-first AI worker control-plane research, with task ownership, runtime dispatch, approval gates, fake-data demos, public QA evidence, CodeQL cleanup, and external submission tracking.
@@ -15,6 +15,7 @@ Best links:
 |---|---|
 | Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
 | 10-second support router | <https://happysnaker.github.io/support/#sponsor-router> |
+| Default support fallback | <https://github.com/happysnaker/.github/commit/0ec8ed7> |
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | qq-ai-bot project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | RDLeader project page | <https://happysnaker.github.io/rdleader/> |

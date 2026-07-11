@@ -83,6 +83,8 @@ REQUIRED = {
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "python3 scripts/check_github_status.py --summary",
         "python3 scripts/check_checker_catalog.py --json",
+        "Default support fallback",
+        "https://github.com/happysnaker/.github/commit/0ec8ed7",
     ],
     "docs/sponsorware-board.md": [
         "Current targets",
@@ -107,6 +109,8 @@ REQUIRED = {
         "Sponsorship CTA snippets",
         "10-second support router ask",
         "https://happysnaker.github.io/support/#sponsor-router",
+        "Default support fallback",
+        "https://github.com/happysnaker/.github/commit/0ec8ed7",
         "Tip — if one repo saved you time",
         "Fund — if you want a visible public outcome",
         "Deploy-read sample ask",
@@ -196,6 +200,8 @@ REQUIRED = {
     ],
     "docs/support-surface-coverage.md": [
         "Latest default/profile support-router refresh",
+        "support-router defaults",
+        "https://github.com/happysnaker/.github/commit/0ec8ed7",
         "Tip / Proof / Review / Fund",
         "Latest project-page sponsor-router refresh",
         "https://github.com/happysnaker/happysnaker.github.io/commit/843af8d",
