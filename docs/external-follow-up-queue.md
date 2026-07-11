@@ -77,7 +77,7 @@ done
 
 ## Evidence to record after the scheduled check
 
-- current PR / tracked issue state and checks from `python3 scripts/check_external_followups.py`;
+- current PR / tracked issue state, checks, and next-action guidance from `python3 scripts/check_external_followups.py`;
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;
