@@ -50,7 +50,7 @@ jobs:
         run: python3 scripts/check_ci_workflow_contract.py
 
       - name: Verify checker catalog
-        run: python3 scripts/check_checker_catalog.py
+        run: python3 scripts/check_checker_catalog.py --json
 
       - name: Verify share kit
         run: python3 scripts/check_share_kit.py

@@ -293,6 +293,7 @@ REQUIRED = {
         "scripts/github_cli.py",
         "scripts/check_gh_usage.py",
         "machine-readable helper-usage drift state",
+        "checker catalog JSON",
         "scripts/check_ci_workflow_contract.py",
         "machine-readable workflow-contract drift state",
         "scripts/check_operator_handoff.py",
