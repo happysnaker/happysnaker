@@ -35,7 +35,7 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 
 > **Manual GitHub checklist:** [docs/manual-github-actions.md](docs/manual-github-actions.md) tracks profile-pin and license actions that require deliberate/manual handling.
 
-> **Operator handoff:** [docs/operator-handoff.md](docs/operator-handoff.md) is the first-read state map for future GitHub takeover turns. Reproduce the current proof/support gate with `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external`.
+> **Operator handoff:** [docs/operator-handoff.md](docs/operator-handoff.md) is the first-read state map for future GitHub takeover turns. Reproduce the current proof/support gate with `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external`; use `python3 scripts/check_manual_blockers.py --json` and `python3 scripts/check_checker_catalog.py --json` for machine-readable blocker/checker state.
 >
 > **Operations cadence:** [docs/operations-cadence.md](docs/operations-cadence.md) defines the weekly/monthly maintenance loop for CI, sponsorware, proof index, and portfolio hygiene.
 
