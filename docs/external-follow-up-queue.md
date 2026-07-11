@@ -57,14 +57,7 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 
 ```bash
 # Profile / support-route preflight
-python3 scripts/check_github_status.py
-python3 scripts/check_support_routes.py
-python3 scripts/check_repo_metadata.py
-python3 scripts/check_profile_pins.py
-python3 scripts/check_rdleader_license.py
-python3 scripts/check_manual_blockers.py
-python3 scripts/check_public_links.py --timeout 6 --workers 12 --scope profile
-python3 scripts/check_external_followups.py
+python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
 for repo in happysnaker/qq-ai-bot happysnaker/RDLeader; do

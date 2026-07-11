@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import subprocess
+import sys
+from dataclasses import dataclass
+from typing import Sequence
+
+
+@dataclass(frozen=True)
+class Step:
+    name: str
+    command: tuple[str, ...]
+
+
+def run_step(step: Step) -> int:
+    print(f"\n## {step.name}", flush=True)
+    print("$ " + " ".join(step.command), flush=True)
+    completed = subprocess.run(step.command, check=False)
+    if completed.returncode != 0:
+        print(f"FAILED {step.name}: exit {completed.returncode}", file=sys.stderr, flush=True)
+    return completed.returncode
+
+
+def build_steps(args: argparse.Namespace) -> list[Step]:
+    steps = [
+        Step("Verify public docs", ("python3", "scripts/verify_public_docs.py")),
+        Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
+        Step("Check support routes", ("python3", "scripts/check_support_routes.py")),
+        Step("Check repository metadata", ("python3", "scripts/check_repo_metadata.py")),
+        Step("Check sponsor release", ("python3", "scripts/check_sponsor_release.py")),
+        Step("Report manual blockers", ("python3", "scripts/check_manual_blockers.py")),
+        Step(
+            f"Check public links ({args.link_scope})",
+            (
+                "python3",
+                "scripts/check_public_links.py",
+                "--timeout",
+                str(args.timeout),
+                "--workers",
+                str(args.workers),
+                "--scope",
+                args.link_scope,
+            ),
+        ),
+    ]
+    if not args.skip_external:
+        steps.append(Step("Summarize external follow-ups", ("python3", "scripts/check_external_followups.py")))
+    if args.snapshot_as_of:
+        steps.append(
+            Step(
+                "Generate flagship status snapshot",
+                (
+                    "python3",
+                    "scripts/check_github_status.py",
+                    "--markdown",
+                    "--as-of",
+                    args.snapshot_as_of,
+                ),
+            )
+        )
+    return steps
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Run the happysnaker profile proof/support preflight checks.")
+    parser.add_argument("--link-scope", choices=("core", "profile", "all"), default="core", help="Public-link scope to check. Default: core.")
+    parser.add_argument("--workers", type=int, default=8, help="Concurrent link checker workers. Default: 8.")
+    parser.add_argument("--timeout", type=float, default=6.0, help="Per-link timeout in seconds. Default: 6.")
+    parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
+    parser.add_argument("--snapshot-as-of", help="If set, emit a markdown status snapshot with this label at the end.")
+    args = parser.parse_args(argv)
+
+    if args.workers < 1:
+        parser.error("--workers must be >= 1")
+
+    failures: list[str] = []
+    for step in build_steps(args):
+        code = run_step(step)
+        if code != 0:
+            failures.append(f"{step.name}: exit {code}")
+
+    if failures:
+        print("\nPreflight failures:", file=sys.stderr)
+        for failure in failures:
+            print(f"- {failure}", file=sys.stderr)
+        return 1
+
+    print("\nPreflight passed", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
