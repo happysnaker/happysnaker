@@ -8,6 +8,7 @@ If **happysnaker** saved you time, helped your interview prep, or made implement
 - Main support page: https://happysnaker.github.io/support/
 - Sponsor one-pager: https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager
 - Share kit: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md
+- Sponsor / paid-support intake replies: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md#sponsor--paid-support-intake-replies
 - Flagship status snapshot: https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md
 - Deploy-read sample: https://happysnaker.github.io/review/deploy-read-sample/
 
@@ -22,3 +23,5 @@ Best payment notes:
 - `Deploy read` — ¥29.9 for one blunt pass when a bot, agent, or infra repo runs but still looks toy-like.
 
 Direct support uses WeChat Pay / Alipay QR codes on the support page. Email for async review: happysnaker@foxmail.com.
+
+Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues. Use the sponsor / paid-support intake replies in the share kit when someone asks how to pay, sponsor, or buy a review.
