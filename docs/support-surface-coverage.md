@@ -64,6 +64,8 @@ For this coverage table, do not infer completion from intention. Evidence should
 - `scripts/check_site_hygiene.py` for local/live project-page metadata, sitemap, public repo-link hygiene, and support-page proof-before-payment content;
 - security alert checks where the API is available.
 
+Latest project-page sponsor-router refresh: the `qq-ai-bot` and `RDLeader` Pages project pages now expose a first-screen `Pick Tip / Proof / Review / Fund` CTA to the 10-second support router, closing the profile → project page → support-router loop ([Pages commit](https://github.com/happysnaker/happysnaker.github.io/commit/843af8d), [Pages deploy](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218)).
+
 Latest RDLeader sponsor-router refresh: README, SUPPORT files, and issue contact links now route uncertain visitors to the 10-second support router while keeping the unresolved license/reuse guardrail explicit ([RDLeader commit](https://github.com/happysnaker/RDLeader/commit/8e8317a)).
 
 Latest qq-ai-bot sponsor-router refresh: the repository README, SUPPORT files, and issue contact links now route uncertain visitors to the 10-second support router before choosing Tip / Proof / Review / Fund ([support router commit](https://github.com/happysnaker/qq-ai-bot/commit/d624e6c), [README sponsor note commit](https://github.com/happysnaker/qq-ai-bot/commit/594cb21)).

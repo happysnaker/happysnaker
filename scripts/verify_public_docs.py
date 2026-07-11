@@ -186,6 +186,10 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
+        "Latest project-page sponsor-router refresh",
+        "https://github.com/happysnaker/happysnaker.github.io/commit/843af8d",
+        "https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218",
+        "Pick Tip / Proof / Review / Fund",
         "Latest RDLeader sponsor-router refresh",
         "https://github.com/happysnaker/RDLeader/commit/8e8317a",
         "unresolved license/reuse guardrail",

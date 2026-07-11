@@ -78,6 +78,21 @@ SUPPORT_CONTENT_NEEDLES = [
     "support does not imply a reuse grant",
 ]
 
+PROJECT_CONTENT_NEEDLES: dict[str, list[str]] = {
+    "qq-ai-bot": [
+        "/support/#sponsor-router",
+        "Pick Tip / Proof / Review / Fund",
+        "10-second support router",
+        "qq-ai-bot #26 arm64",
+    ],
+    "rdleader": [
+        "/support/#sponsor-router",
+        "Pick Tip / Proof / Review / Fund",
+        "10-second support router",
+        "Support does not imply reuse rights",
+    ],
+}
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -158,6 +173,12 @@ def check_support_content(html: str, source_label: str, findings: list[Finding])
     for needle in SUPPORT_CONTENT_NEEDLES:
         (ok if needle in html else fail)(f"{source_label} support content", needle, findings)
 
+
+def check_project_content(html: str, slug: str, source_label: str, findings: list[Finding]) -> None:
+    for needle in PROJECT_CONTENT_NEEDLES.get(slug, []):
+        (ok if needle in html else fail)(f"{source_label} {slug} support router content", needle, findings)
+
+
 def check_local_metadata(site_root: Path, base_url: str, findings: list[Finding]) -> None:
     for slug in METADATA_PAGES:
         path = page_path(site_root, slug)
@@ -168,6 +189,7 @@ def check_local_metadata(site_root: Path, base_url: str, findings: list[Finding]
         check_metadata(html, slug, base_url, "local", findings)
         if slug == "support":
             check_support_content(html, "local", findings)
+        check_project_content(html, slug, "local", findings)
 
 
 def check_live_metadata(base_url: str, timeout: float, findings: list[Finding]) -> None:
@@ -183,6 +205,7 @@ def check_live_metadata(base_url: str, timeout: float, findings: list[Finding]) 
         check_metadata(html, slug, base_url, "live", findings)
         if slug == "support":
             check_support_content(html, "live", findings)
+        check_project_content(html, slug, "live", findings)
     check_stable_workflow_link_texts("live site stable workflow links", live_pages, findings)
 
 
