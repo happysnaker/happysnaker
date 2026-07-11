@@ -63,6 +63,8 @@ SUPPORT_CONTENT_NEEDLES = [
     "Proof before payment",
     "flagship-technical-map.md",
     "Open technical map",
+    "Share kit",
+    "share-kit.md",
     "Current concrete asks",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
