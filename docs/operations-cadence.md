@@ -149,7 +149,7 @@ When updating coverage, use this sequence:
 
 1. Add or update the repository / page row in `docs/support-surface-coverage.md` with the exact evidence commit.
 2. Run `python3 scripts/verify_public_docs.py`.
-3. Run `python3 scripts/check_public_links.py --timeout 6` for the core support/proof links; use `--scope profile` before claiming broader profile-link coverage.
+3. Run `python3 scripts/check_public_links.py --timeout 6 --workers 8` for the core support/proof links; use `--scope profile` before claiming broader profile-link coverage.
 4. If the change affects a public support or review page, verify the live page after Pages deployment.
 5. Update the frozen sponsor one-pager release note when the coverage change affects sponsor-facing evidence.
 6. Record the result in `happysnaker#2`.

@@ -5,6 +5,7 @@ import argparse
 import re
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
@@ -132,7 +133,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Check public proof/support links in profile docs.")
     parser.add_argument("--scope", choices=("core", "profile", "all"), default="core", help="Files to scan. Default: core sponsor/support docs.")
     parser.add_argument("--timeout", type=float, default=8.0, help="Per-request timeout in seconds.")
+    parser.add_argument("--workers", type=int, default=8, help="Concurrent link checks. Use 1 for sequential output/debugging.")
     args = parser.parse_args()
+
+    if args.workers < 1:
+        parser.error("--workers must be >= 1")
 
     files = iter_markdown_files(args.scope)
     links_by_url: dict[str, list[Path]] = {}
@@ -142,9 +147,20 @@ def main() -> int:
                 continue
             links_by_url.setdefault(link.url, []).append(link.source)
 
-    failures: list[tuple[str, str, list[Path]]] = []
-    for url, sources in sorted(links_by_url.items()):
+    def check_one(item: tuple[str, list[Path]]) -> tuple[str, bool, str, list[Path]]:
+        url, sources = item
         ok, detail = fetch_status(url, timeout=args.timeout)
+        return url, ok, detail, sources
+
+    failures: list[tuple[str, str, list[Path]]] = []
+    items = sorted(links_by_url.items())
+    if args.workers == 1:
+        results = [check_one(item) for item in items]
+    else:
+        with ThreadPoolExecutor(max_workers=args.workers) as executor:
+            results = list(executor.map(check_one, items))
+
+    for url, ok, detail, sources in results:
         rel_sources = ", ".join(sorted({source.relative_to(ROOT).as_posix() for source in sources}))
         print(f"{'OK' if ok else 'FAIL'} {detail} {url} [{rel_sources}]", flush=True)
         if not ok:

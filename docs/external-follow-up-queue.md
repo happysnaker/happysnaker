@@ -63,7 +63,7 @@ python3 scripts/check_repo_metadata.py
 python3 scripts/check_profile_pins.py
 python3 scripts/check_rdleader_license.py
 python3 scripts/check_manual_blockers.py
-python3 scripts/check_public_links.py --timeout 6
+python3 scripts/check_public_links.py --timeout 6 --workers 8
 python3 scripts/check_external_followups.py
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
