@@ -59,6 +59,7 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 # Profile / support-route preflight
 python3 scripts/check_github_status.py
 python3 scripts/check_support_routes.py
+python3 scripts/check_repo_metadata.py
 python3 scripts/check_public_links.py --timeout 6
 
 # External PR state
@@ -90,7 +91,7 @@ done
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;
-- whether support-route checker or core link checker failed;
+- whether support-route checker, metadata checker, or core link checker failed;
 - whether a new external comment was actually posted, or why no comment was posted.
 
 Record the outcome in <https://github.com/happysnaker/happysnaker/issues/2> and update project trackers only if the state changed.
