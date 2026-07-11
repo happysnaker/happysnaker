@@ -15,6 +15,7 @@ python3 scripts/check_manual_blockers.py
 python3 scripts/check_stable_profile_links.py
 python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
+python3 scripts/check_checker_catalog.py
 python3 scripts/check_external_followups.py --summary
 ```
 
@@ -68,6 +69,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 - Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py` rejects one-off profile self-check run links in public docs.
 - `python3 scripts/check_gh_usage.py` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call.
 - `python3 scripts/check_ci_workflow_contract.py` fails if scheduled CI stops compiling/running the required proof/support drift checks.
+- `python3 scripts/check_checker_catalog.py` fails if a new proof checker is not documented in the technical proof index.
 
 ## Good next actions
 

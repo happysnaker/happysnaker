@@ -94,6 +94,7 @@ REQUIRED = {
         "check_stable_profile_links.py",
         "check_gh_usage.py",
         "check_ci_workflow_contract.py",
+        "check_checker_catalog.py",
         "happysnaker#2",
     ],
     "docs/manual-github-actions.md": [
@@ -126,6 +127,7 @@ REQUIRED = {
         "scripts/github_cli.py",
         "scripts/check_gh_usage.py",
         "scripts/check_ci_workflow_contract.py",
+        "scripts/check_checker_catalog.py",
     ],
     "docs/flagship-technical-map.md": [
         "Fast read",
