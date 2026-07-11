@@ -44,6 +44,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         Step("Check support routes", ("python3", "scripts/check_support_routes.py")),
         Step("Check repository metadata", ("python3", "scripts/check_repo_metadata.py")),
         Step("Check sponsor release", ("python3", "scripts/check_sponsor_release.py")),
+        Step("Check operations log", ("python3", "scripts/check_ops_issue_log.py")),
         Step("Report manual blockers", ("python3", "scripts/check_manual_blockers.py")),
         Step(
             f"Check public links ({args.link_scope})",
