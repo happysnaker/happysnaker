@@ -22,6 +22,7 @@ class PullRequestTarget:
     note: str
     action_class: str
     next_action: str
+    materials: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -32,16 +33,59 @@ class IssueTarget:
     note: str
     action_class: str
     next_action: str
+    materials: tuple[str, ...] = ()
 
 
 PRS: tuple[PullRequestTarget, ...] = (
-    PullRequestTarget("docker/awesome-compose", 781, "qq-ai-bot", "Docker Compose sample", "optional-update", "On scheduled review: one short update only if still review-required and no maintainer reply; if used, include project-page/support-router proof and avoid physical ARM completion claims. Otherwise stay quiet."),
+    PullRequestTarget(
+        "docker/awesome-compose",
+        781,
+        "qq-ai-bot",
+        "Docker Compose sample",
+        "optional-update",
+        "On scheduled review: one short update only if still review-required and no maintainer reply; if used, include project-page/support-router proof and avoid physical ARM completion claims. Otherwise stay quiet.",
+        (
+            "docs/external-follow-up-queue.md#dockerawesome-compose781",
+            "docs/share-kit.md#project-page-closed-loop-update",
+            "https://happysnaker.github.io/qq-ai-bot/",
+            "https://happysnaker.github.io/support/#sponsor-router",
+            "https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md",
+        ),
+    ),
     PullRequestTarget("Cp0204/CasaOS-AppStore-Play", 42, "qq-ai-bot", "CasaOS app-store PR", "stay-quiet", "Do not bump unless a real physical CasaOS/ARM report lands or maintainer asks."),
     PullRequestTarget("getumbrel/umbrel-apps", 5834, "qq-ai-bot", "Umbrel app PR", "recheck-only", "Recheck lint/mergeability; do not comment unless maintainer asks or checks regress."),
-    PullRequestTarget("AwesomeHomelab/awesome-homelab", 98, "qq-ai-bot", "homelab listing PR", "optional-update", "On scheduled review: one short homelab-focused update may be useful after tester pack/project page/support-router render; avoid physical ARM completion claims."),
+    PullRequestTarget(
+        "AwesomeHomelab/awesome-homelab",
+        98,
+        "qq-ai-bot",
+        "homelab listing PR",
+        "optional-update",
+        "On scheduled review: one short homelab-focused update may be useful after tester pack/project page/support-router render; avoid physical ARM completion claims.",
+        (
+            "docs/external-follow-up-queue.md#awesomehomelab98",
+            "docs/share-kit.md#project-page-closed-loop-update",
+            "https://happysnaker.github.io/qq-ai-bot/",
+            "https://happysnaker.github.io/support/#sponsor-router",
+            "https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md",
+        ),
+    ),
     PullRequestTarget("LLOneBot/LuckyLilliaDoc", 20, "qq-ai-bot", "LLOneBot docs PR", "stay-quiet", "Stay quiet unless maintainer replies."),
     PullRequestTarget("LLOneBot/llonebot.nix", 22, "qq-ai-bot", "LLOneBot Nix example PR", "stay-quiet", "Stay quiet unless maintainer replies or checks change."),
-    PullRequestTarget("jbesomi/awesome-autonomous-agents", 20, "RDLeader", "autonomous-agents listing PR", "optional-update", "On scheduled review: use security-proof/project-page/support-router snippet only once if still open/no feedback; keep RDLeader license caveat explicit."),
+    PullRequestTarget(
+        "jbesomi/awesome-autonomous-agents",
+        20,
+        "RDLeader",
+        "autonomous-agents listing PR",
+        "optional-update",
+        "On scheduled review: use security-proof/project-page/support-router snippet only once if still open/no feedback; keep RDLeader license caveat explicit.",
+        (
+            "docs/external-follow-up-queue.md#jbesomiawesome-autonomous-agents20",
+            "docs/share-kit.md#project-page-closed-loop-update",
+            "https://happysnaker.github.io/rdleader/",
+            "https://happysnaker.github.io/support/#sponsor-router",
+            "https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md",
+        ),
+    ),
     PullRequestTarget("kailiu42/awesome-coding-agents", 13, "RDLeader", "coding-agents listing PR", "no-action", "No action; keep as proof surface only."),
 )
 
@@ -111,6 +155,7 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "note": target.note,
         "actionClass": target.action_class,
         "nextAction": target.next_action,
+        "materials": list(target.materials),
     }
 
 
@@ -140,18 +185,19 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "note": target.note,
         "actionClass": target.action_class,
         "nextAction": target.next_action,
+        "materials": list(target.materials),
     }
 
 
 def format_markdown(rows: list[dict[str, Any]]) -> str:
     lines = [
-        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Note | Next action |",
-        "|---|---|---|---|---|---|---|---|---|---|---|",
+        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Note | Next action | Materials |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         surface = f"[{row['repo']}#{row['number']}]({row['url']})"
         lines.append(
-            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {note} | {next_action} |".format(
+            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {note} | {next_action} | {materials} |".format(
                 kind=row["kind"],
                 project=row["project"],
                 surface=surface,
@@ -163,6 +209,7 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
                 action_class=row.get("actionClass") or "",
                 note=(row.get("note") or "").replace("|", "/"),
                 next_action=(row.get("nextAction") or "").replace("|", "/"),
+                materials=", ".join(row.get("materials") or []).replace("|", "/"),
             )
         )
     return "\n".join(lines)
@@ -191,7 +238,9 @@ def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = Non
     if optional:
         lines.extend(["", "Optional-update surfaces:"])
         for row in optional:
-            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}")
+            material_text = "; ".join(row.get("materials") or [])
+            suffix = f" Materials: {material_text}" if material_text else ""
+            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}{suffix}")
     else:
         lines.extend(["", "Optional-update surfaces: none"])
     blockers = [row for row in rows if row.get("actionClass") in {"keep-open", "stay-quiet"}]
