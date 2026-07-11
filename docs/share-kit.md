@@ -77,6 +77,22 @@ Technical map: https://github.com/happysnaker/happysnaker/blob/master/docs/flags
 Those pages link back to CI, CodeQL, release, support, demo, and current caveats.
 ```
 
+### Project-page closed loop update
+
+```text
+I tightened the public proof/support loop around happysnaker's two current flagship repos:
+
+- profile README → project pages
+- project pages → 10-second support router
+- support router → Tip / Proof / Review / Fund
+
+qq-ai-bot: https://happysnaker.github.io/qq-ai-bot/
+RDLeader: https://happysnaker.github.io/rdleader/
+Support router: https://happysnaker.github.io/support/#sponsor-router
+
+Caveats stay visible: qq-ai-bot still needs a real physical ARM/CasaOS report, and RDLeader reuse rights are not granted until license posture is resolved.
+```
+
 ## Sponsorship CTA snippets
 
 ### 10-second support router ask

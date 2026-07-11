@@ -18,6 +18,7 @@ REQUIRED_TEXT = (
     "### LinkedIn / longer post",
     "### WeChat / private share",
     "### Curator / maintainer context",
+    "### Project-page closed loop update",
     "## Sponsorship CTA snippets",
     "### 10-second support router ask",
     "### Concrete support ask",
@@ -41,6 +42,9 @@ REQUIRED_TEXT = (
     "Proof before payment",
     "Tip — if one repo saved you time",
     "Fund — if you want a visible public outcome",
+    "profile README → project pages",
+    "project pages → 10-second support router",
+    "Support router: https://happysnaker.github.io/support/#sponsor-router",
 )
 
 BANNED_PHRASES = (
