@@ -265,6 +265,11 @@ REQUIRED = {
         "profile README → project page → 10-second support router",
         "qq-ai-bot still needs a real physical ARM/CasaOS host report",
         "RDLeader reuse rights are still blocked on the license issue",
+        "Candidate comments for optional-update rows",
+        "docker/awesome-compose#781",
+        "AwesomeHomelab#98",
+        "jbesomi/awesome-autonomous-agents#20",
+        "I am still not claiming real physical ARM/CasaOS completion",
         "Do not post it before the review gate is due",
     ],
     "docs/flagship-technical-map.md": [

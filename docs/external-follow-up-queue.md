@@ -59,6 +59,48 @@ Support router: https://happysnaker.github.io/support/#sponsor-router
 Proof caveat: qq-ai-bot still needs a real physical ARM/CasaOS host report; RDLeader reuse rights are still blocked on the license issue.
 ```
 
+### Candidate comments for optional-update rows
+
+Use only after rerunning the scheduled checks on or after 2026-07-16, and only if the specific row still allows an update. Replace links/status if the live state has changed.
+
+#### docker/awesome-compose#781
+
+```text
+Small proof-path update since the original submission: the qq-ai-bot project page now links through a 10-second support/proof router, so reviewers can inspect the current CI / CodeQL / Docker / arm64-smoke state and support notes without inferring everything from the Compose sample.
+
+Project page: https://happysnaker.github.io/qq-ai-bot/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Tester pack: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md
+
+Caveat: QEMU arm64 smoke is green, but I am still not claiming real physical ARM/CasaOS completion until qq-ai-bot#26 gets a real host report.
+```
+
+#### AwesomeHomelab#98
+
+```text
+Quick homelab-facing update for reviewers: qq-ai-bot now has a project page → support/proof router path, plus the tester pack / outreach kit for people who want to try the arm64 or CasaOS path.
+
+Project page: https://happysnaker.github.io/qq-ai-bot/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Tester pack: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md
+Homelab outreach kit: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md
+
+Caveat: this is still waiting on a real physical ARM/CasaOS/NAS/SBC report; I am not marking that validation complete yet.
+```
+
+#### jbesomi/awesome-autonomous-agents#20
+
+```text
+Small public-proof update for RDLeader: the project page now routes reviewers through a 10-second support/proof router, and the support route keeps the license/reuse caveat explicit.
+
+Project page: https://happysnaker.github.io/rdleader/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Distribution kit: https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md
+Submission tracker: https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md
+
+Caveat: RDLeader reuse rights are still blocked on https://github.com/happysnaker/RDLeader/issues/3, so this is a review/proof update, not a license grant.
+```
+
 ## Next scheduled review: 2026-07-16
 
 Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies.
