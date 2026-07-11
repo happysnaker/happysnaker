@@ -186,6 +186,11 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
+        "Latest qq-ai-bot sponsor-router refresh",
+        "https://github.com/happysnaker/qq-ai-bot/commit/d624e6c",
+        "594cb21",
+        "10-second support router",
+        "Tip / Proof / Review / Fund",
         "deploy-read sample",
         "scripts/check_review_funnel.py",
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",

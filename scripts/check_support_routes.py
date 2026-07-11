@@ -22,6 +22,7 @@ class FileExpectation:
 
 PROOF_URL = "https://happysnaker.github.io/support/#proof-before-payment"
 ASKS_URL = "https://happysnaker.github.io/support/#current-asks"
+SUPPORT_ROUTER = "https://happysnaker.github.io/support/#sponsor-router"
 SUPPORT_URL = "https://happysnaker.github.io/support/"
 SPONSOR_RELEASE = "https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager"
 FLAGSHIP_SNAPSHOT = "https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md"
@@ -83,18 +84,23 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
+        "README.md",
+        (SUPPORT_ROUTER, "10-second support router", "¥29.9", "¥99", QQ_NOTE),
+    ),
+    FileExpectation(
+        "happysnaker/qq-ai-bot",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke", "¥29.9", "¥99"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28", "¥29.9", "¥99"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "arm64 / CasaOS install report"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "arm64 / CasaOS install report"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
