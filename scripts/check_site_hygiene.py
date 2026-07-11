@@ -84,12 +84,20 @@ PROJECT_CONTENT_NEEDLES: dict[str, list[str]] = {
         "Pick Tip / Proof / Review / Fund",
         "10-second support router",
         "qq-ai-bot #26 arm64",
+        "Sponsor / paid-support intake replies",
+        "Public intake guardrail",
+        "payment screenshots out of public issues",
+        "no private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues",
     ],
     "rdleader": [
         "/support/#sponsor-router",
         "Pick Tip / Proof / Review / Fund",
         "10-second support router",
         "Support does not imply reuse rights",
+        "Sponsor / paid-support intake replies",
+        "Public intake guardrail",
+        "payment screenshots",
+        "raw live integration output in public issues",
     ],
 }
 
