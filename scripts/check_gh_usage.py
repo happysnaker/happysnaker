@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -15,23 +17,51 @@ GH_PATTERNS = (
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify proof checkers use the shared GitHub CLI helper.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable GitHub CLI helper usage status.")
+    args = parser.parse_args()
+
     failures: list[str] = []
+    scanned_scripts: list[str] = []
+    direct_matches: list[dict[str, object]] = []
     for path in sorted(SCRIPTS.glob("*.py")):
+        rel = path.relative_to(ROOT).as_posix()
         if path.name in ALLOWED_DIRECT_GH:
             continue
+        scanned_scripts.append(rel)
         text = path.read_text(encoding="utf-8")
-        for pattern in GH_PATTERNS:
-            if pattern.search(text):
-                failures.append(f"{path.relative_to(ROOT)} uses direct gh subprocess; use scripts/github_cli.py")
-                break
+        for line_number, line in enumerate(text.splitlines(), 1):
+            for pattern in GH_PATTERNS:
+                if pattern.search(line):
+                    direct_matches.append({
+                        "file": rel,
+                        "line": line_number,
+                        "pattern": pattern.pattern,
+                    })
 
+    failed_files = sorted({str(match["file"]) for match in direct_matches})
+    failures.extend(f"{file} uses direct gh subprocess; use scripts/github_cli.py" for file in failed_files)
+
+    summary = {
+        "ok": not failures,
+        "scannedScriptCount": len(scanned_scripts),
+        "scannedScripts": scanned_scripts,
+        "allowedDirectGh": sorted(ALLOWED_DIRECT_GH),
+        "directMatchCount": len(direct_matches),
+        "directMatches": direct_matches,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("GitHub CLI usage check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("GitHub CLI usage check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print("Checked GitHub CLI usage: all direct gh subprocess calls go through scripts/github_cli.py")
+    if not args.json:
+        print("Checked GitHub CLI usage: all direct gh subprocess calls go through scripts/github_cli.py")
     return 0
 
 
