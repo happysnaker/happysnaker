@@ -13,7 +13,7 @@ python3 scripts/check_github_status.py --summary
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
 python3 scripts/check_manual_blockers.py --json
 python3 scripts/check_operator_handoff.py
-python3 scripts/check_stable_profile_links.py
+python3 scripts/check_stable_profile_links.py --json
 python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
 python3 scripts/check_checker_catalog.py --json
@@ -77,7 +77,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 ## Automation guardrails
 
 - Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
-- Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py` rejects one-off profile self-check run links in public docs.
+- Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py --json` rejects one-off profile self-check run links in public docs and emits machine-readable drift evidence.
 - `python3 scripts/check_gh_usage.py` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call.
 - `python3 scripts/check_ci_workflow_contract.py` fails if scheduled CI stops compiling/running the required proof/support drift checks.
 - `python3 scripts/check_checker_catalog.py` fails if a new proof checker is not documented in the technical proof index.

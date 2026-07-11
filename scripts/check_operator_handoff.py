@@ -13,7 +13,7 @@ REQUIRED_TEXT = (
     "python3 scripts/check_github_status.py --summary",
     "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
     "python3 scripts/check_manual_blockers.py --json",
-    "python3 scripts/check_stable_profile_links.py",
+    "python3 scripts/check_stable_profile_links.py --json",
     "python3 scripts/check_gh_usage.py",
     "python3 scripts/check_ci_workflow_contract.py",
     "python3 scripts/check_checker_catalog.py --json",

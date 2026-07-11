@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -19,13 +21,22 @@ def iter_public_files() -> list[Path]:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Reject one-off profile Actions run links in public docs.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable stable profile proof-link status.")
+    args = parser.parse_args()
+
     failures: list[str] = []
-    for path in iter_public_files():
+    scanned_files = iter_public_files()
+    one_off_run_links: list[dict[str, str]] = []
+    required_link_results: list[dict[str, object]] = []
+    for path in scanned_files:
         rel = path.relative_to(ROOT).as_posix()
         text = path.read_text(encoding="utf-8")
         if rel not in ALLOWED_ONE_OFF_RUN_FILES:
             for match in PROFILE_RUN_RE.finditer(text):
-                failures.append(f"{rel}: hard-coded profile run link {match.group(0)}; use workflow links or {STATUS_SNAPSHOT}")
+                url = match.group(0)
+                one_off_run_links.append({"file": rel, "url": url})
+                failures.append(f"{rel}: hard-coded profile run link {url}; use workflow links or {STATUS_SNAPSHOT}")
 
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     proof_index = (ROOT / "docs" / "technical-proof-index.md").read_text(encoding="utf-8")
@@ -37,16 +48,31 @@ def main() -> int:
         ("docs/technical-proof-index.md", proof_index, STATUS_SNAPSHOT),
     ]
     for rel, text, needle in required_pairs:
-        if needle not in text:
+        present = needle in text
+        required_link_results.append({"file": rel, "needle": needle, "present": present})
+        if not present:
             failures.append(f"{rel}: missing stable profile proof link {needle}")
 
+    summary = {
+        "ok": not failures,
+        "publicFileCount": len(scanned_files),
+        "allowedOneOffRunFiles": sorted(ALLOWED_ONE_OFF_RUN_FILES),
+        "oneOffRunLinkCount": len(one_off_run_links),
+        "oneOffRunLinks": one_off_run_links,
+        "requiredLinks": required_link_results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("Stable profile proof link check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("Stable profile proof link check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print("Checked stable profile proof links: no one-off profile run links in public docs")
+    if not args.json:
+        print("Checked stable profile proof links: no one-off profile run links in public docs")
     return 0
 
 
