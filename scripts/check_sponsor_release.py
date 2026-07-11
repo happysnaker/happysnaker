@@ -21,6 +21,8 @@ REQUIRED_BODY_TEXT = (
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-technical-map.md",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md",
+    "https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml",
+    "https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml",
     "flagship technical map",
     "share kit",
     "qq-ai-bot #26 arm64",
@@ -60,6 +62,8 @@ def main() -> int:
     missing = [needle for needle in REQUIRED_BODY_TEXT if needle not in body]
     if missing:
         failures.append(f"release body missing {missing}")
+    if "https://github.com/happysnaker/happysnaker/actions/runs/" in body:
+        failures.append("release body should use stable profile workflow links, not one-off profile run links")
 
     if failures:
         print("Sponsor release check failures:", file=sys.stderr)
