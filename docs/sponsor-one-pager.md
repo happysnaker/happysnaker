@@ -30,6 +30,7 @@ Point-in-time proof snapshot (2026-07-11):
 | Need | Link |
 |---|---|
 | Main support page | <https://happysnaker.github.io/support/> |
+| Deploy-read sample | <https://happysnaker.github.io/review/deploy-read-sample/> |
 | Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
 | `qq-ai-bot` project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | `qq-ai-bot` support route | <https://happysnaker.github.io/support/#from-qq-ai-bot> |
@@ -67,6 +68,7 @@ Use concrete payment notes instead of a vague donation label:
 | `RDLeader #1` | DevPlan feature sanitization into public-safe commits and docs | [`RDLeader#1`](https://github.com/happysnaker/RDLeader/issues/1) |
 | `RDLeader #3` | license posture decision packet and final reuse boundary | [`RDLeader#3`](https://github.com/happysnaker/RDLeader/issues/3) |
 | `open-source maintenance` | general docs, CI, dependency, security, and packaging upkeep | [operations cadence](operations-cadence.md) |
+| `Deploy read` | `¥29.9` bot / agent / infra repo first pass when the project runs but still looks toy-like | <https://happysnaker.github.io/review/deploy-read-sample/> |
 
 ## Proof already shipped
 
@@ -101,7 +103,8 @@ Support turns unfinished but useful engineering work into public assets that oth
 - fake-data demos and videos instead of private screenshots;
 - CI / CodeQL / dependency-maintenance evidence;
 - external curator follow-up that keeps submissions from going stale;
-- project-page and README packaging that makes serious work easier to discover.
+- project-page and README packaging that makes serious work easier to discover;
+- paid deploy-read samples that turn support into a concrete review offer instead of a vague tip.
 
 ## What sponsorship does not buy
 
@@ -134,5 +137,5 @@ Both pages link back to CI, docs, release, demo, and sponsorware evidence. If so
 ### Sponsor
 
 ```text
-If you want to fund concrete OSS work, use a payment note like `qq-ai-bot #26 arm64` for real ARM/CasaOS validation or `RDLeader #27` for external submission follow-up. The public board is here: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
+If you want to fund concrete OSS work, use a payment note like `qq-ai-bot #26 arm64` for real ARM/CasaOS validation or `RDLeader #27` for external submission follow-up. If your own bot / agent / infra repo needs a blunt packaging pass, use `Deploy read` and preview the sample at https://happysnaker.github.io/review/deploy-read-sample/. The public board is here: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
 ```

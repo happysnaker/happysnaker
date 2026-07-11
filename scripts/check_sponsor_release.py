@@ -21,6 +21,7 @@ REQUIRED_BODY_TEXT = (
     "Sponsor one-pager",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-one-pager.md",
     "https://happysnaker.github.io/support/",
+    "https://happysnaker.github.io/review/deploy-read-sample/",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-technical-map.md",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md",
@@ -30,6 +31,8 @@ REQUIRED_BODY_TEXT = (
     "share kit",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
+    "Deploy read",
+    "¥29.9",
     "Proof before payment",
     "support route checker",
     "repository metadata checker",
@@ -42,12 +45,16 @@ REQUIRED_BODY_TEXT = (
 
 REQUIRED_SOURCE_TEXT = (
     "Reproduce this proof packet",
+    "https://happysnaker.github.io/review/deploy-read-sample/",
+    "Deploy read",
     "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
     "python3 scripts/check_github_status.py --summary",
     "python3 scripts/check_checker_catalog.py --json",
     "Proof before payment",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
+    "Deploy read",
+    "¥29.9",
 )
 
 
