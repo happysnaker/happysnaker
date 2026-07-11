@@ -34,6 +34,7 @@ METADATA_PAGES = [
     "go-http-middleware-kit",
     "happydb",
     "hrpc",
+    "csapp-labs-notes",
 ]
 
 # Pages that should be discoverable from sitemap.xml.
@@ -52,6 +53,7 @@ SITEMAP_PAGES = [
     "go-http-middleware-kit",
     "happydb",
     "hrpc",
+    "csapp-labs-notes",
 ]
 
 BLOCKED_PUBLIC_REPO_LINKS = {
@@ -113,6 +115,8 @@ PROJECT_CONTENT_NEEDLES: dict[str, list[str]] = {
     "go-service-starter": SUPPORT_INTAKE_PAGE_NEEDLES,
     "go-http-middleware-kit": SUPPORT_INTAKE_PAGE_NEEDLES,
     "happydb": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "hrpc": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "csapp-labs-notes": SUPPORT_INTAKE_PAGE_NEEDLES,
 }
 
 

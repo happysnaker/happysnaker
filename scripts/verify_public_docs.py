@@ -270,6 +270,8 @@ REQUIRED = {
         "public-privacy routes",
         "flagship project-page sponsor-intake/privacy markers",
         "support-funnel project-page intake refresh",
+        "Systems-study project-page intake guardrails",
+        "96b2d00",
         "9eea8b1",
         "1c7d450",
         "b5ddf88",
