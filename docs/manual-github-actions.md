@@ -50,6 +50,12 @@ Tracked in:
 
 - <https://github.com/happysnaker/RDLeader/issues/3>
 
+Current report command:
+
+```bash
+python3 scripts/check_rdleader_license.py
+```
+
 Before wider reuse/promotion, choose one of:
 
 - MIT
