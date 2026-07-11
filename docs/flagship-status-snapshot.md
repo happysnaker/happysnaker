@@ -10,8 +10,8 @@ Because editing this file triggers a new profile CI / CodeQL run, the `happysnak
 
 | Repo | Workflow | Status | Commit | Proof |
 |---|---|---|---|---|
-| `happysnaker/happysnaker` | CI | completed / success | `67f8812` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29145221739) |
-| `happysnaker/happysnaker` | CodeQL | completed / success | `67f8812` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29145221753) |
+| `happysnaker/happysnaker` | CI | completed / success | `1523722` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) |
+| `happysnaker/happysnaker` | CodeQL | completed / success | `1523722` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml) |
 | `happysnaker/qq-ai-bot` | CI | completed / success | `5115b59` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29144860988) |
 | `happysnaker/qq-ai-bot` | CodeQL | completed / success | `5115b59` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29144860991) |
 | `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `5115b59` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29144860992) |

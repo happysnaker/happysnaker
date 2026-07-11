@@ -103,6 +103,13 @@ def markdown_link(label: str, url: str | None) -> str:
     return f"[{label}]({url})" if url else label
 
 
+def workflow_url(repo: str, workflow: str, run_url: str | None) -> str | None:
+    if repo == "happysnaker/happysnaker":
+        workflow_file = "codeql.yml" if workflow == "CodeQL" else "ci.yml"
+        return f"https://github.com/{repo}/actions/workflows/{workflow_file}"
+    return run_url
+
+
 def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) -> str:
     lines = [
         "# Flagship GitHub status snapshot",
@@ -126,7 +133,9 @@ def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) ->
                 continue
             status = f"{run['status']} / {run['conclusion']}"
             sha = f"`{run['sha']}`" if run.get("sha") else "-"
-            proof = markdown_link("run", run.get("url"))
+            proof_url = workflow_url(repo, workflow, run.get("url"))
+            proof_label = "workflow" if repo == "happysnaker/happysnaker" else "run"
+            proof = markdown_link(proof_label, proof_url)
             lines.append(f"| `{repo}` | {workflow} | {status} | {sha} | {proof} |")
 
     lines.extend([

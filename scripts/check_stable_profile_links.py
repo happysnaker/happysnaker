@@ -10,9 +10,7 @@ PROFILE_RUN_RE = re.compile(r"https://github\.com/happysnaker/happysnaker/action
 STABLE_CI = "https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml"
 STABLE_CODEQL = "https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml"
 STATUS_SNAPSHOT = "flagship-status-snapshot.md"
-ALLOWED_ONE_OFF_RUN_FILES = {
-    "docs/flagship-status-snapshot.md",
-}
+ALLOWED_ONE_OFF_RUN_FILES: set[str] = set()
 
 
 def iter_public_files() -> list[Path]:
@@ -48,7 +46,7 @@ def main() -> int:
             print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print("Checked stable profile proof links: one-off profile run links are confined to the status snapshot")
+    print("Checked stable profile proof links: no one-off profile run links in public docs")
     return 0
 
 
