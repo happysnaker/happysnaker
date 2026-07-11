@@ -128,6 +128,7 @@ REQUIRED = {
         "scripts/check_gh_usage.py",
         "scripts/check_ci_workflow_contract.py",
         "scripts/check_checker_catalog.py",
+        "--json",
     ],
     "docs/flagship-technical-map.md": [
         "Fast read",
