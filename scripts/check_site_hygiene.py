@@ -66,6 +66,8 @@ JSON_LD_RE = re.compile(r'<script\s+type=["\']application/ld\+json["\']\s*>(.*?)
 
 SUPPORT_CONTENT_NEEDLES = [
     "Proof before payment",
+    "Pick the right support path in 10 seconds",
+    "Specific notes convert better than a vague donation",
     "flagship-technical-map.md",
     "Open technical map",
     "Share kit",
