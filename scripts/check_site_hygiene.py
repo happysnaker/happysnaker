@@ -59,6 +59,16 @@ BLOCKED_PUBLIC_REPO_LINKS = {
 GITHUB_REPO_RE = re.compile(r"https://github\.com/happysnaker/([A-Za-z0-9_.-]+)")
 JSON_LD_RE = re.compile(r'<script\s+type=["\']application/ld\+json["\']\s*>(.*?)</script>', re.IGNORECASE | re.DOTALL)
 
+SUPPORT_CONTENT_NEEDLES = [
+    "Proof before payment",
+    "flagship-technical-map.md",
+    "Open technical map",
+    "Current concrete asks",
+    "qq-ai-bot #26 arm64",
+    "RDLeader #27",
+    "support does not imply a reuse grant",
+]
+
 
 @dataclass(frozen=True)
 class Finding:
@@ -130,6 +140,10 @@ def check_metadata(html: str, slug: str, base_url: str, source_label: str, findi
             ok(f"{source_label} {slug or 'home'} JSON-LD #{index}", "valid JSON", findings)
 
 
+def check_support_content(html: str, source_label: str, findings: list[Finding]) -> None:
+    for needle in SUPPORT_CONTENT_NEEDLES:
+        (ok if needle in html else fail)(f"{source_label} support content", needle, findings)
+
 def check_local_metadata(site_root: Path, base_url: str, findings: list[Finding]) -> None:
     for slug in METADATA_PAGES:
         path = page_path(site_root, slug)
@@ -138,6 +152,8 @@ def check_local_metadata(site_root: Path, base_url: str, findings: list[Finding]
             continue
         html = path.read_text(encoding="utf-8", errors="ignore")
         check_metadata(html, slug, base_url, "local", findings)
+        if slug == "support":
+            check_support_content(html, "local", findings)
 
 
 def check_live_metadata(base_url: str, timeout: float, findings: list[Finding]) -> None:
@@ -149,6 +165,8 @@ def check_live_metadata(base_url: str, timeout: float, findings: list[Finding]) 
             continue
         ok(f"live {slug} HTTP", f"{url} returned {status}", findings)
         check_metadata(html, slug, base_url, "live", findings)
+        if slug == "support":
+            check_support_content(html, "live", findings)
 
 
 def check_sitemap(site_root: Path, base_url: str, expected_lastmod: str | None, findings: list[Finding]) -> None:
