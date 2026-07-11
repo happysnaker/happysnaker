@@ -23,6 +23,7 @@ BASE_URL = "https://happysnaker.github.io"
 METADATA_PAGES = [
     "support",
     "review",
+    "review/deploy-read-sample",
     "qq-ai-bot",
     "rdleader",
     "github-profile-checklist",
@@ -40,6 +41,7 @@ SITEMAP_PAGES = [
     "",
     "support",
     "review",
+    "review/deploy-read-sample",
     "qq-ai-bot",
     "rdleader",
     "github-profile-checklist",
