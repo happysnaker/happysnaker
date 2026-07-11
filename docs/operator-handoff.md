@@ -18,6 +18,7 @@ python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
 python3 scripts/check_checker_catalog.py --json
 python3 scripts/check_share_kit.py --json
+python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8
 python3 scripts/check_external_followups.py --summary
 ```
 
@@ -27,14 +28,15 @@ Use `python3 scripts/run_profile_preflight.py --external-only --action-class opt
 
 - `qq-ai-bot`: CI, CodeQL, Docker publish, and arm64 smoke are green in the latest status checker. The project has Docker / metrics / session / ACP / OneBot proof, but `qq-ai-bot #26 arm64` still needs a real physical ARM / CasaOS / NAS / SBC report.
 - `RDLeader`: CI and CodeQL are green in the latest status checker. The project has public demo / QA / runtime / security proof, but license posture is still unresolved in `RDLeader#3`; do not imply reuse rights.
-- `happysnaker.github.io`: Pages deploy is green and the support page exposes proof-before-payment, current asks, and the share kit.
-- The sponsor one-pager release is intentionally compact; append-only operational detail belongs in [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2).
+- `happysnaker.github.io`: Pages deploy is green and the support page exposes proof-before-payment, current asks, share kit, and the deploy-read sample.
+- The sponsor one-pager release is intentionally compact and now includes the `Deploy read` path; append-only operational detail belongs in [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2).
 
 ## Proof and support links
 
 - Proof before payment: <https://happysnaker.github.io/support/#proof-before-payment>
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 - Share kit: [share-kit.md](share-kit.md)
+- Deploy-read sample: <https://happysnaker.github.io/review/deploy-read-sample/>
 - Flagship technical map: [flagship-technical-map.md](flagship-technical-map.md)
 - Flagship status snapshot: [flagship-status-snapshot.md](flagship-status-snapshot.md)
 - Sponsor one-pager source: [sponsor-one-pager.md](sponsor-one-pager.md)
@@ -72,6 +74,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 - `python3 scripts/check_gh_usage.py` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call.
 - `python3 scripts/check_ci_workflow_contract.py` fails if scheduled CI stops compiling/running the required proof/support drift checks.
 - `python3 scripts/check_checker_catalog.py` fails if a new proof checker is not documented in the technical proof index.
+- `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
 
 ## Good next actions
 
@@ -89,7 +92,8 @@ Good examples:
 - update a proof doc after a meaningful workflow/security/support change;
 - refresh a compact status snapshot when flagship state materially changes;
 - update issue #1 or #2 with evidence after a manual-blocker or operations audit;
-- improve share-kit / support-page routes without posting externally.
+- improve share-kit / support-page routes without posting externally;
+- keep deploy-read / paid-review routes visible from profile, flagship support files, default `.github`, sponsor packet, technical map, and share kit.
 
 Avoid:
 

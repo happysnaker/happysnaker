@@ -23,6 +23,8 @@ REQUIRED_TEXT = (
     "RDLeader#3",
     "Proof before payment",
     "Share kit",
+    "Deploy-read sample",
+    "https://happysnaker.github.io/review/deploy-read-sample/",
     "Sponsor one-pager release",
     "Open blockers",
     "Manual checklist",
@@ -31,11 +33,13 @@ REQUIRED_TEXT = (
     "--enforce-review-due",
     "Automation guardrails",
     "scripts/github_cli.py",
+    "scripts/check_review_funnel.py",
     "stable profile workflow links",
     "one-off profile self-check run links",
     "Good next actions",
     "Avoid",
     "issue #2",
+    "Deploy read",
 )
 
 BANNED_TEXT = (

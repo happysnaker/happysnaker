@@ -115,6 +115,9 @@ REQUIRED = {
         "check_ci_workflow_contract.py",
         "check_checker_catalog.py",
         "check_share_kit.py --json",
+        "check_review_funnel.py",
+        "Deploy-read sample",
+        "https://happysnaker.github.io/review/deploy-read-sample/",
         "happysnaker#2",
     ],
     "docs/operations-cadence.md": [
