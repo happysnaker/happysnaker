@@ -20,6 +20,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Checkout public Pages site
+        uses: actions/checkout@v4
+        with:
+          repository: happysnaker/happysnaker.github.io
+          path: site/happysnaker.github.io
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -65,3 +71,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/check_manual_blockers.py
+
+      - name: Verify public site hygiene
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/check_site_hygiene.py --site-root site/happysnaker.github.io --timeout 8
