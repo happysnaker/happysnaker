@@ -63,7 +63,7 @@ python3 scripts/check_repo_metadata.py
 python3 scripts/check_profile_pins.py
 python3 scripts/check_rdleader_license.py
 python3 scripts/check_manual_blockers.py
-python3 scripts/check_public_links.py --timeout 6 --workers 8
+python3 scripts/check_public_links.py --timeout 6 --workers 12 --scope profile
 python3 scripts/check_external_followups.py
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
@@ -81,7 +81,7 @@ done
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;
-- whether support-route checker, metadata checker, profile-pin checker, RDLeader license checker, or core link checker failed;
+- whether support-route checker, metadata checker, profile-pin checker, RDLeader license checker, or profile-scope link checker failed;
 - manual blocker summary from `python3 scripts/check_manual_blockers.py`, including whether `RDLeader` is still missing from profile pins or RDLeader license posture is still unresolved;
 - whether a new external comment was actually posted, or why no comment was posted.
 
