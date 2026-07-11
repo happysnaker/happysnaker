@@ -5,7 +5,59 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from typing import Any
+
+
+REPO = "happysnaker/happysnaker"
+MANUAL_ISSUE = "1"
+REQUIRED_MANUAL_ISSUE_LABELS = {"operations", "portfolio", "manual-action"}
+REQUIRED_MANUAL_ISSUE_TEXT = (
+    "Profile pins still need the GitHub web UI",
+    "missing: `happysnaker/RDLeader`",
+    "extra: `happysnaker/Resume`",
+    "RDLeader license posture is still unresolved",
+    "scripts/check_issue_labels.py",
+    "scripts/check_ops_issue_log.py",
+)
+
+
+def is_retryable_gh_error(message: str) -> bool:
+    retryable_needles = (
+        "HTTP 429",
+        "HTTP 500",
+        "HTTP 502",
+        "HTTP 503",
+        "HTTP 504",
+        "connection reset",
+        "connection refused",
+        "can't assign requested address",
+        "network is unreachable",
+        "connection timed out",
+        "i/o timeout",
+        "TLS handshake timeout",
+        "temporary failure",
+    )
+    lowered = message.lower()
+    return any(needle.lower() in lowered for needle in retryable_needles)
+
+
+def run_gh(args: list[str]) -> Any:
+    last_error = "gh command failed"
+    for attempt in range(1, 4):
+        completed = subprocess.run(["gh", *args], check=False, capture_output=True, text=True)
+        if completed.returncode == 0:
+            try:
+                return json.loads(completed.stdout)
+            except json.JSONDecodeError as exc:
+                last_error = f"failed to parse JSON from gh {' '.join(args)}: {exc}"
+        else:
+            last_error = completed.stderr.strip() or completed.stdout.strip() or "gh command failed"
+        if attempt < 3 and is_retryable_gh_error(last_error):
+            time.sleep(attempt * 2)
+            continue
+        break
+    raise RuntimeError(last_error)
 
 
 def run_script(args: list[str]) -> Any:
@@ -26,7 +78,17 @@ def main() -> int:
 
     pins = run_script(["scripts/check_profile_pins.py", "--json"])
     license_state = run_script(["scripts/check_rdleader_license.py", "--json"])
+    manual_issue = run_gh([
+        "issue",
+        "view",
+        MANUAL_ISSUE,
+        "-R",
+        REPO,
+        "--json",
+        "number,title,state,url,updatedAt,labels,body,comments",
+    ])
     blockers: list[dict[str, str]] = []
+    manual_issue_failures: list[str] = []
 
     if not pins.get("matchesRecommended"):
         blockers.append({
@@ -45,11 +107,29 @@ def main() -> int:
             "evidence": f"licenseInfo={license_state.get('licenseInfo')} rootLicenseExists={license_state.get('rootLicenseExists')} issue={issue.get('state')} {issue.get('url')}",
         })
 
+    manual_labels = {label.get("name") for label in manual_issue.get("labels") or []}
+    missing_labels = sorted(REQUIRED_MANUAL_ISSUE_LABELS - manual_labels)
+    if manual_issue.get("state") != "OPEN":
+        manual_issue_failures.append(f"manual issue state is {manual_issue.get('state')!r}; expected OPEN")
+    if missing_labels:
+        manual_issue_failures.append(f"manual issue missing labels {missing_labels}")
+    manual_text = "\n".join([manual_issue.get("body") or "", *(comment.get("body") or "" for comment in manual_issue.get("comments") or [])])
+    missing_text = [needle for needle in REQUIRED_MANUAL_ISSUE_TEXT if needle not in manual_text]
+    if missing_text:
+        manual_issue_failures.append(f"manual issue missing text {missing_text}")
+
     summary = {
         "blockers": blockers,
         "resolved": not blockers,
         "profilePins": pins,
         "rdleaderLicense": license_state,
+        "manualIssue": {
+            "url": manual_issue.get("url"),
+            "state": manual_issue.get("state"),
+            "labels": sorted(manual_labels),
+            "updatedAt": manual_issue.get("updatedAt"),
+            "failures": manual_issue_failures,
+        },
     }
 
     if args.json:
@@ -60,8 +140,17 @@ def main() -> int:
             print("none")
         for blocker in blockers:
             print(f"- {blocker['id']}: {blocker['summary']} ({blocker['evidence']})")
+        if manual_issue_failures:
+            print("\nManual issue hygiene failures:")
+            for failure in manual_issue_failures:
+                print(f"- {failure}")
+        else:
+            print(f"\nManual issue: {manual_issue.get('url')} is open and aligned")
         print("\nUse --strict after manual actions to fail until all blockers are resolved.")
 
+    if manual_issue_failures:
+        print("Manual issue hygiene failures remain", file=sys.stderr)
+        return 1
     if args.strict and blockers:
         print("Manual blockers remain open", file=sys.stderr)
         return 1
