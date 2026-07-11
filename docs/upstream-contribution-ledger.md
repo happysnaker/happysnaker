@@ -4,6 +4,8 @@
 
 ## Summary
 
+This is a proof ledger, not a donation page. If this evidence helps someone decide whether to support the work, route them through the 10-second support router first: <https://happysnaker.github.io/support/#sponsor-router>.
+
 - Merged upstream PRs tracked here: **9**.
 - Open upstream PRs tracked here: **14**.
 - Closed / superseded upstream PRs tracked here: **11**.

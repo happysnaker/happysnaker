@@ -311,6 +311,13 @@ REQUIRED = {
         "0f13edc",
         "2b0ad6a",
     ],
+    "docs/upstream-contribution-ledger.md": [
+        "Upstream contribution ledger",
+        "proof ledger, not a donation page",
+        "10-second support router",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "do not run `go test` or `go build`",
+    ],
     "docs/external-follow-up-queue.md": [
         "Prepared material for the 2026-07-16 review window",
         "Project-page closed loop share snippet",
