@@ -138,6 +138,7 @@ REQUIRED = {
         "python3 scripts/check_sponsor_issues.py --json",
         "python3 scripts/check_sponsor_release.py --json",
         "python3 scripts/check_support_routes.py --json",
+        "python3 scripts/check_repo_metadata.py --json",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",

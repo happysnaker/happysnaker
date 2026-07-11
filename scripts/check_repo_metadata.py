@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
 import sys
@@ -58,8 +59,15 @@ EXPECTATIONS: tuple[RepoMetadataExpectation, ...] = (
 run_gh = run_gh_json
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify core repository homepage, description, topic, visibility, and archive metadata.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable repository metadata summary.")
+    args = parser.parse_args()
+
     failures: list[str] = []
+    results: list[dict[str, Any]] = []
     for expected in EXPECTATIONS:
+        data: dict[str, Any] = {}
+        fetch_error: str | None = None
         try:
             data = run_gh([
                 "repo",
@@ -69,42 +77,71 @@ def main() -> int:
                 "nameWithOwner,description,homepageUrl,repositoryTopics,isArchived,visibility",
             ])
         except RuntimeError as error:
+            fetch_error = str(error)
             failures.append(f"{expected.repo}: {error}")
-            continue
 
         description = data.get("description") or ""
         homepage = data.get("homepageUrl") or ""
-        topics = {topic.get("name") for topic in data.get("repositoryTopics", [])}
+        topics = {topic.get("name") for topic in data.get("repositoryTopics", [])} if data else set()
 
         repo_failures: list[str] = []
-        if data.get("visibility") != "PUBLIC":
-            repo_failures.append(f"visibility is {data.get('visibility')!r}")
-        if data.get("isArchived"):
-            repo_failures.append("repository is archived")
-        if homepage != expected.homepage:
-            repo_failures.append(f"homepage is {homepage!r}; expected {expected.homepage!r}")
-        missing_terms = [term for term in expected.description_terms if term.lower() not in description.lower()]
-        if missing_terms:
-            repo_failures.append(f"description missing {missing_terms}")
-        missing_topics = [topic for topic in expected.required_topics if topic not in topics]
-        if missing_topics:
-            repo_failures.append(f"topics missing {missing_topics}")
-
-        if repo_failures:
-            failures.extend(f"{expected.repo}: {failure}" for failure in repo_failures)
-            print(f"FAIL {expected.repo}")
+        if fetch_error:
+            repo_failures.append(fetch_error)
         else:
-            print(f"OK {expected.repo}: {homepage} ({len(topics)} topics)")
+            if data.get("visibility") != "PUBLIC":
+                repo_failures.append(f"visibility is {data.get('visibility')!r}")
+            if data.get("isArchived"):
+                repo_failures.append("repository is archived")
+            if homepage != expected.homepage:
+                repo_failures.append(f"homepage is {homepage!r}; expected {expected.homepage!r}")
+            missing_terms = [term for term in expected.description_terms if term.lower() not in description.lower()]
+            if missing_terms:
+                repo_failures.append(f"description missing {missing_terms}")
+            missing_topics = [topic for topic in expected.required_topics if topic not in topics]
+            if missing_topics:
+                repo_failures.append(f"topics missing {missing_topics}")
 
+        if repo_failures and not fetch_error:
+            failures.extend(f"{expected.repo}: {failure}" for failure in repo_failures)
+        results.append({
+            "repo": expected.repo,
+            "homepage": homepage,
+            "expectedHomepage": expected.homepage,
+            "description": description,
+            "visibility": data.get("visibility") if data else None,
+            "isArchived": data.get("isArchived") if data else None,
+            "topicCount": len(topics),
+            "requiredTopicCount": len(expected.required_topics),
+            "missingTopics": [topic for topic in expected.required_topics if topic not in topics],
+            "missingDescriptionTerms": [term for term in expected.description_terms if term.lower() not in description.lower()] if data else list(expected.description_terms),
+            "fetchError": fetch_error,
+            "ok": not repo_failures,
+        })
+        if not args.json:
+            if repo_failures:
+                print(f"FAIL {expected.repo}")
+            else:
+                print(f"OK {expected.repo}: {homepage} ({len(topics)} topics)")
+
+    summary = {
+        "ok": not failures,
+        "repoCount": len(EXPECTATIONS),
+        "checkedRepoCount": len(results),
+        "repos": results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("\nRepository metadata check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("\nRepository metadata check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"Checked {len(EXPECTATIONS)} repository metadata surfaces")
+    if not args.json:
+        print(f"Checked {len(EXPECTATIONS)} repository metadata surfaces")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())
