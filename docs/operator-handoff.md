@@ -65,6 +65,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 ## Automation guardrails
 
 - Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
+- Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py` rejects one-off profile self-check run links in public docs.
 - `python3 scripts/check_gh_usage.py` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call.
 - `python3 scripts/check_ci_workflow_contract.py` fails if scheduled CI stops compiling/running the required proof/support drift checks.
 

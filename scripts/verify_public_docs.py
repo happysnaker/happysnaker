@@ -88,6 +88,8 @@ REQUIRED = {
         "2026-07-16 UTC",
         "Good next actions",
         "scripts/github_cli.py",
+        "stable profile workflow links",
+        "one-off profile self-check run links",
         "check_stable_profile_links.py",
         "check_gh_usage.py",
         "check_ci_workflow_contract.py",
