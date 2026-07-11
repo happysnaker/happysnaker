@@ -109,18 +109,23 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     ),
     FileExpectation(
         "happysnaker/RDLeader",
+        "README.md",
+        (SUPPORT_ROUTER, "10-second support router", "Tip / Proof / Review / Fund", RD_NOTE, "RDLeader #1", "RDLeader #3", "reuse rights"),
+    ),
+    FileExpectation(
+        "happysnaker/RDLeader",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture", "¥29.9", "¥99"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture", "¥29.9", "¥99"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Security report"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Security report"),
     ),
 )
 

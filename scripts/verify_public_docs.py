@@ -186,6 +186,9 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
+        "Latest RDLeader sponsor-router refresh",
+        "https://github.com/happysnaker/RDLeader/commit/8e8317a",
+        "unresolved license/reuse guardrail",
         "Latest qq-ai-bot sponsor-router refresh",
         "https://github.com/happysnaker/qq-ai-bot/commit/d624e6c",
         "594cb21",
