@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import sys
 from dataclasses import dataclass
 from typing import Sequence
@@ -116,36 +118,71 @@ def issue_id(spec: SponsorIssueSpec) -> str:
     return f"{spec.repo}#{spec.number}"
 
 
-def check_issue(spec: SponsorIssueSpec, failures: list[str]) -> None:
+def check_issue(spec: SponsorIssueSpec, failures: list[str], results: list[dict[str, object]]) -> None:
     issue = run_gh_json(["issue", "view", str(spec.number), "-R", spec.repo, "--json", "number,title,state,url,body"])
     url = issue.get("url")
-    if issue.get("state") != "OPEN":
-        failures.append(f"{issue_id(spec)}: expected OPEN sponsor/support issue, got {issue.get('state')!r} ({url})")
     body = issue.get("body") or ""
     missing = [needle for needle in spec.required if needle not in body]
-    if missing:
-        failures.append(f"{issue_id(spec)}: {spec.summary} missing required sponsor/proof text {missing} ({url})")
     present_banned = [needle for needle in spec.banned if needle in body]
+    issue_failures: list[str] = []
+    if issue.get("state") != "OPEN":
+        issue_failures.append(f"expected OPEN sponsor/support issue, got {issue.get('state')!r}")
+    if missing:
+        issue_failures.append(f"missing required sponsor/proof text {missing}")
     if present_banned:
-        failures.append(f"{issue_id(spec)}: {spec.summary} contains drift-prone one-off proof links {present_banned}; use stable workflow/status links ({url})")
+        issue_failures.append(f"contains drift-prone one-off proof links {present_banned}; use stable workflow/status links")
+    for failure in issue_failures:
+        failures.append(f"{issue_id(spec)}: {spec.summary} {failure} ({url})")
+    results.append({
+        "id": issue_id(spec),
+        "repo": spec.repo,
+        "number": spec.number,
+        "summary": spec.summary,
+        "url": url,
+        "state": issue.get("state"),
+        "requiredCount": len(spec.required),
+        "missingRequiredText": missing,
+        "bannedPhraseHits": present_banned,
+        "ok": not issue_failures,
+    })
 
 
 def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Verify live sponsor/support issue bodies keep proof links, support routes, and guardrails.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable sponsor issue summary.")
+    args = parser.parse_args(argv)
+
     failures: list[str] = []
+    results: list[dict[str, object]] = []
     try:
         for spec in SPECS:
-            check_issue(spec, failures)
+            check_issue(spec, failures, results)
     except RuntimeError as error:
-        print(f"ERROR: failed to check sponsor issues: {error}", file=sys.stderr)
+        if args.json:
+            print(json.dumps({"ok": False, "error": str(error), "issues": results, "failures": [str(error)]}, indent=2, ensure_ascii=False))
+        else:
+            print(f"ERROR: failed to check sponsor issues: {error}", file=sys.stderr)
         return 1
 
+    summary = {
+        "ok": not failures,
+        "issueCount": len(SPECS),
+        "checkedIssueCount": len(results),
+        "requiredCount": sum(len(spec.required) for spec in SPECS),
+        "issues": results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("Sponsor issue check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("Sponsor issue check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"Checked {len(SPECS)} sponsor/support issue bodies for stable proof links, support routes, and guardrails")
+    if not args.json:
+        print(f"Checked {len(SPECS)} sponsor/support issue bodies for stable proof links, support routes, and guardrails")
     return 0
 
 
