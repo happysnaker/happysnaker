@@ -131,6 +131,16 @@ REQUIRED = {
         "scripts/check_ops_issue_log.py",
         "happysnaker#2",
     ],
+    "docs/support-surface-coverage.md": [
+        "deploy-read sample",
+        "scripts/check_review_funnel.py",
+        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8",
+        "Payment%20screenshot",
+        "¥29.9",
+        "¥99",
+        "https://happysnaker.github.io/review/deploy-read-sample/",
+        "e9387ce",
+    ],
     "docs/technical-proof-index.md": [
         "Flagship proof: qq-ai-bot",
         "Flagship proof: RDLeader",
