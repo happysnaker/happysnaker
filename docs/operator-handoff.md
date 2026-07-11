@@ -12,6 +12,7 @@ Run these from the profile repository before acting:
 python3 scripts/check_github_status.py --summary
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
 python3 scripts/check_manual_blockers.py
+python3 scripts/check_operator_handoff.py
 python3 scripts/check_stable_profile_links.py
 python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
