@@ -205,6 +205,7 @@ def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) ->
         "## Current support routing",
         "",
         "- Main support page: <https://happysnaker.github.io/support/>",
+        "- 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>",
         "- Current concrete asks: <https://happysnaker.github.io/support/#current-asks>",
         "- `qq-ai-bot #26 arm64`: <https://github.com/happysnaker/qq-ai-bot/issues/26>",
         "- `RDLeader #27`: <https://github.com/happysnaker/RDLeader/issues/27>",

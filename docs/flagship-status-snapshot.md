@@ -1,6 +1,6 @@
 # Flagship GitHub status snapshot
 
-> Generated from `scripts/check_github_status.py --markdown` on 2026-07-11 Asia/Shanghai.
+> Generated from `scripts/check_github_status.py --markdown` on 2026-07-12 Asia/Shanghai.
 
 This is a point-in-time proof snapshot for sponsor, curator, and reviewer links. It covers the configured flagship surfaces only; do not generalize the CodeQL claim to older repositories without CodeQL configured.
 
@@ -10,15 +10,15 @@ Because editing this file triggers a new profile CI / CodeQL run, the `happysnak
 
 | Repo | Workflow | Status | Commit | Proof |
 |---|---|---|---|---|
-| `happysnaker/happysnaker` | CI | completed / success | `e4c6c6e` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) |
-| `happysnaker/happysnaker` | CodeQL | completed / success | `e4c6c6e` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml) |
-| `happysnaker/qq-ai-bot` | CI | completed / success | `0f13edc` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29153968913) |
-| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `0f13edc` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29153968934) |
-| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `0f13edc` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29153968904) |
-| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `0f13edc` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29154026332) |
-| `happysnaker/RDLeader` | CI | completed / success | `2b0ad6a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29153737743) |
-| `happysnaker/RDLeader` | CodeQL | completed / success | `2b0ad6a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29153737774) |
-| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `e9387ce` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29152926142) |
+| `happysnaker/happysnaker` | CI | completed / success | `2217db4` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) |
+| `happysnaker/happysnaker` | CodeQL | completed / success | `2217db4` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml) |
+| `happysnaker/qq-ai-bot` | CI | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313176) |
+| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313177) |
+| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313173) |
+| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161374094) |
+| `happysnaker/RDLeader` | CI | completed / success | `8e8317a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29161612331) |
+| `happysnaker/RDLeader` | CodeQL | completed / success | `8e8317a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29161612338) |
+| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `843af8d` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218) |
 
 ## Configured alert state
 
@@ -31,6 +31,7 @@ Because editing this file triggers a new profile CI / CodeQL run, the `happysnak
 ## Current support routing
 
 - Main support page: <https://happysnaker.github.io/support/>
+- 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 - `qq-ai-bot #26 arm64`: <https://github.com/happysnaker/qq-ai-bot/issues/26>
 - `RDLeader #27`: <https://github.com/happysnaker/RDLeader/issues/27>

@@ -104,6 +104,15 @@ REQUIRED = {
         "RDLeader #2",
         "What sponsorship funds",
     ],
+    "docs/flagship-status-snapshot.md": [
+        "Flagship GitHub status snapshot",
+        "Current support routing",
+        "10-second support router",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "Current concrete asks",
+        "qq-ai-bot #26 arm64",
+        "RDLeader #27",
+    ],
     "docs/share-kit.md": [
         "Core angle",
         "X / short post",
