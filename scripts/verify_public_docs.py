@@ -251,6 +251,8 @@ REQUIRED = {
         "Tip / Proof / Review / Fund",
         "deploy-read sample",
         "scripts/check_review_funnel.py",
+        "19 remote funding/support/README/issue-contact files",
+        "support-router and share-kit routes",
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_public_links.py --timeout 6 --workers 8 --json",
