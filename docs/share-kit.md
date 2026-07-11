@@ -99,6 +99,17 @@ Start with the ¥29.9 quick read, then upgrade only if the first pass is useful:
 https://happysnaker.github.io/review/
 ```
 
+### Deploy-read sample ask
+
+```text
+Have a bot, agent, or infra repo that technically runs but still looks toy-like?
+
+The ¥29.9 deploy-read sample shows the exact output style: one blunt paragraph, top 3 fixes, and deploy / README / landing-page wording to rewrite first.
+
+Preview before paying: https://happysnaker.github.io/review/deploy-read-sample/
+Order route: https://happysnaker.github.io/support/#quick-read
+```
+
 ## Guardrails
 
 Do not claim:

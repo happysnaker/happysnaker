@@ -21,12 +21,16 @@ REQUIRED_TEXT = (
     "## Sponsorship CTA snippets",
     "### Concrete support ask",
     "### Paid review ask",
+    "### Deploy-read sample ask",
     "## Guardrails",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/support/#current-asks",
     "https://happysnaker.github.io/qq-ai-bot/",
     "https://happysnaker.github.io/rdleader/",
     "https://happysnaker.github.io/review/",
+    "https://happysnaker.github.io/review/deploy-read-sample/",
+    "Order route: https://happysnaker.github.io/support/#quick-read",
+    "top 3 fixes",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
     "RDLeader#3",
@@ -81,7 +85,7 @@ def main() -> int:
     missing_guardrails = [claim for claim in guarded_claims if claim not in guardrails]
 
     summary = {
-        "ok": not missing and not banned_hits and text_fences >= 6 and not missing_guardrails,
+        "ok": not missing and not banned_hits and text_fences >= 7 and not missing_guardrails,
         "path": SHARE_KIT.relative_to(ROOT).as_posix(),
         "snippetCount": text_fences,
         "requiredCount": len(REQUIRED_TEXT),
@@ -99,9 +103,9 @@ def main() -> int:
         if not args.json:
             fail(f"share kit contains banned hype phrase(s): {banned_hits}")
         return 1
-    if text_fences < 6:
+    if text_fences < 7:
         if not args.json:
-            fail(f"expected at least 6 copy-ready text snippets; found {text_fences}")
+            fail(f"expected at least 7 copy-ready text snippets; found {text_fences}")
         return 1
     if missing_guardrails:
         if not args.json:
