@@ -16,6 +16,10 @@ Fast path:
 
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8
+# Machine-readable quick state for automation / handoff.
+python3 scripts/check_github_status.py --summary
+python3 scripts/check_manual_blockers.py --json
+python3 scripts/check_checker_catalog.py --json
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md

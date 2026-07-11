@@ -112,6 +112,13 @@ REQUIRED = {
         "check_share_kit.py --json",
         "happysnaker#2",
     ],
+    "docs/operations-cadence.md": [
+        "Machine-readable quick state",
+        "python3 scripts/check_github_status.py --summary",
+        "python3 scripts/check_manual_blockers.py --json",
+        "python3 scripts/check_checker_catalog.py --json",
+        "--enforce-review-due",
+    ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
         "replace `Resume` with `RDLeader`",
