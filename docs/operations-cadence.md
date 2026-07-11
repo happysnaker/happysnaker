@@ -114,7 +114,7 @@ What it checks:
 - local and live canonical / OpenGraph / Twitter Card / JSON-LD metadata on support, review, flagship, and project landing pages;
 - `robots.txt` sitemap pointer and sitemap entries / optional `lastmod`;
 - public-site links to `happysnaker/*` repositories resolve to public repositories;
-- project/support landing pages use stable workflow/status links instead of one-off Actions run URLs;
+- local and live project/support landing pages use stable workflow/status links instead of one-off Actions run URLs;
 - legacy unavailable repository URLs such as old private project CTAs stay out of public pages.
 
 Profile CI runs the local site hygiene checks against a checked-out `happysnaker.github.io` tree. Keep the external `--live` check manual unless flakiness is acceptable; it depends on GitHub Pages and network responses.

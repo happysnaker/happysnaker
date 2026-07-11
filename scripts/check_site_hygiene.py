@@ -162,16 +162,19 @@ def check_local_metadata(site_root: Path, base_url: str, findings: list[Finding]
 
 
 def check_live_metadata(base_url: str, timeout: float, findings: list[Finding]) -> None:
+    live_pages: list[tuple[str, str]] = []
     for slug in METADATA_PAGES:
         url = site_url(base_url, slug)
         status, html = fetch_url(url, timeout=timeout)
         if not (200 <= status < 400):
             fail(f"live {slug} HTTP", f"{url} returned {status}", findings)
             continue
+        live_pages.append((url, html))
         ok(f"live {slug} HTTP", f"{url} returned {status}", findings)
         check_metadata(html, slug, base_url, "live", findings)
         if slug == "support":
             check_support_content(html, "live", findings)
+    check_stable_workflow_link_texts("live site stable workflow links", live_pages, findings)
 
 
 def check_sitemap(site_root: Path, base_url: str, expected_lastmod: str | None, findings: list[Finding]) -> None:
@@ -214,19 +217,25 @@ def check_sitemap(site_root: Path, base_url: str, expected_lastmod: str | None, 
             (ok if actual == expected_lastmod else fail)("sitemap lastmod", f"{url} -> {actual} (expected {expected_lastmod})", findings)
 
 
-def check_site_stable_workflow_links(site_root: Path, findings: list[Finding]) -> None:
+def check_stable_workflow_link_texts(label: str, pages: Iterable[tuple[str, str]], findings: list[Finding]) -> None:
     hits: list[str] = []
-    for path in iter_scan_files([site_root]):
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        rel = path.relative_to(site_root)
+    for source, text in pages:
         for match in SITE_ONE_OFF_RUN_RE.finditer(text):
-            hits.append(f"{rel}: {match.group(0)}")
+            hits.append(f"{source}: {match.group(0)}")
 
     if hits:
         for hit in hits:
-            fail("site stable workflow links", f"replace one-off Actions run URL with workflow/status link: {hit}", findings)
+            fail(label, f"replace one-off Actions run URL with workflow/status link: {hit}", findings)
     else:
-        ok("site stable workflow links", "no one-off happysnaker Actions run URLs on public Pages surfaces", findings)
+        ok(label, "no one-off happysnaker Actions run URLs on public Pages surfaces", findings)
+
+
+def check_site_stable_workflow_links(site_root: Path, findings: list[Finding]) -> None:
+    pages = [
+        (path.relative_to(site_root).as_posix(), path.read_text(encoding="utf-8", errors="ignore"))
+        for path in iter_scan_files([site_root])
+    ]
+    check_stable_workflow_link_texts("site stable workflow links", pages, findings)
 
 
 def iter_scan_files(paths: Iterable[Path]) -> Iterable[Path]:
