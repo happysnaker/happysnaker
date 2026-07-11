@@ -46,6 +46,8 @@ Use `python3 scripts/run_profile_preflight.py --external-only --action-class opt
 ## Proof and support links
 
 - Proof before payment: <https://happysnaker.github.io/support/#proof-before-payment>
+- 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
+- Default support fallback: <https://github.com/happysnaker/.github/commit/0ec8ed7> / funding fallback: <https://github.com/happysnaker/.github/commit/47eaa73>
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 - Share kit: [share-kit.md](share-kit.md)
 - Deploy-read sample: <https://happysnaker.github.io/review/deploy-read-sample/>
@@ -93,6 +95,7 @@ The optional-update JSON includes `materials`, `candidateComment`, and `candidat
 - `python3 scripts/check_ci_workflow_contract.py --json` fails if scheduled CI stops compiling/running the required proof/support drift checks and emits machine-readable workflow-contract evidence.
 - `python3 scripts/check_checker_catalog.py` fails if a new proof checker is not documented in the technical proof index.
 - `python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json` verifies sponsor/support/status links and emits machine-readable link evidence before broader promotion.
+- `python3 scripts/check_support_routes.py --json` verifies profile/default funding links include both the root support page and the 10-second support router fallback.
 - `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json` verifies local public-page metadata, sitemap, support proof-before-payment content, and repo-link hygiene as machine-readable site evidence.
 - `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
 - `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, candidate comments, and candidate-comment guardrails without posting externally.
