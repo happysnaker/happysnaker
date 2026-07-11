@@ -20,6 +20,7 @@ Point-in-time proof snapshot (2026-07-11):
 - The tracked `RDLeader` CI / CodeQL were green.
 - Run `python3 scripts/check_github_status.py --summary` for live workflow and alert totals before quoting current state.
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
+- 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>.
 - Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
 - Technical map: [flagship-technical-map.md](flagship-technical-map.md).
@@ -32,6 +33,7 @@ Point-in-time proof snapshot (2026-07-11):
 | Main support page | <https://happysnaker.github.io/support/> |
 | Deploy-read sample | <https://happysnaker.github.io/review/deploy-read-sample/> |
 | Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
+| 10-second support router | <https://happysnaker.github.io/support/#sponsor-router> |
 | `qq-ai-bot` project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | `qq-ai-bot` support route | <https://happysnaker.github.io/support/#from-qq-ai-bot> |
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |
@@ -59,7 +61,7 @@ Use the preflight command for the human-readable proof/support gate, `--summary`
 
 ## Current sponsor notes
 
-Use concrete payment notes instead of a vague donation label:
+Use concrete payment notes instead of a vague donation label. If someone is not sure which path fits, send them to the 10-second support router first: <https://happysnaker.github.io/support/#sponsor-router>.
 
 | Payment note | What it funds | Public tracker |
 |---|---|---|
@@ -137,5 +139,5 @@ Both pages link back to CI, docs, release, demo, and sponsorware evidence. If so
 ### Sponsor
 
 ```text
-If you want to fund concrete OSS work, use a payment note like `qq-ai-bot #26 arm64` for real ARM/CasaOS validation or `RDLeader #27` for external submission follow-up. If your own bot / agent / infra repo needs a blunt packaging pass, use `Deploy read` and preview the sample at https://happysnaker.github.io/review/deploy-read-sample/. The public board is here: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
+If you want to fund concrete OSS work but are not sure which path fits, start with the 10-second router: https://happysnaker.github.io/support/#sponsor-router. Use a payment note like `qq-ai-bot #26 arm64` for real ARM/CasaOS validation or `RDLeader #27` for external submission follow-up. If your own bot / agent / infra repo needs a blunt packaging pass, use `Deploy read` and preview the sample at https://happysnaker.github.io/review/deploy-read-sample/. The public board is here: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md
 ```
