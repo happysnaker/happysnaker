@@ -298,6 +298,7 @@ REQUIRED = {
         "scripts/check_operator_handoff.py",
         "scripts/check_checker_catalog.py",
         "including the catalog checker itself",
+        "lacks `--json`",
         "--json",
         "machine-readable link status",
         "the 10-second support router",

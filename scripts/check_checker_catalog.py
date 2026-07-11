@@ -15,22 +15,29 @@ def main() -> int:
     args = parser.parse_args()
 
     proof_text = PROOF_INDEX.read_text(encoding="utf-8")
-    checkers = sorted(path.name for path in SCRIPTS.glob("check_*.py"))
+    checker_paths = sorted(SCRIPTS.glob("check_*.py"))
+    checkers = [path.name for path in checker_paths]
     missing = [name for name in checkers if f"scripts/{name}" not in proof_text]
+    missing_json = [path.name for path in checker_paths if "--json" not in path.read_text(encoding="utf-8")]
     summary = {
         "proofIndex": PROOF_INDEX.relative_to(ROOT).as_posix(),
         "documented": not missing,
+        "jsonSupported": not missing_json,
         "checkers": checkers,
         "missing": missing,
+        "missingJsonSupport": missing_json,
         "count": len(checkers),
     }
     if args.json:
         print(json.dumps(summary, indent=2, ensure_ascii=False))
-    if missing:
+    failures = []
+    failures.extend(f"docs/technical-proof-index.md missing scripts/{name}" for name in missing)
+    failures.extend(f"scripts/{name} is missing --json support" for name in missing_json)
+    if failures:
         if not args.json:
             print("Checker catalog failures:", file=sys.stderr)
-            for name in missing:
-                print(f"- docs/technical-proof-index.md missing scripts/{name}", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
     if not args.json:
         print(f"Checked checker catalog: {len(checkers)} proof checkers documented in technical-proof-index.md")
