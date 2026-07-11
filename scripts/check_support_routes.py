@@ -169,6 +169,26 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
         ".github/ISSUE_TEMPLATE/config.yml",
         ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
     ),
+    FileExpectation(
+        "happysnaker/github-profile-checklist",
+        ".github/FUNDING.yml",
+        ("https://happysnaker.github.io/support/#from-github-profile-checklist", SUPPORT_ROUTER),
+    ),
+    FileExpectation(
+        "happysnaker/github-profile-checklist",
+        "README.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "github-profile-checklist", "private logs", "payment screenshots"),
+    ),
+    FileExpectation(
+        "happysnaker/github-profile-checklist",
+        ".github/SUPPORT.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Best payment note", "github-profile-checklist", "private logs", "payment screenshots", "internal URLs"),
+    ),
+    FileExpectation(
+        "happysnaker/github-profile-checklist",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
+    ),
 )
 
 
