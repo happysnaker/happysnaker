@@ -149,6 +149,26 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
         ".github/ISSUE_TEMPLATE/config.yml",
         ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
     ),
+    FileExpectation(
+        "happysnaker/CSAPPLabsAndNotes",
+        ".github/FUNDING.yml",
+        ("https://happysnaker.github.io/support/#from-csapplabsandnotes", SUPPORT_ROUTER),
+    ),
+    FileExpectation(
+        "happysnaker/CSAPPLabsAndNotes",
+        "README.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "CSAPPLabsAndNotes", "private logs", "payment screenshots"),
+    ),
+    FileExpectation(
+        "happysnaker/CSAPPLabsAndNotes",
+        ".github/SUPPORT.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Best payment note", "CSAPPLabsAndNotes", "private logs", "payment screenshots", "internal URLs"),
+    ),
+    FileExpectation(
+        "happysnaker/CSAPPLabsAndNotes",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
+    ),
 )
 
 
