@@ -27,6 +27,8 @@ def external_step(args: argparse.Namespace) -> Step:
     external_command = ["python3", "scripts/check_external_followups.py"]
     for action_class in args.action_class or []:
         external_command.extend(["--action-class", action_class])
+    if args.external_summary:
+        external_command.append("--summary")
     return Step("Summarize external follow-ups", tuple(external_command))
 
 
@@ -81,6 +83,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--timeout", type=float, default=6.0, help="Per-link timeout in seconds. Default: 6.")
     parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
     parser.add_argument("--external-only", action="store_true", help="Run only the dynamic external PR/issue summary, preserving action-class filters.")
+    parser.add_argument("--external-summary", action="store_true", help="Use compact summary output for the dynamic external PR/issue step.")
     parser.add_argument(
         "--action-class",
         action="append",
