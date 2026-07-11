@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 ALLOWED_DIRECT_GH = {"github_cli.py"}
+EXPECTED_ALLOWED_DIRECT_GH = {"github_cli.py"}
 GH_PATTERNS = (
     re.compile(r"subprocess\.run\(\[\"gh\""),
     re.compile(r"subprocess\.run\(\[\'gh\'"),
@@ -25,6 +26,13 @@ def main() -> int:
     scanned_scripts: list[str] = []
     allowed_scripts: list[str] = []
     direct_matches: list[dict[str, object]] = []
+    expected_allowed_scripts = sorted(f"scripts/{name}" for name in EXPECTED_ALLOWED_DIRECT_GH)
+    if ALLOWED_DIRECT_GH != EXPECTED_ALLOWED_DIRECT_GH:
+        failures.append(
+            "direct gh allowlist drifted; expected "
+            f"{sorted(EXPECTED_ALLOWED_DIRECT_GH)} but found {sorted(ALLOWED_DIRECT_GH)}"
+        )
+
     for path in sorted(SCRIPTS.glob("*.py")):
         rel = path.relative_to(ROOT).as_posix()
         if path.name in ALLOWED_DIRECT_GH:
@@ -43,6 +51,12 @@ def main() -> int:
 
     failed_files = sorted({str(match["file"]) for match in direct_matches})
     failures.extend(f"{file} uses direct gh subprocess; use scripts/github_cli.py" for file in failed_files)
+    missing_allowed_scripts = sorted(set(expected_allowed_scripts) - set(allowed_scripts))
+    unexpected_allowed_scripts = sorted(set(allowed_scripts) - set(expected_allowed_scripts))
+    if missing_allowed_scripts:
+        failures.append(f"missing expected direct gh helper(s): {', '.join(missing_allowed_scripts)}")
+    if unexpected_allowed_scripts:
+        failures.append(f"unexpected direct gh helper allowlist entry: {', '.join(unexpected_allowed_scripts)}")
 
     summary = {
         "ok": not failures,
@@ -51,6 +65,10 @@ def main() -> int:
         "scannedScripts": scanned_scripts,
         "allowedScriptCount": len(allowed_scripts),
         "allowedScripts": allowed_scripts,
+        "expectedAllowedScripts": expected_allowed_scripts,
+        "missingAllowedScripts": missing_allowed_scripts,
+        "unexpectedAllowedScripts": unexpected_allowed_scripts,
+        "allowedScriptDriftOk": not missing_allowed_scripts and not unexpected_allowed_scripts,
         "allowedDirectGh": sorted(ALLOWED_DIRECT_GH),
         "directMatchCount": len(direct_matches),
         "directMatches": direct_matches,

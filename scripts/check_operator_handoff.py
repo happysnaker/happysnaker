@@ -50,6 +50,7 @@ REQUIRED_TEXT = (
     "--enforce-review-due",
     "Automation guardrails",
     "scripts/github_cli.py",
+    "anything except `scripts/github_cli.py` is allowlisted",
     "scripts/check_review_funnel.py",
     "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     "python3 scripts/check_sponsor_issues.py --json",

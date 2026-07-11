@@ -91,7 +91,7 @@ The optional-update JSON includes `materials`, `candidateComment`, and `candidat
 - Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
 - `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json` emits machine-readable pass/fail status for the core takeover proof gate.
 - Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py --json` rejects one-off profile self-check run links in public docs and emits machine-readable drift evidence.
-- `python3 scripts/check_gh_usage.py --json` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call and emits machine-readable helper-usage evidence.
+- `python3 scripts/check_gh_usage.py --json` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call, or if anything except `scripts/github_cli.py` is allowlisted for direct `gh`, and emits machine-readable helper-usage evidence.
 - `python3 scripts/check_ci_workflow_contract.py --json` fails if scheduled CI stops compiling/running the required proof/support drift checks and emits machine-readable workflow-contract evidence.
 - `python3 scripts/check_checker_catalog.py --json` fails if a new proof checker is not documented in the technical proof index or lacks `--json` support.
 - `python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json` verifies sponsor/support/status links and emits machine-readable link evidence before broader promotion.

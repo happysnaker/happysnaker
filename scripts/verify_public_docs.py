@@ -198,6 +198,7 @@ REQUIRED = {
         "python3 scripts/check_ops_issue_log.py --json",
         "python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json",
         "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json",
+        "only allowed direct-`gh` script",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
@@ -293,6 +294,8 @@ REQUIRED = {
         "scripts/github_cli.py",
         "scripts/check_gh_usage.py",
         "machine-readable helper-usage drift state",
+        "expected allowlisted shared helper",
+        "missing/unexpected allowlist drift",
         "allowlisted shared helper",
         "total script count",
         "checker catalog JSON",
