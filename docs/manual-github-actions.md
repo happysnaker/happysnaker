@@ -4,7 +4,7 @@
 
 ## 1. Pin RDLeader on the profile
 
-Current API check still shows profile pins include `Resume` and do not include `RDLeader`. Re-checked on 2026-07-08 UTC / 2026-07-09 Asia-Shanghai: the current GraphQL mutation surface exposes issue/comment pin mutations, not profile repository pin mutations, so this remains a manual web-UI action.
+Current API check still shows profile pins include `Resume` and do not include `RDLeader`. Re-checked on 2026-07-11 Asia/Shanghai: the current GraphQL mutation surface exposes issue/comment/environment pin mutations and repository metadata mutations, but still does not expose a profile repository-pin mutation, so this remains a manual web-UI action.
 
 For the strongest technical first screen, replace `Resume` with `RDLeader`.
 
@@ -32,6 +32,8 @@ Automation already completed around this item:
 - RDLeader repository homepage now points to that project page.
 - RDLeader topics include `agent-ops`, `control-plane`, `runtime-orchestration`, `sponsorware`, and `ai-workers`.
 - The profile repo topics include `agent-ops`, `oss-portfolio`, and `sponsorware`.
+- Weekly profile CI now checks support-route, repository metadata, and sponsor-release drift.
+- `docs/flagship-technical-map.md` now explains why RDLeader belongs in the first-screen technical proof set.
 
 Manual path:
 
