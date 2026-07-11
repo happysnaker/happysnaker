@@ -4,6 +4,8 @@
 
 Tracking issue: <https://github.com/happysnaker/happysnaker/issues/2>.
 
+First-read handoff for future operators: [operator-handoff.md](operator-handoff.md).
+
 ## Weekly checklist
 
 Run this once per week, or whenever a major public-surface change lands.

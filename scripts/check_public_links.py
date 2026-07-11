@@ -33,6 +33,7 @@ PROFILE_FILES = [
     ROOT / "docs" / "sponsorware-board.md",
     ROOT / "docs" / "portfolio-audit.md",
     ROOT / "docs" / "operations-cadence.md",
+    ROOT / "docs" / "operator-handoff.md",
 ]
 
 MARKDOWN_LINK_RE = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
