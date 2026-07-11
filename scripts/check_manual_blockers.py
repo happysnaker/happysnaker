@@ -8,6 +8,8 @@ import sys
 import time
 from typing import Any
 
+from github_cli import run_gh_json
+
 
 REPO = "happysnaker/happysnaker"
 MANUAL_ISSUE = "1"
@@ -22,43 +24,8 @@ REQUIRED_MANUAL_ISSUE_TEXT = (
 )
 
 
-def is_retryable_gh_error(message: str) -> bool:
-    retryable_needles = (
-        "HTTP 429",
-        "HTTP 500",
-        "HTTP 502",
-        "HTTP 503",
-        "HTTP 504",
-        "connection reset",
-        "connection refused",
-        "can't assign requested address",
-        "network is unreachable",
-        "connection timed out",
-        "i/o timeout",
-        "TLS handshake timeout",
-        "temporary failure",
-    )
-    lowered = message.lower()
-    return any(needle.lower() in lowered for needle in retryable_needles)
 
-
-def run_gh(args: list[str]) -> Any:
-    last_error = "gh command failed"
-    for attempt in range(1, 4):
-        completed = subprocess.run(["gh", *args], check=False, capture_output=True, text=True)
-        if completed.returncode == 0:
-            try:
-                return json.loads(completed.stdout)
-            except json.JSONDecodeError as exc:
-                last_error = f"failed to parse JSON from gh {' '.join(args)}: {exc}"
-        else:
-            last_error = completed.stderr.strip() or completed.stdout.strip() or "gh command failed"
-        if attempt < 3 and is_retryable_gh_error(last_error):
-            time.sleep(attempt * 2)
-            continue
-        break
-    raise RuntimeError(last_error)
-
+run_gh = run_gh_json
 
 def run_script(args: list[str]) -> Any:
     completed = subprocess.run(["python3", *args], check=False, capture_output=True, text=True)
