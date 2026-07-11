@@ -31,6 +31,7 @@ python3 scripts/check_repo_metadata.py --json
 python3 scripts/check_issue_labels.py --json
 python3 scripts/check_readme_badges.py --json
 python3 scripts/check_ops_issue_log.py --json
+python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
@@ -110,7 +111,7 @@ python3 scripts/verify_public_docs.py
 For sponsor/proof link hygiene, run the narrower external link check manually when support surfaces change:
 
 ```bash
-python3 scripts/check_public_links.py
+python3 scripts/check_public_links.py --timeout 6 --workers 8 --json
 # Use --scope profile for README + technical proof index + upstream ledger + core proof docs, or --scope all for a slower full-doc sweep.
 ```
 
@@ -165,7 +166,7 @@ When updating coverage, use this sequence:
 
 1. Add or update the repository / page row in `docs/support-surface-coverage.md` with the exact evidence commit.
 2. Run `python3 scripts/verify_public_docs.py`.
-3. Run `python3 scripts/check_public_links.py --timeout 6 --workers 8` for the core support/proof links; use `--scope profile --workers 12` before claiming broader profile-link coverage.
+3. Run `python3 scripts/check_public_links.py --timeout 6 --workers 8 --json` for the core support/proof links; use `--scope profile --workers 12 --json` before claiming broader profile-link coverage.
 4. If the change affects a public support or review page, verify the live page after Pages deployment.
 5. Keep the frozen sponsor one-pager release compact. It should summarize the current proof packet and link to the append-only operations log in issue #2; do not keep appending every heartbeat to the release body because GitHub enforces a release-note size limit.
 6. Record the result in `happysnaker#2`.

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import subprocess
 import sys
@@ -137,6 +138,7 @@ def main() -> int:
     parser.add_argument("--scope", choices=("core", "profile", "all"), default="core", help="Files to scan. Default: core sponsor/support docs.")
     parser.add_argument("--timeout", type=float, default=8.0, help="Per-request timeout in seconds.")
     parser.add_argument("--workers", type=int, default=8, help="Concurrent link checks. Use 1 for sequential output/debugging.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable public-link status.")
     args = parser.parse_args()
 
     if args.workers < 1:
@@ -144,9 +146,11 @@ def main() -> int:
 
     files = iter_markdown_files(args.scope)
     links_by_url: dict[str, list[Path]] = {}
+    skipped_links_by_url: dict[str, list[Path]] = {}
     for path in files:
         for link in extract_links(path):
             if should_skip(link.url):
+                skipped_links_by_url.setdefault(link.url, []).append(link.source)
                 continue
             links_by_url.setdefault(link.url, []).append(link.source)
 
@@ -156,6 +160,7 @@ def main() -> int:
         return url, ok, detail, sources
 
     failures: list[tuple[str, str, list[Path]]] = []
+    link_results: list[dict[str, object]] = []
     items = sorted(links_by_url.items())
     if args.workers == 1:
         results = [check_one(item) for item in items]
@@ -164,19 +169,57 @@ def main() -> int:
             results = list(executor.map(check_one, items))
 
     for url, ok, detail, sources in results:
-        rel_sources = ", ".join(sorted({source.relative_to(ROOT).as_posix() for source in sources}))
-        print(f"{'OK' if ok else 'FAIL'} {detail} {url} [{rel_sources}]", flush=True)
+        rel_sources_list = sorted({source.relative_to(ROOT).as_posix() for source in sources})
+        rel_sources = ", ".join(rel_sources_list)
+        link_results.append({
+            "url": url,
+            "ok": ok,
+            "detail": detail,
+            "sources": rel_sources_list,
+        })
+        if not args.json:
+            print(f"{'OK' if ok else 'FAIL'} {detail} {url} [{rel_sources}]", flush=True)
         if not ok:
             failures.append((url, detail, sources))
 
+    summary = {
+        "ok": not failures,
+        "scope": args.scope,
+        "timeout": args.timeout,
+        "workers": args.workers,
+        "fileCount": len(files),
+        "files": [path.relative_to(ROOT).as_posix() for path in files],
+        "linkCount": len(links_by_url),
+        "skippedLinkCount": len(skipped_links_by_url),
+        "skippedLinks": [
+            {
+                "url": url,
+                "sources": sorted({source.relative_to(ROOT).as_posix() for source in sources}),
+            }
+            for url, sources in sorted(skipped_links_by_url.items())
+        ],
+        "links": link_results,
+        "failures": [
+            {
+                "url": url,
+                "detail": detail,
+                "sources": sorted({source.relative_to(ROOT).as_posix() for source in sources}),
+            }
+            for url, detail, sources in failures
+        ],
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False), flush=True)
     if failures:
-        print("\nBroken public links:", file=sys.stderr)
-        for url, detail, sources in failures:
-            rel_sources = ", ".join(sorted({source.relative_to(ROOT).as_posix() for source in sources}))
-            print(f"- {url} ({detail}) in {rel_sources}", file=sys.stderr)
+        if not args.json:
+            print("\nBroken public links:", file=sys.stderr)
+            for url, detail, sources in failures:
+                rel_sources = ", ".join(sorted({source.relative_to(ROOT).as_posix() for source in sources}))
+                print(f"- {url} ({detail}) in {rel_sources}", file=sys.stderr)
         return 1
 
-    print(f"Checked {len(links_by_url)} public links from {len(files)} files", flush=True)
+    if not args.json:
+        print(f"Checked {len(links_by_url)} public links from {len(files)} files", flush=True)
     return 0
 
 
