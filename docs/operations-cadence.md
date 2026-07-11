@@ -17,7 +17,7 @@ python3 scripts/check_github_status.py
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
 ```
 
-This checks latest configured workflows for `happysnaker`, `qq-ai-bot`, `RDLeader`, and `happysnaker.github.io`, plus open CodeQL / Dependabot / secret-scanning alerts for the configured flagship repos. The Markdown mode refreshes the sponsor/curator-facing [flagship status snapshot](flagship-status-snapshot.md).
+This checks latest configured workflows for `happysnaker`, `qq-ai-bot`, `RDLeader`, and `happysnaker.github.io`, plus open CodeQL / Dependabot / secret-scanning alerts for the configured flagship repos. The Markdown mode refreshes the sponsor/curator-facing [flagship status snapshot](flagship-status-snapshot.md). Do not create a refresh-only loop solely to chase the profile repo's own newest CI run: editing the snapshot triggers another self-check. Refresh the snapshot when a flagship status, support route, or alert posture materially changes.
 
 Manual checklist:
 
