@@ -98,6 +98,46 @@ ISSUES: tuple[IssueTarget, ...] = (
 )
 
 
+CANDIDATE_COMMENTS: dict[tuple[str, int], str] = {
+    (
+        "docker/awesome-compose",
+        781,
+    ): """Small proof-path update since the original submission: the qq-ai-bot project page now links through a 10-second support/proof router, so reviewers can inspect the current CI / CodeQL / Docker / arm64-smoke state and support notes without inferring everything from the Compose sample.
+
+Project page: https://happysnaker.github.io/qq-ai-bot/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Tester pack: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md
+
+Caveat: QEMU arm64 smoke is green, but I am still not claiming real physical ARM/CasaOS completion until qq-ai-bot#26 gets a real host report.""",
+    (
+        "AwesomeHomelab/awesome-homelab",
+        98,
+    ): """Quick homelab-facing update for reviewers: qq-ai-bot now has a project page → support/proof router path, plus the tester pack / outreach kit for people who want to try the arm64 or CasaOS path.
+
+Project page: https://happysnaker.github.io/qq-ai-bot/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Tester pack: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md
+Homelab outreach kit: https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md
+
+Caveat: this is still waiting on a real physical ARM/CasaOS/NAS/SBC report; I am not marking that validation complete yet.""",
+    (
+        "jbesomi/awesome-autonomous-agents",
+        20,
+    ): """Small public-proof update for RDLeader: the project page now routes reviewers through a 10-second support/proof router, and the support route keeps the license/reuse caveat explicit.
+
+Project page: https://happysnaker.github.io/rdleader/
+Support/proof router: https://happysnaker.github.io/support/#sponsor-router
+Distribution kit: https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md
+Submission tracker: https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md
+
+Caveat: RDLeader reuse rights are still blocked on https://github.com/happysnaker/RDLeader/issues/3, so this is a review/proof update, not a license grant.""",
+}
+
+
+def candidate_comment(repo: str, number: int) -> str | None:
+    return CANDIDATE_COMMENTS.get((repo, number))
+
+
 def parse_iso_date(value: str, label: str) -> date:
     try:
         return date.fromisoformat(value)
@@ -156,6 +196,7 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "actionClass": target.action_class,
         "nextAction": target.next_action,
         "materials": list(target.materials),
+        "candidateComment": candidate_comment(target.repo, target.number),
     }
 
 
@@ -186,18 +227,19 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "actionClass": target.action_class,
         "nextAction": target.next_action,
         "materials": list(target.materials),
+        "candidateComment": candidate_comment(target.repo, target.number),
     }
 
 
 def format_markdown(rows: list[dict[str, Any]]) -> str:
     lines = [
-        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Note | Next action | Materials |",
-        "|---|---|---|---|---|---|---|---|---|---|---|---|",
+        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Note | Next action | Materials | Candidate |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         surface = f"[{row['repo']}#{row['number']}]({row['url']})"
         lines.append(
-            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {note} | {next_action} | {materials} |".format(
+            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {note} | {next_action} | {materials} | {candidate} |".format(
                 kind=row["kind"],
                 project=row["project"],
                 surface=surface,
@@ -210,6 +252,7 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
                 note=(row.get("note") or "").replace("|", "/"),
                 next_action=(row.get("nextAction") or "").replace("|", "/"),
                 materials=", ".join(row.get("materials") or []).replace("|", "/"),
+                candidate="prepared" if row.get("candidateComment") else "",
             )
         )
     return "\n".join(lines)
@@ -240,7 +283,8 @@ def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = Non
         for row in optional:
             material_text = "; ".join(row.get("materials") or [])
             suffix = f" Materials: {material_text}" if material_text else ""
-            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}{suffix}")
+            candidate = " Candidate comment: prepared" if row.get("candidateComment") else ""
+            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}{suffix}{candidate}")
     else:
         lines.extend(["", "Optional-update surfaces: none"])
     blockers = [row for row in rows if row.get("actionClass") in {"keep-open", "stay-quiet"}]
