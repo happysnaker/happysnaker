@@ -23,10 +23,12 @@ def main() -> int:
 
     failures: list[str] = []
     scanned_scripts: list[str] = []
+    allowed_scripts: list[str] = []
     direct_matches: list[dict[str, object]] = []
     for path in sorted(SCRIPTS.glob("*.py")):
         rel = path.relative_to(ROOT).as_posix()
         if path.name in ALLOWED_DIRECT_GH:
+            allowed_scripts.append(rel)
             continue
         scanned_scripts.append(rel)
         text = path.read_text(encoding="utf-8")
@@ -44,8 +46,11 @@ def main() -> int:
 
     summary = {
         "ok": not failures,
+        "scriptCount": len(scanned_scripts) + len(allowed_scripts),
         "scannedScriptCount": len(scanned_scripts),
         "scannedScripts": scanned_scripts,
+        "allowedScriptCount": len(allowed_scripts),
+        "allowedScripts": allowed_scripts,
         "allowedDirectGh": sorted(ALLOWED_DIRECT_GH),
         "directMatchCount": len(direct_matches),
         "directMatches": direct_matches,
