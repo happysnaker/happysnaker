@@ -229,6 +229,26 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
         ".github/ISSUE_TEMPLATE/config.yml",
         ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
     ),
+    FileExpectation(
+        "happysnaker/production-readiness-checklist",
+        ".github/FUNDING.yml",
+        ("https://happysnaker.github.io/support/#from-production-readiness-checklist", SUPPORT_ROUTER),
+    ),
+    FileExpectation(
+        "happysnaker/production-readiness-checklist",
+        "README.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "production-readiness-checklist", "private logs", "payment screenshots"),
+    ),
+    FileExpectation(
+        "happysnaker/production-readiness-checklist",
+        ".github/SUPPORT.md",
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Low-friction thanks", "production-readiness-checklist", "private logs", "payment screenshots", "internal URLs"),
+    ),
+    FileExpectation(
+        "happysnaker/production-readiness-checklist",
+        ".github/ISSUE_TEMPLATE/config.yml",
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
+    ),
 )
 
 
