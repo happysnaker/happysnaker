@@ -114,6 +114,8 @@ REQUIRED = {
         "actions/workflows/codeql.yml",
         "flagship status snapshot",
         "Stable profile proof-link checker",
+        "rejects one-off profile self-check run links",
+        "stable profile workflow links",
         "scripts/check_stable_profile_links.py",
         "python3 scripts/check_github_status.py",
         "Shared GitHub CLI helper",
