@@ -12,6 +12,7 @@ Run these from the profile repository before acting:
 python3 scripts/check_github_status.py
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
 python3 scripts/check_manual_blockers.py
+python3 scripts/check_gh_usage.py
 python3 scripts/check_external_followups.py --summary
 ```
 
@@ -58,6 +59,11 @@ python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
+
+## Automation guardrails
+
+- Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
+- `python3 scripts/check_gh_usage.py` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call.
 
 ## Good next actions
 

@@ -87,6 +87,8 @@ REQUIRED = {
         "--enforce-review-due",
         "2026-07-16 UTC",
         "Good next actions",
+        "scripts/github_cli.py",
+        "check_gh_usage.py",
         "happysnaker#2",
     ],
     "docs/manual-github-actions.md": [
@@ -106,6 +108,10 @@ REQUIRED = {
         "Flagship proof: RDLeader",
         "Maintenance proof",
         "Sponsorware / support proof",
+        "Shared GitHub CLI helper",
+        "GitHub CLI usage checker",
+        "scripts/github_cli.py",
+        "scripts/check_gh_usage.py",
     ],
     "docs/flagship-technical-map.md": [
         "Fast read",
