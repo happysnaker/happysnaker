@@ -44,6 +44,7 @@ REQUIRED = {
         "Point-in-time proof snapshot",
         "python3 scripts/check_github_status.py --summary",
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
+        "`--json` for machine-readable preflight step status",
         "python3 scripts/check_manual_blockers.py --json",
         "python3 scripts/check_stable_profile_links.py --json",
         "python3 scripts/check_gh_usage.py --json",
@@ -106,6 +107,7 @@ REQUIRED = {
     "docs/operator-handoff.md": [
         "Current source of truth",
         "python3 scripts/check_github_status.py --summary",
+        "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json",
         "python3 scripts/check_manual_blockers.py --json",
         "Current flagship state",
         "Proof before payment",
@@ -136,6 +138,7 @@ REQUIRED = {
     ],
     "docs/operations-cadence.md": [
         "Machine-readable quick state",
+        "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --json",
         "python3 scripts/check_github_status.py --summary",
         "python3 scripts/check_manual_blockers.py --json",
         "python3 scripts/check_stable_profile_links.py --json",
@@ -205,6 +208,7 @@ REQUIRED = {
         "stable profile workflow links",
         "scripts/check_stable_profile_links.py",
         "machine-readable proof-link drift state",
+        "supports `--json`",
         "python3 scripts/check_github_status.py",
         "--summary",
         "Shared GitHub CLI helper",

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -14,13 +15,36 @@ class Step:
     command: tuple[str, ...]
 
 
-def run_step(step: Step) -> int:
+@dataclass(frozen=True)
+class StepResult:
+    name: str
+    command: tuple[str, ...]
+    returncode: int
+    stdout: str | None = None
+    stderr: str | None = None
+
+    @property
+    def ok(self) -> bool:
+        return self.returncode == 0
+
+
+def run_step(step: Step, *, capture: bool = False) -> StepResult:
+    if capture:
+        completed = subprocess.run(step.command, check=False, capture_output=True, text=True)
+        return StepResult(
+            name=step.name,
+            command=step.command,
+            returncode=completed.returncode,
+            stdout=completed.stdout,
+            stderr=completed.stderr,
+        )
+
     print(f"\n## {step.name}", flush=True)
     print("$ " + " ".join(step.command), flush=True)
     completed = subprocess.run(step.command, check=False)
     if completed.returncode != 0:
         print(f"FAILED {step.name}: exit {completed.returncode}", file=sys.stderr, flush=True)
-    return completed.returncode
+    return StepResult(name=step.name, command=step.command, returncode=completed.returncode)
 
 
 def external_step(args: argparse.Namespace) -> Step:
@@ -110,6 +134,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         help="Filter external follow-up rows by action class. Can be repeated.",
     )
     parser.add_argument("--snapshot-as-of", help="If set, emit a markdown status snapshot with this label at the end.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable preflight step status.")
     args = parser.parse_args(argv)
 
     if args.workers < 1:
@@ -117,19 +142,52 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.external_only and args.skip_external:
         parser.error("--external-only cannot be combined with --skip-external")
 
-    failures: list[str] = []
+    results: list[StepResult] = []
     for step in build_steps(args):
-        code = run_step(step)
-        if code != 0:
-            failures.append(f"{step.name}: exit {code}")
+        results.append(run_step(step, capture=args.json))
 
+    failures = [result for result in results if not result.ok]
+    if args.json:
+        print(
+            json.dumps(
+                {
+                    "ok": not failures,
+                    "stepCount": len(results),
+                    "failureCount": len(failures),
+                    "steps": [
+                        {
+                            "name": result.name,
+                            "command": list(result.command),
+                            "returncode": result.returncode,
+                            "ok": result.ok,
+                            "stdout": result.stdout,
+                            "stderr": result.stderr,
+                        }
+                        for result in results
+                    ],
+                    "failures": [
+                        {
+                            "name": result.name,
+                            "command": list(result.command),
+                            "returncode": result.returncode,
+                        }
+                        for result in failures
+                    ],
+                },
+                indent=2,
+                ensure_ascii=False,
+            ),
+            flush=True,
+        )
     if failures:
-        print("\nPreflight failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("\nPreflight failures:", file=sys.stderr)
+            for result in failures:
+                print(f"- {result.name}: exit {result.returncode}", file=sys.stderr)
         return 1
 
-    print("\nPreflight passed", flush=True)
+    if not args.json:
+        print("\nPreflight passed", flush=True)
     return 0
 
 

@@ -11,6 +11,7 @@ Run these from the profile repository before acting:
 ```bash
 python3 scripts/check_github_status.py --summary
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
+python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json
 python3 scripts/check_manual_blockers.py --json
 python3 scripts/check_operator_handoff.py
 python3 scripts/check_stable_profile_links.py --json
@@ -79,6 +80,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 ## Automation guardrails
 
 - Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
+- `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json` emits machine-readable pass/fail status for the core takeover proof gate.
 - Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py --json` rejects one-off profile self-check run links in public docs and emits machine-readable drift evidence.
 - `python3 scripts/check_gh_usage.py --json` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call and emits machine-readable helper-usage evidence.
 - `python3 scripts/check_ci_workflow_contract.py --json` fails if scheduled CI stops compiling/running the required proof/support drift checks and emits machine-readable workflow-contract evidence.

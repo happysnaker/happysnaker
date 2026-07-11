@@ -16,6 +16,7 @@ Fast path:
 
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8
+python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --json
 # Machine-readable quick state for automation / handoff.
 python3 scripts/check_github_status.py --summary
 python3 scripts/check_manual_blockers.py --json
