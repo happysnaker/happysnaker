@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -52,41 +54,87 @@ GH_TOKEN_STEPS = (
 )
 
 
-def fail(message: str) -> None:
-    print(f"ERROR: {message}", file=sys.stderr)
-    raise SystemExit(1)
+def workflow_step_block(text: str, step: str) -> str | None:
+    index = text.find(f"- name: {step}")
+    if index == -1:
+        return None
+    next_index = text.find("\n      - name:", index + 1)
+    return text[index : next_index if next_index != -1 else len(text)]
 
 
 def main() -> int:
-    if not WORKFLOW.exists():
-        fail(f"missing workflow: {WORKFLOW.relative_to(ROOT)}")
+    parser = argparse.ArgumentParser(description="Verify the profile CI workflow proof-check contract.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable CI workflow contract status.")
+    args = parser.parse_args()
 
-    text = WORKFLOW.read_text(encoding="utf-8")
-    missing_text = [needle for needle in REQUIRED_TEXT if needle not in text]
+    failures: list[str] = []
+    workflow_rel = WORKFLOW.relative_to(ROOT).as_posix()
+    workflow_present = WORKFLOW.exists()
+    text = WORKFLOW.read_text(encoding="utf-8") if workflow_present else ""
+    if not workflow_present:
+        failures.append(f"missing workflow: {workflow_rel}")
+
+    required_text_results = [{"needle": needle, "present": needle in text} for needle in REQUIRED_TEXT]
+    missing_text = [item["needle"] for item in required_text_results if not item["present"]]
     if missing_text:
-        fail(f"CI workflow missing required text: {missing_text}")
+        failures.append(f"CI workflow missing required text: {missing_text}")
 
+    compile_line = None
     compile_line_match = re.search(r"run: python3 -m py_compile (?P<scripts>.+)", text)
     if not compile_line_match:
-        fail("CI workflow missing py_compile line")
-    compile_line = compile_line_match.group("scripts")
-    missing_scripts = [
+        failures.append("CI workflow missing py_compile line")
+    else:
+        compile_line = compile_line_match.group("scripts")
+
+    scripts_to_compile = [
         script.relative_to(ROOT).as_posix()
         for script in sorted(SCRIPTS.glob("*.py"))
-        if script.name != "__init__.py" and script.relative_to(ROOT).as_posix() not in compile_line
+        if script.name != "__init__.py"
+    ]
+    missing_scripts = [
+        script
+        for script in scripts_to_compile
+        if compile_line is None or script not in compile_line
     ]
     if missing_scripts:
-        fail(f"CI py_compile line missing scripts: {missing_scripts}")
+        failures.append(f"CI py_compile line missing scripts: {missing_scripts}")
 
+    gh_token_results: list[dict[str, object]] = []
     for step in GH_TOKEN_STEPS:
-        index = text.find(f"- name: {step}")
-        if index == -1:
-            fail(f"CI workflow missing step {step!r}")
-        block = text[index : text.find("\n      - name:", index + 1) if text.find("\n      - name:", index + 1) != -1 else len(text)]
-        if "GH_TOKEN: ${{ github.token }}" not in block:
-            fail(f"CI step {step!r} is missing GH_TOKEN")
+        block = workflow_step_block(text, step)
+        step_present = block is not None
+        has_gh_token = bool(block and "GH_TOKEN: ${{ github.token }}" in block)
+        gh_token_results.append({"step": step, "present": step_present, "hasGhToken": has_gh_token})
+        if not step_present:
+            failures.append(f"CI workflow missing step {step!r}")
+        elif not has_gh_token:
+            failures.append(f"CI step {step!r} is missing GH_TOKEN")
 
-    print("Checked CI workflow contract: schedule, scripts, helper gate, GH_TOKEN steps, and site checkout are present")
+    summary = {
+        "ok": not failures,
+        "workflow": workflow_rel,
+        "workflowPresent": workflow_present,
+        "requiredTextCount": len(REQUIRED_TEXT),
+        "requiredText": required_text_results,
+        "missingRequiredText": missing_text,
+        "compileLinePresent": compile_line is not None,
+        "compiledScriptCount": len(scripts_to_compile),
+        "missingCompiledScripts": missing_scripts,
+        "ghTokenStepCount": len(GH_TOKEN_STEPS),
+        "ghTokenSteps": gh_token_results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
+    if failures:
+        if not args.json:
+            print("CI workflow contract failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
+        return 1
+
+    if not args.json:
+        print("Checked CI workflow contract: schedule, scripts, helper gate, GH_TOKEN steps, and site checkout are present")
     return 0
 
 

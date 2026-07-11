@@ -20,6 +20,7 @@ python3 scripts/run_profile_preflight.py --link-scope core --workers 8
 python3 scripts/check_github_status.py --summary
 python3 scripts/check_manual_blockers.py --json
 python3 scripts/check_stable_profile_links.py --json
+python3 scripts/check_ci_workflow_contract.py --json
 python3 scripts/check_checker_catalog.py --json
 python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 python3 scripts/check_sponsor_issues.py --json
