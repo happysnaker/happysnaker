@@ -23,6 +23,7 @@ python3 scripts/check_sponsor_issues.py --json
 python3 scripts/check_sponsor_release.py --json
 python3 scripts/check_support_routes.py --json
 python3 scripts/check_repo_metadata.py --json
+python3 scripts/check_issue_labels.py --json
 python3 scripts/check_external_followups.py --summary
 ```
 

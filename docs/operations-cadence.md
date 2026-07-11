@@ -25,6 +25,7 @@ python3 scripts/check_sponsor_issues.py --json
 python3 scripts/check_sponsor_release.py --json
 python3 scripts/check_support_routes.py --json
 python3 scripts/check_repo_metadata.py --json
+python3 scripts/check_issue_labels.py --json
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
