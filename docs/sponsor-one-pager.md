@@ -13,11 +13,12 @@ The current flagship line is:
 - [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) — self-hosted QQ / OneBot / NapCat / LLOneBot bridge for ACP-compatible agents, with sessions, progress streaming, metrics, Docker, multi-arch image publishing, and arm64 smoke evidence.
 - [`RDLeader`](https://github.com/happysnaker/RDLeader) — local-first AI R&D worker control plane with task ownership, runtime dispatch, approval gates, fake-data demos, public QA evidence, and external submission follow-up.
 
-Current proof snapshot:
+Point-in-time proof snapshot (2026-07-11):
 
-- `qq-ai-bot` and `RDLeader` currently have `0` open CodeQL / Dependabot / secret-scanning alerts.
-- `qq-ai-bot` latest CI / CodeQL / Docker publish / arm64 smoke are green.
-- `RDLeader` latest CI / CodeQL are green.
+- `qq-ai-bot` and `RDLeader` had `0` open CodeQL / Dependabot / secret-scanning alerts.
+- The tracked `qq-ai-bot` CI / CodeQL / Docker publish / arm64 smoke were green.
+- The tracked `RDLeader` CI / CodeQL were green.
+- Run `python3 scripts/check_github_status.py --summary` for live workflow and alert totals before quoting current state.
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
 - Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).

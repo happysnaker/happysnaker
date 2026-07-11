@@ -39,6 +39,8 @@ REQUIRED = {
         "support/#proof-before-payment",
         "docs/flagship-technical-map.md",
         "docs/operator-handoff.md",
+        "Point-in-time proof snapshot",
+        "python3 scripts/check_github_status.py --summary",
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "Profile CodeQL",
         "qq-ai-bot CodeQL",
@@ -62,6 +64,8 @@ REQUIRED = {
         "Sponsor / support guardrails",
     ],
     "docs/sponsor-one-pager.md": [
+        "Point-in-time proof snapshot",
+        "before quoting current state",
         "Reproduce this proof packet",
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "python3 scripts/check_github_status.py --summary",
