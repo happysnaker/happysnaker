@@ -5,6 +5,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any
@@ -57,17 +58,48 @@ ALERT_DISPLAY = {
 }
 
 
-def run_gh(args: list[str]) -> Any:
-    completed = subprocess.run(
-        ["gh", *args],
-        check=False,
-        capture_output=True,
-        text=True,
+def is_retryable_gh_error(message: str) -> bool:
+    retryable_needles = (
+        "HTTP 429",
+        "HTTP 500",
+        "HTTP 502",
+        "HTTP 503",
+        "HTTP 504",
+        "connection reset",
+        "connection refused",
+        "can't assign requested address",
+        "network is unreachable",
+        "connection timed out",
+        "i/o timeout",
+        "TLS handshake timeout",
+        "temporary failure",
     )
-    if completed.returncode != 0:
-        raise RuntimeError(completed.stderr.strip() or completed.stdout.strip() or "gh command failed")
-    stdout = completed.stdout.strip()
-    return json.loads(stdout) if stdout else None
+    lowered = message.lower()
+    return any(needle.lower() in lowered for needle in retryable_needles)
+
+
+def run_gh(args: list[str]) -> Any:
+    last_error = "gh command failed"
+    for attempt in range(1, 4):
+        completed = subprocess.run(
+            ["gh", *args],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if completed.returncode == 0:
+            stdout = completed.stdout.strip()
+            try:
+                return json.loads(stdout) if stdout else None
+            except json.JSONDecodeError as error:
+                last_error = f"invalid JSON from gh: {error}"
+        else:
+            last_error = completed.stderr.strip() or completed.stdout.strip() or "gh command failed"
+        if attempt < 3 and is_retryable_gh_error(last_error):
+            time.sleep(attempt * 2)
+            continue
+        break
+    raise RuntimeError(last_error)
 
 
 def latest_runs(repo: RepoCheck) -> dict[str, dict[str, Any]]:
