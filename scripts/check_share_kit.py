@@ -24,6 +24,10 @@ REQUIRED_TEXT = (
     "### Concrete support ask",
     "### Paid review ask",
     "### Deploy-read sample ask",
+    "## Sponsor / paid-support intake replies",
+    "### Before-payment reply",
+    "### Paid-review intake reply",
+    "### Sponsor receipt follow-up",
     "## Guardrails",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/support/#sponsor-router",
@@ -47,6 +51,11 @@ REQUIRED_TEXT = (
     "profile README → project pages",
     "project pages → 10-second support router",
     "Support router: https://happysnaker.github.io/support/#sponsor-router",
+    "do not send any private logs, credentials, QR codes, payment screenshots, or internal URLs in a public thread",
+    "repo / profile / landing-page URL",
+    "one blunt paragraph, top 3 fixes",
+    "Received — I will keep the outcome public and tied to the note you used",
+    "operations proof log: https://github.com/happysnaker/happysnaker/issues/2",
 )
 
 BANNED_PHRASES = (
@@ -90,12 +99,15 @@ def main() -> int:
         "CodeQL-clean",
         "external PR has merged",
         "Do not post the same snippet repeatedly",
+        "Never ask for private logs",
+        "payment screenshots in public",
+        "public tracker",
     )
     guardrails = text.split("## Guardrails", 1)[-1]
     missing_guardrails = [claim for claim in guarded_claims if claim not in guardrails]
 
     summary = {
-        "ok": not missing and not banned_hits and text_fences >= 7 and not missing_guardrails,
+        "ok": not missing and not banned_hits and text_fences >= 10 and not missing_guardrails,
         "path": SHARE_KIT.relative_to(ROOT).as_posix(),
         "snippetCount": text_fences,
         "requiredCount": len(REQUIRED_TEXT),
@@ -113,9 +125,9 @@ def main() -> int:
         if not args.json:
             fail(f"share kit contains banned hype phrase(s): {banned_hits}")
         return 1
-    if text_fences < 7:
+    if text_fences < 10:
         if not args.json:
-            fail(f"expected at least 7 copy-ready text snippets; found {text_fences}")
+            fail(f"expected at least 10 copy-ready text snippets; found {text_fences}")
         return 1
     if missing_guardrails:
         if not args.json:

@@ -141,6 +141,49 @@ Preview before paying: https://happysnaker.github.io/review/deploy-read-sample/
 Order route: https://happysnaker.github.io/support/#quick-read
 ```
 
+## Sponsor / paid-support intake replies
+
+Use these only in direct replies after someone asks how to support, sponsor, or buy a review. Keep public threads on proof links; move payment screenshots and repo-specific review requests to email / private chat.
+
+### Before-payment reply
+
+```text
+Thanks — please do not send any private logs, credentials, QR codes, payment screenshots, or internal URLs in a public thread.
+
+Pick one route first:
+
+1. Tip / inspect proof / fund a public issue: https://happysnaker.github.io/support/#sponsor-router
+2. Quick read for your repo/profile: https://happysnaker.github.io/support/#quick-read
+3. Deploy-read sample before paying: https://happysnaker.github.io/review/deploy-read-sample/
+
+If you fund a public task, use one concrete note: `qq-ai-bot #26 arm64`, `RDLeader #27`, `RDLeader #1`, or `RDLeader #3`.
+```
+
+### Paid-review intake reply
+
+```text
+For a ¥29.9 quick read / deploy read, send only public material:
+
+- repo / profile / landing-page URL
+- what you want judged first: README, deploy path, issue funnel, or sponsor CTA
+- any public constraints or target audience
+
+I will reply with one blunt paragraph, top 3 fixes, and the first wording / route I would rewrite. Do not send secrets or private screenshots.
+```
+
+### Sponsor receipt follow-up
+
+```text
+Received — I will keep the outcome public and tied to the note you used.
+
+I will log progress against the public tracker instead of promising a private result:
+- `qq-ai-bot #26 arm64`: https://github.com/happysnaker/qq-ai-bot/issues/26
+- `RDLeader #27`: https://github.com/happysnaker/RDLeader/issues/27
+- operations proof log: https://github.com/happysnaker/happysnaker/issues/2
+
+If the support was for a review, I will only discuss public repo/profile/landing-page material unless you explicitly move details to private email.
+```
+
 ## Guardrails
 
 Do not claim:
@@ -151,3 +194,5 @@ Do not claim:
 - an external PR has merged unless the PR state actually says merged.
 
 Do not post the same snippet repeatedly under external PRs. Use [external-follow-up-queue.md](external-follow-up-queue.md) before any maintainer-facing follow-up.
+
+Never ask for private logs, credentials, QR codes, internal URLs, or payment screenshots in public. Keep sponsor receipts tied to a public tracker or a paid-review deliverable, not vague private promises.

@@ -118,7 +118,7 @@ Support turns unfinished but useful engineering work into public assets that oth
 
 ## Copy/paste outreach blurbs
 
-For platform-specific X / LinkedIn / WeChat / curator snippets, use [share-kit.md](share-kit.md).
+For platform-specific X / LinkedIn / WeChat / curator snippets, and for sponsor / paid-support intake replies that keep payment screenshots and private material out of public threads, use [share-kit.md](share-kit.md).
 
 ### Short
 
