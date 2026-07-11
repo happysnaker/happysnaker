@@ -32,6 +32,7 @@ python3 scripts/check_issue_labels.py --json
 python3 scripts/check_readme_badges.py --json
 python3 scripts/check_ops_issue_log.py --json
 python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json
+python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
@@ -118,7 +119,7 @@ python3 scripts/check_public_links.py --timeout 6 --workers 8 --json
 For public site / project-page hygiene after changing `happysnaker.github.io`, run the site hygiene verifier from this profile repo:
 
 ```bash
-python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8
+python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 ```
 
 What it checks:

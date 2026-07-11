@@ -131,6 +131,7 @@ REQUIRED = {
         "python3 scripts/check_sponsor_release.py --json",
         "python3 scripts/check_ops_issue_log.py --json",
         "python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json",
+        "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json",
         "happysnaker#2",
     ],
     "docs/operations-cadence.md": [
@@ -151,6 +152,7 @@ REQUIRED = {
         "python3 scripts/check_readme_badges.py --json",
         "python3 scripts/check_ops_issue_log.py --json",
         "python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json",
+        "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
@@ -177,6 +179,7 @@ REQUIRED = {
         "deploy-read sample",
         "scripts/check_review_funnel.py",
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
+        "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_public_links.py --timeout 6 --workers 8 --json",
         "JSON output",
         "Payment%20screenshot",
@@ -215,6 +218,7 @@ REQUIRED = {
         "scripts/check_checker_catalog.py",
         "--json",
         "machine-readable link status",
+        "machine-readable site hygiene status",
         "deploy-read sample",
         "a747985",
         "0f13edc",

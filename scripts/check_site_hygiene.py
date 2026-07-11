@@ -84,7 +84,12 @@ class Finding:
     detail: str
 
 
+EMIT_TEXT = True
+
+
 def emit(finding: Finding) -> None:
+    if not EMIT_TEXT:
+        return
     status = "OK" if finding.ok else "FAIL"
     print(f"{status} {finding.label}: {finding.detail}", flush=True)
 
@@ -294,7 +299,11 @@ def main() -> int:
     parser.add_argument("--live", action="store_true", help="Fetch live project pages and verify status/metadata.")
     parser.add_argument("--timeout", type=float, default=8.0, help="Live fetch timeout in seconds.")
     parser.add_argument("--scan-root", action="append", type=Path, help="Additional root to scan for happysnaker GitHub repo links. Can be repeated.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable site hygiene status.")
     args = parser.parse_args()
+
+    global EMIT_TEXT
+    EMIT_TEXT = not args.json
 
     site_root = args.site_root.resolve()
     scan_roots = [ROOT, site_root]
@@ -316,10 +325,40 @@ def main() -> int:
         check_live_metadata(args.base_url, args.timeout, findings)
 
     failures = [finding for finding in findings if not finding.ok]
+    summary = {
+        "ok": not failures,
+        "siteRoot": str(site_root),
+        "baseUrl": args.base_url,
+        "expectedLastmod": args.expected_lastmod,
+        "live": args.live,
+        "timeout": args.timeout,
+        "scanRoots": [str(path) for path in scan_roots],
+        "findingCount": len(findings),
+        "failureCount": len(failures),
+        "findings": [
+            {
+                "ok": finding.ok,
+                "label": finding.label,
+                "detail": finding.detail,
+            }
+            for finding in findings
+        ],
+        "failures": [
+            {
+                "label": finding.label,
+                "detail": finding.detail,
+            }
+            for finding in failures
+        ],
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False), flush=True)
     if failures:
-        print(f"\n{len(failures)} site hygiene check(s) failed", file=sys.stderr)
+        if not args.json:
+            print(f"\n{len(failures)} site hygiene check(s) failed", file=sys.stderr)
         return 1
-    print(f"\nChecked {len(findings)} site hygiene assertions", flush=True)
+    if not args.json:
+        print(f"\nChecked {len(findings)} site hygiene assertions", flush=True)
     return 0
 
 

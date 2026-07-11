@@ -27,6 +27,7 @@ python3 scripts/check_issue_labels.py --json
 python3 scripts/check_readme_badges.py --json
 python3 scripts/check_ops_issue_log.py --json
 python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json
+python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json
 python3 scripts/check_external_followups.py --summary
 ```
 
@@ -83,6 +84,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 - `python3 scripts/check_ci_workflow_contract.py --json` fails if scheduled CI stops compiling/running the required proof/support drift checks and emits machine-readable workflow-contract evidence.
 - `python3 scripts/check_checker_catalog.py` fails if a new proof checker is not documented in the technical proof index.
 - `python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json` verifies sponsor/support/status links and emits machine-readable link evidence before broader promotion.
+- `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json` verifies local public-page metadata, sitemap, support proof-before-payment content, and repo-link hygiene as machine-readable site evidence.
 - `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
 
 ## Good next actions

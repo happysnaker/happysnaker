@@ -43,6 +43,7 @@ REQUIRED_TEXT = (
     "python3 scripts/check_readme_badges.py --json",
     "python3 scripts/check_ops_issue_log.py --json",
     "python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json",
+    "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json",
     "stable profile workflow links",
     "one-off profile self-check run links",
     "Good next actions",
