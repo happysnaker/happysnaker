@@ -143,6 +143,8 @@ REQUIRED = {
         "¥99",
         "https://happysnaker.github.io/review/deploy-read-sample/",
         "e9387ce",
+        "2b0ad6a",
+        "deploy-read support route",
     ],
     "docs/technical-proof-index.md": [
         "Flagship proof: qq-ai-bot",

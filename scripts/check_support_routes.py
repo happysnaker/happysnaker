@@ -27,6 +27,7 @@ FLAGSHIP_SNAPSHOT = "https://github.com/happysnaker/happysnaker/blob/master/docs
 SHARE_KIT = "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md"
 QQ_NOTE = "qq-ai-bot #26 arm64"
 RD_NOTE = "RDLeader #27"
+REVIEW_SAMPLE = "https://happysnaker.github.io/review/deploy-read-sample/"
 
 EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
@@ -102,12 +103,12 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/RDLeader",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
