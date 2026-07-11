@@ -21,6 +21,8 @@ REQUIRED_TEXT = (
     "python3 scripts/check_external_followups.py --summary",
     "python3 scripts/check_external_followups.py --action-class optional-update --summary",
     "python3 scripts/check_external_followups.py --action-class optional-update --json",
+    "python3 scripts/check_external_followups.py --action-class optional-update --candidate-comments --enforce-review-due",
+    "--candidate-comments",
     "materials",
     "candidateComment",
     "candidateGuardrails",

@@ -336,6 +336,49 @@ def format_review_gate(gate: dict[str, Any]) -> list[str]:
     ]
 
 
+def format_candidate_comments(rows: list[dict[str, Any]], gate: dict[str, Any]) -> str:
+    lines = format_review_gate(gate)
+    lines.extend([
+        "",
+        "## Prepared candidate comments",
+        "",
+        "Use these only when the review gate is due and the row guidance still allows a comment. Do not post early; do not reuse repeatedly.",
+    ])
+    candidate_rows = [row for row in rows if row.get("candidateComment")]
+    if not candidate_rows:
+        lines.extend(["", "No prepared candidate comments for the selected rows."])
+        return "\n".join(lines)
+
+    for row in candidate_rows:
+        guardrails = row.get("candidateGuardrails") or {}
+        lines.extend(
+            [
+                "",
+                f"### {row['repo']}#{row['number']}",
+                "",
+                f"Surface: {row.get('url')}",
+                f"Action class: {row.get('actionClass')}",
+                f"Guardrails OK: {str(bool(guardrails.get('ok'))).lower()}",
+                f"Next action: {row.get('nextAction')}",
+            ]
+        )
+        materials = row.get("materials") or []
+        if materials:
+            lines.append("Materials:")
+            for material in materials:
+                lines.append(f"- {material}")
+        if guardrails.get("missingRequiredText") or guardrails.get("bannedTextHits"):
+            lines.extend(
+                [
+                    "Guardrail failures:",
+                    f"- missingRequiredText: {guardrails.get('missingRequiredText')}",
+                    f"- bannedTextHits: {guardrails.get('bannedTextHits')}",
+                ]
+            )
+        lines.extend(["", "```text", str(row.get("candidateComment") or ""), "```"])
+    return "\n".join(lines)
+
+
 def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = None) -> str:
     counts = Counter(row.get("actionClass") or "unknown" for row in rows)
     lines = []
@@ -366,6 +409,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Summarize tracked external follow-up PRs and issues.")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of markdown.")
     parser.add_argument("--summary", action="store_true", help="Emit a compact action-class summary instead of the full markdown table.")
+    parser.add_argument("--candidate-comments", action="store_true", help="Render prepared candidate comments for selected rows without posting them.")
     parser.add_argument("--today", type=lambda value: parse_iso_date(value, "--today"), default=date.today(), help="Date used for scheduled-review gating, in YYYY-MM-DD. Default: today.")
     parser.add_argument("--review-date", type=lambda value: parse_iso_date(value, "--review-date"), default=NEXT_REVIEW_DATE, help="Next scheduled review date in YYYY-MM-DD. Default: 2026-07-16.")
     parser.add_argument("--enforce-review-due", action="store_true", help="Exit non-zero before --review-date to prevent premature external follow-up.")
@@ -406,6 +450,8 @@ def main() -> int:
 
     if args.json:
         print(json.dumps({"rows": rows, "failures": failures, "reviewGate": gate}, indent=2, ensure_ascii=False))
+    elif args.candidate_comments:
+        print(format_candidate_comments(rows, gate=gate))
     elif args.summary:
         print(format_summary(rows, gate=gate))
     else:
