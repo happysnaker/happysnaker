@@ -6,7 +6,7 @@ Support page: <https://happysnaker.github.io/support/>
 
 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
 
-Default support fallback: <https://github.com/happysnaker/.github/commit/0ec8ed7>
+Default support fallback: <https://github.com/happysnaker/.github/commit/0ec8ed7> / funding fallback: <https://github.com/happysnaker/.github/commit/47eaa73>
 
 Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 

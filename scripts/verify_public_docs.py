@@ -92,6 +92,7 @@ REQUIRED = {
         "https://happysnaker.github.io/support/#sponsor-router",
         "Default support fallback",
         "https://github.com/happysnaker/.github/commit/0ec8ed7",
+        "47eaa73",
         "Tip / Proof / Review / Fund",
         "Paid support offers",
         "Deploy read",
@@ -205,6 +206,7 @@ REQUIRED = {
     ],
     "docs/support-surface-coverage.md": [
         "Latest default/profile support-router refresh",
+        "funding links, plus issue-contact links",
         "support-router defaults",
         "https://github.com/happysnaker/.github/commit/0ec8ed7",
         "Tip / Proof / Review / Fund",

@@ -35,7 +35,7 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/FUNDING.yml",
-        (SUPPORT_URL,),
+        (SUPPORT_URL, SUPPORT_ROUTER),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
@@ -55,7 +55,7 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/.github",
         ".github/FUNDING.yml",
-        (SUPPORT_URL,),
+        (SUPPORT_URL, SUPPORT_ROUTER),
     ),
     FileExpectation(
         "happysnaker/.github",
