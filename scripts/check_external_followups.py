@@ -7,6 +7,7 @@ import subprocess
 import sys
 from collections import Counter
 from dataclasses import dataclass
+from datetime import date
 from typing import Any
 
 
@@ -41,10 +42,32 @@ PRS: tuple[PullRequestTarget, ...] = (
     PullRequestTarget("kailiu42/awesome-coding-agents", 13, "RDLeader", "coding-agents listing PR", "no-action", "No action; keep as proof surface only."),
 )
 
+NEXT_REVIEW_DATE = date(2026, 7, 16)
+
+
 ISSUES: tuple[IssueTarget, ...] = (
     IssueTarget("happysnaker/qq-ai-bot", 26, "qq-ai-bot", "physical ARM / CasaOS validation target", "keep-open", "Check for new real physical-host reports; keep open and avoid completion claims if none."),
     IssueTarget("happysnaker/RDLeader", 27, "RDLeader", "external submission review follow-up", "recheck-only", "Update only when external PR feedback or scheduled recheck finds meaningful state change."),
 )
+
+
+def parse_iso_date(value: str, label: str) -> date:
+    try:
+        return date.fromisoformat(value)
+    except ValueError as error:
+        raise argparse.ArgumentTypeError(f"{label} must be YYYY-MM-DD, got {value!r}") from error
+
+
+def review_gate(today: date, review_date: date) -> dict[str, Any]:
+    days_until = (review_date - today).days
+    due = days_until <= 0
+    return {
+        "today": today.isoformat(),
+        "nextReviewDate": review_date.isoformat(),
+        "due": due,
+        "daysUntil": max(days_until, 0),
+        "defaultAction": "scheduled review is due; still avoid comments unless the row guidance allows it" if due else "not due; stay quiet unless a maintainer/tester has replied or new material evidence lands",
+    }
 
 
 def run_gh(args: list[str]) -> Any:
@@ -146,9 +169,24 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
     return "\n".join(lines)
 
 
-def format_summary(rows: list[dict[str, Any]]) -> str:
+def format_review_gate(gate: dict[str, Any]) -> list[str]:
+    due_text = "due" if gate["due"] else f"not due for {gate['daysUntil']} day(s)"
+    return [
+        "## Review gate",
+        "",
+        f"Today: {gate['today']}",
+        f"Next scheduled review: {gate['nextReviewDate']} ({due_text})",
+        f"Default action: {gate['defaultAction']}",
+    ]
+
+
+def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = None) -> str:
     counts = Counter(row.get("actionClass") or "unknown" for row in rows)
-    lines = ["## External follow-up summary", ""]
+    lines = []
+    if gate is not None:
+        lines.extend(format_review_gate(gate))
+        lines.append("")
+    lines.extend(["## External follow-up summary", ""])
     lines.append("Action classes: " + ", ".join(f"{key}={counts[key]}" for key in sorted(counts)))
     optional = [row for row in rows if row.get("actionClass") == "optional-update"]
     if optional:
@@ -169,6 +207,9 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Summarize tracked external follow-up PRs and issues.")
     parser.add_argument("--json", action="store_true", help="Emit JSON instead of markdown.")
     parser.add_argument("--summary", action="store_true", help="Emit a compact action-class summary instead of the full markdown table.")
+    parser.add_argument("--today", type=lambda value: parse_iso_date(value, "--today"), default=date.today(), help="Date used for scheduled-review gating, in YYYY-MM-DD. Default: today.")
+    parser.add_argument("--review-date", type=lambda value: parse_iso_date(value, "--review-date"), default=NEXT_REVIEW_DATE, help="Next scheduled review date in YYYY-MM-DD. Default: 2026-07-16.")
+    parser.add_argument("--enforce-review-due", action="store_true", help="Exit non-zero before --review-date to prevent premature external follow-up.")
     parser.add_argument(
         "--action-class",
         action="append",
@@ -194,10 +235,12 @@ def main() -> int:
         allowed = set(args.action_class)
         rows = [row for row in rows if row.get("actionClass") in allowed]
 
+    gate = review_gate(args.today, args.review_date)
+
     if args.json:
-        print(json.dumps({"rows": rows, "failures": failures}, indent=2, ensure_ascii=False))
+        print(json.dumps({"rows": rows, "failures": failures, "reviewGate": gate}, indent=2, ensure_ascii=False))
     elif args.summary:
-        print(format_summary(rows))
+        print(format_summary(rows, gate=gate))
     else:
         print(format_markdown(rows))
 
@@ -207,6 +250,9 @@ def main() -> int:
             print(f"- {failure}", file=sys.stderr)
         return 1
     print(f"Checked {len(rows)} external follow-up surfaces", file=sys.stderr)
+    if args.enforce_review_due and not gate["due"]:
+        print(f"Scheduled external review is not due until {gate['nextReviewDate']} (today={gate['today']})", file=sys.stderr)
+        return 2
     return 0
 
 

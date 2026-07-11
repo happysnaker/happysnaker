@@ -15,7 +15,7 @@ python3 scripts/check_manual_blockers.py
 python3 scripts/check_external_followups.py --summary
 ```
 
-Use `python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary` only for the scheduled external review view.
+Use `python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due` only for the scheduled external review view; before the review date it should fail closed.
 
 ## Current flagship state
 
@@ -55,8 +55,8 @@ Current planned review remains `2026-07-16 UTC` unless a maintainer or tester re
 
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
-python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary
-python3 scripts/run_profile_preflight.py --external-only --external-summary
+python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
+python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
 
 ## Good next actions

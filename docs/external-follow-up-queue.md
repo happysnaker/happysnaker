@@ -58,8 +58,8 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 ```bash
 # Profile / support-route preflight
 python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
-python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary
-python3 scripts/run_profile_preflight.py --external-only --external-summary
+python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
+python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
 for repo in happysnaker/qq-ai-bot happysnaker/RDLeader; do
@@ -72,7 +72,7 @@ done
 
 ## Evidence to record after the scheduled check
 
-- current PR / tracked issue state, checks, action class, next-action guidance, and compact summary from `python3 scripts/run_profile_preflight.py --external-only --external-summary`; use `--action-class optional-update` to isolate surfaces where a short scheduled update may be allowed;
+- current PR / tracked issue state, checks, action class, next-action guidance, due-gate status, and compact summary from `python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due`; use `--action-class optional-update` to isolate surfaces where a short scheduled update may be allowed;
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;

@@ -29,6 +29,12 @@ def external_step(args: argparse.Namespace) -> Step:
         external_command.extend(["--action-class", action_class])
     if args.external_summary:
         external_command.append("--summary")
+    if args.today:
+        external_command.extend(["--today", args.today])
+    if args.review_date:
+        external_command.extend(["--review-date", args.review_date])
+    if args.enforce_review_due:
+        external_command.append("--enforce-review-due")
     return Step("Summarize external follow-ups", tuple(external_command))
 
 
@@ -87,6 +93,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
     parser.add_argument("--external-only", action="store_true", help="Run only the dynamic external PR/issue summary, preserving action-class filters.")
     parser.add_argument("--external-summary", action="store_true", help="Use compact summary output for the dynamic external PR/issue step.")
+    parser.add_argument("--today", help="Forward YYYY-MM-DD date to external follow-up review gate.")
+    parser.add_argument("--review-date", help="Forward YYYY-MM-DD next scheduled review date to external follow-up checker.")
+    parser.add_argument("--enforce-review-due", action="store_true", help="Make the external follow-up step fail before the scheduled review date.")
     parser.add_argument(
         "--action-class",
         action="append",

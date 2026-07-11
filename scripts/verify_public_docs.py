@@ -84,6 +84,7 @@ REQUIRED = {
         "qq-ai-bot #26 arm64",
         "RDLeader#3",
         "External follow-up rule",
+        "--enforce-review-due",
         "2026-07-16 UTC",
         "Good next actions",
         "happysnaker#2",
