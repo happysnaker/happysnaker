@@ -246,6 +246,7 @@ Central board:
 
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
+- Share kit: [share-kit.md](share-kit.md) — copy-ready X / LinkedIn / WeChat / curator snippets with proof and sponsor guardrails
 - Flagship technical map: [flagship-technical-map.md](flagship-technical-map.md)
 - Support page current asks: <https://happysnaker.github.io/support/#current-asks>
 - Support page proof-before-payment section: <https://happysnaker.github.io/support/#proof-before-payment> ([proof section](https://github.com/happysnaker/happysnaker.github.io/commit/d4c554b), [technical-map route](https://github.com/happysnaker/happysnaker.github.io/commit/c20b732), [stable workflow-link route](https://github.com/happysnaker/happysnaker.github.io/commit/cdce930), [Pages deploy](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29140571745))

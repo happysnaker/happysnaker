@@ -15,6 +15,7 @@ CORE_FILES = [
     ROOT / ".github" / "SUPPORT.md",
     ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml",
     ROOT / "docs" / "sponsor-one-pager.md",
+    ROOT / "docs" / "share-kit.md",
     ROOT / "docs" / "support-surface-coverage.md",
     ROOT / "docs" / "flagship-status-snapshot.md",
 ]
@@ -27,6 +28,7 @@ PROFILE_FILES = [
     ROOT / "docs" / "flagship-status-snapshot.md",
     ROOT / "docs" / "upstream-contribution-ledger.md",
     ROOT / "docs" / "sponsor-one-pager.md",
+    ROOT / "docs" / "share-kit.md",
     ROOT / "docs" / "support-surface-coverage.md",
     ROOT / "docs" / "sponsorware-board.md",
     ROOT / "docs" / "portfolio-audit.md",

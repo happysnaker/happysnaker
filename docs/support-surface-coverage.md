@@ -12,6 +12,7 @@ Snapshot: 2026-07-11 Asia/Shanghai.
 | Frozen sponsor one-pager | <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager> | stable sponsor / curator brief for sharing |
 | Source sponsor one-pager | [sponsor-one-pager.md](sponsor-one-pager.md) | editable source for future support updates |
 | Sponsorware board | [sponsorware-board.md](sponsorware-board.md) | current and shipped sponsor targets |
+| Share kit | [share-kit.md](share-kit.md) | copy-ready X / LinkedIn / WeChat / curator snippets with proof and sponsor guardrails |
 | Operations cadence | [operations-cadence.md](operations-cadence.md) | maintenance loop and manual actions |
 
 ## Coverage table

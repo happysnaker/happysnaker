@@ -40,6 +40,7 @@ Current proof snapshot:
 | Upstream contribution ledger | [upstream-contribution-ledger.md](upstream-contribution-ledger.md) |
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
+| Share kit | [share-kit.md](share-kit.md) |
 
 ## Current sponsor notes
 
@@ -96,6 +97,8 @@ Support turns unfinished but useful engineering work into public assets that oth
 - no implied license grant for RDLeader until the license issue is resolved.
 
 ## Copy/paste outreach blurbs
+
+For platform-specific X / LinkedIn / WeChat / curator snippets, use [share-kit.md](share-kit.md).
 
 ### Short
 
