@@ -78,6 +78,13 @@ SUPPORT_CONTENT_NEEDLES = [
     "support does not imply a reuse grant",
 ]
 
+SUPPORT_INTAKE_PAGE_NEEDLES = [
+    "/support/#sponsor-router",
+    "Sponsor / paid-support intake replies",
+    "Public intake guardrail",
+    "private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues",
+]
+
 PROJECT_CONTENT_NEEDLES: dict[str, list[str]] = {
     "qq-ai-bot": [
         "/support/#sponsor-router",
@@ -99,6 +106,13 @@ PROJECT_CONTENT_NEEDLES: dict[str, list[str]] = {
         "payment screenshots",
         "raw live integration output in public issues",
     ],
+    "github-profile-checklist": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "backend-engineer-checklist": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "system-design-checklist": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "production-readiness-checklist": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "go-service-starter": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "go-http-middleware-kit": SUPPORT_INTAKE_PAGE_NEEDLES,
+    "happydb": SUPPORT_INTAKE_PAGE_NEEDLES,
 }
 
 
