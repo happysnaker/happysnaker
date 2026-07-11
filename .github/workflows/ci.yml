@@ -45,3 +45,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 scripts/check_sponsor_release.py
+
+      - name: Report profile pins
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/check_profile_pins.py
