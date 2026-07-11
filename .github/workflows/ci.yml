@@ -26,7 +26,7 @@ jobs:
           python-version: '3.12'
 
       - name: Compile verification scripts
-        run: python3 -m py_compile scripts/verify_public_docs.py scripts/check_support_routes.py scripts/check_repo_metadata.py scripts/check_sponsor_release.py scripts/check_github_status.py scripts/check_public_links.py scripts/check_site_hygiene.py
+        run: python3 -m py_compile scripts/verify_public_docs.py scripts/check_support_routes.py scripts/check_repo_metadata.py scripts/check_sponsor_release.py scripts/check_external_followups.py scripts/check_github_status.py scripts/check_public_links.py scripts/check_site_hygiene.py
 
       - name: Verify public docs
         run: python3 scripts/verify_public_docs.py

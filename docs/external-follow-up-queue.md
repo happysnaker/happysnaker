@@ -61,20 +61,7 @@ python3 scripts/check_github_status.py
 python3 scripts/check_support_routes.py
 python3 scripts/check_repo_metadata.py
 python3 scripts/check_public_links.py --timeout 6
-
-# External PR state
-for spec in \
-  'docker/awesome-compose 781' \
-  'Cp0204/CasaOS-AppStore-Play 42' \
-  'getumbrel/umbrel-apps 5834' \
-  'AwesomeHomelab/awesome-homelab 98' \
-  'LLOneBot/LuckyLilliaDoc 20' \
-  'LLOneBot/llonebot.nix 22' \
-  'jbesomi/awesome-autonomous-agents 20' \
-  'kailiu42/awesome-coding-agents 13'; do
-  set -- $spec
-  gh pr view "$2" -R "$1" --json number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup
-done
+python3 scripts/check_external_followups.py
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
 for repo in happysnaker/qq-ai-bot happysnaker/RDLeader; do
@@ -87,7 +74,7 @@ done
 
 ## Evidence to record after the scheduled check
 
-- current PR state and checks;
+- current PR / tracked issue state and checks from `python3 scripts/check_external_followups.py`;
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;

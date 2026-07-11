@@ -17,6 +17,7 @@ python3 scripts/check_github_status.py
 python3 scripts/check_support_routes.py
 python3 scripts/check_repo_metadata.py
 python3 scripts/check_sponsor_release.py
+python3 scripts/check_external_followups.py
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
 ```
 
