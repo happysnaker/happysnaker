@@ -37,6 +37,8 @@ REQUIRED = {
         "docs/share-kit.md",
         "Proof before payment",
         "support/#proof-before-payment",
+        "Deploy read",
+        "https://happysnaker.github.io/review/deploy-read-sample/",
         "docs/flagship-technical-map.md",
         "docs/operator-handoff.md",
         "Point-in-time proof snapshot",

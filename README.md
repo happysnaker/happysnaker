@@ -160,6 +160,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 - **If you came here from `qq-ai-bot`:** the cleanest support note is `qq-ai-bot` or `qq-ai-bot #26 arm64`; the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page
 - **Fastest low-friction tip:** `¥9.9` / `¥19.9` if one repo, checklist, or OSS fix saved you time
 - **Most useful paid entry:** **`¥29.9` quick read** for a blunt first-impression pass on your profile / repo / landing page — [review page](https://happysnaker.github.io/review/)
+- **Bot / agent / infra repo path:** **`Deploy read`** for projects that run but still look toy-like — [deploy-read sample](https://happysnaker.github.io/review/deploy-read-sample/)
 - **Best packaging option:** **`¥99` async review** for pinned repos, README cleanup, landing-page positioning, or profile packaging — [review page](https://happysnaker.github.io/review/)
 - **Preview first:** [redacted sample audit](https://github.com/happysnaker/github-profile-checklist/blob/main/docs/redacted-audit-sample.md)
 - **Current July offer:** first paid request gets **one extra public page / README** in the same pass at no extra charge
