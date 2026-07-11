@@ -89,6 +89,7 @@ REQUIRED = {
         "Good next actions",
         "scripts/github_cli.py",
         "check_gh_usage.py",
+        "check_ci_workflow_contract.py",
         "happysnaker#2",
     ],
     "docs/manual-github-actions.md": [
@@ -112,6 +113,7 @@ REQUIRED = {
         "GitHub CLI usage checker",
         "scripts/github_cli.py",
         "scripts/check_gh_usage.py",
+        "scripts/check_ci_workflow_contract.py",
     ],
     "docs/flagship-technical-map.md": [
         "Fast read",
