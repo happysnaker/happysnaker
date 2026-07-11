@@ -61,6 +61,12 @@ REQUIRED = {
         "python3 scripts/check_github_status.py",
         "Sponsor / support guardrails",
     ],
+    "docs/sponsor-one-pager.md": [
+        "Reproduce this proof packet",
+        "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
+        "python3 scripts/check_github_status.py --summary",
+        "python3 scripts/check_checker_catalog.py --json",
+    ],
     "docs/sponsorware-board.md": [
         "Current targets",
         "qq-ai-bot #23",

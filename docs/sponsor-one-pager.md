@@ -42,6 +42,19 @@ Current proof snapshot:
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 | Share kit | [share-kit.md](share-kit.md) |
 
+
+## Reproduce this proof packet
+
+Run from the profile repository:
+
+```bash
+python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external
+python3 scripts/check_github_status.py --summary
+python3 scripts/check_checker_catalog.py --json
+```
+
+Use the preflight command for the human-readable proof/support gate, `--summary` for workflow and alert totals, and the checker catalog JSON to see which proof checkers are currently part of the profile automation.
+
 ## Current sponsor notes
 
 Use concrete payment notes instead of a vague donation label:
