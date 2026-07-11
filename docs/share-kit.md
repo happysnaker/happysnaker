@@ -14,6 +14,7 @@ Best links:
 | Need | Link |
 |---|---|
 | Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
+| 10-second support router | <https://happysnaker.github.io/support/#sponsor-router> |
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | qq-ai-bot project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | RDLeader project page | <https://happysnaker.github.io/rdleader/> |
@@ -77,6 +78,19 @@ Those pages link back to CI, CodeQL, release, support, demo, and current caveats
 ```
 
 ## Sponsorship CTA snippets
+
+### 10-second support router ask
+
+```text
+If you want to support happysnaker but don’t know which path fits, use the 10-second router:
+
+- Tip — if one repo saved you time
+- Proof — if you want CI / CodeQL / issue evidence before paying
+- Review — if you want your own repo/profile packaged better
+- Fund — if you want a visible public outcome like `qq-ai-bot #26 arm64` or `RDLeader #27`
+
+Start here: https://happysnaker.github.io/support/#sponsor-router
+```
 
 ### Concrete support ask
 

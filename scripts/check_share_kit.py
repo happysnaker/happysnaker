@@ -19,11 +19,13 @@ REQUIRED_TEXT = (
     "### WeChat / private share",
     "### Curator / maintainer context",
     "## Sponsorship CTA snippets",
+    "### 10-second support router ask",
     "### Concrete support ask",
     "### Paid review ask",
     "### Deploy-read sample ask",
     "## Guardrails",
     "https://happysnaker.github.io/support/#proof-before-payment",
+    "https://happysnaker.github.io/support/#sponsor-router",
     "https://happysnaker.github.io/support/#current-asks",
     "https://happysnaker.github.io/qq-ai-bot/",
     "https://happysnaker.github.io/rdleader/",
@@ -37,6 +39,8 @@ REQUIRED_TEXT = (
     "external-follow-up-queue.md",
     "QEMU arm64 smoke",
     "Proof before payment",
+    "Tip — if one repo saved you time",
+    "Fund — if you want a visible public outcome",
 )
 
 BANNED_PHRASES = (
