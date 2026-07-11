@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import json
 import subprocess
 import sys
@@ -61,49 +62,79 @@ REQUIRED_SOURCE_TEXT = (
 run_gh = run_gh_json
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify sponsor one-pager source and frozen release body.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable sponsor release summary.")
+    args = parser.parse_args()
+
     failures: list[str] = []
     if not SOURCE_FILE.exists():
         failures.append(f"missing source sponsor one-pager: {SOURCE_FILE.relative_to(ROOT)}")
         source_text = ""
+        source_missing = list(REQUIRED_SOURCE_TEXT)
     else:
         source_text = SOURCE_FILE.read_text(encoding="utf-8")
         source_missing = [needle for needle in REQUIRED_SOURCE_TEXT if needle not in source_text]
         if source_missing:
             failures.append(f"source sponsor one-pager missing {source_missing}")
 
+    release: dict[str, Any] = {}
+    release_error: str | None = None
     try:
         release = run_gh(["release", "view", TAG, "-R", REPO, "--json", "tagName,name,isDraft,isPrerelease,url,body"])
     except RuntimeError as error:
-        print(f"ERROR: failed to load release {TAG}: {error}", file=sys.stderr)
-        return 1
+        release_error = str(error)
+        failures.append(f"failed to load release {TAG}: {error}")
 
-    if release.get("tagName") != TAG:
-        failures.append(f"tagName is {release.get('tagName')!r}; expected {TAG!r}")
-    if release.get("isDraft"):
-        failures.append("release is still draft")
-    if not release.get("isPrerelease"):
-        failures.append("release should remain a pre-release proof packet")
-    body = release.get("body") or ""
+    body = release.get("body") or "" if release else ""
     body_length = len(body)
-    if body_length > MAX_BODY_CHARS:
-        failures.append(f"release body is {body_length} chars; keep <= {MAX_BODY_CHARS} and put history in issue #2")
-    if body_length < MIN_BODY_CHARS:
-        failures.append(f"release body is only {body_length} chars; expected >= {MIN_BODY_CHARS} for a useful proof packet")
-    missing = [needle for needle in REQUIRED_BODY_TEXT if needle not in body]
-    if missing:
-        failures.append(f"release body missing {missing}")
-    if "https://github.com/happysnaker/happysnaker/actions/runs/" in body:
-        failures.append("release body should use stable profile workflow links, not one-off profile run links")
+    missing: list[str] = []
+    if release:
+        if release.get("tagName") != TAG:
+            failures.append(f"tagName is {release.get('tagName')!r}; expected {TAG!r}")
+        if release.get("isDraft"):
+            failures.append("release is still draft")
+        if not release.get("isPrerelease"):
+            failures.append("release should remain a pre-release proof packet")
+        if body_length > MAX_BODY_CHARS:
+            failures.append(f"release body is {body_length} chars; keep <= {MAX_BODY_CHARS} and put history in issue #2")
+        if body_length < MIN_BODY_CHARS:
+            failures.append(f"release body is only {body_length} chars; expected >= {MIN_BODY_CHARS} for a useful proof packet")
+        missing = [needle for needle in REQUIRED_BODY_TEXT if needle not in body]
+        if missing:
+            failures.append(f"release body missing {missing}")
+        if "https://github.com/happysnaker/happysnaker/actions/runs/" in body:
+            failures.append("release body should use stable profile workflow links, not one-off profile run links")
 
+    summary = {
+        "ok": not failures,
+        "repo": REPO,
+        "tag": TAG,
+        "url": release.get("url") if release else None,
+        "name": release.get("name") if release else None,
+        "isDraft": release.get("isDraft") if release else None,
+        "isPrerelease": release.get("isPrerelease") if release else None,
+        "bodyLength": body_length,
+        "maxBodyChars": MAX_BODY_CHARS,
+        "minBodyChars": MIN_BODY_CHARS,
+        "requiredBodyCount": len(REQUIRED_BODY_TEXT),
+        "missingBodyText": missing,
+        "requiredSourceCount": len(REQUIRED_SOURCE_TEXT),
+        "missingSourceText": source_missing,
+        "releaseError": release_error,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("Sponsor release check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("Sponsor release check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"OK {release.get('url')}: {release.get('name')} and {SOURCE_FILE.relative_to(ROOT)} contain compact sponsor proof routes ({len(body)} chars)")
+    if not args.json:
+        print(f"OK {release.get('url')}: {release.get('name')} and {SOURCE_FILE.relative_to(ROOT)} contain compact sponsor proof routes ({len(body)} chars)")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

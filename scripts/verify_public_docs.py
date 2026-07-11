@@ -125,6 +125,7 @@ REQUIRED = {
         "Deploy-read sample",
         "https://happysnaker.github.io/review/deploy-read-sample/",
         "python3 scripts/check_sponsor_issues.py --json",
+        "python3 scripts/check_sponsor_release.py --json",
         "happysnaker#2",
     ],
     "docs/operations-cadence.md": [
@@ -135,6 +136,7 @@ REQUIRED = {
         "--enforce-review-due",
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_sponsor_issues.py --json",
+        "python3 scripts/check_sponsor_release.py --json",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
