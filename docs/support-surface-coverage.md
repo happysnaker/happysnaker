@@ -64,6 +64,8 @@ For this coverage table, do not infer completion from intention. Evidence should
 - `scripts/check_site_hygiene.py` for local/live project-page metadata, sitemap, public repo-link hygiene, and support-page proof-before-payment content;
 - security alert checks where the API is available.
 
+Latest live sponsor/support issue refresh: `qq-ai-bot#28`, `qq-ai-bot#26`, `RDLeader#27`, `RDLeader#1`, and `RDLeader#3` now include the 10-second support router in their issue bodies; RDLeader issue bodies keep the reuse-rights caveat explicit.
+
 Latest default/profile support-router refresh: profile and account-wide default support files, funding links, plus issue-contact links now expose the 10-second support router before generic support, so repositories without local support files still route visitors through Tip / Proof / Review / Fund ([default `.github` support-router commit](https://github.com/happysnaker/.github/commit/0ec8ed7), [funding fallback commit](https://github.com/happysnaker/.github/commit/47eaa73)).
 
 Latest project-page sponsor-router refresh: the `qq-ai-bot` and `RDLeader` Pages project pages now expose a first-screen `Pick Tip / Proof / Review / Fund` CTA to the 10-second support router, closing the profile → project page → support-router loop ([Pages commit](https://github.com/happysnaker/happysnaker.github.io/commit/843af8d), [Pages deploy](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218)).

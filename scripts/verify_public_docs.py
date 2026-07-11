@@ -208,6 +208,9 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
+        "Latest live sponsor/support issue refresh",
+        "qq-ai-bot#28",
+        "RDLeader#3",
         "Latest default/profile support-router refresh",
         "funding links, plus issue-contact links",
         "support-router defaults",

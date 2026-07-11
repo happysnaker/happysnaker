@@ -9,6 +9,8 @@ from typing import Sequence
 
 from github_cli import run_gh_json
 
+SUPPORT_ROUTER = "https://happysnaker.github.io/support/#sponsor-router"
+
 
 @dataclass(frozen=True)
 class SponsorIssueSpec:
@@ -27,6 +29,7 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
         required=(
             "https://happysnaker.github.io/support/#from-qq-ai-bot",
             "https://happysnaker.github.io/support/#proof-before-payment",
+            SUPPORT_ROUTER,
             "https://happysnaker.github.io/support/#current-asks",
             "qq-ai-bot #26 arm64",
             "https://github.com/happysnaker/qq-ai-bot/actions/workflows/ci.yml",
@@ -58,6 +61,7 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "https://github.com/happysnaker/qq-ai-bot/discussions/43",
             "Best payment note: `qq-ai-bot #26 arm64`",
             "https://happysnaker.github.io/support/#from-qq-ai-bot",
+            SUPPORT_ROUTER,
             "tokens / group IDs / user IDs removed",
         ),
         banned=(
@@ -79,6 +83,8 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "no private paths, IDs, QR artifacts, or raw integration output",
             "¥199",
             "https://happysnaker.github.io/support/#from-rdleader",
+            SUPPORT_ROUTER,
+            "Support does not imply RDLeader reuse rights",
         ),
         banned=(
             "https://github.com/happysnaker/RDLeader/actions/runs/",
@@ -96,6 +102,8 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "Employee-agent onboarding docs",
             "Runtime endurance deep dive",
             "Support page: https://happysnaker.github.io/support/",
+            SUPPORT_ROUTER,
+            "Support does not imply RDLeader reuse rights",
             "Decide whether this repo is ready for an explicit license",
         ),
     ),
@@ -108,6 +116,8 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "unrestricted reuse until the license is published.",
             "https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md",
             "https://happysnaker.github.io/support/#from-rdleader",
+            SUPPORT_ROUTER,
+            "Support does not imply RDLeader reuse rights",
             "GitHub metadata check",
         ),
     ),
