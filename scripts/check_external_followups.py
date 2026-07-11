@@ -35,13 +35,13 @@ class IssueTarget:
 
 
 PRS: tuple[PullRequestTarget, ...] = (
-    PullRequestTarget("docker/awesome-compose", 781, "qq-ai-bot", "Docker Compose sample", "optional-update", "On scheduled review: one short update only if still review-required and no maintainer reply; otherwise stay quiet."),
+    PullRequestTarget("docker/awesome-compose", 781, "qq-ai-bot", "Docker Compose sample", "optional-update", "On scheduled review: one short update only if still review-required and no maintainer reply; if used, include project-page/support-router proof and avoid physical ARM completion claims. Otherwise stay quiet."),
     PullRequestTarget("Cp0204/CasaOS-AppStore-Play", 42, "qq-ai-bot", "CasaOS app-store PR", "stay-quiet", "Do not bump unless a real physical CasaOS/ARM report lands or maintainer asks."),
     PullRequestTarget("getumbrel/umbrel-apps", 5834, "qq-ai-bot", "Umbrel app PR", "recheck-only", "Recheck lint/mergeability; do not comment unless maintainer asks or checks regress."),
-    PullRequestTarget("AwesomeHomelab/awesome-homelab", 98, "qq-ai-bot", "homelab listing PR", "optional-update", "On scheduled review: one short homelab-focused update may be useful after tester pack/project page render."),
+    PullRequestTarget("AwesomeHomelab/awesome-homelab", 98, "qq-ai-bot", "homelab listing PR", "optional-update", "On scheduled review: one short homelab-focused update may be useful after tester pack/project page/support-router render; avoid physical ARM completion claims."),
     PullRequestTarget("LLOneBot/LuckyLilliaDoc", 20, "qq-ai-bot", "LLOneBot docs PR", "stay-quiet", "Stay quiet unless maintainer replies."),
     PullRequestTarget("LLOneBot/llonebot.nix", 22, "qq-ai-bot", "LLOneBot Nix example PR", "stay-quiet", "Stay quiet unless maintainer replies or checks change."),
-    PullRequestTarget("jbesomi/awesome-autonomous-agents", 20, "RDLeader", "autonomous-agents listing PR", "optional-update", "On scheduled review: use security-proof snippet only once if still open/no feedback; otherwise stay quiet."),
+    PullRequestTarget("jbesomi/awesome-autonomous-agents", 20, "RDLeader", "autonomous-agents listing PR", "optional-update", "On scheduled review: use security-proof/project-page/support-router snippet only once if still open/no feedback; keep RDLeader license caveat explicit."),
     PullRequestTarget("kailiu42/awesome-coding-agents", 13, "RDLeader", "coding-agents listing PR", "no-action", "No action; keep as proof surface only."),
 )
 

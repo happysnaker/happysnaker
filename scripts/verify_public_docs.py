@@ -258,6 +258,15 @@ REQUIRED = {
         "0f13edc",
         "2b0ad6a",
     ],
+    "docs/external-follow-up-queue.md": [
+        "Prepared material for the 2026-07-16 review window",
+        "Project-page closed loop share snippet",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "profile README → project page → 10-second support router",
+        "qq-ai-bot still needs a real physical ARM/CasaOS host report",
+        "RDLeader reuse rights are still blocked on the license issue",
+        "Do not post it before the review gate is due",
+    ],
     "docs/flagship-technical-map.md": [
         "Fast read",
         "Systems boundary",
