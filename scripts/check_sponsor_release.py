@@ -5,10 +5,13 @@ import json
 import subprocess
 import sys
 import time
+from pathlib import Path
 from typing import Any
 
 from github_cli import run_gh_json
 
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE_FILE = ROOT / "docs" / "sponsor-one-pager.md"
 REPO = "happysnaker/happysnaker"
 TAG = "v2026.07-sponsor-one-pager"
 MAX_BODY_CHARS = 25000
@@ -37,19 +40,36 @@ REQUIRED_BODY_TEXT = (
     "python3 scripts/check_checker_catalog.py --json",
 )
 
-
+REQUIRED_SOURCE_TEXT = (
+    "Reproduce this proof packet",
+    "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
+    "python3 scripts/check_github_status.py --summary",
+    "python3 scripts/check_checker_catalog.py --json",
+    "Proof before payment",
+    "qq-ai-bot #26 arm64",
+    "RDLeader #27",
+)
 
 
 run_gh = run_gh_json
 
 def main() -> int:
+    failures: list[str] = []
+    if not SOURCE_FILE.exists():
+        failures.append(f"missing source sponsor one-pager: {SOURCE_FILE.relative_to(ROOT)}")
+        source_text = ""
+    else:
+        source_text = SOURCE_FILE.read_text(encoding="utf-8")
+        source_missing = [needle for needle in REQUIRED_SOURCE_TEXT if needle not in source_text]
+        if source_missing:
+            failures.append(f"source sponsor one-pager missing {source_missing}")
+
     try:
         release = run_gh(["release", "view", TAG, "-R", REPO, "--json", "tagName,name,isDraft,isPrerelease,url,body"])
     except RuntimeError as error:
         print(f"ERROR: failed to load release {TAG}: {error}", file=sys.stderr)
         return 1
 
-    failures: list[str] = []
     if release.get("tagName") != TAG:
         failures.append(f"tagName is {release.get('tagName')!r}; expected {TAG!r}")
     if release.get("isDraft"):
@@ -74,7 +94,7 @@ def main() -> int:
             print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"OK {release.get('url')}: {release.get('name')} contains compact sponsor proof routes ({len(body)} chars)")
+    print(f"OK {release.get('url')}: {release.get('name')} and {SOURCE_FILE.relative_to(ROOT)} contain compact sponsor proof routes ({len(body)} chars)")
     return 0
 
 
