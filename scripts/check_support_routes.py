@@ -30,6 +30,8 @@ SHARE_KIT = "https://github.com/happysnaker/happysnaker/blob/master/docs/share-k
 QQ_NOTE = "qq-ai-bot #26 arm64"
 RD_NOTE = "RDLeader #27"
 REVIEW_SAMPLE = "https://happysnaker.github.io/review/deploy-read-sample/"
+INTAKE_REPLIES = "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md#sponsor--paid-support-intake-replies"
+PUBLIC_PRIVACY_GUARDRAIL = "Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs"
 
 EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
@@ -40,17 +42,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Technical proof index"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "sponsor / paid-support intake replies", "privacy", "Technical proof index"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/profile_operations.md",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "python3 scripts/check_github_status.py", "Sponsor / support guardrails"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, INTAKE_REPLIES, "python3 scripts/check_github_status.py", "Sponsor / support guardrails", "Do not ask for private logs, credentials, QR codes, internal URLs, or payment screenshots in public"),
     ),
     FileExpectation(
         "happysnaker/.github",
@@ -60,22 +62,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/.github",
         "SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
     ),
     FileExpectation(
         "happysnaker/.github",
         "CONTRIBUTING.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, INTAKE_REPLIES, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader", "Do not send private logs, credentials, QR codes, payment screenshots, or internal URLs in public issues or PRs"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, REVIEW_SAMPLE, SUPPORT_URL),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "sponsor / paid-support intake replies", "privacy", REVIEW_SAMPLE, SUPPORT_URL),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
