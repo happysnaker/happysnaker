@@ -181,6 +181,10 @@ REQUIRED = {
         "scripts/check_operator_handoff.py",
         "scripts/check_checker_catalog.py",
         "--json",
+        "deploy-read sample",
+        "a747985",
+        "0f13edc",
+        "2b0ad6a",
     ],
     "docs/flagship-technical-map.md": [
         "Fast read",
