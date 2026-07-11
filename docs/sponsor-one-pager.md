@@ -19,6 +19,7 @@ Current proof snapshot:
 - `qq-ai-bot` latest CI / CodeQL / Docker publish / arm64 smoke are green.
 - `RDLeader` latest CI / CodeQL are green.
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
+- Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
 
 ## Best links to share
@@ -26,6 +27,7 @@ Current proof snapshot:
 | Need | Link |
 |---|---|
 | Main support page | <https://happysnaker.github.io/support/> |
+| Proof before payment | <https://happysnaker.github.io/support/#proof-before-payment> |
 | `qq-ai-bot` project page | <https://happysnaker.github.io/qq-ai-bot/> |
 | `qq-ai-bot` support route | <https://happysnaker.github.io/support/#from-qq-ai-bot> |
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |
@@ -106,7 +108,7 @@ The strongest current public proof links are the project pages, not just the rep
 qq-ai-bot: https://happysnaker.github.io/qq-ai-bot/
 RDLeader: https://happysnaker.github.io/rdleader/
 
-Both pages link back to CI, docs, release, demo, and sponsorware evidence.
+Both pages link back to CI, docs, release, demo, and sponsorware evidence. If someone wants proof before paying, use https://happysnaker.github.io/support/#proof-before-payment first.
 ```
 
 ### Sponsor

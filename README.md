@@ -4,7 +4,7 @@
 
 > 💛 **Sponsorware + 开源支持：** 当前可赞助任务见下方 **Current sponsorware board**；[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot) / [RDLeader](https://github.com/happysnaker/RDLeader) 都在公开推进。也欢迎 [扫码支持](https://happysnaker.github.io/support/)（¥9.9 起）或购买付费评审服务 ¥29.9–¥199。
 
-> **Current proof snapshot (2026-07-11):** `qq-ai-bot` and `RDLeader` currently have **0 open CodeQL / Dependabot / secret-scanning alerts**. The latest `qq-ai-bot` CI / CodeQL / Docker publish / arm64 smoke and the latest `RDLeader` CI / CodeQL are green. Current concrete asks live at [support/#current-asks](https://happysnaker.github.io/support/#current-asks): `qq-ai-bot #26 arm64`, `RDLeader #27`, or the ¥29.9 quick read. The source-linked status table is frozen in [docs/flagship-status-snapshot.md](docs/flagship-status-snapshot.md).
+> **Current proof snapshot (2026-07-11):** `qq-ai-bot` and `RDLeader` currently have **0 open CodeQL / Dependabot / secret-scanning alerts**. The latest `qq-ai-bot` CI / CodeQL / Docker publish / arm64 smoke and the latest `RDLeader` CI / CodeQL are green. Current concrete asks live at [support/#current-asks](https://happysnaker.github.io/support/#current-asks): `qq-ai-bot #26 arm64`, `RDLeader #27`, or the ¥29.9 quick read. The source-linked status table is frozen in [docs/flagship-status-snapshot.md](docs/flagship-status-snapshot.md); if you want proof before tipping or buying a review, start at [support/#proof-before-payment](https://happysnaker.github.io/support/#proof-before-payment).
 
 Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol / RPC infrastructure, performance-oriented engineering, and selective real OSS fixes.
 
@@ -23,6 +23,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 > **Sponsor one-pager:** [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) ([frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)) is the short shareable brief for sponsors, curators, and people asking what to support.
 >
 > **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) tracks which repos route visitors to the support page, sponsor one-pager, and sponsorware metadata.
+>
+> **Proof before payment:** [support/#proof-before-payment](https://happysnaker.github.io/support/#proof-before-payment) is the shortest live path from current workflow/alert proof to concrete payment notes.
 
 > **Portfolio audit:** [docs/portfolio-audit.md](docs/portfolio-audit.md) explains what to promote, what to keep as proof, and what to park.
 
