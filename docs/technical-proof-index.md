@@ -246,6 +246,7 @@ Central board:
 
 - <https://github.com/happysnaker/happysnaker/blob/master/docs/sponsorware-board.md>
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
+- Flagship technical map: [flagship-technical-map.md](flagship-technical-map.md)
 - Support page current asks: <https://happysnaker.github.io/support/#current-asks>
 - Support page proof-before-payment section: <https://happysnaker.github.io/support/#proof-before-payment> ([site commit](https://github.com/happysnaker/happysnaker.github.io/commit/d4c554b), [Pages deploy](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29134563962))
 - Repo-local GitHub support file: [.github/SUPPORT.md](../.github/SUPPORT.md), now routed to proof-before-payment, current asks, sponsor one-pager, and concrete payment notes.

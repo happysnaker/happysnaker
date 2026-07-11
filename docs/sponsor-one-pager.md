@@ -21,6 +21,7 @@ Current proof snapshot:
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
 - Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
+- Technical map: [flagship-technical-map.md](flagship-technical-map.md).
 - Flagship repo support files and issue contact links now route the same proof-before-payment path from `qq-ai-bot` and `RDLeader`.
 
 ## Best links to share
@@ -34,6 +35,7 @@ Current proof snapshot:
 | `RDLeader` project page | <https://happysnaker.github.io/rdleader/> |
 | `RDLeader` support route | <https://happysnaker.github.io/support/#from-rdleader> |
 | Full proof index | [technical-proof-index.md](technical-proof-index.md) |
+| Flagship technical map | [flagship-technical-map.md](flagship-technical-map.md) |
 | Flagship status snapshot | [flagship-status-snapshot.md](flagship-status-snapshot.md) |
 | Upstream contribution ledger | [upstream-contribution-ledger.md](upstream-contribution-ledger.md) |
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
