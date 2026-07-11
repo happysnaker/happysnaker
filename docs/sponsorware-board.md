@@ -30,6 +30,17 @@ Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #1
 
 If you are not sure which item fits, use `open-source maintenance` or the project name.
 
+
+## Paid support offers
+
+These are not replacements for the sponsorware issues above; they are the fastest paid paths when someone wants concrete feedback back instead of only funding maintenance.
+
+| Offer | Best fit | Entry point | Guardrail |
+|---|---|---|---|
+| `Deploy read` (`¥29.9`) | Bot / agent / infra repo already runs, but token / WebSocket / Docker / README / landing-page story still looks toy-like | [deploy-read sample](https://happysnaker.github.io/review/deploy-read-sample/) / [quick-read order route](https://happysnaker.github.io/support/#quick-read) | one blunt first pass, not a full rewrite |
+| `Quick read` (`¥29.9`) | One public profile / repo / page needs first-impression triage | [review page](https://happysnaker.github.io/review/) | one paragraph + top 3 fixes |
+| `Async review` (`¥99`) | GitHub profile, pinned repos, README, or landing-page packaging needs concrete edits | [support page](https://happysnaker.github.io/support/#async-review) | public links only; redact private data |
+
 ## Current targets
 
 | Project | Target | Funding use | Public issue |

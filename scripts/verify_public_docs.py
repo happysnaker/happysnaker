@@ -77,6 +77,12 @@ REQUIRED = {
     ],
     "docs/sponsorware-board.md": [
         "Current targets",
+        "Paid support offers",
+        "Deploy read",
+        "https://happysnaker.github.io/review/deploy-read-sample/",
+        "https://happysnaker.github.io/support/#quick-read",
+        "¥29.9",
+        "¥99",
         "qq-ai-bot #23",
         "RDLeader #2",
         "What sponsorship funds",
