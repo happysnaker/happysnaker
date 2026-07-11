@@ -35,6 +35,8 @@ Automation already completed around this item:
 - Weekly profile CI now checks support-route, repository metadata, compact sponsor-release, operations-log, issue-label, share-kit, manual-blocker, README badge, and public site hygiene drift.
 - `docs/flagship-technical-map.md` now explains why RDLeader belongs in the first-screen technical proof set.
 - `docs/share-kit.md` and the live support page now expose proof-safe share snippets for `qq-ai-bot` and `RDLeader`.
+- The 10-second support router is live at <https://happysnaker.github.io/support/#sponsor-router> and is linked from profile, project pages, sponsor packet, share kit, support files, funding fallback, and live sponsor/support issues.
+- Default `.github` funding/support fallback now routes repositories without local support files through Tip / Proof / Review / Fund.
 - `scripts/check_issue_labels.py` keeps the manual/profile and sponsor/open-loop issues labeled for public triage.
 - `scripts/check_ops_issue_log.py` keeps [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2) as the append-only operations log now that the sponsor release is compact.
 
