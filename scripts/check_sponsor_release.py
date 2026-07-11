@@ -13,6 +13,8 @@ REQUIRED_BODY_TEXT = (
     "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-one-pager.md",
     "https://happysnaker.github.io/support/",
     "https://happysnaker.github.io/support/#proof-before-payment",
+    "https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-technical-map.md",
+    "flagship technical map",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
     "Proof before payment",
