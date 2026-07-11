@@ -4,6 +4,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -38,14 +39,43 @@ EXPECTATIONS = (
 BADGE_RE = re.compile(r"\[!\[(?P<label>[^\]]+)\]\((?P<image>[^)]+)\)\]\((?P<target>[^)]+)\)")
 
 
-def workflow_exists(repo: str, workflow: str) -> bool:
-    completed = subprocess.run(
-        ["gh", "api", f"repos/{repo}/contents/.github/workflows/{workflow}"],
-        check=False,
-        capture_output=True,
-        text=True,
+def is_retryable_gh_error(message: str) -> bool:
+    retryable_needles = (
+        "HTTP 429",
+        "HTTP 500",
+        "HTTP 502",
+        "HTTP 503",
+        "HTTP 504",
+        "connection reset",
+        "connection refused",
+        "can't assign requested address",
+        "network is unreachable",
+        "connection timed out",
+        "i/o timeout",
+        "TLS handshake timeout",
+        "temporary failure",
     )
-    return completed.returncode == 0
+    lowered = message.lower()
+    return any(needle.lower() in lowered for needle in retryable_needles)
+
+
+def workflow_exists(repo: str, workflow: str) -> bool:
+    last_error = "gh command failed"
+    for attempt in range(1, 4):
+        completed = subprocess.run(
+            ["gh", "api", f"repos/{repo}/contents/.github/workflows/{workflow}"],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if completed.returncode == 0:
+            return True
+        last_error = completed.stderr.strip() or completed.stdout.strip() or "gh command failed"
+        if attempt < 3 and is_retryable_gh_error(last_error):
+            time.sleep(attempt * 2)
+            continue
+        return False
+    return False
 
 
 def main() -> int:
