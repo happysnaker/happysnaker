@@ -297,6 +297,7 @@ REQUIRED = {
         "machine-readable workflow-contract drift state",
         "scripts/check_operator_handoff.py",
         "scripts/check_checker_catalog.py",
+        "including the catalog checker itself",
         "--json",
         "machine-readable link status",
         "the 10-second support router",
