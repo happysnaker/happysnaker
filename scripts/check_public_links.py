@@ -12,6 +12,7 @@ from typing import Iterable
 ROOT = Path(__file__).resolve().parents[1]
 CORE_FILES = [
     ROOT / ".github" / "SUPPORT.md",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml",
     ROOT / "docs" / "sponsor-one-pager.md",
     ROOT / "docs" / "support-surface-coverage.md",
     ROOT / "docs" / "flagship-status-snapshot.md",
@@ -19,6 +20,7 @@ CORE_FILES = [
 PROFILE_FILES = [
     ROOT / "README.md",
     ROOT / ".github" / "SUPPORT.md",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml",
     ROOT / "docs" / "technical-proof-index.md",
     ROOT / "docs" / "flagship-status-snapshot.md",
     ROOT / "docs" / "upstream-contribution-ledger.md",
