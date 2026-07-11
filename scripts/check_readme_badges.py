@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import subprocess
 import sys
@@ -47,32 +49,64 @@ def workflow_exists(repo: str, workflow: str) -> bool:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify first-screen README workflow badges and workflow files.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable README badge summary.")
+    args = parser.parse_args()
+
     text = README.read_text(encoding="utf-8")
     badges = {match.group("label"): (match.group("image"), match.group("target")) for match in BADGE_RE.finditer(text)}
     failures: list[str] = []
+    results: list[dict[str, object]] = []
 
     for expected in EXPECTATIONS:
         actual = badges.get(expected.label)
+        badge_failures: list[str] = []
+        image = actual[0] if actual else None
+        target = actual[1] if actual else None
         if not actual:
-            failures.append(f"missing badge {expected.label!r}")
-            continue
-        image, target = actual
-        if image != expected.image_url:
-            failures.append(f"{expected.label}: image {image!r} != {expected.image_url!r}")
-        if target != expected.target_url:
-            failures.append(f"{expected.label}: target {target!r} != {expected.target_url!r}")
-        if not workflow_exists(expected.repo, expected.workflow):
-            failures.append(f"{expected.label}: workflow missing in {expected.repo}/.github/workflows/{expected.workflow}")
+            badge_failures.append(f"missing badge {expected.label!r}")
+            workflow_present = False
+        else:
+            if image != expected.image_url:
+                badge_failures.append(f"image {image!r} != {expected.image_url!r}")
+            if target != expected.target_url:
+                badge_failures.append(f"target {target!r} != {expected.target_url!r}")
+            workflow_present = workflow_exists(expected.repo, expected.workflow)
+            if not workflow_present:
+                badge_failures.append(f"workflow missing in {expected.repo}/.github/workflows/{expected.workflow}")
+        failures.extend(f"{expected.label}: {failure}" for failure in badge_failures)
+        results.append({
+            "label": expected.label,
+            "repo": expected.repo,
+            "workflow": expected.workflow,
+            "image": image,
+            "expectedImage": expected.image_url,
+            "target": target,
+            "expectedTarget": expected.target_url,
+            "workflowPresent": workflow_present,
+            "ok": not badge_failures,
+            "failures": badge_failures,
+        })
 
+    summary = {
+        "ok": not failures,
+        "badgeCount": len(EXPECTATIONS),
+        "foundBadgeCount": sum(1 for result in results if result["image"]),
+        "badges": results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("README badge check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("README badge check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"Checked {len(EXPECTATIONS)} README workflow badges")
+    if not args.json:
+        print(f"Checked {len(EXPECTATIONS)} README workflow badges")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

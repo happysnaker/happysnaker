@@ -40,6 +40,7 @@ REQUIRED_TEXT = (
     "python3 scripts/check_support_routes.py --json",
     "python3 scripts/check_repo_metadata.py --json",
     "python3 scripts/check_issue_labels.py --json",
+    "python3 scripts/check_readme_badges.py --json",
     "python3 scripts/check_ops_issue_log.py --json",
     "stable profile workflow links",
     "one-off profile self-check run links",
