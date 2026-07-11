@@ -6,7 +6,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DOCS = [ROOT / "README.md", ROOT / ".github" / "SUPPORT.md", *sorted((ROOT / "docs").glob("*.md"))]
+DOCS = [
+    ROOT / "README.md",
+    ROOT / ".github" / "SUPPORT.md",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "profile_operations.md",
+    *sorted((ROOT / "docs").glob("*.md")),
+]
 
 SENSITIVE_PATTERNS = [
     re.compile(pattern, re.IGNORECASE)
@@ -37,6 +42,13 @@ REQUIRED = {
         "Sponsor one-pager",
         "qq-ai-bot #26 arm64",
         "RDLeader #27",
+    ],
+    ".github/ISSUE_TEMPLATE/profile_operations.md": [
+        "Proof before payment",
+        "Current concrete asks",
+        "Flagship status snapshot",
+        "python3 scripts/check_github_status.py",
+        "Sponsor / support guardrails",
     ],
     "docs/sponsorware-board.md": [
         "Current targets",

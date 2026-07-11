@@ -21,6 +21,7 @@ PROFILE_FILES = [
     ROOT / "README.md",
     ROOT / ".github" / "SUPPORT.md",
     ROOT / ".github" / "ISSUE_TEMPLATE" / "config.yml",
+    ROOT / ".github" / "ISSUE_TEMPLATE" / "profile_operations.md",
     ROOT / "docs" / "technical-proof-index.md",
     ROOT / "docs" / "flagship-status-snapshot.md",
     ROOT / "docs" / "upstream-contribution-ledger.md",
