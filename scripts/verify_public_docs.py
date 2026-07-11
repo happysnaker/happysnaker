@@ -269,6 +269,8 @@ REQUIRED = {
         "sponsor / paid-support intake replies",
         "public-privacy routes",
         "b5ddf88",
+        "af2fa9b",
+        "69bab33",
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_public_links.py --timeout 6 --workers 8 --json",
@@ -340,6 +342,8 @@ REQUIRED = {
         "0f13edc",
         "2b0ad6a",
         "b5ddf88",
+        "af2fa9b",
+        "69bab33",
     ],
     "docs/upstream-contribution-ledger.md": [
         "Upstream contribution ledger",
