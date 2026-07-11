@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
 import base64
 import json
 import subprocess
@@ -131,29 +132,55 @@ def fetch_file(repo: str, path: str) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify remote support/funding/issue-contact routes across profile and flagship repositories.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable support route summary.")
+    args = parser.parse_args()
+
     failures: list[str] = []
+    results: list[dict[str, object]] = []
     for expected in EXPECTATIONS:
+        text = ""
+        fetch_error: str | None = None
         try:
             text = fetch_file(expected.repo, expected.path)
         except RuntimeError as error:
-            failures.append(str(error))
-            continue
-        missing = [needle for needle in expected.required if needle not in text]
-        if missing:
+            fetch_error = str(error)
+            failures.append(fetch_error)
+        missing = [needle for needle in expected.required if needle not in text] if not fetch_error else list(expected.required)
+        if missing and not fetch_error:
             failures.append(f"{expected.repo}:{expected.path}: missing {missing}")
-            print(f"FAIL {expected.repo}:{expected.path}")
-        else:
-            print(f"OK {expected.repo}:{expected.path}")
+        result = {
+            "repo": expected.repo,
+            "path": expected.path,
+            "requiredCount": len(expected.required),
+            "missingRequiredText": missing,
+            "fetchError": fetch_error,
+            "ok": not fetch_error and not missing,
+        }
+        results.append(result)
+        if not args.json:
+            print(("OK" if result["ok"] else "FAIL") + f" {expected.repo}:{expected.path}")
 
+    summary = {
+        "ok": not failures,
+        "fileCount": len(EXPECTATIONS),
+        "checkedFileCount": len(results),
+        "requiredCount": sum(len(expected.required) for expected in EXPECTATIONS),
+        "files": results,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("\nSupport route check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("\nSupport route check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"Checked {len(EXPECTATIONS)} support route files")
+    if not args.json:
+        print(f"Checked {len(EXPECTATIONS)} support route files")
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

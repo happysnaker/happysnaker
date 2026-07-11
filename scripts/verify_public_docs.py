@@ -137,6 +137,7 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "python3 scripts/check_sponsor_issues.py --json",
         "python3 scripts/check_sponsor_release.py --json",
+        "python3 scripts/check_support_routes.py --json",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
