@@ -56,6 +56,11 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 ## Commands for the scheduled check
 
 ```bash
+# Profile / support-route preflight
+python3 scripts/check_github_status.py
+python3 scripts/check_support_routes.py
+python3 scripts/check_public_links.py --timeout 6
+
 # External PR state
 for spec in \
   'docker/awesome-compose 781' \
@@ -70,13 +75,13 @@ for spec in \
   gh pr view "$2" -R "$1" --json number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup
 done
 
-# Flagship alert state
-gh api repos/happysnaker/qq-ai-bot/code-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
-gh api repos/happysnaker/qq-ai-bot/dependabot/alerts --jq '[.[] | select(.state=="open")] | length'
-gh api repos/happysnaker/qq-ai-bot/secret-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
-gh api repos/happysnaker/RDLeader/code-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
-gh api repos/happysnaker/RDLeader/dependabot/alerts --jq '[.[] | select(.state=="open")] | length'
-gh api repos/happysnaker/RDLeader/secret-scanning/alerts --jq '[.[] | select(.state=="open")] | length'
+# Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
+for repo in happysnaker/qq-ai-bot happysnaker/RDLeader; do
+  echo "## $repo"
+  gh api "repos/$repo/code-scanning/alerts?state=open&per_page=100" --jq 'length'
+  gh api "repos/$repo/dependabot/alerts?state=open&per_page=100" --jq 'length'
+  gh api "repos/$repo/secret-scanning/alerts?state=open&per_page=100" --jq 'length'
+done
 ```
 
 ## Evidence to record after the scheduled check
@@ -84,7 +89,8 @@ gh api repos/happysnaker/RDLeader/secret-scanning/alerts --jq '[.[] | select(.st
 - current PR state and checks;
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
-- whether any flagship alert count became non-zero;
+- whether any flagship alert count became non-zero using explicit `state=open` API queries;
+- whether support-route checker or core link checker failed;
 - whether a new external comment was actually posted, or why no comment was posted.
 
 Record the outcome in <https://github.com/happysnaker/happysnaker/issues/2> and update project trackers only if the state changed.
