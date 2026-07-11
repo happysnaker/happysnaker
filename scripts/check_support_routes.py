@@ -80,17 +80,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/qq-ai-bot",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "arm64 / CasaOS install report"),
+        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "arm64 / CasaOS install report"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
@@ -100,17 +100,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/RDLeader",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Security report"),
+        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Security report"),
     ),
 )
 
