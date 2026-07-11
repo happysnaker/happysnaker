@@ -62,6 +62,17 @@ REQUIRED = {
         "Maintenance proof",
         "Sponsorware / support proof",
     ],
+    "docs/flagship-technical-map.md": [
+        "Fast read",
+        "Systems boundary",
+        "Operator proof",
+        "Maintenance proof",
+        "Current support note",
+        "Proof before payment",
+        "qq-ai-bot #26 arm64",
+        "RDLeader #27",
+        "Automation that keeps this map honest",
+    ],
 }
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
