@@ -138,6 +138,71 @@ def candidate_comment(repo: str, number: int) -> str | None:
     return CANDIDATE_COMMENTS.get((repo, number))
 
 
+CANDIDATE_REQUIRED_TEXT: dict[tuple[str, int], tuple[str, ...]] = {
+    (
+        "docker/awesome-compose",
+        781,
+    ): (
+        "https://happysnaker.github.io/qq-ai-bot/",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md",
+        "not claiming real physical ARM/CasaOS completion",
+        "qq-ai-bot#26",
+    ),
+    (
+        "AwesomeHomelab/awesome-homelab",
+        98,
+    ): (
+        "https://happysnaker.github.io/qq-ai-bot/",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md",
+        "https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md",
+        "not marking that validation complete",
+    ),
+    (
+        "jbesomi/awesome-autonomous-agents",
+        20,
+    ): (
+        "https://happysnaker.github.io/rdleader/",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "https://github.com/happysnaker/RDLeader/blob/main/docs/public/distribution-kit.md",
+        "https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md",
+        "not a license grant",
+    ),
+}
+
+CANDIDATE_BANNED_TEXT = (
+    "physical ARM/CasaOS completion is done",
+    "physical ARM / CasaOS validation is complete",
+    "real physical ARM/CasaOS completion is done",
+    "RDLeader reuse rights are granted",
+    "license granted",
+    "merged upstream",
+    "accepted upstream",
+)
+
+
+def candidate_guardrails(repo: str, number: int, comment: str | None) -> dict[str, Any]:
+    key = (repo, number)
+    if key not in CANDIDATE_REQUIRED_TEXT:
+        return {
+            "requiredText": [],
+            "missingRequiredText": [],
+            "bannedTextHits": [],
+            "ok": comment is None,
+        }
+    required = list(CANDIDATE_REQUIRED_TEXT[key])
+    missing = [needle for needle in required if not comment or needle not in comment]
+    lowered = (comment or "").lower()
+    banned_hits = [needle for needle in CANDIDATE_BANNED_TEXT if needle.lower() in lowered]
+    return {
+        "requiredText": required,
+        "missingRequiredText": missing,
+        "bannedTextHits": banned_hits,
+        "ok": bool(comment) and not missing and not banned_hits,
+    }
+
+
 def parse_iso_date(value: str, label: str) -> date:
     try:
         return date.fromisoformat(value)
@@ -197,6 +262,7 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "nextAction": target.next_action,
         "materials": list(target.materials),
         "candidateComment": candidate_comment(target.repo, target.number),
+        "candidateGuardrails": candidate_guardrails(target.repo, target.number, candidate_comment(target.repo, target.number)),
     }
 
 
@@ -228,6 +294,7 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "nextAction": target.next_action,
         "materials": list(target.materials),
         "candidateComment": candidate_comment(target.repo, target.number),
+        "candidateGuardrails": candidate_guardrails(target.repo, target.number, candidate_comment(target.repo, target.number)),
     }
 
 
@@ -326,6 +393,14 @@ def main() -> int:
     if args.action_class:
         allowed = set(args.action_class)
         rows = [row for row in rows if row.get("actionClass") in allowed]
+
+    for row in rows:
+        guardrails = row.get("candidateGuardrails") or {}
+        if not guardrails.get("ok") and row.get("candidateComment") is not None:
+            failures.append(
+                f"{row['repo']}#{row['number']}: candidate comment guardrails failed: "
+                f"missing={guardrails.get('missingRequiredText')}; banned={guardrails.get('bannedTextHits')}"
+            )
 
     gate = review_gate(args.today, args.review_date)
 

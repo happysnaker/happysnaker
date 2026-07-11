@@ -249,6 +249,7 @@ REQUIRED = {
         "--json",
         "machine-readable link status",
         "prepared candidate comments",
+        "candidate-comment guardrails",
         "supports `--action-class` filtering, `--json`, and `--summary`",
         "machine-readable site hygiene status",
         "Support page 10-second sponsor router",
