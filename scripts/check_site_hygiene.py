@@ -13,6 +13,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
+from github_cli import run_gh_json
+
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SITE_ROOT = ROOT.parent / "happysnaker.github.io"
 BASE_URL = "https://happysnaker.github.io"
@@ -224,15 +226,11 @@ def iter_scan_files(paths: Iterable[Path]) -> Iterable[Path]:
 
 
 def repo_visibility(repo: str) -> str:
-    completed = subprocess.run(
-        ["gh", "repo", "view", f"happysnaker/{repo}", "--json", "isPrivate", "--jq", ".isPrivate"],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
-    if completed.returncode != 0:
+    try:
+        data = run_gh_json(["repo", "view", f"happysnaker/{repo}", "--json", "isPrivate"])
+    except RuntimeError:
         return "unknown"
-    return completed.stdout.strip()
+    return str(bool(data.get("isPrivate"))).lower()
 
 
 def check_public_repo_links(scan_roots: list[Path], findings: list[Finding]) -> None:

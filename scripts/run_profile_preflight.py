@@ -44,6 +44,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
 
     steps = [
         Step("Verify public docs", ("python3", "scripts/verify_public_docs.py")),
+        Step("Check GitHub CLI helper usage", ("python3", "scripts/check_gh_usage.py")),
         Step("Check share kit", ("python3", "scripts/check_share_kit.py")),
         Step("Check README workflow badges", ("python3", "scripts/check_readme_badges.py")),
         Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
