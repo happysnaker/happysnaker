@@ -39,6 +39,7 @@ REQUIRED = {
         "support/#proof-before-payment",
         "docs/flagship-technical-map.md",
         "docs/operator-handoff.md",
+        "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "Profile CodeQL",
         "qq-ai-bot CodeQL",
         "RDLeader CodeQL",
