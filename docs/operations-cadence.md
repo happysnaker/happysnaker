@@ -79,7 +79,7 @@ Update `docs/technical-proof-index.md` when any of these change:
 
 Check:
 
-- pinned repos still match the intended first-screen story; latest API audit still leaves replacing `Resume` with `RDLeader` as a manual web-UI action
+- pinned repos still match the intended first-screen story; run `python3 scripts/check_profile_pins.py` to confirm whether replacing `Resume` with `RDLeader` is still pending
 - active forks still have “not portfolio centerpiece” descriptions
 - parked repos still should remain parked
 - newly created repos have license / support / security posture appropriate to their role
