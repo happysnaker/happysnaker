@@ -8,6 +8,9 @@ from typing import Any
 
 REPO = "happysnaker/happysnaker"
 TAG = "v2026.07-sponsor-one-pager"
+MAX_BODY_CHARS = 25000
+MIN_BODY_CHARS = 1000
+
 REQUIRED_BODY_TEXT = (
     "Sponsor one-pager",
     "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-one-pager.md",
@@ -22,6 +25,8 @@ REQUIRED_BODY_TEXT = (
     "Proof before payment",
     "support route checker",
     "repository metadata checker",
+    "Operations log",
+    "https://github.com/happysnaker/happysnaker/issues/2",
 )
 
 
@@ -47,6 +52,11 @@ def main() -> int:
     if not release.get("isPrerelease"):
         failures.append("release should remain a pre-release proof packet")
     body = release.get("body") or ""
+    body_length = len(body)
+    if body_length > MAX_BODY_CHARS:
+        failures.append(f"release body is {body_length} chars; keep <= {MAX_BODY_CHARS} and put history in issue #2")
+    if body_length < MIN_BODY_CHARS:
+        failures.append(f"release body is only {body_length} chars; expected >= {MIN_BODY_CHARS} for a useful proof packet")
     missing = [needle for needle in REQUIRED_BODY_TEXT if needle not in body]
     if missing:
         failures.append(f"release body missing {missing}")
@@ -57,7 +67,7 @@ def main() -> int:
             print(f"- {failure}", file=sys.stderr)
         return 1
 
-    print(f"OK {release.get('url')}: {release.get('name')} contains sponsor proof routes")
+    print(f"OK {release.get('url')}: {release.get('name')} contains compact sponsor proof routes ({len(body)} chars)")
     return 0
 
 
