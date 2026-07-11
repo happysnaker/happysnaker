@@ -90,6 +90,7 @@ REQUIRED = {
     "docs/operator-handoff.md": [
         "Current source of truth",
         "python3 scripts/check_github_status.py --summary",
+        "python3 scripts/check_manual_blockers.py --json",
         "Current flagship state",
         "Proof before payment",
         "qq-ai-bot #26 arm64",
