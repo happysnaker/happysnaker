@@ -17,6 +17,7 @@ python3 scripts/check_stable_profile_links.py
 python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
 python3 scripts/check_checker_catalog.py --json
+python3 scripts/check_share_kit.py --json
 python3 scripts/check_external_followups.py --summary
 ```
 

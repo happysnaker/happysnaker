@@ -106,6 +106,7 @@ REQUIRED = {
         "check_gh_usage.py",
         "check_ci_workflow_contract.py",
         "check_checker_catalog.py",
+        "check_share_kit.py --json",
         "happysnaker#2",
     ],
     "docs/manual-github-actions.md": [

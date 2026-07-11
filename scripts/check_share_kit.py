@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -49,6 +51,10 @@ def fail(message: str) -> None:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify proof-safe share kit snippets and guardrails.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable share-kit summary.")
+    args = parser.parse_args()
+
     if not SHARE_KIT.exists():
         fail(f"missing {SHARE_KIT.relative_to(ROOT)}")
 
@@ -58,30 +64,52 @@ def main() -> int:
             fail(f"share-kit.md:{line_no}: trailing whitespace")
 
     missing = [needle for needle in REQUIRED_TEXT if needle not in text]
-    if missing:
-        fail(f"share kit missing required text: {missing}")
 
     lowered = text.lower()
     banned_hits = [phrase for phrase in BANNED_PHRASES if phrase in lowered]
-    if banned_hits:
-        fail(f"share kit contains banned hype phrase(s): {banned_hits}")
 
     text_fences = len(re.findall(r"^```text$", text, flags=re.MULTILINE))
-    if text_fences < 6:
-        fail(f"expected at least 6 copy-ready text snippets; found {text_fences}")
 
-    guardrails = text.split("## Guardrails", 1)[-1]
-    for guarded_claim in (
+    guarded_claims = (
         "real physical ARM / CasaOS report",
         "reuse rights",
         "CodeQL-clean",
         "external PR has merged",
         "Do not post the same snippet repeatedly",
-    ):
-        if guarded_claim not in guardrails:
-            fail(f"guardrails missing {guarded_claim!r}")
+    )
+    guardrails = text.split("## Guardrails", 1)[-1]
+    missing_guardrails = [claim for claim in guarded_claims if claim not in guardrails]
 
-    print(f"Checked share kit: {text_fences} copy-ready snippets with required proof/support guardrails")
+    summary = {
+        "ok": not missing and not banned_hits and text_fences >= 6 and not missing_guardrails,
+        "path": SHARE_KIT.relative_to(ROOT).as_posix(),
+        "snippetCount": text_fences,
+        "requiredCount": len(REQUIRED_TEXT),
+        "missingRequiredText": missing,
+        "bannedPhraseHits": banned_hits,
+        "missingGuardrails": missing_guardrails,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
+    if missing:
+        if not args.json:
+            fail(f"share kit missing required text: {missing}")
+        return 1
+    if banned_hits:
+        if not args.json:
+            fail(f"share kit contains banned hype phrase(s): {banned_hits}")
+        return 1
+    if text_fences < 6:
+        if not args.json:
+            fail(f"expected at least 6 copy-ready text snippets; found {text_fences}")
+        return 1
+    if missing_guardrails:
+        if not args.json:
+            fail(f"guardrails missing {missing_guardrails!r}")
+        return 1
+
+    if not args.json:
+        print(f"Checked share kit: {text_fences} copy-ready snippets with required proof/support guardrails")
     return 0
 
 
