@@ -83,12 +83,12 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/qq-ai-bot",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",

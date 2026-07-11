@@ -144,6 +144,7 @@ REQUIRED = {
         "https://happysnaker.github.io/review/deploy-read-sample/",
         "e9387ce",
         "2b0ad6a",
+        "0f13edc",
         "deploy-read support route",
     ],
     "docs/technical-proof-index.md": [
