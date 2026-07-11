@@ -30,6 +30,8 @@ python3 scripts/check_ops_issue_log.py --json
 python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json
 python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json
 python3 scripts/check_external_followups.py --summary
+python3 scripts/check_external_followups.py --action-class optional-update --summary
+python3 scripts/check_external_followups.py --action-class optional-update --json
 ```
 
 Use `python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due` only for the scheduled external review view; before the review date it should fail closed.
@@ -73,9 +75,12 @@ Current planned review remains `2026-07-16 UTC` unless a maintainer or tester re
 
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
+python3 scripts/check_external_followups.py --action-class optional-update --json
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
+
+The optional-update JSON includes `materials`, `candidateComment`, and `candidateGuardrails`. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The prepared comments are for `docker/awesome-compose#781`, `AwesomeHomelab#98`, and `jbesomi/awesome-autonomous-agents#20`; they must not be posted early or reused repeatedly.
 
 ## Automation guardrails
 
@@ -88,6 +93,7 @@ python3 scripts/run_profile_preflight.py --external-only --external-summary --en
 - `python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json` verifies sponsor/support/status links and emits machine-readable link evidence before broader promotion.
 - `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json` verifies local public-page metadata, sitemap, support proof-before-payment content, and repo-link hygiene as machine-readable site evidence.
 - `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
+- `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, candidate comments, and candidate-comment guardrails without posting externally.
 
 ## Good next actions
 

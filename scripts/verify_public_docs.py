@@ -136,6 +136,8 @@ REQUIRED = {
         "check_ci_workflow_contract.py --json",
         "check_checker_catalog.py",
         "check_share_kit.py --json",
+        "python3 scripts/check_external_followups.py --action-class optional-update --json",
+        "candidateGuardrails.ok",
         "check_review_funnel.py",
         "Deploy-read sample",
         "https://happysnaker.github.io/review/deploy-read-sample/",
