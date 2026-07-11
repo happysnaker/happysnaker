@@ -23,7 +23,17 @@ def run_step(step: Step) -> int:
     return completed.returncode
 
 
+def external_step(args: argparse.Namespace) -> Step:
+    external_command = ["python3", "scripts/check_external_followups.py"]
+    for action_class in args.action_class or []:
+        external_command.extend(["--action-class", action_class])
+    return Step("Summarize external follow-ups", tuple(external_command))
+
+
 def build_steps(args: argparse.Namespace) -> list[Step]:
+    if args.external_only:
+        return [external_step(args)]
+
     steps = [
         Step("Verify public docs", ("python3", "scripts/verify_public_docs.py")),
         Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
@@ -46,10 +56,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         ),
     ]
     if not args.skip_external:
-        external_command = ["python3", "scripts/check_external_followups.py"]
-        for action_class in args.action_class or []:
-            external_command.extend(["--action-class", action_class])
-        steps.append(Step("Summarize external follow-ups", tuple(external_command)))
+        steps.append(external_step(args))
     if args.snapshot_as_of:
         steps.append(
             Step(
@@ -72,6 +79,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--workers", type=int, default=8, help="Concurrent link checker workers. Default: 8.")
     parser.add_argument("--timeout", type=float, default=6.0, help="Per-link timeout in seconds. Default: 6.")
     parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
+    parser.add_argument("--external-only", action="store_true", help="Run only the dynamic external PR/issue summary, preserving action-class filters.")
     parser.add_argument(
         "--action-class",
         action="append",
@@ -83,6 +91,8 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     if args.workers < 1:
         parser.error("--workers must be >= 1")
+    if args.external_only and args.skip_external:
+        parser.error("--external-only cannot be combined with --skip-external")
 
     failures: list[str] = []
     for step in build_steps(args):

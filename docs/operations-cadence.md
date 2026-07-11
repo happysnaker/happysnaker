@@ -15,7 +15,7 @@ Fast path:
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
-python3 scripts/run_profile_preflight.py --link-scope profile --workers 12 --action-class optional-update
+python3 scripts/run_profile_preflight.py --external-only --action-class optional-update
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md
 ```
 
