@@ -32,8 +32,11 @@ Automation already completed around this item:
 - RDLeader repository homepage now points to that project page.
 - RDLeader topics include `agent-ops`, `control-plane`, `runtime-orchestration`, `sponsorware`, and `ai-workers`.
 - The profile repo topics include `agent-ops`, `oss-portfolio`, and `sponsorware`.
-- Weekly profile CI now checks support-route, repository metadata, and sponsor-release drift.
+- Weekly profile CI now checks support-route, repository metadata, compact sponsor-release, operations-log, issue-label, share-kit, manual-blocker, README badge, and public site hygiene drift.
 - `docs/flagship-technical-map.md` now explains why RDLeader belongs in the first-screen technical proof set.
+- `docs/share-kit.md` and the live support page now expose proof-safe share snippets for `qq-ai-bot` and `RDLeader`.
+- `scripts/check_issue_labels.py` keeps the manual/profile and sponsor/open-loop issues labeled for public triage.
+- `scripts/check_ops_issue_log.py` keeps [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2) as the append-only operations log now that the sponsor release is compact.
 
 Manual path:
 
@@ -63,7 +66,7 @@ Before wider reuse/promotion, choose one of:
 - AGPL-style copyleft
 - Source-available for now
 
-Do not imply unrestricted reuse until a license is published.
+Do not imply unrestricted reuse until a license is published. The current share kit, sponsor release, support routes, and RDLeader support files intentionally preserve this caveat.
 
 ## 3. RDLeader public demo assets — completed
 
@@ -94,4 +97,4 @@ Minimum before promotion:
 
 ## Tracking
 
-This checklist is mirrored in [happysnaker#1](https://github.com/happysnaker/happysnaker/issues/1). Keep the issue and this file aligned when a manual item is completed.
+This checklist is mirrored in [happysnaker#1](https://github.com/happysnaker/happysnaker/issues/1). Keep the issue and this file aligned when a manual item is completed. Operational evidence belongs in [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2), not in the compact sponsor release body.
