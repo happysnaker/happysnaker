@@ -3,6 +3,7 @@
 If **happysnaker** saved you time, helped your interview prep, or made implementation work easier, use one of these public support paths:
 
 - Proof before payment: https://happysnaker.github.io/support/#proof-before-payment
+- 10-second support router: https://happysnaker.github.io/support/#sponsor-router
 - Current concrete asks: https://happysnaker.github.io/support/#current-asks
 - Main support page: https://happysnaker.github.io/support/
 - Sponsor one-pager: https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager

@@ -17,6 +17,7 @@ What does this improve for reviewers, users, curators, or sponsors?
 - [ ] Profile README / proof hub
 - [ ] Sponsor one-pager / sponsorware board
 - [ ] Proof before payment: https://happysnaker.github.io/support/#proof-before-payment
+- [ ] 10-second support router: https://happysnaker.github.io/support/#sponsor-router
 - [ ] Current concrete asks: https://happysnaker.github.io/support/#current-asks
 - [ ] Flagship status snapshot: https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md
 - [ ] External follow-up queue: https://github.com/happysnaker/happysnaker/blob/master/docs/external-follow-up-queue.md

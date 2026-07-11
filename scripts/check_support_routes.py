@@ -40,17 +40,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Technical proof index"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Technical proof index"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/profile_operations.md",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "python3 scripts/check_github_status.py", "Sponsor / support guardrails"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "python3 scripts/check_github_status.py", "Sponsor / support guardrails"),
     ),
     FileExpectation(
         "happysnaker/.github",
@@ -60,22 +60,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/.github",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/.github",
         "CONTRIBUTING.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, REVIEW_SAMPLE, SUPPORT_URL),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, REVIEW_SAMPLE, SUPPORT_URL),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",

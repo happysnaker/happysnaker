@@ -62,6 +62,8 @@ REQUIRED = {
     ],
     ".github/SUPPORT.md": [
         "Proof before payment",
+        "10-second support router",
+        "support/#sponsor-router",
         "Current concrete asks",
         "Sponsor one-pager",
         "qq-ai-bot #26 arm64",
@@ -193,6 +195,8 @@ REQUIRED = {
         "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
+        "Latest default/profile support-router refresh",
+        "Tip / Proof / Review / Fund",
         "Latest project-page sponsor-router refresh",
         "https://github.com/happysnaker/happysnaker.github.io/commit/843af8d",
         "https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218",
