@@ -9,6 +9,7 @@ Snapshot: 2026-07-11 Asia/Shanghai.
 | Asset | Link | Purpose |
 |---|---|---|
 | Main support page | <https://happysnaker.github.io/support/> | QR codes, async review options, and project-specific support paths |
+| 10-second support router | <https://happysnaker.github.io/support/#sponsor-router> | choose Tip / Proof / Review / Fund before paying or sponsoring |
 | Frozen sponsor one-pager | <https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager> | stable sponsor / curator brief for sharing |
 | Source sponsor one-pager | [sponsor-one-pager.md](sponsor-one-pager.md) | editable source for future support updates |
 | Sponsorware board | [sponsorware-board.md](sponsorware-board.md) | current and shipped sponsor targets |

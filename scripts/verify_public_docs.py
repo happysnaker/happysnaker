@@ -246,6 +246,8 @@ REQUIRED = {
         "https://github.com/happysnaker/qq-ai-bot/commit/d624e6c",
         "594cb21",
         "10-second support router",
+        "choose Tip / Proof / Review / Fund before paying or sponsoring",
+        "https://happysnaker.github.io/support/#sponsor-router",
         "Tip / Proof / Review / Fund",
         "deploy-read sample",
         "scripts/check_review_funnel.py",
