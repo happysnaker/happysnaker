@@ -59,6 +59,7 @@ BLOCKED_PUBLIC_REPO_LINKS = {
 }
 
 GITHUB_REPO_RE = re.compile(r"https://github\.com/happysnaker/([A-Za-z0-9_.-]+)")
+SITE_ONE_OFF_RUN_RE = re.compile(r"https://github\.com/happysnaker/(?:happysnaker|qq-ai-bot|RDLeader|happysnaker\.github\.io)/actions/runs/\d+")
 JSON_LD_RE = re.compile(r'<script\s+type=["\']application/ld\+json["\']\s*>(.*?)</script>', re.IGNORECASE | re.DOTALL)
 
 SUPPORT_CONTENT_NEEDLES = [
@@ -213,6 +214,21 @@ def check_sitemap(site_root: Path, base_url: str, expected_lastmod: str | None, 
             (ok if actual == expected_lastmod else fail)("sitemap lastmod", f"{url} -> {actual} (expected {expected_lastmod})", findings)
 
 
+def check_site_stable_workflow_links(site_root: Path, findings: list[Finding]) -> None:
+    hits: list[str] = []
+    for path in iter_scan_files([site_root]):
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        rel = path.relative_to(site_root)
+        for match in SITE_ONE_OFF_RUN_RE.finditer(text):
+            hits.append(f"{rel}: {match.group(0)}")
+
+    if hits:
+        for hit in hits:
+            fail("site stable workflow links", f"replace one-off Actions run URL with workflow/status link: {hit}", findings)
+    else:
+        ok("site stable workflow links", "no one-off happysnaker Actions run URLs on public Pages surfaces", findings)
+
+
 def iter_scan_files(paths: Iterable[Path]) -> Iterable[Path]:
     suffixes = {".html", ".md", ".yml", ".yaml", ".json", ".txt", ".xml"}
     for root in paths:
@@ -281,6 +297,7 @@ def main() -> int:
         ok("site root", str(site_root), findings)
         check_local_metadata(site_root, args.base_url, findings)
         check_sitemap(site_root, args.base_url, args.expected_lastmod, findings)
+        check_site_stable_workflow_links(site_root, findings)
 
     check_public_repo_links(scan_roots, findings)
 
