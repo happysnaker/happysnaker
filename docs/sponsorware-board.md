@@ -4,6 +4,10 @@
 
 Support page: <https://happysnaker.github.io/support/>
 
+10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
+
+Default support fallback: <https://github.com/happysnaker/.github/commit/0ec8ed7>
+
 Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 
 Short sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md) / [frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)
@@ -28,7 +32,7 @@ Historical shipped notes: `qq-ai-bot #23`, `qq-ai-bot #24`, and the closed RDLea
 
 Recently shipped sponsorware slices: `RDLeader #2`, `RDLeader #14`, `RDLeader #15`, `RDLeader #16`, `RDLeader #17`, `RDLeader #18`, `RDLeader #19`, `RDLeader #20`, `RDLeader #21`, `RDLeader #22`, `RDLeader #24`, `RDLeader #26`.
 
-If you are not sure which item fits, use `open-source maintenance` or the project name.
+If you are not sure which item fits, use the 10-second support router first, then choose `open-source maintenance` or the project name. Repositories without local support files inherit the default `.github` fallback and still route to Tip / Proof / Review / Fund.
 
 
 ## Paid support offers

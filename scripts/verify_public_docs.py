@@ -88,6 +88,11 @@ REQUIRED = {
     ],
     "docs/sponsorware-board.md": [
         "Current targets",
+        "10-second support router",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "Default support fallback",
+        "https://github.com/happysnaker/.github/commit/0ec8ed7",
+        "Tip / Proof / Review / Fund",
         "Paid support offers",
         "Deploy read",
         "https://happysnaker.github.io/review/deploy-read-sample/",
