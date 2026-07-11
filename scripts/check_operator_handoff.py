@@ -34,6 +34,7 @@ REQUIRED_TEXT = (
     "Automation guardrails",
     "scripts/github_cli.py",
     "scripts/check_review_funnel.py",
+    "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     "stable profile workflow links",
     "one-off profile self-check run links",
     "Good next actions",

@@ -18,7 +18,7 @@ python3 scripts/check_gh_usage.py
 python3 scripts/check_ci_workflow_contract.py
 python3 scripts/check_checker_catalog.py --json
 python3 scripts/check_share_kit.py --json
-python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8
+python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 python3 scripts/check_external_followups.py --summary
 ```
 

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 import urllib.error
 import urllib.request
@@ -121,6 +122,7 @@ def main() -> int:
     parser.add_argument("--site-root", type=Path, default=DEFAULT_SITE_ROOT, help="Local happysnaker.github.io checkout. Default: sibling repo.")
     parser.add_argument("--base-url", default=BASE_URL, help="Public Pages base URL.")
     parser.add_argument("--live", action="store_true", help="Also fetch live pages and verify the same conversion markers.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable review-funnel summary.")
     parser.add_argument("--timeout", type=float, default=8.0, help="Live fetch timeout in seconds.")
     args = parser.parse_args()
 
@@ -168,14 +170,29 @@ def main() -> int:
             check_text("live sitemap.xml", live_sitemap, (SITEMAP_NEEDLE,), failures)
             checked += 1
 
+    scope = "local+live" if args.live else "local"
+    summary = {
+        "ok": not failures,
+        "scope": scope,
+        "siteRoot": str(site_root),
+        "baseUrl": args.base_url,
+        "live": args.live,
+        "checkedSurfaces": checked,
+        "pageCount": len(PAGE_SPECS),
+        "requiredMarkers": sum(len(spec.required) for spec in PAGE_SPECS) + 1,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
-        print("Review funnel check failures:", file=sys.stderr)
-        for failure in failures:
-            print(f"- {failure}", file=sys.stderr)
+        if not args.json:
+            print("Review funnel check failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
         return 1
 
-    scope = "local+live" if args.live else "local"
-    print(f"Checked {checked} {scope} paid review funnel surfaces")
+    if not args.json:
+        print(f"Checked {checked} {scope} paid review funnel surfaces")
     return 0
 
 

@@ -20,6 +20,7 @@ python3 scripts/run_profile_preflight.py --link-scope core --workers 8
 python3 scripts/check_github_status.py --summary
 python3 scripts/check_manual_blockers.py --json
 python3 scripts/check_checker_catalog.py --json
+python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 # Optional: focus external follow-up output on surfaces where a short scheduled update may be allowed.
 python3 scripts/run_profile_preflight.py --external-only --action-class optional-update --external-summary --enforce-review-due
 python3 scripts/check_github_status.py --markdown --as-of 'YYYY-MM-DD Asia/Shanghai' > docs/flagship-status-snapshot.md

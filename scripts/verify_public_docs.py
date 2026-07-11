@@ -132,6 +132,7 @@ REQUIRED = {
         "python3 scripts/check_manual_blockers.py --json",
         "python3 scripts/check_checker_catalog.py --json",
         "--enforce-review-due",
+        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/manual-github-actions.md": [
         "Pin RDLeader on the profile",
@@ -152,12 +153,12 @@ REQUIRED = {
         "¥29.9",
         "¥99",
         "check_review_funnel.py",
-        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8",
+        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
     ],
     "docs/support-surface-coverage.md": [
         "deploy-read sample",
         "scripts/check_review_funnel.py",
-        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8",
+        "python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json",
         "Payment%20screenshot",
         "¥29.9",
         "¥99",
