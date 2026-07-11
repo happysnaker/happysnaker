@@ -18,6 +18,7 @@ Snapshot: 2026-07-11 Asia/Shanghai.
 ## Start here
 
 - Proof before payment: <https://happysnaker.github.io/support/#proof-before-payment>
+- 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 - Flagship status snapshot: [flagship-status-snapshot.md](flagship-status-snapshot.md)
 - Technical proof index: [technical-proof-index.md](technical-proof-index.md)
@@ -45,6 +46,7 @@ Technical reading order:
 
 Current funding conversion:
 
+- If unsure whether to tip, inspect proof, buy a review, or fund a concrete issue, start with the 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>.
 - Use payment note `qq-ai-bot #26 arm64` for real physical ARM / CasaOS / NAS / SBC validation.
 - Use `Deploy read` / `Quick read` / `Async review` if the buyer wants the same bot / agent / infra packaging pass for their own public repo; preview the deliverable first at <https://happysnaker.github.io/review/deploy-read-sample/>.
 - Do not claim physical-host validation until a real redacted report lands.
@@ -70,6 +72,7 @@ Technical reading order:
 
 Current funding conversion:
 
+- If unsure whether to tip, inspect proof, buy a review, or fund a concrete issue, start with the 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>.
 - Use payment note `RDLeader #27` for external submission review follow-up and curator-response work.
 - Use `RDLeader #1` for further DevPlan bundle sanitization.
 - Use `RDLeader #3` only for license/reuse-boundary work; do not imply reuse rights before that decision lands.

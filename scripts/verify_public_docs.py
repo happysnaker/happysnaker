@@ -313,6 +313,8 @@ REQUIRED = {
         "Maintenance proof",
         "Current support note",
         "Proof before payment",
+        "https://happysnaker.github.io/support/#sponsor-router",
+        "10-second support router",
         "Deploy read",
         "https://happysnaker.github.io/review/deploy-read-sample/",
         "scripts/check_review_funnel.py",
