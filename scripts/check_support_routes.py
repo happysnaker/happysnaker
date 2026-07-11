@@ -38,7 +38,7 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
@@ -58,22 +58,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/.github",
         "SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/SUPPORT.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read"),
     ),
     FileExpectation(
         "happysnaker/.github",
         "CONTRIBUTING.md",
-        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, "qq-ai-bot", "RDLeader"),
+        (PROOF_URL, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, SUPPORT_URL),
+        ("Proof before payment", PROOF_URL, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, REVIEW_SAMPLE, SUPPORT_URL),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",

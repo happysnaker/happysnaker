@@ -145,6 +145,7 @@ REQUIRED = {
         "e9387ce",
         "2b0ad6a",
         "0f13edc",
+        "a747985",
         "deploy-read support route",
     ],
     "docs/technical-proof-index.md": [
