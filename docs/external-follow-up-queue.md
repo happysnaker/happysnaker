@@ -58,7 +58,7 @@ Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies
 ```bash
 # Profile / support-route preflight
 python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
-python3 scripts/check_external_followups.py --action-class optional-update
+python3 scripts/run_profile_preflight.py --link-scope profile --workers 12 --action-class optional-update
 
 # Strict flagship alert state. Use explicit state=open so API defaults/pagination do not hide open alerts.
 for repo in happysnaker/qq-ai-bot happysnaker/RDLeader; do

@@ -46,7 +46,10 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         ),
     ]
     if not args.skip_external:
-        steps.append(Step("Summarize external follow-ups", ("python3", "scripts/check_external_followups.py")))
+        external_command = ["python3", "scripts/check_external_followups.py"]
+        for action_class in args.action_class or []:
+            external_command.extend(["--action-class", action_class])
+        steps.append(Step("Summarize external follow-ups", tuple(external_command)))
     if args.snapshot_as_of:
         steps.append(
             Step(
@@ -69,6 +72,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--workers", type=int, default=8, help="Concurrent link checker workers. Default: 8.")
     parser.add_argument("--timeout", type=float, default=6.0, help="Per-link timeout in seconds. Default: 6.")
     parser.add_argument("--skip-external", action="store_true", help="Skip dynamic external PR/issue summary.")
+    parser.add_argument(
+        "--action-class",
+        action="append",
+        choices=("optional-update", "stay-quiet", "recheck-only", "no-action", "keep-open"),
+        help="Filter external follow-up rows by action class. Can be repeated.",
+    )
     parser.add_argument("--snapshot-as-of", help="If set, emit a markdown status snapshot with this label at the end.")
     args = parser.parse_args(argv)
 
