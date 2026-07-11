@@ -2,21 +2,23 @@
 
 > Generated from `scripts/check_github_status.py --markdown` on 2026-07-11 Asia/Shanghai.
 
-This is a point-in-time proof snapshot for sponsor, curator, and reviewer links. It covers the configured flagship surfaces only; do not generalize the CodeQL claim to older repositories without CodeQL configured. Because editing this file triggers a new profile CI / CodeQL run, the `happysnaker/happysnaker` self-check rows may intentionally trail the newest commit by one docs refresh; run `python3 scripts/check_github_status.py` for the live source of truth before quoting current status.
+This is a point-in-time proof snapshot for sponsor, curator, and reviewer links. It covers the configured flagship surfaces only; do not generalize the CodeQL claim to older repositories without CodeQL configured.
+
+Because editing this file triggers a new profile CI / CodeQL run, the `happysnaker/happysnaker` self-check rows may intentionally trail the newest commit by one docs refresh. Run `python3 scripts/check_github_status.py` for the live source of truth before quoting current status.
 
 ## Workflow state
 
 | Repo | Workflow | Status | Commit | Proof |
 |---|---|---|---|---|
-| `happysnaker/happysnaker` | CI | completed / success | `fcea257` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29116340114) |
-| `happysnaker/happysnaker` | CodeQL | completed / success | `fcea257` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29116339969) |
-| `happysnaker/qq-ai-bot` | CI | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776397) |
-| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776374) |
-| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102776459) |
-| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `18413c3` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29102901202) |
-| `happysnaker/RDLeader` | CI | completed / success | `47e608a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29112782761) |
-| `happysnaker/RDLeader` | CodeQL | completed / success | `47e608a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29112782768) |
-| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `9eaf51a` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29106752206) |
+| `happysnaker/happysnaker` | CI | completed / success | `bf1c3e1` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29135881425) |
+| `happysnaker/happysnaker` | CodeQL | completed / success | `bf1c3e1` | [run](https://github.com/happysnaker/happysnaker/actions/runs/29135881419) |
+| `happysnaker/qq-ai-bot` | CI | completed / success | `b97bc42` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29136016157) |
+| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `b97bc42` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29136016135) |
+| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `b97bc42` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29136016146) |
+| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `b97bc42` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29136074424) |
+| `happysnaker/RDLeader` | CI | completed / success | `e83ff4d` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29136017531) |
+| `happysnaker/RDLeader` | CodeQL | completed / success | `e83ff4d` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29136017533) |
+| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `d4c554b` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29134563962) |
 
 ## Configured alert state
 

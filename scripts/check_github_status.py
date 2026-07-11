@@ -118,6 +118,8 @@ def format_markdown(summary: dict[str, Any], failures: list[str], as_of: str) ->
         "",
         "This is a point-in-time proof snapshot for sponsor, curator, and reviewer links. It covers the configured flagship surfaces only; do not generalize the CodeQL claim to older repositories without CodeQL configured.",
         "",
+        "Because editing this file triggers a new profile CI / CodeQL run, the `happysnaker/happysnaker` self-check rows may intentionally trail the newest commit by one docs refresh. Run `python3 scripts/check_github_status.py` for the live source of truth before quoting current status.",
+        "",
         "## Workflow state",
         "",
         "| Repo | Workflow | Status | Commit | Proof |",

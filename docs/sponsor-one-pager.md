@@ -21,6 +21,7 @@ Current proof snapshot:
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>.
 - Proof-before-payment path: <https://happysnaker.github.io/support/#proof-before-payment>.
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
+- Flagship repo support files now route the same proof-before-payment path from `qq-ai-bot` and `RDLeader`.
 
 ## Best links to share
 
