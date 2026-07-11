@@ -75,6 +75,18 @@ REQUIRED = {
         "RDLeader #27",
         "Guardrails",
     ],
+    "docs/manual-github-actions.md": [
+        "Pin RDLeader on the profile",
+        "replace `Resume` with `RDLeader`",
+        "python3 scripts/check_profile_pins.py --strict",
+        "Decide RDLeader license posture",
+        "python3 scripts/check_rdleader_license.py",
+        "Do not imply unrestricted reuse",
+        "docs/share-kit.md",
+        "scripts/check_issue_labels.py",
+        "scripts/check_ops_issue_log.py",
+        "happysnaker#2",
+    ],
     "docs/technical-proof-index.md": [
         "Flagship proof: qq-ai-bot",
         "Flagship proof: RDLeader",
