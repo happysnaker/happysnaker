@@ -23,6 +23,7 @@ Snapshot: 2026-07-11 Asia/Shanghai.
 - Technical proof index: [technical-proof-index.md](technical-proof-index.md)
 - Support surface coverage: [support-surface-coverage.md](support-surface-coverage.md)
 - Sponsor one-pager: [sponsor-one-pager.md](sponsor-one-pager.md)
+- Deploy-read sample: <https://happysnaker.github.io/review/deploy-read-sample/>
 
 ## What to inspect in `qq-ai-bot`
 
@@ -45,7 +46,7 @@ Technical reading order:
 Current funding conversion:
 
 - Use payment note `qq-ai-bot #26 arm64` for real physical ARM / CasaOS / NAS / SBC validation.
-- Use `Quick read` or `Async review` if the buyer wants the same bot / agent / infra packaging pass for their own public repo.
+- Use `Deploy read` / `Quick read` / `Async review` if the buyer wants the same bot / agent / infra packaging pass for their own public repo; preview the deliverable first at <https://happysnaker.github.io/review/deploy-read-sample/>.
 - Do not claim physical-host validation until a real redacted report lands.
 
 ## What to inspect in `RDLeader`
@@ -72,6 +73,7 @@ Current funding conversion:
 - Use payment note `RDLeader #27` for external submission review follow-up and curator-response work.
 - Use `RDLeader #1` for further DevPlan bundle sanitization.
 - Use `RDLeader #3` only for license/reuse-boundary work; do not imply reuse rights before that decision lands.
+- Use `Deploy read` / `Quick read` / `Async review` for people who want their own agent / internal-tool repo packaged with the same proof-first style; preview: <https://happysnaker.github.io/review/deploy-read-sample/>.
 
 ## Automation that keeps this map honest
 
@@ -81,6 +83,7 @@ The profile repo now has CI / scheduled checks for:
 - support-route drift via [scripts/check_support_routes.py](../scripts/check_support_routes.py);
 - repository metadata drift via [scripts/check_repo_metadata.py](../scripts/check_repo_metadata.py);
 - sponsor release drift via [scripts/check_sponsor_release.py](../scripts/check_sponsor_release.py);
+- paid review / deploy-read funnel drift via [scripts/check_review_funnel.py](../scripts/check_review_funnel.py);
 - current workflow / alert state via [scripts/check_github_status.py](../scripts/check_github_status.py);
 - external follow-up summary via [scripts/check_external_followups.py](../scripts/check_external_followups.py).
 
