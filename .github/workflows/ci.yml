@@ -5,6 +5,9 @@ on:
     branches:
       - master
   pull_request:
+  schedule:
+    # Weekly drift check for remote support routes and repository metadata.
+    - cron: '17 2 * * 1'
   workflow_dispatch:
 
 permissions:
