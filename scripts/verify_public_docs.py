@@ -206,6 +206,7 @@ REQUIRED = {
         "15 portfolio-critical repository homepages",
         "python3 scripts/check_issue_labels.py --json",
         "python3 scripts/check_readme_badges.py --json",
+        "first-screen support/proof routes",
         "python3 scripts/check_ops_issue_log.py --json",
         "python3 scripts/check_public_links.py --scope core --timeout 6 --workers 8 --json",
         "python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json",

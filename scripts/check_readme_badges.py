@@ -40,6 +40,16 @@ EXPECTATIONS = (
     BadgeExpectation("RDLeader CodeQL", "happysnaker/RDLeader", "codeql.yml"),
 )
 
+FIRST_SCREEN_REQUIRED_TEXT = (
+    "https://happysnaker.github.io/support/#sponsor-router",
+    "https://happysnaker.github.io/support/#current-asks",
+    "https://happysnaker.github.io/support/#proof-before-payment",
+    "https://happysnaker.github.io/review/deploy-read-sample/",
+    "Tip / Proof / Review / Fund",
+    "qq-ai-bot #26 arm64",
+    "RDLeader #27",
+)
+
 BADGE_RE = re.compile(r"\[!\[(?P<label>[^\]]+)\]\((?P<image>[^)]+)\)\]\((?P<target>[^)]+)\)")
 
 
@@ -54,6 +64,7 @@ def main() -> int:
     args = parser.parse_args()
 
     text = README.read_text(encoding="utf-8")
+    first_screen_text = "\n".join(text.splitlines()[:40])
     badges = {match.group("label"): (match.group("image"), match.group("target")) for match in BADGE_RE.finditer(text)}
     failures: list[str] = []
     results: list[dict[str, object]] = []
@@ -88,10 +99,15 @@ def main() -> int:
             "failures": badge_failures,
         })
 
+    missing_first_screen_text = [needle for needle in FIRST_SCREEN_REQUIRED_TEXT if needle not in first_screen_text]
+    failures.extend(f"first-screen support/proof route missing {needle!r}" for needle in missing_first_screen_text)
+
     summary = {
         "ok": not failures,
         "badgeCount": len(EXPECTATIONS),
         "foundBadgeCount": sum(1 for result in results if result["image"]),
+        "firstScreenRequiredCount": len(FIRST_SCREEN_REQUIRED_TEXT),
+        "missingFirstScreenText": missing_first_screen_text,
         "badges": results,
         "failures": failures,
     }
@@ -105,7 +121,7 @@ def main() -> int:
         return 1
 
     if not args.json:
-        print(f"Checked {len(EXPECTATIONS)} README workflow badges")
+        print(f"Checked {len(EXPECTATIONS)} README workflow badges and {len(FIRST_SCREEN_REQUIRED_TEXT)} first-screen support/proof routes")
     return 0
 
 if __name__ == "__main__":
