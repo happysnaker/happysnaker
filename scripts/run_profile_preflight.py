@@ -69,7 +69,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         return [external_step(args)]
 
     steps = [
-        Step("Verify public docs", ("python3", "scripts/verify_public_docs.py")),
+        Step("Verify public docs", ("python3", "scripts/verify_public_docs.py", "--json")),
         Step("Check operator handoff", ("python3", "scripts/check_operator_handoff.py")),
         Step("Check stable profile proof links", ("python3", "scripts/check_stable_profile_links.py")),
         Step("Check GitHub CLI helper usage", ("python3", "scripts/check_gh_usage.py")),

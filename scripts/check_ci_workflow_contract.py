@@ -22,7 +22,7 @@ REQUIRED_TEXT = (
     "path: site/happysnaker.github.io",
     "python-version: '3.12'",
     "python3 -m py_compile",
-    "python3 scripts/verify_public_docs.py",
+    "python3 scripts/verify_public_docs.py --json",
     "python3 scripts/check_gh_usage.py",
     "python3 scripts/check_share_kit.py",
     "python3 scripts/check_sponsor_pipeline.py",
