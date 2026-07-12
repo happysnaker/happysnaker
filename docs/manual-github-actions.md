@@ -103,4 +103,4 @@ Minimum before promotion:
 
 ## Tracking
 
-This checklist is mirrored in [happysnaker#1](https://github.com/happysnaker/happysnaker/issues/1). Keep the issue and this file aligned when a manual item is completed. Operational evidence belongs in [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2), not in the compact sponsor release body.
+This checklist is mirrored in [happysnaker#1](https://github.com/happysnaker/happysnaker/issues/1). Keep the issue and this file aligned when a manual item is completed. For the shortest owner-facing version, use [owner-action-packet.md](owner-action-packet.md). Operational evidence belongs in [happysnaker#2](https://github.com/happysnaker/happysnaker/issues/2), not in the compact sponsor release body.

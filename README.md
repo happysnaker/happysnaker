@@ -36,6 +36,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 > **Portfolio audit:** [docs/portfolio-audit.md](docs/portfolio-audit.md) explains what to promote, what to keep as proof, and what to park.
 
 > **Manual GitHub checklist:** [docs/manual-github-actions.md](docs/manual-github-actions.md) tracks profile-pin and license actions that require deliberate/manual handling.
+>
+> **Owner action packet:** [docs/owner-action-packet.md](docs/owner-action-packet.md) is the shortest handoff for the two remaining owner-only blockers: profile pin swap and RDLeader license posture.
 
 > **Operator handoff:** [docs/operator-handoff.md](docs/operator-handoff.md) is the first-read state map for future GitHub takeover turns. Reproduce the current proof/support gate with `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external`; add `--json` for machine-readable preflight step status. Use `python3 scripts/check_manual_blockers.py --json`, `python3 scripts/check_stable_profile_links.py --json`, `python3 scripts/check_gh_usage.py --json`, `python3 scripts/check_ci_workflow_contract.py --json`, and `python3 scripts/check_checker_catalog.py --json` for machine-readable blocker/proof-link/helper/CI-contract/checker state.
 >

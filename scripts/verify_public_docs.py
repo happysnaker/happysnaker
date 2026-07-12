@@ -48,6 +48,8 @@ REQUIRED = {
         "https://happysnaker.github.io/review/deploy-read-sample/",
         "docs/flagship-technical-map.md",
         "docs/operator-handoff.md",
+        "docs/owner-action-packet.md",
+        "Owner action packet",
         "Point-in-time proof snapshot",
         "Point-in-time proof snapshot (2026-07-12)",
         "python3 scripts/check_github_status.py --summary",
