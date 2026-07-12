@@ -65,6 +65,8 @@ BLOCKED_PUBLIC_REPO_LINKS = {
 GITHUB_REPO_RE = re.compile(r"https://github\.com/happysnaker/([A-Za-z0-9_.-]+)")
 SITE_ONE_OFF_RUN_RE = re.compile(r"https://github\.com/happysnaker/(?:happysnaker|qq-ai-bot|RDLeader|happysnaker\.github\.io)/actions/runs/\d+")
 JSON_LD_RE = re.compile(r'<script\s+type=["\']application/ld\+json["\']\s*>(.*?)</script>', re.IGNORECASE | re.DOTALL)
+SUPPORT_ANCHOR_RE = re.compile(r"/support/#(?P<anchor>from-[A-Za-z0-9_-]+)")
+HTML_ID_RE = re.compile(r"id=[\"'](?P<id>[^\"']+)[\"']")
 
 SUPPORT_CONTENT_NEEDLES = [
     "Proof before payment",
@@ -301,6 +303,29 @@ def check_site_stable_workflow_links(site_root: Path, findings: list[Finding]) -
     check_stable_workflow_link_texts("site stable workflow links", pages, findings)
 
 
+def check_support_anchor_integrity(site_root: Path, findings: list[Finding]) -> None:
+    support_page = page_path(site_root, "support")
+    if not support_page.exists():
+        fail("support anchor integrity", f"missing {support_page}", findings)
+        return
+    support_text = support_page.read_text(encoding="utf-8", errors="ignore")
+    defined_ids = set(HTML_ID_RE.findall(support_text))
+    refs: dict[str, set[str]] = {}
+    for path in iter_scan_files([site_root]):
+        rel = path.relative_to(site_root).as_posix()
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        for match in SUPPORT_ANCHOR_RE.finditer(text):
+            refs.setdefault(match.group("anchor"), set()).add(rel)
+
+    missing = sorted(anchor for anchor in refs if anchor not in defined_ids)
+    if missing:
+        for anchor in missing:
+            sources = ", ".join(sorted(refs[anchor])[:5])
+            fail("support anchor integrity", f"/support/#{anchor} is referenced but not defined in support/index.html; sources: {sources}", findings)
+    else:
+        ok("support anchor integrity", f"{len(refs)} /support/#from-* anchors have matching support page sections", findings)
+
+
 def iter_scan_files(paths: Iterable[Path]) -> Iterable[Path]:
     suffixes = {".html", ".md", ".yml", ".yaml", ".json", ".txt", ".xml"}
     for root in paths:
@@ -374,6 +399,7 @@ def main() -> int:
         check_local_metadata(site_root, args.base_url, findings)
         check_sitemap(site_root, args.base_url, args.expected_lastmod, findings)
         check_site_stable_workflow_links(site_root, findings)
+        check_support_anchor_integrity(site_root, findings)
 
     check_public_repo_links(scan_roots, findings)
 
