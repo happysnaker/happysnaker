@@ -31,6 +31,7 @@ REQUIRED_TEXT = (
     "Sponsorware board",
     "External follow-up queue",
     "Owner action packet",
+    "share-kit.md",
     "2026-07-16 UTC",
     "happysnaker#2",
     "Resume` → `RDLeader",

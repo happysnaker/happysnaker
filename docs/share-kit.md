@@ -1,6 +1,6 @@
 # Share kit
 
-> Copy-ready snippets for promoting `happysnaker` projects without overstating proof, spamming maintainers, or hiding the sponsor path. Source set: [sponsor one-pager](sponsor-one-pager.md), [flagship technical map](flagship-technical-map.md), [flagship status snapshot](flagship-status-snapshot.md), [sponsorware board](sponsorware-board.md), and [proof before payment](https://happysnaker.github.io/support/#proof-before-payment).
+> Copy-ready snippets for promoting `happysnaker` projects without overstating proof, spamming maintainers, or hiding the sponsor path. Source set: [sponsor one-pager](sponsor-one-pager.md), [flagship technical map](flagship-technical-map.md), [flagship status snapshot](flagship-status-snapshot.md), [sponsorware board](sponsorware-board.md), [sponsor conversion scorecard](sponsor-conversion-scorecard.md), and [proof before payment](https://happysnaker.github.io/support/#proof-before-payment).
 
 ## Core angle
 
@@ -22,10 +22,11 @@ Best links:
 | Technical map | [flagship-technical-map.md](flagship-technical-map.md) |
 | Status snapshot | [flagship-status-snapshot.md](flagship-status-snapshot.md) |
 | Sponsor board | [sponsorware-board.md](sponsorware-board.md) |
+| Sponsor conversion scorecard | [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) |
 
 ## Audience routing matrix
 
-Use this table before posting or replying so the CTA matches the reader instead of sounding like a generic donation ask.
+Use this table before posting or replying so the CTA matches the reader instead of sounding like a generic donation ask. If [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) cannot identify a landing surface, proof surface, concrete note, and follow-up owner, do not post the ask yet.
 
 | Audience | Lead with | Best next link | Ask / note | Do not claim |
 |---|---|---|---|---|

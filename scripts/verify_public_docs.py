@@ -132,6 +132,10 @@ REQUIRED = {
     ],
     "docs/share-kit.md": [
         "Core angle",
+        "sponsor-conversion-scorecard.md",
+        "Sponsor conversion scorecard",
+        "landing surface, proof surface, concrete note, and follow-up owner",
+        "do not post the ask yet",
         "Audience routing matrix",
         "Homelab / CasaOS tester",
         "Bot / agent builder",
