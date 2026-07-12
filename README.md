@@ -27,6 +27,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 >
 > **Sponsor prospect pipeline:** [docs/sponsor-prospect-pipeline.md](docs/sponsor-prospect-pipeline.md) turns the proof/support surface into audience-specific sponsor, tester, curator, and paid-review follow-up paths.
 >
+> **Sponsor conversion scorecard:** [docs/sponsor-conversion-scorecard.md](docs/sponsor-conversion-scorecard.md) maps landing → proof → support note → follow-up so promotion work stays measurable before asking for money.
+>
 > **Share kit:** [docs/share-kit.md](docs/share-kit.md) has an audience routing matrix, copy-ready X / LinkedIn / WeChat / curator snippets, and sponsor / paid-support intake replies with guardrails for proof, privacy, support notes, and what not to claim.
 >
 > **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) tracks which repos route visitors to the support page, sponsor one-pager, and sponsorware metadata.

@@ -47,6 +47,8 @@ FIRST_SCREEN_REQUIRED_TEXT = (
     "https://happysnaker.github.io/review/deploy-read-sample/",
     "docs/sponsor-prospect-pipeline.md",
     "Sponsor prospect pipeline",
+    "docs/sponsor-conversion-scorecard.md",
+    "Sponsor conversion scorecard",
     "Tip / Proof / Review / Fund",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",

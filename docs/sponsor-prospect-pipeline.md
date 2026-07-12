@@ -1,6 +1,6 @@
 # Sponsor Prospect Pipeline
 
-> Evidence-first pipeline for turning public GitHub attention into useful support without spam, overclaiming, or private-data leakage. Use this together with the [share kit](share-kit.md), [sponsorware board](sponsorware-board.md), and [external follow-up queue](external-follow-up-queue.md).
+> Evidence-first pipeline for turning public GitHub attention into useful support without spam, overclaiming, or private-data leakage. Use this together with the [sponsor conversion scorecard](sponsor-conversion-scorecard.md), [share kit](share-kit.md), [sponsorware board](sponsorware-board.md), and [external follow-up queue](external-follow-up-queue.md).
 
 ## Operating rule
 
@@ -115,6 +115,7 @@ Current asks: https://happysnaker.github.io/support/#current-asks
 python3 scripts/check_github_status.py --summary
 python3 scripts/check_external_followups.py --summary
 python3 scripts/check_sponsor_pipeline.py --json
+python3 scripts/check_sponsor_conversion_scorecard.py --json
 python3 scripts/check_share_kit.py --json
 python3 scripts/check_manual_blockers.py --json
 ```

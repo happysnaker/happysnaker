@@ -20,6 +20,7 @@ python3 scripts/check_ci_workflow_contract.py --json
 python3 scripts/check_checker_catalog.py --json
 python3 scripts/check_share_kit.py --json
 python3 scripts/check_sponsor_pipeline.py --json
+python3 scripts/check_sponsor_conversion_scorecard.py --json
 python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 python3 scripts/check_sponsor_issues.py --json
 python3 scripts/check_sponsor_release.py --json
@@ -52,6 +53,7 @@ Use `python3 scripts/run_profile_preflight.py --external-only --action-class opt
 - Current concrete asks: <https://happysnaker.github.io/support/#current-asks>
 - Share kit: [share-kit.md](share-kit.md)
 - Sponsor prospect pipeline: [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md)
+- Sponsor conversion scorecard: [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md)
 - Deploy-read sample: <https://happysnaker.github.io/review/deploy-read-sample/>
 - Flagship technical map: [flagship-technical-map.md](flagship-technical-map.md)
 - Flagship status snapshot: [flagship-status-snapshot.md](flagship-status-snapshot.md)
@@ -103,6 +105,7 @@ The optional-update JSON includes `materials`, `candidateComment`, and `candidat
 - Payment screenshot privacy guard: mailto templates should ask users to attach payment screenshots privately by email only, never in public issues.
 - `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, candidate comments, and candidate-comment guardrails without posting externally.
 - `python3 scripts/check_sponsor_pipeline.py --json` verifies audience segments, support notes, reply patterns, and no-overclaim guardrails before outreach or sponsor replies use the prospect pipeline.
+- `python3 scripts/check_sponsor_conversion_scorecard.py --json` verifies the landing → proof → route → action → follow-up conversion stages, segment-to-offer fit, support notes, and privacy/license/no-spam guardrails before promotion asks become too vague.
 
 ## Good next actions
 
@@ -120,7 +123,7 @@ Good examples:
 - update a proof doc after a meaningful workflow/security/support change;
 - refresh a compact status snapshot when flagship state materially changes;
 - update issue #1 or #2 with evidence after a manual-blocker or operations audit;
-- improve share-kit / sponsor-prospect-pipeline / support-page routes without posting externally;
+- improve share-kit / sponsor-prospect-pipeline / sponsor-conversion-scorecard / support-page routes without posting externally;
 - keep deploy-read / paid-review routes visible from profile, flagship support files, default `.github`, sponsor packet, technical map, and share kit.
 
 Avoid:
