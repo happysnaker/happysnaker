@@ -99,22 +99,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/qq-ai-bot",
         "README.md",
-        (SUPPORT_ROUTER, "10-second support router", INTAKE_REPLIES, PROSPECT_PIPELINE, "private logs", "payment screenshots", "¥29.9", "¥99", QQ_NOTE),
+        (SUPPORT_ROUTER, "10-second support router", INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots", "¥29.9", "¥99", QQ_NOTE),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         "SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, QQ_NOTE, "Latest CI", "Latest CodeQL", "Latest Docker publish", "Latest arm64 smoke", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "issues/26", "issues/28", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "sponsor / paid-support intake replies", "privacy", "arm64 / CasaOS install report"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "sponsor / paid-support intake replies", "privacy", "arm64 / CasaOS install report"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
@@ -124,22 +124,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/RDLeader",
         "README.md",
-        (SUPPORT_ROUTER, "10-second support router", INTAKE_REPLIES, PROSPECT_PIPELINE, PUBLIC_PRIVACY_GUARDRAIL, "Tip / Proof / Review / Fund", RD_NOTE, "RDLeader #1", "RDLeader #3", "reuse rights"),
+        (SUPPORT_ROUTER, "10-second support router", INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", PUBLIC_PRIVACY_GUARDRAIL, "Tip / Proof / Review / Fund", RD_NOTE, "RDLeader #1", "RDLeader #3", "reuse rights"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         "SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, RD_NOTE, "Security proof", "CI", "CodeQL", "License posture", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, "Latest CI proof", "Latest CodeQL proof", "License posture", "¥29.9", "¥99", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/RDLeader",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "sponsor / paid-support intake replies", "privacy", "Security report"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "sponsor / paid-support intake replies", "privacy", "Security report"),
     ),
     FileExpectation(
         "happysnaker/Resume",

@@ -352,6 +352,10 @@ REQUIRED = {
     "docs/support-surface-coverage.md": [
         "Latest live sponsor/support issue refresh",
         "Latest flagship repo prospect-routing refresh",
+        "Latest flagship support scorecard refresh",
+        "commit 1c940a0",
+        "commit 3d386e8",
+        "Hot / Warm / Nurture / No-send qualification",
         "GitHub readers can route homelab testers, bot builders, curators, sponsors, RDLeader evaluators, and paid-review customers",
         "right proof, CTA, support note, and guardrail",
         "Latest chinese-independent-developer support-intake refresh",
