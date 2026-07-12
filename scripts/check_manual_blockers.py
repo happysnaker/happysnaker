@@ -6,6 +6,7 @@ import json
 import subprocess
 import sys
 import time
+from pathlib import Path
 from typing import Any
 
 from github_cli import run_gh_json
@@ -23,6 +24,20 @@ REQUIRED_MANUAL_ISSUE_TEXT = (
     "RDLeader license posture is still unresolved",
     "scripts/check_issue_labels.py",
     "scripts/check_ops_issue_log.py",
+)
+
+OWNER_ACTION_PACKET = "docs/owner-action-packet.md"
+REQUIRED_OWNER_ACTION_PACKET_TEXT = (
+    "Owner Action Packet",
+    "ownerActionRequired",
+    "agentBlockedOnOwnerAction",
+    "profile-pin-rdleader",
+    "rdleader-license-posture",
+    "Customize your pins",
+    "python3 scripts/check_profile_pins.py --strict",
+    "Path A: Apache-2.0",
+    "Path B: source-available for now",
+    "Do not add a root `LICENSE`",
 )
 
 
@@ -104,6 +119,17 @@ def main() -> int:
     if missing_text:
         manual_issue_failures.append(f"manual issue missing text {missing_text}")
 
+    owner_packet_path = Path(OWNER_ACTION_PACKET)
+    owner_packet_exists = owner_packet_path.exists()
+    owner_packet_text = owner_packet_path.read_text(encoding="utf-8") if owner_packet_exists else ""
+    owner_packet_missing = [needle for needle in REQUIRED_OWNER_ACTION_PACKET_TEXT if needle not in owner_packet_text]
+    owner_packet_failures = []
+    if not owner_packet_exists:
+        owner_packet_failures.append(f"missing {OWNER_ACTION_PACKET}")
+    if owner_packet_missing:
+        owner_packet_failures.append(f"owner action packet missing text {owner_packet_missing}")
+    manual_issue_failures.extend(owner_packet_failures)
+
     next_actions = [action for blocker in blockers for action in blocker.get("nextActions", [])]
 
     summary = {
@@ -112,6 +138,13 @@ def main() -> int:
         "nextActions": next_actions,
         "ownerActionRequired": bool(blockers),
         "agentBlockedOnOwnerAction": bool(blockers),
+        "ownerActionPacket": {
+            "path": OWNER_ACTION_PACKET,
+            "exists": owner_packet_exists,
+            "requiredTextCount": len(REQUIRED_OWNER_ACTION_PACKET_TEXT),
+            "missingRequiredText": owner_packet_missing,
+            "ready": owner_packet_exists and not owner_packet_missing,
+        },
         "profilePins": pins,
         "rdleaderLicense": license_state,
         "manualIssue": {
