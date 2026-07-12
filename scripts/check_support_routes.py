@@ -47,7 +47,7 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, INTAKE_REPLIES, REVIEW_SAMPLE, PRIVATE_PAYMENT_MARKER, "10-second support router", "¥29.9", "¥99"),
+        (PROOF_URL, SUPPORT_ROUTER, "docs/share-kit.md", REVIEW_SAMPLE, PRIVATE_PAYMENT_MARKER, "sponsor / paid-support intake replies", "10-second support router", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
