@@ -25,6 +25,7 @@ REQUIRED_TEXT = (
     "python3 scripts/verify_public_docs.py",
     "python3 scripts/check_gh_usage.py",
     "python3 scripts/check_share_kit.py",
+    "python3 scripts/check_sponsor_pipeline.py",
     "python3 scripts/check_readme_badges.py",
     "python3 scripts/check_support_routes.py",
     "python3 scripts/check_repo_metadata.py",

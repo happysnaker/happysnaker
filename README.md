@@ -25,6 +25,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 >
 > **Sponsor one-pager:** [docs/sponsor-one-pager.md](docs/sponsor-one-pager.md) ([frozen release](https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager)) is the short shareable brief for sponsors, curators, and people asking what to support.
 >
+> **Sponsor prospect pipeline:** [docs/sponsor-prospect-pipeline.md](docs/sponsor-prospect-pipeline.md) turns the proof/support surface into audience-specific sponsor, tester, curator, and paid-review follow-up paths.
+>
 > **Share kit:** [docs/share-kit.md](docs/share-kit.md) has an audience routing matrix, copy-ready X / LinkedIn / WeChat / curator snippets, and sponsor / paid-support intake replies with guardrails for proof, privacy, support notes, and what not to claim.
 >
 > **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) tracks which repos route visitors to the support page, sponsor one-pager, and sponsorware metadata.
@@ -156,6 +158,7 @@ If my open-source work, reusable templates, code contributions, or engineering a
 
 - **Support page:** [happysnaker.github.io/support](https://happysnaker.github.io/support/) — WeChat Pay / Alipay QR codes live there
 - **10-second support router:** [support/#sponsor-router](https://happysnaker.github.io/support/#sponsor-router) — choose Tip / Proof / Review / Fund before paying
+- **Sponsor prospect pipeline:** [docs/sponsor-prospect-pipeline.md](docs/sponsor-prospect-pipeline.md) — maps homelab testers, bot builders, curators, sponsors, and review customers to the right proof link, support note, and guardrail
 - **Share kit:** [docs/share-kit.md](docs/share-kit.md) — audience routing matrix plus copy-ready X / LinkedIn / WeChat / curator snippets and sponsor / paid-support intake replies that keep proof, privacy, and sponsor asks accurate
 - **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) — audit trail for which repos/pages route to the sponsor one-pager and support page
 - **If you came here from `qq-ai-bot`:** the cleanest support note is `qq-ai-bot` or `qq-ai-bot #26 arm64`; the fastest useful paid path is the **¥29.9 quick read** for another bot / repo / landing page

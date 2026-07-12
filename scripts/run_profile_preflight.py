@@ -76,6 +76,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         Step("Check CI workflow contract", ("python3", "scripts/check_ci_workflow_contract.py")),
         Step("Check checker catalog", ("python3", "scripts/check_checker_catalog.py", "--json")),
         Step("Check share kit", ("python3", "scripts/check_share_kit.py")),
+        Step("Check sponsor prospect pipeline", ("python3", "scripts/check_sponsor_pipeline.py")),
         Step("Check README workflow badges", ("python3", "scripts/check_readme_badges.py")),
         Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
         Step("Check support routes", ("python3", "scripts/check_support_routes.py")),
