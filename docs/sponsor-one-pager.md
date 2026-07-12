@@ -49,7 +49,7 @@ Point-in-time proof snapshot (2026-07-12):
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 | Sponsor prospect pipeline | [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md) |
 | Sponsor conversion scorecard | [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) |
-| Share kit | [share-kit.md](share-kit.md) |
+| Share kit / productized offer cards | [share-kit.md#productized-offer-cards](share-kit.md#productized-offer-cards) |
 
 
 ## Reproduce this proof packet
@@ -122,7 +122,7 @@ Support turns unfinished but useful engineering work into public assets that oth
 
 ## Copy/paste outreach blurbs
 
-For audience routing before outreach, use [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md), then classify the ask with [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) so weak leads stay Nurture / No-send instead of becoming generic donation bumps. For platform-specific X / LinkedIn / WeChat / curator snippets, and for sponsor / paid-support intake replies that keep payment screenshots and private material out of public threads, use [share-kit.md](share-kit.md).
+For audience routing before outreach, use [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md), then classify the ask with [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) so weak leads stay Nurture / No-send instead of becoming generic donation bumps. For productized offer cards, platform-specific X / LinkedIn / WeChat / curator snippets, and sponsor / paid-support intake replies that keep payment screenshots and private material out of public threads, use [share-kit.md](share-kit.md).
 
 ### Short
 

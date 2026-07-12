@@ -37,6 +37,53 @@ Use this table before posting or replying so the CTA matches the reader instead 
 | GitHub-profile / README customer | Sell the proof-backed packaging pass, not vague “consulting” | <https://happysnaker.github.io/support/#quick-read> | `Quick read` / `Async review` | Do not request private payment screenshots in public issues |
 | RDLeader evaluator | Show the fake-data demo / submission tracker and the license caveat together | <https://happysnaker.github.io/rdleader/> | `RDLeader #27` | Do not imply reuse rights until `RDLeader#3` is resolved |
 
+## Productized offer cards
+
+Use these cards when someone is close enough to support, sponsor, or buy a review but still needs a concrete package. Each card keeps one proof link, one support note, and one guardrail visible.
+
+| Offer card | Best fit | Proof link | Buyer/support note | Public outcome | Guardrail |
+|---|---|---|---|---|---|
+| **Fund a real host report** | Homelab / CasaOS / NAS / SBC users who can validate deployment | <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md> | `qq-ai-bot #26 arm64` | one real physical ARM / CasaOS / NAS / SBC report added to the public tracker | Do not say physical ARM / CasaOS validation is complete before the report lands |
+| **Fund curator follow-up** | People who want RDLeader reviewed in agent / coding-agent lists | <https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md> | `RDLeader #27` | one scheduled-review update or maintainer reply follow-up, logged publicly | Keep the RDLeader license caveat visible; this is not a license grant |
+| **Buy a deploy read** | Bot / agent / infra repos that run but still look toy-like | <https://happysnaker.github.io/review/deploy-read-sample/> | `Deploy read` / `Quick read` | one blunt first-impression pass with top 3 fixes and first rewrite target | Only send public links; keep payment evidence private by email |
+| **Tip with attribution** | Readers helped by a repo, checklist, or OSS fix | <https://happysnaker.github.io/support/#sponsor-router> | repo name, for example `happydb` or `go-service-starter` | maintenance credit can be summarized in the operations log when material | Do not turn educational repo threads into generic fundraising spam |
+
+### Offer card — fund a public issue
+
+```text
+If you want support to create a visible public outcome, use a concrete note instead of a vague donation:
+
+- qq-ai-bot #26 arm64 — fund / unlock a real ARM, CasaOS, NAS, or SBC host report
+- RDLeader #27 — fund external submission review follow-up and curator replies
+
+Proof first: https://happysnaker.github.io/support/#proof-before-payment
+Current asks: https://happysnaker.github.io/support/#current-asks
+
+I will not claim physical ARM/CasaOS completion or RDLeader reuse rights until the public trackers prove it.
+```
+
+### Offer card — buy a deploy read
+
+```text
+If your bot, agent, or infra repo runs but still looks toy-like, buy a deploy read instead of a vague consultation.
+
+Preview the output style first:
+https://happysnaker.github.io/review/deploy-read-sample/
+
+Send only public links. I will return one blunt paragraph, top 3 fixes, and the first deploy / README / landing-page wording I would rewrite. Keep payment screenshots and private logs out of public issues.
+```
+
+### Offer card — proof-first tip
+
+```text
+If one repo, checklist, or OSS fix saved you time, use the support router and include the repo name in the note:
+
+https://happysnaker.github.io/support/#sponsor-router
+
+Good notes: qq-ai-bot, happydb, go-service-starter, go-http-middleware-kit, CSAPP notes.
+If you want a funded public outcome instead of a tip, use qq-ai-bot #26 arm64 or RDLeader #27.
+```
+
 ## Short share snippets
 
 ### X / short post
