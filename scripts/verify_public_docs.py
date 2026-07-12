@@ -305,6 +305,8 @@ REQUIRED = {
         "Latest system-design-checklist support-intake refresh",
         "5265d50",
         "Latest backend-engineer-checklist support-intake refresh",
+        "Latest backend/system/launch prospect-routing refresh",
+        "technical-review buyers get the right proof, CTA, support note, and guardrail",
         "3c8e52f",
         "Latest github-profile-checklist support-intake refresh",
         "Latest paid-review prospect-routing refresh",
