@@ -182,6 +182,40 @@ CANDIDATE_BANNED_TEXT = (
 )
 
 
+SCORECARD_BY_ACTION_CLASS: dict[str, dict[str, str]] = {
+    "optional-update": {
+        "qualification": "Warm",
+        "scorecardAction": "One proof-route update only when the scheduled review gate is due, row guidance still allows it, and candidate guardrails pass.",
+    },
+    "stay-quiet": {
+        "qualification": "No-send",
+        "scorecardAction": "Do not post; wait for maintainer/tester reply or new material evidence.",
+    },
+    "recheck-only": {
+        "qualification": "Nurture",
+        "scorecardAction": "Recheck state internally; comment only if checks regress, maintainer asks, or meaningful state changes.",
+    },
+    "no-action": {
+        "qualification": "No-send",
+        "scorecardAction": "No outreach; keep as proof surface only.",
+    },
+    "keep-open": {
+        "qualification": "Nurture",
+        "scorecardAction": "Keep public tracker open; wait for real proof/report before claiming completion.",
+    },
+}
+
+
+def scorecard_for(action_class: str) -> dict[str, str]:
+    return SCORECARD_BY_ACTION_CLASS.get(
+        action_class,
+        {
+            "qualification": "Nurture",
+            "scorecardAction": "No direct ask until the row has proof, timing, and a concrete follow-up owner.",
+        },
+    )
+
+
 def candidate_guardrails(repo: str, number: int, comment: str | None) -> dict[str, Any]:
     key = (repo, number)
     if key not in CANDIDATE_REQUIRED_TEXT:
@@ -245,6 +279,7 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "--json",
         "number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup",
     ])
+    scorecard = scorecard_for(target.action_class)
     return {
         "kind": "pr",
         "project": target.project,
@@ -259,6 +294,8 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "checks": summarize_checks(data.get("statusCheckRollup") or []),
         "note": target.note,
         "actionClass": target.action_class,
+        "qualification": scorecard["qualification"],
+        "scorecardAction": scorecard["scorecardAction"],
         "nextAction": target.next_action,
         "materials": list(target.materials),
         "candidateComment": candidate_comment(target.repo, target.number),
@@ -277,6 +314,7 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "number,title,state,updatedAt,url,comments",
     ])
     comments = data.get("comments") or []
+    scorecard = scorecard_for(target.action_class)
     return {
         "kind": "issue",
         "project": target.project,
@@ -291,6 +329,8 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "checks": f"comments={len(comments)}",
         "note": target.note,
         "actionClass": target.action_class,
+        "qualification": scorecard["qualification"],
+        "scorecardAction": scorecard["scorecardAction"],
         "nextAction": target.next_action,
         "materials": list(target.materials),
         "candidateComment": candidate_comment(target.repo, target.number),
@@ -300,13 +340,13 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
 
 def format_markdown(rows: list[dict[str, Any]]) -> str:
     lines = [
-        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Note | Next action | Materials | Candidate |",
-        "|---|---|---|---|---|---|---|---|---|---|---|---|---|",
+        "| Kind | Project | Surface | State | Mergeable | Review | Updated | Checks / comments | Action class | Qualification | Note | Next action | Materials | Candidate |",
+        "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|",
     ]
     for row in rows:
         surface = f"[{row['repo']}#{row['number']}]({row['url']})"
         lines.append(
-            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {note} | {next_action} | {materials} | {candidate} |".format(
+            "| {kind} | {project} | {surface} | {state} | {mergeable} | {review} | {updated} | {checks} | {action_class} | {qualification} | {note} | {next_action} | {materials} | {candidate} |".format(
                 kind=row["kind"],
                 project=row["project"],
                 surface=surface,
@@ -316,6 +356,7 @@ def format_markdown(rows: list[dict[str, Any]]) -> str:
                 updated=row.get("updatedAt") or "",
                 checks=(row.get("checks") or "").replace("|", "/"),
                 action_class=row.get("actionClass") or "",
+                qualification=row.get("qualification") or "",
                 note=(row.get("note") or "").replace("|", "/"),
                 next_action=(row.get("nextAction") or "").replace("|", "/"),
                 materials=", ".join(row.get("materials") or []).replace("|", "/"),
@@ -358,6 +399,7 @@ def format_candidate_comments(rows: list[dict[str, Any]], gate: dict[str, Any]) 
                 "",
                 f"Surface: {row.get('url')}",
                 f"Action class: {row.get('actionClass')}",
+                f"Qualification: {row.get('qualification')} — {row.get('scorecardAction')}",
                 f"Guardrails OK: {str(bool(guardrails.get('ok'))).lower()}",
                 f"Next action: {row.get('nextAction')}",
             ]
@@ -381,12 +423,14 @@ def format_candidate_comments(rows: list[dict[str, Any]], gate: dict[str, Any]) 
 
 def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = None) -> str:
     counts = Counter(row.get("actionClass") or "unknown" for row in rows)
+    qualification_counts = Counter(row.get("qualification") or "unknown" for row in rows)
     lines = []
     if gate is not None:
         lines.extend(format_review_gate(gate))
         lines.append("")
     lines.extend(["## External follow-up summary", ""])
     lines.append("Action classes: " + ", ".join(f"{key}={counts[key]}" for key in sorted(counts)))
+    lines.append("Qualification gates: " + ", ".join(f"{key}={qualification_counts[key]}" for key in sorted(qualification_counts)))
     optional = [row for row in rows if row.get("actionClass") == "optional-update"]
     if optional:
         lines.extend(["", "Optional-update surfaces:"])
@@ -394,14 +438,14 @@ def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = Non
             material_text = "; ".join(row.get("materials") or [])
             suffix = f" Materials: {material_text}" if material_text else ""
             candidate = " Candidate comment: prepared" if row.get("candidateComment") else ""
-            lines.append(f"- {row['repo']}#{row['number']} — {row.get('nextAction')}{suffix}{candidate}")
+            lines.append(f"- {row['repo']}#{row['number']} ({row.get('qualification')}) — {row.get('nextAction')}{suffix}{candidate}")
     else:
         lines.extend(["", "Optional-update surfaces: none"])
     blockers = [row for row in rows if row.get("actionClass") in {"keep-open", "stay-quiet"}]
     if blockers:
         lines.extend(["", "Default quiet / keep-open surfaces:"])
         for row in blockers:
-            lines.append(f"- {row['repo']}#{row['number']} ({row.get('actionClass')}) — {row.get('nextAction')}")
+            lines.append(f"- {row['repo']}#{row['number']} ({row.get('actionClass')}, {row.get('qualification')}) — {row.get('nextAction')}")
     return "\n".join(lines)
 
 

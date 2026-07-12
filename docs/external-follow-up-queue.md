@@ -8,6 +8,7 @@ Tracking issue: <https://github.com/happysnaker/happysnaker/issues/2>.
 
 - Recheck current state before any comment or PR-body edit.
 - Do not comment externally if there is no maintainer feedback, no failed check, and no new public proof relevant to that surface.
+- Qualification gates: run every possible comment through the [sponsor conversion scorecard](sponsor-conversion-scorecard.md): `Warm` can get one proof-route update only when due, `Nurture` stays internal, and `No-send` blocks generic donation or proof bumps.
 - Prefer updating internal trackers over bumping external maintainers.
 - Keep every follow-up source-linked and short.
 - Do not paste private QQ data, OneBot tokens, app IDs, chat IDs, open IDs, QR screenshots, private paths, raw live logs, or payment screenshots.
@@ -39,11 +40,13 @@ New internal proof since the last queue audit:
 - `qq-ai-bot` and `RDLeader` project pages now expose first-screen `Pick Tip / Proof / Review / Fund` CTAs;
 - `qq-ai-bot` README / support / issue-contact surfaces now include the support router and `qq-ai-bot #26 arm64` note;
 - `RDLeader` README / support / issue-contact surfaces now include the support router while preserving the unresolved license / reuse-rights guardrail;
-- share-kit now has a copy-ready `Project-page closed loop update` snippet.
+- share-kit now has a copy-ready `Project-page closed loop update` snippet;
+- support, `qq-ai-bot`, and `RDLeader` Pages now expose the sponsor conversion scorecard, including Hot / Warm / Nurture / No-send qualification before any support ask.
 
 Reusable links for scheduled review comments:
 
 - Project-page closed loop share snippet: [share-kit.md#project-page-closed-loop-update](share-kit.md#project-page-closed-loop-update)
+- Sponsor conversion scorecard: [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md)
 - 10-second support router: <https://happysnaker.github.io/support/#sponsor-router>
 - qq-ai-bot project page: <https://happysnaker.github.io/qq-ai-bot/>
 - RDLeader project page: <https://happysnaker.github.io/rdleader/>
@@ -61,7 +64,7 @@ Proof caveat: qq-ai-bot still needs a real physical ARM/CasaOS host report; RDLe
 
 ### Candidate comments for optional-update rows
 
-Use only after rerunning the scheduled checks on or after 2026-07-16, and only if the specific row still allows an update. Replace links/status if the live state has changed.
+Use only after rerunning the scheduled checks on or after 2026-07-16, and only if the specific row still allows an update. Treat optional-update rows as `Warm`, not `Hot`: one concise proof-route update is the maximum, and `No-send` wins if timing, proof, or guardrails are weak. Replace links/status if the live state has changed.
 
 #### docker/awesome-compose#781
 
@@ -144,7 +147,7 @@ done
 
 ## Evidence to record after the scheduled check
 
-- current PR / tracked issue state, checks, action class, next-action guidance, due-gate status, and compact summary from `python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due`; use `--action-class optional-update` to isolate surfaces where a short scheduled update may be allowed;
+- current PR / tracked issue state, checks, action class, sponsor conversion qualification gate, next-action guidance, due-gate status, and compact summary from `python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due`; use `--action-class optional-update` to isolate `Warm` surfaces where a short scheduled update may be allowed;
 - whether any external maintainer replied;
 - whether a real ARM / CasaOS physical-host report landed;
 - whether any flagship alert count became non-zero using explicit `state=open` API queries;

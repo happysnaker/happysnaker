@@ -88,7 +88,7 @@ python3 scripts/run_profile_preflight.py --external-only --action-class optional
 python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
 
-The optional-update JSON includes `materials`, `candidateComment`, and `candidateGuardrails`; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The prepared comments are for `docker/awesome-compose#781`, `AwesomeHomelab#98`, and `jbesomi/awesome-autonomous-agents#20`; they must not be posted early or reused repeatedly.
+The optional-update JSON includes `qualification`, `scorecardAction`, `materials`, `candidateComment`, and `candidateGuardrails`; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The prepared comments are for `docker/awesome-compose#781`, `AwesomeHomelab#98`, and `jbesomi/awesome-autonomous-agents#20`; they must not be posted early or reused repeatedly.
 
 ## Automation guardrails
 
@@ -103,7 +103,7 @@ The optional-update JSON includes `materials`, `candidateComment`, and `candidat
 - `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json` verifies local public-page metadata, sitemap, support proof-before-payment content, and repo-link hygiene as machine-readable site evidence.
 - `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
 - Payment screenshot privacy guard: mailto templates should ask users to attach payment screenshots privately by email only, never in public issues.
-- `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, candidate comments, and candidate-comment guardrails without posting externally.
+- `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, sponsor conversion qualification gates, candidate comments, and candidate-comment guardrails without posting externally.
 - `python3 scripts/check_sponsor_pipeline.py --json` verifies audience segments, support notes, reply patterns, and no-overclaim guardrails before outreach or sponsor replies use the prospect pipeline.
 - `python3 scripts/check_sponsor_conversion_scorecard.py --json` verifies the landing → proof → route → action → follow-up conversion stages, segment-to-offer fit, support notes, and privacy/license/no-spam guardrails before promotion asks become too vague.
 
