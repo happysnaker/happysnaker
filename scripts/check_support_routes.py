@@ -28,6 +28,7 @@ SPONSOR_RELEASE = "https://github.com/happysnaker/happysnaker/releases/tag/v2026
 FLAGSHIP_SNAPSHOT = "https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md"
 SHARE_KIT = "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md"
 PROSPECT_PIPELINE = "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md"
+CONVERSION_SCORECARD = "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-conversion-scorecard.md"
 QQ_NOTE = "qq-ai-bot #26 arm64"
 RD_NOTE = "RDLeader #27"
 REVIEW_SAMPLE = "https://happysnaker.github.io/review/deploy-read-sample/"
@@ -53,17 +54,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "sponsor / paid-support intake replies", "privacy", "Technical proof index"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "sponsor / paid-support intake replies", "privacy", "Technical proof index"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/ISSUE_TEMPLATE/profile_operations.md",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, INTAKE_REPLIES, "python3 scripts/check_github_status.py", "Sponsor / support guardrails", "Do not ask for private logs, credentials, QR codes, internal URLs, or payment screenshots in public"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, INTAKE_REPLIES, CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "python3 scripts/check_github_status.py", "Sponsor / support guardrails", "Do not ask for private logs, credentials, QR codes, internal URLs, or payment screenshots in public"),
     ),
     FileExpectation(
         "happysnaker/.github",
@@ -73,22 +74,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/.github",
         "SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, FLAGSHIP_SNAPSHOT, QQ_NOTE, RD_NOTE, "Quick read", "Async review", "Deploy read", PUBLIC_PRIVACY_GUARDRAIL, "Hot / Warm / Nurture / No-send"),
     ),
     FileExpectation(
         "happysnaker/.github",
         "CONTRIBUTING.md",
-        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader", "Do not send private logs, credentials, QR codes, payment screenshots, or internal URLs in public issues or PRs"),
+        (PROOF_URL, SUPPORT_ROUTER, ASKS_URL, SPONSOR_RELEASE, SHARE_KIT, PROSPECT_PIPELINE, CONVERSION_SCORECARD, INTAKE_REPLIES, REVIEW_SAMPLE, "qq-ai-bot", "RDLeader", "Hot / Warm / Nurture / No-send", "Do not send private logs, credentials, QR codes, payment screenshots, or internal URLs in public issues or PRs"),
     ),
     FileExpectation(
         "happysnaker/.github",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "sponsor / paid-support intake replies", "privacy", REVIEW_SAMPLE, SUPPORT_URL),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Current concrete asks", ASKS_URL, "Share kit", SHARE_KIT, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "sponsor / paid-support intake replies", "privacy", REVIEW_SAMPLE, SUPPORT_URL),
     ),
     FileExpectation(
         "happysnaker/qq-ai-bot",
