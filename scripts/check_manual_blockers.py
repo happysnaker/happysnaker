@@ -65,15 +65,32 @@ def main() -> int:
             "status": "open",
             "summary": "Replace happysnaker/Resume with happysnaker/RDLeader in profile pinned repositories.",
             "evidence": f"missing={pins.get('missing')} extra={pins.get('extra')}",
+            "ownerActionRequired": True,
+            "agentCanCompleteUnauthenticated": False,
+            "nextActions": [
+                "Log in to GitHub as happysnaker in a real browser session.",
+                "Open https://github.com/happysnaker and use Customize your pins.",
+                "Remove happysnaker/Resume and add happysnaker/RDLeader.",
+                "Run python3 scripts/check_profile_pins.py --strict after saving.",
+            ],
         })
 
     if not license_state.get("resolved"):
         issue = license_state.get("issue") or {}
+        decision_packet = license_state.get("decisionPacket") or {}
         blockers.append({
             "id": "rdleader-license-posture",
             "status": "open",
             "summary": "Resolve RDLeader license posture before implying reuse rights.",
-            "evidence": f"licenseInfo={license_state.get('licenseInfo')} rootLicenseExists={license_state.get('rootLicenseExists')} issue={issue.get('state')} {issue.get('url')}",
+            "evidence": f"licenseInfo={license_state.get('licenseInfo')} rootLicenseExists={license_state.get('rootLicenseExists')} issue={issue.get('state')} {issue.get('url')} ownerActionReady={decision_packet.get('ownerActionReady')}",
+            "ownerActionRequired": True,
+            "agentCanChooseLicense": False,
+            "decisionPacketReady": bool(decision_packet.get("ownerActionReady")),
+            "nextActions": [
+                "Owner chooses Path A: Apache-2.0, then agent can add root LICENSE and update README.",
+                "Or owner chooses Path B: source-available for now, then agent keeps no-reuse wording and records re-evaluation trigger.",
+                "Do not imply reuse rights until a choice is made and issue #3 is resolved accordingly.",
+            ],
         })
 
     manual_labels = {label.get("name") for label in manual_issue.get("labels") or []}
@@ -87,9 +104,14 @@ def main() -> int:
     if missing_text:
         manual_issue_failures.append(f"manual issue missing text {missing_text}")
 
+    next_actions = [action for blocker in blockers for action in blocker.get("nextActions", [])]
+
     summary = {
         "blockers": blockers,
         "resolved": not blockers,
+        "nextActions": next_actions,
+        "ownerActionRequired": bool(blockers),
+        "agentBlockedOnOwnerAction": bool(blockers),
         "profilePins": pins,
         "rdleaderLicense": license_state,
         "manualIssue": {
@@ -109,6 +131,8 @@ def main() -> int:
             print("none")
         for blocker in blockers:
             print(f"- {blocker['id']}: {blocker['summary']} ({blocker['evidence']})")
+            for action in blocker.get("nextActions", []):
+                print(f"  - next: {action}")
         if manual_issue_failures:
             print("\nManual issue hygiene failures:")
             for failure in manual_issue_failures:

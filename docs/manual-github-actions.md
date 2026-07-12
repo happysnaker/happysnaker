@@ -4,7 +4,7 @@
 
 ## 1. Pin RDLeader on the profile
 
-Current API check still shows profile pins include `Resume` and do not include `RDLeader`. Re-checked on 2026-07-11 Asia/Shanghai with `python3 scripts/check_profile_pins.py`: the current GraphQL mutation surface exposes issue/comment/environment pin mutations and repository metadata mutations, but still does not expose a profile repository-pin mutation, so this remains a manual web-UI action. The checker now runs in CI as a report-only step; use `python3 scripts/check_profile_pins.py --strict` after the manual swap to make it fail until the recommended pinned set is visible.
+Current API check still shows profile pins include `Resume` and do not include `RDLeader`. Re-checked on 2026-07-11 Asia/Shanghai with `python3 scripts/check_profile_pins.py`: the current GraphQL mutation surface exposes issue/comment/environment pin mutations and repository metadata mutations, but still does not expose a profile repository-pin mutation, so this remains a manual web-UI action. The checker now runs in CI as a report-only step; use `python3 scripts/check_profile_pins.py --strict` after the manual swap to make it fail until the recommended pinned set is visible. `python3 scripts/check_manual_blockers.py --json` now emits machine-readable `nextActions`, `ownerActionRequired`, and `agentBlockedOnOwnerAction` fields for handoff.
 
 For the strongest technical first screen, replace `Resume` with `RDLeader`.
 
