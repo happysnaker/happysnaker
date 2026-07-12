@@ -27,6 +27,7 @@ REQUIRED_TEXT = (
     "python3 scripts/check_share_kit.py",
     "python3 scripts/check_sponsor_pipeline.py",
     "python3 scripts/check_sponsor_conversion_scorecard.py",
+    "python3 scripts/check_sponsor_scorecard_coverage.py",
     "python3 scripts/check_readme_badges.py",
     "python3 scripts/check_support_routes.py",
     "python3 scripts/check_repo_metadata.py",

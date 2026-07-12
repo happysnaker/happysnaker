@@ -29,6 +29,8 @@ Backend / systems engineer focused on **Go**, **Java**, distributed systems, pro
 >
 > **Sponsor conversion scorecard:** [docs/sponsor-conversion-scorecard.md](docs/sponsor-conversion-scorecard.md) maps landing → proof → support note → follow-up so promotion work stays measurable before asking for money.
 >
+> **Sponsor scorecard coverage:** [docs/sponsor-scorecard-coverage.md](docs/sponsor-scorecard-coverage.md) shows where Hot / Warm / Nurture / No-send is enforced across support, issues, review funnel, and external follow-up.
+>
 > **Share kit:** [docs/share-kit.md](docs/share-kit.md) has an audience routing matrix, copy-ready X / LinkedIn / WeChat / curator snippets, and sponsor / paid-support intake replies with guardrails for proof, privacy, support notes, and what not to claim.
 >
 > **Support surface coverage:** [docs/support-surface-coverage.md](docs/support-surface-coverage.md) tracks which repos route visitors to the support page, sponsor one-pager, and sponsorware metadata.

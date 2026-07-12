@@ -1,6 +1,6 @@
 # Sponsor Conversion Scorecard
 
-> A public, evidence-first scorecard for turning GitHub attention into useful support without spam, overclaiming, or private-data leakage. Read it after the [sponsor prospect pipeline](sponsor-prospect-pipeline.md) and before posting any outreach from the [share kit](share-kit.md).
+> A public, evidence-first scorecard for turning GitHub attention into useful support without spam, overclaiming, or private-data leakage. Read it after the [sponsor prospect pipeline](sponsor-prospect-pipeline.md), verify deployment in [sponsor-scorecard-coverage.md](sponsor-scorecard-coverage.md), and before posting any outreach from the [share kit](share-kit.md).
 
 ## Operating rule
 
@@ -77,6 +77,7 @@ Please do not post tokens, QR codes, raw logs, internal URLs, private screenshot
 
 ```bash
 python3 scripts/check_sponsor_conversion_scorecard.py --json
+python3 scripts/check_sponsor_scorecard_coverage.py --json
 python3 scripts/check_sponsor_pipeline.py --json
 python3 scripts/check_share_kit.py --json
 python3 scripts/check_support_routes.py --json

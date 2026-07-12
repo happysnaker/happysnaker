@@ -49,6 +49,8 @@ FIRST_SCREEN_REQUIRED_TEXT = (
     "Sponsor prospect pipeline",
     "docs/sponsor-conversion-scorecard.md",
     "Sponsor conversion scorecard",
+    "docs/sponsor-scorecard-coverage.md",
+    "Sponsor scorecard coverage",
     "Tip / Proof / Review / Fund",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",

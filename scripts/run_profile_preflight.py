@@ -78,6 +78,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         Step("Check share kit", ("python3", "scripts/check_share_kit.py")),
         Step("Check sponsor prospect pipeline", ("python3", "scripts/check_sponsor_pipeline.py")),
         Step("Check sponsor conversion scorecard", ("python3", "scripts/check_sponsor_conversion_scorecard.py")),
+        Step("Check sponsor scorecard coverage", ("python3", "scripts/check_sponsor_scorecard_coverage.py")),
         Step("Check README workflow badges", ("python3", "scripts/check_readme_badges.py")),
         Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
         Step("Check support routes", ("python3", "scripts/check_support_routes.py")),
