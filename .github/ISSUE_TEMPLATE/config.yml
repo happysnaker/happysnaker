@@ -15,6 +15,9 @@ contact_links:
   - name: Share kit
     url: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md
     about: Copy-ready X / LinkedIn / WeChat / curator snippets plus sponsor / paid-support intake replies with proof, privacy, and sponsor guardrails.
+  - name: Sponsor prospect pipeline
+    url: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md
+    about: Route homelab testers, bot builders, curators, sponsors, and paid-review customers to the right proof, CTA, support note, and guardrail.
   - name: Deploy-read sample
     url: https://happysnaker.github.io/review/deploy-read-sample/
     about: Preview the ¥29.9 bot / agent / infra deploy-read output before buying feedback.

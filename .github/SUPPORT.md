@@ -9,6 +9,7 @@ If **happysnaker** saved you time, helped your interview prep, or made implement
 - Sponsor one-pager: https://github.com/happysnaker/happysnaker/releases/tag/v2026.07-sponsor-one-pager
 - Share kit: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md
 - Sponsor / paid-support intake replies: https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md#sponsor--paid-support-intake-replies
+- Sponsor prospect pipeline: https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-prospect-pipeline.md
 - Flagship status snapshot: https://github.com/happysnaker/happysnaker/blob/master/docs/flagship-status-snapshot.md
 - Deploy-read sample: https://happysnaker.github.io/review/deploy-read-sample/
 
@@ -24,4 +25,4 @@ Best payment notes:
 
 Direct support uses WeChat Pay / Alipay QR codes on the support page. Email for async review: happysnaker@foxmail.com.
 
-Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues. Use the sponsor / paid-support intake replies in the share kit when someone asks how to pay, sponsor, or buy a review.
+Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues. Use the sponsor prospect pipeline to choose the right proof, CTA, support note, and guardrail by audience; use the sponsor / paid-support intake replies in the share kit when someone asks how to pay, sponsor, or buy a review.

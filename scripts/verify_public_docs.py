@@ -318,6 +318,8 @@ REQUIRED = {
         "qq-ai-bot#28",
         "RDLeader#3",
         "Latest default/profile support-router refresh",
+        "Default sponsor prospect pipeline fallback",
+        "sponsor prospect pipeline fallback",
         "funding links, plus issue-contact links",
         "support-router defaults",
         "chinese-independent-developer support-intake guardrails",
