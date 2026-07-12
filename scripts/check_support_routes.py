@@ -328,22 +328,22 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/chinese-independent-developer",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, INTAKE_REPLIES, REVIEW_SAMPLE, "happysnaker@foxmail.com", "indie", "payment screenshots", "public issue"),
+        (PROOF_URL, SUPPORT_ROUTER, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, "happysnaker@foxmail.com", "indie", "payment screenshots", "public issue"),
     ),
     FileExpectation(
         "happysnaker/chinese-independent-developer",
         "SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, INTAKE_REPLIES, REVIEW_SAMPLE, "Best payment note", "indie", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, "Best payment note", "indie", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/chinese-independent-developer",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, INTAKE_REPLIES, REVIEW_SAMPLE, "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, PROSPECT_PIPELINE, INTAKE_REPLIES, REVIEW_SAMPLE, "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/chinese-independent-developer",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Support this list"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Support this list"),
     ),
 )
 
