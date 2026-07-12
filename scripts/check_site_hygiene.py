@@ -68,6 +68,15 @@ JSON_LD_RE = re.compile(r'<script\s+type=["\']application/ld\+json["\']\s*>(.*?)
 SUPPORT_ANCHOR_RE = re.compile(r"/support/#(?P<anchor>from-[A-Za-z0-9_-]+)")
 HTML_ID_RE = re.compile(r"id=[\"'](?P<id>[^\"']+)[\"']")
 
+SUPPORT_JSON_LD_OFFER_NAMES = [
+    "Quick read",
+    "Async review",
+    "Deploy read",
+    "Fund a real host report",
+    "Fund curator follow-up",
+    "Tip with attribution",
+]
+
 SUPPORT_CONTENT_NEEDLES = [
     "Proof before payment",
     "Pick the right support path in 10 seconds",
@@ -233,9 +242,35 @@ def check_metadata(html: str, slug: str, base_url: str, source_label: str, findi
             ok(f"{source_label} {slug or 'home'} JSON-LD #{index}", "valid JSON", findings)
 
 
+def collect_offer_names(value: object) -> set[str]:
+    names: set[str] = set()
+    if isinstance(value, dict):
+        if value.get("@type") == "Offer" and isinstance(value.get("name"), str):
+            names.add(str(value["name"]))
+        for child in value.values():
+            names.update(collect_offer_names(child))
+    elif isinstance(value, list):
+        for child in value:
+            names.update(collect_offer_names(child))
+    return names
+
+
+def check_support_json_ld_offers(html: str, source_label: str, findings: list[Finding]) -> None:
+    offer_names: set[str] = set()
+    for block in JSON_LD_RE.findall(html):
+        try:
+            parsed = json.loads(block.strip())
+        except json.JSONDecodeError:
+            continue
+        offer_names.update(collect_offer_names(parsed))
+    for name in SUPPORT_JSON_LD_OFFER_NAMES:
+        (ok if name in offer_names else fail)(f"{source_label} support JSON-LD offer", name, findings)
+
+
 def check_support_content(html: str, source_label: str, findings: list[Finding]) -> None:
     for needle in SUPPORT_CONTENT_NEEDLES:
         (ok if needle in html else fail)(f"{source_label} support content", needle, findings)
+    check_support_json_ld_offers(html, source_label, findings)
 
 
 def check_project_content(html: str, slug: str, source_label: str, findings: list[Finding]) -> None:
