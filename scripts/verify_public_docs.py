@@ -49,6 +49,8 @@ REQUIRED = {
         "support/#proof-before-payment",
         "10-second support router",
         "https://happysnaker.github.io/support/#sponsor-router",
+        "https://happysnaker.github.io/support/#offer-cards",
+        "Productized offer cards",
         "Tip / Proof / Review / Fund",
         "Deploy read",
         "https://happysnaker.github.io/review/deploy-read-sample/",

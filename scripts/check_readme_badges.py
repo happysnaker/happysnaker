@@ -43,6 +43,8 @@ EXPECTATIONS = (
 FIRST_SCREEN_REQUIRED_TEXT = (
     "https://happysnaker.github.io/support/#sponsor-router",
     "https://happysnaker.github.io/support/#current-asks",
+    "https://happysnaker.github.io/support/#offer-cards",
+    "Productized offer cards",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/review/deploy-read-sample/",
     "docs/sponsor-prospect-pipeline.md",
