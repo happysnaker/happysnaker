@@ -47,6 +47,12 @@ def run_step(step: Step, *, capture: bool = False) -> StepResult:
     return StepResult(name=step.name, command=step.command, returncode=completed.returncode)
 
 
+def maybe_json(command: Sequence[str], args: argparse.Namespace) -> tuple[str, ...]:
+    if args.json:
+        return (*command, "--json")
+    return tuple(command)
+
+
 def external_step(args: argparse.Namespace) -> Step:
     external_command = ["python3", "scripts/check_external_followups.py"]
     for action_class in args.action_class or []:
@@ -61,7 +67,7 @@ def external_step(args: argparse.Namespace) -> Step:
         external_command.extend(["--review-date", args.review_date])
     if args.enforce_review_due:
         external_command.append("--enforce-review-due")
-    return Step("Summarize external follow-ups", tuple(external_command))
+    return Step("Summarize external follow-ups", maybe_json(external_command, args))
 
 
 def build_steps(args: argparse.Namespace) -> list[Step]:
@@ -70,36 +76,39 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
 
     steps = [
         Step("Verify public docs", ("python3", "scripts/verify_public_docs.py", "--json")),
-        Step("Check operator handoff", ("python3", "scripts/check_operator_handoff.py")),
-        Step("Check stable profile proof links", ("python3", "scripts/check_stable_profile_links.py")),
-        Step("Check GitHub CLI helper usage", ("python3", "scripts/check_gh_usage.py")),
-        Step("Check CI workflow contract", ("python3", "scripts/check_ci_workflow_contract.py")),
+        Step("Check operator handoff", maybe_json(("python3", "scripts/check_operator_handoff.py"), args)),
+        Step("Check stable profile proof links", maybe_json(("python3", "scripts/check_stable_profile_links.py"), args)),
+        Step("Check GitHub CLI helper usage", maybe_json(("python3", "scripts/check_gh_usage.py"), args)),
+        Step("Check CI workflow contract", maybe_json(("python3", "scripts/check_ci_workflow_contract.py"), args)),
         Step("Check checker catalog", ("python3", "scripts/check_checker_catalog.py", "--json")),
-        Step("Check share kit", ("python3", "scripts/check_share_kit.py")),
-        Step("Check sponsor prospect pipeline", ("python3", "scripts/check_sponsor_pipeline.py")),
-        Step("Check sponsor conversion scorecard", ("python3", "scripts/check_sponsor_conversion_scorecard.py")),
-        Step("Check sponsor scorecard coverage", ("python3", "scripts/check_sponsor_scorecard_coverage.py")),
-        Step("Check README workflow badges", ("python3", "scripts/check_readme_badges.py")),
-        Step("Check GitHub workflow / alert status", ("python3", "scripts/check_github_status.py")),
-        Step("Check support routes", ("python3", "scripts/check_support_routes.py")),
-        Step("Check repository metadata", ("python3", "scripts/check_repo_metadata.py")),
-        Step("Check sponsor release", ("python3", "scripts/check_sponsor_release.py")),
-        Step("Check sponsor issues", ("python3", "scripts/check_sponsor_issues.py")),
-        Step("Check review funnel", ("python3", "scripts/check_review_funnel.py")),
-        Step("Check operations log", ("python3", "scripts/check_ops_issue_log.py")),
-        Step("Check issue labels", ("python3", "scripts/check_issue_labels.py")),
-        Step("Report manual blockers", ("python3", "scripts/check_manual_blockers.py")),
+        Step("Check share kit", maybe_json(("python3", "scripts/check_share_kit.py"), args)),
+        Step("Check sponsor prospect pipeline", maybe_json(("python3", "scripts/check_sponsor_pipeline.py"), args)),
+        Step("Check sponsor conversion scorecard", maybe_json(("python3", "scripts/check_sponsor_conversion_scorecard.py"), args)),
+        Step("Check sponsor scorecard coverage", maybe_json(("python3", "scripts/check_sponsor_scorecard_coverage.py"), args)),
+        Step("Check README workflow badges", maybe_json(("python3", "scripts/check_readme_badges.py"), args)),
+        Step("Check GitHub workflow / alert status", maybe_json(("python3", "scripts/check_github_status.py"), args)),
+        Step("Check support routes", maybe_json(("python3", "scripts/check_support_routes.py"), args)),
+        Step("Check repository metadata", maybe_json(("python3", "scripts/check_repo_metadata.py"), args)),
+        Step("Check sponsor release", maybe_json(("python3", "scripts/check_sponsor_release.py"), args)),
+        Step("Check sponsor issues", maybe_json(("python3", "scripts/check_sponsor_issues.py"), args)),
+        Step("Check review funnel", maybe_json(("python3", "scripts/check_review_funnel.py"), args)),
+        Step("Check operations log", maybe_json(("python3", "scripts/check_ops_issue_log.py"), args)),
+        Step("Check issue labels", maybe_json(("python3", "scripts/check_issue_labels.py"), args)),
+        Step("Report manual blockers", maybe_json(("python3", "scripts/check_manual_blockers.py"), args)),
         Step(
             f"Check public links ({args.link_scope})",
-            (
-                "python3",
-                "scripts/check_public_links.py",
-                "--timeout",
-                str(args.timeout),
-                "--workers",
-                str(args.workers),
-                "--scope",
-                args.link_scope,
+            maybe_json(
+                (
+                    "python3",
+                    "scripts/check_public_links.py",
+                    "--timeout",
+                    str(args.timeout),
+                    "--workers",
+                    str(args.workers),
+                    "--scope",
+                    args.link_scope,
+                ),
+                args,
             ),
         ),
     ]
