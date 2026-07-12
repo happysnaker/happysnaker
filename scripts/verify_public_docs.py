@@ -289,6 +289,9 @@ REQUIRED = {
     ],
     "docs/support-surface-coverage.md": [
         "Latest live sponsor/support issue refresh",
+        "Latest flagship repo prospect-routing refresh",
+        "GitHub readers can route homelab testers, bot builders, curators, sponsors, RDLeader evaluators, and paid-review customers",
+        "right proof, CTA, support note, and guardrail",
         "Latest chinese-independent-developer support-intake refresh",
         "e1ec861",
         "Latest go-http-middleware-kit support-intake refresh",
