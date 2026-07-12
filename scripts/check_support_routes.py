@@ -168,12 +168,12 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/CSAPPLabsAndNotes",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "CSAPPLabsAndNotes", "private logs", "payment screenshots"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "CSAPPLabsAndNotes", "private logs", "payment screenshots"),
     ),
     FileExpectation(
         "happysnaker/CSAPPLabsAndNotes",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, REVIEW_SAMPLE, "Best payment note", "CSAPPLabsAndNotes", "private logs", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Best payment note", "CSAPPLabsAndNotes", "private logs", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/CSAPPLabsAndNotes",

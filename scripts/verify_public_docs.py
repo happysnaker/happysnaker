@@ -314,6 +314,8 @@ REQUIRED = {
         "right proof, CTA, support note, and guardrail",
         "f173d65",
         "Latest CSAPPLabsAndNotes support-intake refresh",
+        "Latest CSAPP prospect-routing refresh",
+        "study-repo, README, and technical-profile review requests",
         "e696571",
         "Latest Resume support-intake refresh",
         "bc58edc",
