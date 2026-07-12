@@ -12,6 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SITE_ROOT = ROOT.parent / "happysnaker.github.io"
 BASE_URL = "https://happysnaker.github.io"
+PRIVATE_PAYMENT_MARKER = "Payment%20screenshot%3A%20attach%20privately%20by%20email%20only%2C%20never%20in%20public%20issues"
+BANNED_PUBLIC_PAYMENT_MARKERS = (
+    "Payment%20screenshot%3A%20attached",
+    "Payment screenshot: attached",
+)
 
 
 @dataclass(frozen=True)
@@ -33,7 +38,7 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "/review/deploy-read-sample/",
             "mailto:happysnaker@foxmail.com?subject=Quick%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
-            "Payment%20screenshot",
+            PRIVATE_PAYMENT_MARKER,
             "Proof before payment",
             "Pick the right support path in 10 seconds",
             "Sponsor / paid-support intake replies",
@@ -54,7 +59,7 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "mailto:happysnaker@foxmail.com?subject=Quick%20read",
             "mailto:happysnaker@foxmail.com?subject=Deploy%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
-            "Payment%20screenshot",
+            PRIVATE_PAYMENT_MARKER,
             "¥29.9",
             "¥99",
         ),
@@ -68,7 +73,7 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "Deploy Read Sample",
             "mailto:happysnaker@foxmail.com?subject=Deploy%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
-            "Payment%20screenshot",
+            PRIVATE_PAYMENT_MARKER,
             "top 3 fixes",
             "¥29.9",
             "¥99",
@@ -83,7 +88,7 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "mailto:happysnaker@foxmail.com?subject=Deploy%20read",
             "mailto:happysnaker@foxmail.com?subject=Quick%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
-            "Payment%20screenshot",
+            PRIVATE_PAYMENT_MARKER,
             "/support/#quick-read",
             "/support/#async-review",
             "/support/#sponsor-router",
@@ -125,6 +130,9 @@ def check_text(label: str, text: str, required: tuple[str, ...], failures: list[
     missing = [needle for needle in required if needle not in text]
     if missing:
         failures.append(f"{label}: missing {missing}")
+    banned = [needle for needle in BANNED_PUBLIC_PAYMENT_MARKERS if needle in text]
+    if banned:
+        failures.append(f"{label}: banned public payment-screenshot marker(s) {banned}")
 
 
 def main() -> int:

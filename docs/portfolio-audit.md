@@ -94,3 +94,8 @@ Monthly:
 - Revisit pinned repos.
 - Close or archive stale temporary forks.
 - Decide whether parked repos should be promoted, renamed, relicensed, or left quiet.
+
+
+## Payment screenshot privacy guard
+
+Paid-review and support mailto templates should keep payment screenshots private: attach by email or private chat only, never in public issues.

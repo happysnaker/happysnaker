@@ -78,6 +78,7 @@ SUPPORT_CONTENT_NEEDLES = [
     "#public-intake-guardrail",
     "Public privacy guardrail",
     "Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public issues",
+    "Payment%20screenshot%3A%20attach%20privately%20by%20email%20only%2C%20never%20in%20public%20issues",
     "Current concrete asks",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",

@@ -98,6 +98,7 @@ The optional-update JSON includes `materials`, `candidateComment`, and `candidat
 - `python3 scripts/check_support_routes.py --json` verifies profile/default funding links include both the root support page and the 10-second support router fallback.
 - `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --timeout 8 --json` verifies local public-page metadata, sitemap, support proof-before-payment content, and repo-link hygiene as machine-readable site evidence.
 - `python3 scripts/check_review_funnel.py` verifies the paid review / deploy-read path across support, review, deploy-read sample, and flagship inbound pages.
+- Payment screenshot privacy guard: mailto templates should ask users to attach payment screenshots privately by email only, never in public issues.
 - `python3 scripts/check_external_followups.py --action-class optional-update --json` exposes scheduled-review materials, candidate comments, and candidate-comment guardrails without posting externally.
 
 ## Good next actions
