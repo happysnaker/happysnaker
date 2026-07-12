@@ -26,6 +26,7 @@ REQUIRED_TEXT = (
     "Paid-review repos",
     "Technical-review repos",
     "Systems / indie content repos",
+    "Go docs/template repos",
     "profile README support/proof block",
     "support page, `qq-ai-bot`, `RDLeader`, review page, deploy-read sample",
     "`qq-ai-bot#26`, `qq-ai-bot#28`, `RDLeader#1`, `RDLeader#3`, `RDLeader#27`",
@@ -33,6 +34,8 @@ REQUIRED_TEXT = (
     "`Resume` and `github-profile-checklist`",
     "`backend-engineer-checklist`, `system-design-checklist`, `production-readiness-checklist`",
     "`CSAPPLabsAndNotes`, `happydb`, `chinese-independent-developer`",
+    "`go-service-starter` and `go-http-middleware-kit`",
+    "Go service and middleware readers classify before support, deploy-read, or paid-review asks",
     "## No-send guardrails",
     "qq-ai-bot #26 arm64",
     "RDLeader#3",
@@ -55,7 +58,7 @@ BANNED_TEXT = (
     "payment screenshots are fine in public",
 )
 
-MIN_COVERAGE_ROWS = 10
+MIN_COVERAGE_ROWS = 11
 
 
 def count_table_rows(section: str) -> int:

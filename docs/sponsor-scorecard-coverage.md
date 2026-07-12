@@ -25,6 +25,7 @@ Every support or outreach surface should satisfy four properties before asking f
 | Paid-review repos | `Resume` and `github-profile-checklist` | `python3 scripts/check_support_routes.py --json` | profile / README buyers classify before paid review or support asks |
 | Technical-review repos | `backend-engineer-checklist`, `system-design-checklist`, `production-readiness-checklist` | `python3 scripts/check_support_routes.py --json` | backend / system-design / launch-readiness buyers classify before paid review or support asks |
 | Systems / indie content repos | `CSAPPLabsAndNotes`, `happydb`, `chinese-independent-developer` | `python3 scripts/check_support_routes.py --json` | study, database-internals, and indie-list readers classify before support or paid-review asks |
+| Go docs/template repos | `go-service-starter` and `go-http-middleware-kit` | `python3 scripts/check_support_routes.py --json` | Go service and middleware readers classify before support, deploy-read, or paid-review asks |
 
 ## No-send guardrails
 
