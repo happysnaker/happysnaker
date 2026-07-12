@@ -49,7 +49,7 @@ Point-in-time proof snapshot (2026-07-12):
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 | Sponsor prospect pipeline | [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md) |
 | Sponsor conversion scorecard | [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) |
-| Share kit / productized offer cards | [share-kit.md#productized-offer-cards](share-kit.md#productized-offer-cards) |
+| Productized offer cards / share kit | [share-kit.md#productized-offer-cards](share-kit.md#productized-offer-cards) |
 
 
 ## Reproduce this proof packet
