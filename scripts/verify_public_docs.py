@@ -91,6 +91,8 @@ REQUIRED = {
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "python3 scripts/check_github_status.py --summary",
         "python3 scripts/check_checker_catalog.py --json",
+        "Sponsor prospect pipeline",
+        "sponsor-prospect-pipeline.md",
         "Default support fallback",
         "https://github.com/happysnaker/.github/commit/0ec8ed7",
     ],
