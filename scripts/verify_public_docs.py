@@ -49,6 +49,7 @@ REQUIRED = {
         "docs/flagship-technical-map.md",
         "docs/operator-handoff.md",
         "Point-in-time proof snapshot",
+        "Point-in-time proof snapshot (2026-07-12)",
         "python3 scripts/check_github_status.py --summary",
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
         "`--json` for machine-readable preflight step status",
@@ -86,6 +87,8 @@ REQUIRED = {
     ],
     "docs/sponsor-one-pager.md": [
         "Point-in-time proof snapshot",
+        "Point-in-time proof snapshot (2026-07-12)",
+        "Snapshot: 2026-07-12 Asia/Shanghai.",
         "before quoting current state",
         "Reproduce this proof packet",
         "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",

@@ -2,7 +2,7 @@
 
 > A short, source-linked sponsor brief for `happysnaker` projects. Use this when someone asks what to support, what proof exists, or which link to share.
 
-Snapshot: 2026-07-11 Asia/Shanghai.
+Snapshot: 2026-07-12 Asia/Shanghai.
 
 ## Short pitch
 
@@ -13,7 +13,7 @@ The current flagship line is:
 - [`qq-ai-bot`](https://github.com/happysnaker/qq-ai-bot) — self-hosted QQ / OneBot / NapCat / LLOneBot bridge for ACP-compatible agents, with sessions, progress streaming, metrics, Docker, multi-arch image publishing, and arm64 smoke evidence.
 - [`RDLeader`](https://github.com/happysnaker/RDLeader) — local-first AI R&D worker control plane with task ownership, runtime dispatch, approval gates, fake-data demos, public QA evidence, and external submission follow-up.
 
-Point-in-time proof snapshot (2026-07-11):
+Point-in-time proof snapshot (2026-07-12):
 
 - `qq-ai-bot` and `RDLeader` had `0` open CodeQL / Dependabot / secret-scanning alerts.
 - The tracked `qq-ai-bot` CI / CodeQL / Docker publish / arm64 smoke were green.
