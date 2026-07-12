@@ -75,6 +75,7 @@ BANNED_TEXT = (
 )
 
 MIN_SEGMENT_ROWS = 7
+MIN_COVERAGE_ROWS = 6
 MIN_REPLY_SNIPPETS = 3
 
 
@@ -113,6 +114,12 @@ def main() -> int:
     if segment_count < MIN_SEGMENT_ROWS:
         failures.append(f"expected at least {MIN_SEGMENT_ROWS} active segment rows; found {segment_count}")
 
+    coverage_section = text.split("## Coverage ladder", 1)[-1].split("## Current working list", 1)[0]
+    coverage_rows = [line for line in coverage_section.splitlines() if line.startswith("| ") and "---" not in line]
+    coverage_layer_count = max(0, len(coverage_rows) - 1)
+    if coverage_layer_count < MIN_COVERAGE_ROWS:
+        failures.append(f"expected at least {MIN_COVERAGE_ROWS} coverage ladder rows; found {coverage_layer_count}")
+
     reply_snippets = len(re.findall(r"^```text$", text, flags=re.MULTILINE))
     if reply_snippets < MIN_REPLY_SNIPPETS:
         failures.append(f"expected at least {MIN_REPLY_SNIPPETS} copy-ready reply snippets; found {reply_snippets}")
@@ -132,6 +139,7 @@ def main() -> int:
         "guardrailCount": len(REQUIRED_GUARDRAILS),
         "missingGuardrails": missing_guardrails,
         "segmentCount": segment_count,
+        "coverageLayerCount": coverage_layer_count,
         "replySnippetCount": reply_snippets,
         "bannedTextHits": banned_hits,
         "failures": failures,
@@ -145,7 +153,7 @@ def main() -> int:
                 print(f"- {failure}", file=sys.stderr)
         return 1
     if not args.json:
-        print(f"Checked sponsor prospect pipeline: {segment_count} segments and {reply_snippets} reply snippets")
+        print(f"Checked sponsor prospect pipeline: {segment_count} segments, {coverage_layer_count} coverage layers, and {reply_snippets} reply snippets")
     return 0
 
 
