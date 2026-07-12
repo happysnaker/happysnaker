@@ -42,12 +42,16 @@ Automation already completed around this item:
 
 Manual path:
 
-1. Open the GitHub profile page.
-2. Edit pinned repositories.
-3. Remove `Resume`.
-4. Add `RDLeader`.
-5. Keep the other five pins unchanged.
-6. Confirm the visible pins match the list above.
+1. Log in to GitHub as `happysnaker` in a real browser session.
+2. Open the GitHub profile page: <https://github.com/happysnaker>.
+3. Use the profile pins editor / `Customize your pins` UI.
+4. Remove `Resume`.
+5. Add `RDLeader`.
+6. Keep the other five pins unchanged.
+7. Save the pins.
+8. Run `python3 scripts/check_profile_pins.py --strict` and confirm the visible pins match the recommended list above.
+
+Latest automation attempt: on 2026-07-12 UTC, the in-app browser session reached the public profile as logged-out (`Sign in` / `Sign up` visible), so the pin swap still requires an authenticated owner browser session.
 
 ## 2. Decide RDLeader license posture
 

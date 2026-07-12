@@ -18,6 +18,8 @@ REQUIRED_MANUAL_ISSUE_TEXT = (
     "Profile pins still need the GitHub web UI",
     "missing: `happysnaker/RDLeader`",
     "extra: `happysnaker/Resume`",
+    "Customize your pins",
+    "logged-out (`Sign in` / `Sign up` visible)",
     "RDLeader license posture is still unresolved",
     "scripts/check_issue_labels.py",
     "scripts/check_ops_issue_log.py",
