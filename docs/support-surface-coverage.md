@@ -68,7 +68,7 @@ For this coverage table, do not infer completion from intention. Evidence should
 - `scripts/check_site_hygiene.py` for local/live project-page metadata, sitemap, public repo-link hygiene, and support-page proof-before-payment content;
 - security alert checks where the API is available.
 
-Latest live sponsor/support issue refresh: `qq-ai-bot#28`, `qq-ai-bot#26`, `RDLeader#27`, `RDLeader#1`, and `RDLeader#3` now include the 10-second support router in their issue bodies; RDLeader issue bodies keep the reuse-rights caveat explicit.
+Latest live sponsor/support issue refresh: `qq-ai-bot#28`, `qq-ai-bot#26`, `RDLeader#27`, `RDLeader#1`, and `RDLeader#3` now include the 10-second support router and sponsor conversion scorecard in their issue bodies; each issue requires Hot / Warm / Nurture / No-send qualification before support/outreach asks, with No-send blocking generic donation or proof bumps; RDLeader issue bodies keep the reuse-rights caveat explicit.
 
 Latest flagship repo prospect-routing refresh: `qq-ai-bot` and `RDLeader` README/support/contact surfaces now also link the sponsor prospect pipeline so GitHub readers can route homelab testers, bot builders, curators, sponsors, RDLeader evaluators, and paid-review customers to the right proof, CTA, support note, and guardrail. Latest flagship support scorecard refresh: `qq-ai-bot` ([commit 1c940a0](https://github.com/happysnaker/qq-ai-bot/commit/1c940a0)) and `RDLeader` ([commit 3d386e8](https://github.com/happysnaker/RDLeader/commit/3d386e8)) README/support/contact surfaces now route support/outreach asks through the sponsor conversion scorecard and Hot / Warm / Nurture / No-send qualification before posting.
 

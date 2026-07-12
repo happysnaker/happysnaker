@@ -351,6 +351,8 @@ REQUIRED = {
     ],
     "docs/support-surface-coverage.md": [
         "Latest live sponsor/support issue refresh",
+        "sponsor conversion scorecard in their issue bodies",
+        "No-send blocking generic donation or proof bumps",
         "Latest flagship repo prospect-routing refresh",
         "Latest flagship support scorecard refresh",
         "commit 1c940a0",

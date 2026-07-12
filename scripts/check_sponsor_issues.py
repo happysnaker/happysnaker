@@ -10,6 +10,10 @@ from typing import Sequence
 from github_cli import run_gh_json
 
 SUPPORT_ROUTER = "https://happysnaker.github.io/support/#sponsor-router"
+CONVERSION_SCORECARD = "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-conversion-scorecard.md"
+QUALIFICATION_GATE = "Hot / Warm / Nurture / No-send"
+NO_SEND_GUARDRAIL = "No-send blocks generic donation or proof bumps"
+PUBLIC_PRIVACY_GUARDRAIL = "Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs"
 
 
 @dataclass(frozen=True)
@@ -38,8 +42,12 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "https://github.com/happysnaker/qq-ai-bot/actions/workflows/arm64-image-smoke.yml",
             "https://happysnaker.github.io/review/deploy-read-sample/",
             "https://happysnaker.github.io/support/#quick-read",
+            CONVERSION_SCORECARD,
+            QUALIFICATION_GATE,
+            NO_SEND_GUARDRAIL,
             "Deploy read",
             "Please redact QQ credentials",
+            "attach payment screenshot privately by email only, never in public issues",
             "¥29.9",
             "¥99",
         ),
@@ -62,6 +70,10 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "Best payment note: `qq-ai-bot #26 arm64`",
             "https://happysnaker.github.io/support/#from-qq-ai-bot",
             SUPPORT_ROUTER,
+            CONVERSION_SCORECARD,
+            QUALIFICATION_GATE,
+            NO_SEND_GUARDRAIL,
+            PUBLIC_PRIVACY_GUARDRAIL,
             "tokens / group IDs / user IDs removed",
         ),
         banned=(
@@ -84,6 +96,9 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "¥199",
             "https://happysnaker.github.io/support/#from-rdleader",
             SUPPORT_ROUTER,
+            CONVERSION_SCORECARD,
+            QUALIFICATION_GATE,
+            NO_SEND_GUARDRAIL,
             "Support does not imply RDLeader reuse rights",
         ),
         banned=(
@@ -103,6 +118,9 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "Runtime endurance deep dive",
             "Support page: https://happysnaker.github.io/support/",
             SUPPORT_ROUTER,
+            CONVERSION_SCORECARD,
+            QUALIFICATION_GATE,
+            NO_SEND_GUARDRAIL,
             "Support does not imply RDLeader reuse rights",
             "Decide whether this repo is ready for an explicit license",
         ),
@@ -117,6 +135,9 @@ SPECS: tuple[SponsorIssueSpec, ...] = (
             "https://github.com/happysnaker/RDLeader/blob/main/docs/public/license-decision-packet.md",
             "https://happysnaker.github.io/support/#from-rdleader",
             SUPPORT_ROUTER,
+            CONVERSION_SCORECARD,
+            QUALIFICATION_GATE,
+            NO_SEND_GUARDRAIL,
             "Support does not imply RDLeader reuse rights",
             "GitHub metadata check",
         ),
