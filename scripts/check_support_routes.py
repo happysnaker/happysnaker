@@ -149,17 +149,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/Resume",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "Resume", "private logs", "payment screenshots"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "Resume", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots"),
     ),
     FileExpectation(
         "happysnaker/Resume",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Best payment note", "Resume", "private logs", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Best payment note", "Resume", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/Resume",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "privacy guardrails", "Support / direct feedback"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "privacy guardrails", "Support / direct feedback"),
     ),
     FileExpectation(
         "happysnaker/CSAPPLabsAndNotes",
@@ -189,17 +189,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/github-profile-checklist",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "github-profile-checklist", "private logs", "payment screenshots"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Payment%20screenshot", "¥29.9", "¥99", "github-profile-checklist", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots"),
     ),
     FileExpectation(
         "happysnaker/github-profile-checklist",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Best payment note", "github-profile-checklist", "private logs", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Best payment note", "github-profile-checklist", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/github-profile-checklist",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "privacy guardrails", "Support / direct feedback"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor prospect pipeline", PROSPECT_PIPELINE, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "privacy guardrails", "Support / direct feedback"),
     ),
     FileExpectation(
         "happysnaker/backend-engineer-checklist",
