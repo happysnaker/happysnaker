@@ -51,6 +51,66 @@ EXPECTATIONS: tuple[RepoMetadataExpectation, ...] = (
         description_terms=("Default community health", "support", "contribution"),
         required_topics=("community-health", "support", "oss-maintenance", "sponsorware"),
     ),
+    RepoMetadataExpectation(
+        repo="happysnaker/go-service-starter",
+        homepage="https://happysnaker.github.io/go-service-starter/",
+        description_terms=("Go", "HTTP", "service starter", "Docker"),
+        required_topics=("go", "backend", "service-template", "docker", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/go-http-middleware-kit",
+        homepage="https://happysnaker.github.io/go-http-middleware-kit/",
+        description_terms=("net/http", "middleware", "request IDs", "structured logging"),
+        required_topics=("go", "middleware", "net-http", "request-id", "structured-logging", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/happydb",
+        homepage="https://happysnaker.github.io/happydb/",
+        description_terms=("Java", "database internals", "MVCC", "recovery"),
+        required_topics=("java", "database", "storage-engine", "mvcc", "query-optimizer", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/Resume",
+        homepage="https://happysnaker.github.io/Resume/",
+        description_terms=("resume", "portfolio", "GitHub Pages"),
+        required_topics=("developer-portfolio", "resume-template", "github-pages", "landing-page", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/CSAPPLabsAndNotes",
+        homepage="https://happysnaker.github.io/csapp-labs-notes/",
+        description_terms=("CSAPP", "systems", "interview"),
+        required_topics=("csapp", "computer-systems", "systems-programming", "interview-prep", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/github-profile-checklist",
+        homepage="https://happysnaker.github.io/github-profile-checklist/",
+        description_terms=("GitHub profile", "proof of work", "README"),
+        required_topics=("github-profile", "developer-portfolio", "github-readme", "template-repository", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/backend-engineer-checklist",
+        homepage="https://happysnaker.github.io/backend-engineer-checklist/",
+        description_terms=("Backend", "interviews", "public proof"),
+        required_topics=("backend-engineering", "distributed-systems", "java", "golang", "template-repository", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/system-design-checklist",
+        homepage="https://happysnaker.github.io/system-design-checklist/",
+        description_terms=("System design", "architecture reviews", "tradeoff"),
+        required_topics=("system-design", "software-architecture", "distributed-systems", "design-docs", "template-repository", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/production-readiness-checklist",
+        homepage="https://happysnaker.github.io/production-readiness-checklist/",
+        description_terms=("Production readiness", "launch reviews", "on-call"),
+        required_topics=("production-readiness", "release-engineering", "observability", "sre", "template-repository", "oss-maintenance", "sponsorware"),
+    ),
+    RepoMetadataExpectation(
+        repo="happysnaker/chinese-independent-developer",
+        homepage="https://happysnaker.github.io/support/#from-indie-dev",
+        description_terms=("Chinese indie developer", "make money"),
+        required_topics=("indie-developer", "monetization", "saas", "remote-work", "oss-maintenance", "sponsorware"),
+    ),
 )
 
 
@@ -59,7 +119,7 @@ EXPECTATIONS: tuple[RepoMetadataExpectation, ...] = (
 run_gh = run_gh_json
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Verify core repository homepage, description, topic, visibility, and archive metadata.")
+    parser = argparse.ArgumentParser(description="Verify portfolio-critical repository homepage, description, topic, visibility, and archive metadata.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable repository metadata summary.")
     args = parser.parse_args()
 
