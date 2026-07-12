@@ -289,17 +289,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/go-service-starter",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "¥99", "go-service-starter", "private logs", "payment screenshots"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "¥99", "go-service-starter", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots"),
     ),
     FileExpectation(
         "happysnaker/go-service-starter",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Low-friction thanks", "go-service-starter", "private logs", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Low-friction thanks", "go-service-starter", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/go-service-starter",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "privacy guardrails", "Support / direct feedback"),
     ),
     FileExpectation(
         "happysnaker/go-http-middleware-kit",
@@ -309,17 +309,17 @@ EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/go-http-middleware-kit",
         "README.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "¥99", "go-http-middleware-kit", "request-id middleware", "private logs", "payment screenshots"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "¥99", "go-http-middleware-kit", "request-id middleware", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots"),
     ),
     FileExpectation(
         "happysnaker/go-http-middleware-kit",
         ".github/SUPPORT.md",
-        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, REVIEW_SAMPLE, "Low-friction thanks", "go-http-middleware-kit", "private logs", "payment screenshots", "internal URLs"),
+        (PROOF_URL, SUPPORT_ROUTER, SPONSOR_RELEASE, INTAKE_REPLIES, PROSPECT_PIPELINE, CONVERSION_SCORECARD, REVIEW_SAMPLE, "Low-friction thanks", "go-http-middleware-kit", "Hot / Warm / Nurture / No-send", "private logs", "payment screenshots", "internal URLs"),
     ),
     FileExpectation(
         "happysnaker/go-http-middleware-kit",
         ".github/ISSUE_TEMPLATE/config.yml",
-        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "privacy guardrails", "Support / direct feedback"),
+        ("Proof before payment", PROOF_URL, "10-second support router", SUPPORT_ROUTER, "Sponsor / paid-support intake replies", INTAKE_REPLIES, "Sponsor conversion scorecard", CONVERSION_SCORECARD, "Hot / Warm / Nurture / No-send", "privacy guardrails", "Support / direct feedback"),
     ),
     FileExpectation(
         "happysnaker/chinese-independent-developer",
