@@ -10,15 +10,15 @@ Because editing this file triggers a new profile CI / CodeQL run, the `happysnak
 
 | Repo | Workflow | Status | Commit | Proof |
 |---|---|---|---|---|
-| `happysnaker/happysnaker` | CI | completed / success | `2217db4` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) |
-| `happysnaker/happysnaker` | CodeQL | completed / success | `2217db4` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml) |
-| `happysnaker/qq-ai-bot` | CI | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313176) |
-| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313177) |
-| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161313173) |
-| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `594cb21` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29161374094) |
-| `happysnaker/RDLeader` | CI | completed / success | `8e8317a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29161612331) |
-| `happysnaker/RDLeader` | CodeQL | completed / success | `8e8317a` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29161612338) |
-| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `843af8d` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29161900218) |
+| `happysnaker/happysnaker` | CI | completed / success | `a0fcfc5` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml) |
+| `happysnaker/happysnaker` | CodeQL | completed / success | `a0fcfc5` | [workflow](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml) |
+| `happysnaker/qq-ai-bot` | CI | completed / success | `a5e4896` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29177343412) |
+| `happysnaker/qq-ai-bot` | CodeQL | completed / success | `a5e4896` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29177343425) |
+| `happysnaker/qq-ai-bot` | Publish Docker image | completed / success | `a5e4896` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29177343420) |
+| `happysnaker/qq-ai-bot` | Arm64 image smoke | completed / success | `a5e4896` | [run](https://github.com/happysnaker/qq-ai-bot/actions/runs/29177387832) |
+| `happysnaker/RDLeader` | CI | completed / success | `c9f49c7` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29179102387) |
+| `happysnaker/RDLeader` | CodeQL | completed / success | `c9f49c7` | [run](https://github.com/happysnaker/RDLeader/actions/runs/29179102391) |
+| `happysnaker/happysnaker.github.io` | pages-build-deployment | completed / success | `632a5ec` | [run](https://github.com/happysnaker/happysnaker.github.io/actions/runs/29177172788) |
 
 ## Configured alert state
 
