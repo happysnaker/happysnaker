@@ -19,6 +19,7 @@ python3 scripts/check_stable_profile_links.py --json
 python3 scripts/check_gh_usage.py --json
 python3 scripts/check_ci_workflow_contract.py --json
 python3 scripts/check_checker_catalog.py --json
+python3 scripts/check_preflight_json_contract.py --json
 python3 scripts/check_share_kit.py --json
 python3 scripts/check_sponsor_pipeline.py --json
 python3 scripts/check_sponsor_conversion_scorecard.py --json
@@ -96,7 +97,7 @@ The optional-update JSON includes `qualification`, `scorecardAction`, `materials
 ## Automation guardrails
 
 - Use `scripts/github_cli.py` for GitHub CLI JSON/API calls so transient GitHub API/network errors retry consistently.
-- `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json` emits machine-readable pass/fail status for the core takeover proof gate and forwards `--json` into checker substeps where available, so captured stdout is machine-readable instead of prose.
+- `python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json` emits machine-readable pass/fail status for the core takeover proof gate and forwards `--json` into checker substeps where available, so captured stdout is machine-readable instead of prose. `python3 scripts/check_preflight_json_contract.py --json` verifies this forwarding contract.
 - Use stable profile workflow links for evergreen profile proof; `python3 scripts/check_stable_profile_links.py --json` rejects one-off profile self-check run links in public docs and emits machine-readable drift evidence.
 - `python3 scripts/check_gh_usage.py --json` fails if a proof/status checker bypasses that helper with a direct `gh` subprocess call, or if anything except `scripts/github_cli.py` is allowlisted for direct `gh`, and emits machine-readable helper-usage evidence.
 - `python3 scripts/check_ci_workflow_contract.py --json` fails if scheduled CI stops compiling/running the required proof/support drift checks and emits machine-readable workflow-contract evidence.

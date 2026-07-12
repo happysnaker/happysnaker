@@ -24,6 +24,7 @@ REQUIRED_TEXT = (
     "python3 -m py_compile",
     "python3 scripts/verify_public_docs.py --json",
     "python3 scripts/check_gh_usage.py",
+    "python3 scripts/check_preflight_json_contract.py --json",
     "python3 scripts/check_share_kit.py",
     "python3 scripts/check_sponsor_pipeline.py",
     "python3 scripts/check_sponsor_conversion_scorecard.py",

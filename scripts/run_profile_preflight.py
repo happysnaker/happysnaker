@@ -81,6 +81,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         Step("Check GitHub CLI helper usage", maybe_json(("python3", "scripts/check_gh_usage.py"), args)),
         Step("Check CI workflow contract", maybe_json(("python3", "scripts/check_ci_workflow_contract.py"), args)),
         Step("Check checker catalog", ("python3", "scripts/check_checker_catalog.py", "--json")),
+        Step("Check preflight JSON contract", maybe_json(("python3", "scripts/check_preflight_json_contract.py"), args)),
         Step("Check share kit", maybe_json(("python3", "scripts/check_share_kit.py"), args)),
         Step("Check sponsor prospect pipeline", maybe_json(("python3", "scripts/check_sponsor_pipeline.py"), args)),
         Step("Check sponsor conversion scorecard", maybe_json(("python3", "scripts/check_sponsor_conversion_scorecard.py"), args)),
