@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SITE_ROOT = ROOT.parent / "happysnaker.github.io"
 BASE_URL = "https://happysnaker.github.io"
 PRIVATE_PAYMENT_MARKER = "Payment%20screenshot%3A%20attach%20privately%20by%20email%20only%2C%20never%20in%20public%20issues"
+CONVERSION_SCORECARD = "https://github.com/happysnaker/happysnaker/blob/master/docs/sponsor-conversion-scorecard.md"
 BANNED_PUBLIC_PAYMENT_MARKERS = (
     "Payment%20screenshot%3A%20attached",
     "Payment screenshot: attached",
@@ -39,6 +40,10 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "mailto:happysnaker@foxmail.com?subject=Quick%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
             PRIVATE_PAYMENT_MARKER,
+            CONVERSION_SCORECARD,
+            "Sponsor conversion scorecard",
+            "Hot / Warm / Nurture / No-send",
+            "No-send",
             "Proof before payment",
             "Pick the right support path in 10 seconds",
             "Sponsor / paid-support intake replies",
@@ -60,6 +65,10 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "mailto:happysnaker@foxmail.com?subject=Deploy%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
             PRIVATE_PAYMENT_MARKER,
+            CONVERSION_SCORECARD,
+            "Sponsor conversion scorecard",
+            "Hot / Warm / Nurture / No-send",
+            "No-send",
             "¥29.9",
             "¥99",
         ),
@@ -74,6 +83,10 @@ PAGE_SPECS: tuple[PageSpec, ...] = (
             "mailto:happysnaker@foxmail.com?subject=Deploy%20read",
             "mailto:happysnaker@foxmail.com?subject=Async%20review",
             PRIVATE_PAYMENT_MARKER,
+            CONVERSION_SCORECARD,
+            "Sponsor conversion scorecard",
+            "Hot / Warm / Nurture / No-send",
+            "No-send",
             "top 3 fixes",
             "¥29.9",
             "¥99",
