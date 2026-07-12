@@ -45,6 +45,8 @@ FIRST_SCREEN_REQUIRED_TEXT = (
     "https://happysnaker.github.io/support/#current-asks",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/review/deploy-read-sample/",
+    "docs/sponsor-prospect-pipeline.md",
+    "Sponsor prospect pipeline",
     "Tip / Proof / Review / Fund",
     "qq-ai-bot #26 arm64",
     "RDLeader #27",
