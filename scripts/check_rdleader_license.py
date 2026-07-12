@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import base64
 import json
 import subprocess
 import sys
@@ -12,6 +13,14 @@ from github_cli import run_gh_json
 
 REPO = "happysnaker/RDLeader"
 LICENSE_ISSUE = 3
+LICENSE_PACKET = "docs/public/license-decision-packet.md"
+LICENSE_PACKET_REQUIRED_TEXT = (
+    "Owner action required",
+    "Path A: Apache-2.0",
+    "Path B: source-available for now",
+    "Do **not** add a root `LICENSE` or claim reuse rights until the owner chooses Path A",
+    "Decision for RDLeader#3",
+)
 
 
 
@@ -24,6 +33,17 @@ def has_root_license() -> bool:
     except RuntimeError:
         return False
     return True
+
+
+def fetch_text(path: str) -> str | None:
+    try:
+        data = run_gh(["api", f"repos/{REPO}/contents/{path}"])
+    except RuntimeError:
+        return None
+    content = data.get("content")
+    if not isinstance(content, str) or data.get("encoding") != "base64":
+        return None
+    return base64.b64decode(content).decode("utf-8", errors="replace")
 
 
 def main() -> int:
@@ -39,6 +59,8 @@ def main() -> int:
     issue_closed = issue.get("state") == "CLOSED"
     resolved = bool(license_info) and root_license and issue_closed
     unresolved_expected = not license_info and not root_license and not issue_closed
+    packet_text = fetch_text(LICENSE_PACKET)
+    packet_missing = [needle for needle in LICENSE_PACKET_REQUIRED_TEXT if needle not in (packet_text or "")]
 
     summary = {
         "repo": REPO,
@@ -55,6 +77,17 @@ def main() -> int:
         "resolved": resolved,
         "currentGuardrailState": "unresolved-tracked" if unresolved_expected else "mixed-or-resolved",
         "guardrail": "Do not imply RDLeader reuse rights until licenseInfo/root LICENSE exist and issue #3 is closed.",
+        "decisionPacket": {
+            "path": LICENSE_PACKET,
+            "exists": packet_text is not None,
+            "requiredTextCount": len(LICENSE_PACKET_REQUIRED_TEXT),
+            "missingRequiredText": packet_missing,
+            "ownerActionReady": packet_text is not None and not packet_missing,
+        },
+        "acceptableOwnerChoices": [
+            "Path A: Apache-2.0, then add root LICENSE and close issue #3 with metadata evidence.",
+            "Path B: source-available for now, keep no root LICENSE and keep no-reuse wording until re-evaluation.",
+        ],
     }
 
     if args.json:
@@ -66,6 +99,7 @@ def main() -> int:
         print(f"issue #{LICENSE_ISSUE}: {issue.get('state')} {issue.get('url')}")
         print(f"resolved: {str(resolved).lower()}")
         print("guardrail: do not imply RDLeader reuse rights until licenseInfo/root LICENSE exist and issue #3 is closed")
+        print(f"decision packet ready: {str(summary['decisionPacket']['ownerActionReady']).lower()} ({LICENSE_PACKET})")
 
     if args.strict_resolved and not resolved:
         print("RDLeader license posture is not resolved yet", file=sys.stderr)
