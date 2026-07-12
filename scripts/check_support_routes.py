@@ -32,12 +32,22 @@ RD_NOTE = "RDLeader #27"
 REVIEW_SAMPLE = "https://happysnaker.github.io/review/deploy-read-sample/"
 INTAKE_REPLIES = "https://github.com/happysnaker/happysnaker/blob/master/docs/share-kit.md#sponsor--paid-support-intake-replies"
 PUBLIC_PRIVACY_GUARDRAIL = "Do not paste private logs, credentials, QR codes, payment screenshots, internal URLs"
+PRIVATE_PAYMENT_MARKER = "Payment%20screenshot%3A%20attach%20privately%20by%20email%20only%2C%20never%20in%20public%20issues"
+BANNED_PUBLIC_PAYMENT_MARKERS = (
+    "Payment%20screenshot%3A%20attached",
+    "Payment screenshot: attached",
+)
 
 EXPECTATIONS: tuple[FileExpectation, ...] = (
     FileExpectation(
         "happysnaker/happysnaker",
         ".github/FUNDING.yml",
         (SUPPORT_URL, SUPPORT_ROUTER),
+    ),
+    FileExpectation(
+        "happysnaker/happysnaker",
+        "README.md",
+        (PROOF_URL, SUPPORT_ROUTER, INTAKE_REPLIES, REVIEW_SAMPLE, PRIVATE_PAYMENT_MARKER, "10-second support router", "¥29.9", "¥99"),
     ),
     FileExpectation(
         "happysnaker/happysnaker",
@@ -367,13 +377,21 @@ def main() -> int:
         missing = [needle for needle in expected.required if needle not in text] if not fetch_error else list(expected.required)
         if missing and not fetch_error:
             failures.append(f"{expected.repo}:{expected.path}: missing {missing}")
+        banned_payment_markers = [marker for marker in BANNED_PUBLIC_PAYMENT_MARKERS if marker in text] if not fetch_error else []
+        if banned_payment_markers:
+            failures.append(f"{expected.repo}:{expected.path}: banned public payment-screenshot marker(s) {banned_payment_markers}")
+        payment_marker_ok = not ("Payment%20screenshot" in text and PRIVATE_PAYMENT_MARKER not in text)
+        if not fetch_error and not payment_marker_ok:
+            failures.append(f"{expected.repo}:{expected.path}: Payment%20screenshot mailto field must use private email-only wording")
         result = {
             "repo": expected.repo,
             "path": expected.path,
             "requiredCount": len(expected.required),
             "missingRequiredText": missing,
+            "bannedPaymentMarkers": banned_payment_markers,
+            "privatePaymentMarkerOk": payment_marker_ok,
             "fetchError": fetch_error,
-            "ok": not fetch_error and not missing,
+            "ok": not fetch_error and not missing and not banned_payment_markers and payment_marker_ok,
         }
         results.append(result)
         if not args.json:

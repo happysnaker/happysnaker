@@ -311,7 +311,7 @@ REQUIRED = {
         "Tip / Proof / Review / Fund",
         "deploy-read sample",
         "scripts/check_review_funnel.py",
-        "60 remote funding/support/README/issue-contact files",
+        "61 remote funding/support/README/issue-contact files",
         "support-router and share-kit routes",
         "sponsor / paid-support intake replies",
         "public-privacy routes",
