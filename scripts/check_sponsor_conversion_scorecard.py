@@ -18,6 +18,16 @@ REQUIRED_TEXT = (
     "Proof surface",
     "Concrete note",
     "Follow-up owner",
+    "## Qualification gates",
+    "Hot",
+    "Warm",
+    "Nurture",
+    "No-send",
+    "Scoring rule",
+    "Missing proof link or the ask requires private tokens / logs in public",
+    "No maintainer reply and the scheduled review gate is not due",
+    "generic donation ask",
+    "blocks outreach",
     "## Funnel scorecard",
     "1. Land",
     "2. Trust",
@@ -81,6 +91,7 @@ BANNED_TEXT = (
 )
 
 MIN_FUNNEL_ROWS = 6
+MIN_QUALIFICATION_ROWS = 4
 MIN_SEGMENT_ROWS = 7
 MIN_TEXT_SNIPPETS = 1
 
@@ -110,6 +121,7 @@ def main() -> int:
     missing_links = [needle for needle in REQUIRED_LINKS if needle not in text]
     missing_guardrails = [needle for needle in REQUIRED_GUARDRAILS if needle not in text]
 
+    qualification_section = text.split("## Qualification gates", 1)[-1].split("## Funnel scorecard", 1)[0]
     funnel_section = text.split("## Funnel scorecard", 1)[-1].split("## Segment-to-offer fit", 1)[0]
     segment_section = text.split("## Segment-to-offer fit", 1)[-1].split("## Weekly review questions", 1)[0]
     segment_lines = set(segment_section.splitlines())
@@ -128,10 +140,13 @@ def main() -> int:
                 continue
             banned_hits.append(needle)
             break
+    qualification_row_count = table_row_count(qualification_section)
     funnel_row_count = table_row_count(funnel_section)
     segment_row_count = table_row_count(segment_section)
     text_snippet_count = len(re.findall(r"^```text$", text, flags=re.MULTILINE))
 
+    if qualification_row_count < MIN_QUALIFICATION_ROWS:
+        failures.append(f"expected at least {MIN_QUALIFICATION_ROWS} qualification rows; found {qualification_row_count}")
     if funnel_row_count < MIN_FUNNEL_ROWS:
         failures.append(f"expected at least {MIN_FUNNEL_ROWS} funnel rows; found {funnel_row_count}")
     if segment_row_count < MIN_SEGMENT_ROWS:
@@ -156,6 +171,7 @@ def main() -> int:
         "missingRequiredLinks": missing_links,
         "guardrailCount": len(REQUIRED_GUARDRAILS),
         "missingGuardrails": missing_guardrails,
+        "qualificationRowCount": qualification_row_count,
         "funnelRowCount": funnel_row_count,
         "segmentRowCount": segment_row_count,
         "textSnippetCount": text_snippet_count,
@@ -172,7 +188,8 @@ def main() -> int:
         return 1
     if not args.json:
         print(
-            f"Checked sponsor conversion scorecard: {funnel_row_count} funnel stages, "
+            f"Checked sponsor conversion scorecard: {qualification_row_count} qualification gates, "
+            f"{funnel_row_count} funnel stages, "
             f"{segment_row_count} segment rows, and {text_snippet_count} copy-safe snippet"
         )
     return 0

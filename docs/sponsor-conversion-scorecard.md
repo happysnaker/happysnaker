@@ -13,6 +13,19 @@ A support path is conversion-ready only when it has all four pieces:
 
 If any piece is missing, do not ask for money yet; route the reader to proof, a tester request, or a paid-review sample instead.
 
+## Qualification gates
+
+Use this before a public reply, DM, or sponsor ask. The point is to spend attention only where the next action can create public proof or paid value.
+
+| Gate | Signals | Allowed action | No-send condition |
+|---|---|---|---|
+| Hot | Reader asks how to run, validate, sponsor, review, or package a repo | Send one proof link plus one concrete support note or paid-review route | Missing proof link or the ask requires private tokens / logs in public |
+| Warm | Reader stars, discusses, curates, or maintains a related project surface | Send one relevant project page or proof-before-payment route; wait for a reply before asking for money | No maintainer reply and the scheduled review gate is not due |
+| Nurture | Reader fits the audience but has not shown current intent | Save for later; improve public proof or share-kit copy instead of contacting them | The only next action would be a generic donation ask |
+| No-send | The repo/thread is unrelated, license/privacy is unclear, or the claim would be stale | Do not post; improve evidence or wait for owner action | Any need to imply physical ARM/CasaOS completion, RDLeader reuse rights, or private-data handling |
+
+Scoring rule: **Hot** can receive a direct support/review route, **Warm** can receive one proof route, **Nurture** stays internal, and **No-send** blocks outreach.
+
 ## Funnel scorecard
 
 | Funnel stage | Current public surface | Conversion question | Concrete next action | Guardrail |
