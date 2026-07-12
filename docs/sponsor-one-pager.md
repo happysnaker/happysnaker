@@ -25,6 +25,7 @@ Point-in-time proof snapshot (2026-07-12):
 - Source-linked status table: [flagship-status-snapshot.md](flagship-status-snapshot.md).
 - Technical map: [flagship-technical-map.md](flagship-technical-map.md).
 - Sponsor prospect pipeline: [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md).
+- Sponsor conversion scorecard: [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) classifies support/outreach as Hot / Warm / Nurture / No-send before asking.
 - Flagship repo support files and issue contact links now route the same proof-before-payment path from `qq-ai-bot` and `RDLeader`. Repositories without local support files inherit the account-wide `.github` fallback, which now points uncertain visitors to the 10-second support router before generic support.
 
 ## Best links to share
@@ -47,6 +48,7 @@ Point-in-time proof snapshot (2026-07-12):
 | Current concrete asks | <https://happysnaker.github.io/support/#current-asks> |
 | Current sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 | Sponsor prospect pipeline | [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md) |
+| Sponsor conversion scorecard | [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) |
 | Share kit | [share-kit.md](share-kit.md) |
 
 
@@ -120,7 +122,7 @@ Support turns unfinished but useful engineering work into public assets that oth
 
 ## Copy/paste outreach blurbs
 
-For audience routing before outreach, use [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md). For platform-specific X / LinkedIn / WeChat / curator snippets, and for sponsor / paid-support intake replies that keep payment screenshots and private material out of public threads, use [share-kit.md](share-kit.md).
+For audience routing before outreach, use [sponsor-prospect-pipeline.md](sponsor-prospect-pipeline.md), then classify the ask with [sponsor-conversion-scorecard.md](sponsor-conversion-scorecard.md) so weak leads stay Nurture / No-send instead of becoming generic donation bumps. For platform-specific X / LinkedIn / WeChat / curator snippets, and for sponsor / paid-support intake replies that keep payment screenshots and private material out of public threads, use [share-kit.md](share-kit.md).
 
 ### Short
 
