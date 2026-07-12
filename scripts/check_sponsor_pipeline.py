@@ -22,6 +22,15 @@ REQUIRED_TEXT = (
     "Sponsor / funder",
     "RDLeader evaluators",
     "Backend / systems-study readers",
+    "## Coverage ladder",
+    "Profile first screen",
+    "Public support page",
+    "Sponsor release packet",
+    "Default account support",
+    "Flagship repos",
+    "Paid-review repos",
+    "check_support_routes.py --json",
+    "check_site_hygiene.py --live --json",
     "## Current working list",
     "qq-ai-bot#26",
     "docker/awesome-compose#781",
@@ -98,7 +107,7 @@ def main() -> int:
         and f"do not imply {needle.lower()}" not in lowered
     ]
 
-    active_segments = text.split("## Active segments", 1)[-1].split("## Current working list", 1)[0]
+    active_segments = text.split("## Active segments", 1)[-1].split("## Coverage ladder", 1)[0]
     segment_rows = [line for line in active_segments.splitlines() if line.startswith("| ") and "---" not in line]
     segment_count = max(0, len(segment_rows) - 1)
     if segment_count < MIN_SEGMENT_ROWS:

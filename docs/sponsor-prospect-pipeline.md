@@ -25,6 +25,22 @@ Every outreach / reply should answer four questions:
 | RDLeader evaluators | RDLeader project page, distribution kit, submission tracker, license-decision packet | Review public proof or fund submission follow-up | `RDLeader #27` | Do not imply reuse rights until `RDLeader#3` and root license posture are resolved |
 | Backend / systems-study readers | Go starter, middleware kit, backend/system/production checklists, support router | Tip if saved time; buy a packaging pass if their repo needs sharper positioning | repo name or `Quick read` | Do not turn educational repo threads into generic fundraising spam |
 
+
+## Coverage ladder
+
+The prospect pipeline is useful only if readers can reach it from the places they actually land. Current guarded coverage:
+
+| Layer | Surfaces | Checker / proof |
+|---|---|---|
+| Profile first screen | profile README top proof/support block | `python3 scripts/check_readme_badges.py --json` requires `docs/sponsor-prospect-pipeline.md` in the first 40 README lines |
+| Public support page | support hero, proof-before-payment map, and intake guardrail card | `python3 scripts/check_site_hygiene.py --site-root ../happysnaker.github.io --live --timeout 8 --json` |
+| Sponsor release packet | `v2026.07-sponsor-one-pager` release body | `python3 scripts/check_sponsor_release.py --json` |
+| Default account support | default `.github` support files, contribution guide, README, and issue contact links | `python3 scripts/check_support_routes.py --json` |
+| Flagship repos | `qq-ai-bot` and `RDLeader` README / support / issue contact surfaces | `python3 scripts/check_support_routes.py --json` |
+| Paid-review repos | `github-profile-checklist`, `Resume`, backend/system/production checklists, Go starter / middleware, happydb, CSAPP notes, indie list | `python3 scripts/check_support_routes.py --json` |
+
+Treat `check_support_routes.py --json` as the coverage source of truth for remote README / support / contact files. Treat `check_site_hygiene.py --live --json` as the source of truth for the rendered public Pages funnel.
+
 ## Current working list
 
 | Surface | Segment | Current action | Next allowed move |
