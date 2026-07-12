@@ -24,6 +24,7 @@ python3 scripts/check_stable_profile_links.py --json
 python3 scripts/check_gh_usage.py --json
 python3 scripts/check_ci_workflow_contract.py --json
 python3 scripts/check_checker_catalog.py --json
+python3 scripts/check_operator_handoff.py --json
 python3 scripts/check_review_funnel.py --site-root ../happysnaker.github.io --live --timeout 8 --json
 python3 scripts/check_sponsor_issues.py --json
 python3 scripts/check_sponsor_release.py --json

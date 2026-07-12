@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -14,6 +16,7 @@ REQUIRED_TEXT = (
     "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external",
     "python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json",
     "python3 scripts/check_manual_blockers.py --json",
+    "python3 scripts/check_operator_handoff.py --json",
     "python3 scripts/check_stable_profile_links.py --json",
     "python3 scripts/check_gh_usage.py --json",
     "python3 scripts/check_ci_workflow_contract.py --json",
@@ -80,25 +83,52 @@ BANNED_TEXT = (
 )
 
 
-def fail(message: str) -> None:
-    print(f"ERROR: {message}", file=sys.stderr)
-    raise SystemExit(1)
-
-
 def main() -> int:
-    if not HANDOFF.exists():
-        fail("missing docs/operator-handoff.md")
-    text = HANDOFF.read_text(encoding="utf-8")
+    parser = argparse.ArgumentParser(description="Verify the operator handoff has current takeover commands, blockers, and guardrails.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable operator-handoff status.")
+    args = parser.parse_args()
+
+    failures: list[str] = []
+    rel = HANDOFF.relative_to(ROOT).as_posix()
+    exists = HANDOFF.exists()
+    text = HANDOFF.read_text(encoding="utf-8") if exists else ""
+    if not exists:
+        failures.append(f"missing {rel}")
+
+    trailing_whitespace = []
     for line_no, line in enumerate(text.splitlines(), 1):
         if line.rstrip() != line:
-            fail(f"docs/operator-handoff.md:{line_no}: trailing whitespace")
-    missing = [needle for needle in REQUIRED_TEXT if needle not in text]
-    if missing:
-        fail(f"operator handoff missing required text: {missing}")
-    banned = [needle for needle in BANNED_TEXT if needle in text]
-    if banned:
-        fail(f"operator handoff contains banned text: {banned}")
-    print(f"Checked operator handoff: {len(REQUIRED_TEXT)} required markers and {len(BANNED_TEXT)} banned claims")
+            trailing_whitespace.append(line_no)
+    failures.extend(f"{rel}:{line_no}: trailing whitespace" for line_no in trailing_whitespace)
+
+    missing_required = [needle for needle in REQUIRED_TEXT if needle not in text]
+    banned_hits = [needle for needle in BANNED_TEXT if needle in text]
+    if missing_required:
+        failures.append(f"operator handoff missing required text: {missing_required}")
+    if banned_hits:
+        failures.append(f"operator handoff contains banned text: {banned_hits}")
+
+    summary = {
+        "ok": not failures,
+        "path": rel,
+        "exists": exists,
+        "requiredCount": len(REQUIRED_TEXT),
+        "missingRequiredText": missing_required,
+        "bannedCount": len(BANNED_TEXT),
+        "bannedTextHits": banned_hits,
+        "trailingWhitespaceLines": trailing_whitespace,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
+    if failures:
+        if not args.json:
+            print("Operator handoff failures:", file=sys.stderr)
+            for failure in failures:
+                print(f"- {failure}", file=sys.stderr)
+        return 1
+    if not args.json:
+        print(f"Checked operator handoff: {len(REQUIRED_TEXT)} required markers and {len(BANNED_TEXT)} banned claims")
     return 0
 
 

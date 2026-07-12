@@ -14,6 +14,7 @@ python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-ex
 python3 scripts/run_profile_preflight.py --link-scope core --workers 8 --skip-external --json
 python3 scripts/check_manual_blockers.py --json
 python3 scripts/check_operator_handoff.py
+python3 scripts/check_operator_handoff.py --json
 python3 scripts/check_stable_profile_links.py --json
 python3 scripts/check_gh_usage.py --json
 python3 scripts/check_ci_workflow_contract.py --json
