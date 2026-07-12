@@ -23,6 +23,19 @@ Best links:
 | Status snapshot | [flagship-status-snapshot.md](flagship-status-snapshot.md) |
 | Sponsor board | [sponsorware-board.md](sponsorware-board.md) |
 
+## Audience routing matrix
+
+Use this table before posting or replying so the CTA matches the reader instead of sounding like a generic donation ask.
+
+| Audience | Lead with | Best next link | Ask / note | Do not claim |
+|---|---|---|---|---|
+| Homelab / CasaOS tester | `qq-ai-bot` multi-arch + QEMU arm64 smoke is ready for a real device report | <https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md> | `qq-ai-bot #26 arm64` | Do not say physical ARM / CasaOS validation is complete |
+| Bot / agent builder | A deploy-read can find the first README / Docker / token / WebSocket story gap | <https://happysnaker.github.io/review/deploy-read-sample/> | `Deploy read` or `Quick read` | Do not ask for secrets, private tokens, QR codes, or raw logs |
+| Curator / maintainer | Start from project pages and proof links, not a long repo dump | <https://happysnaker.github.io/qq-ai-bot/> / <https://happysnaker.github.io/rdleader/> | One concise context comment only when the review gate allows it | Do not repeatedly bump external PRs |
+| Sponsor / funder | Tie the payment note to a public outcome | <https://happysnaker.github.io/support/#current-asks> | `qq-ai-bot #26 arm64` or `RDLeader #27` | Do not promise private-only deliverables |
+| GitHub-profile / README customer | Sell the proof-backed packaging pass, not vague “consulting” | <https://happysnaker.github.io/support/#quick-read> | `Quick read` / `Async review` | Do not request private payment screenshots in public issues |
+| RDLeader evaluator | Show the fake-data demo / submission tracker and the license caveat together | <https://happysnaker.github.io/rdleader/> | `RDLeader #27` | Do not imply reuse rights until `RDLeader#3` is resolved |
+
 ## Short share snippets
 
 ### X / short post
