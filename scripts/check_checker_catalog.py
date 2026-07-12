@@ -3,12 +3,22 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPTS = ROOT / "scripts"
 PROOF_INDEX = ROOT / "docs" / "technical-proof-index.md"
+
+JSON_FLAG_RE = re.compile(r"\.add_argument\(\s*['\"]--json['\"]")
+
+
+def has_json_flag(path: Path) -> bool:
+    """Return true only when a checker defines a real argparse --json flag."""
+    return bool(JSON_FLAG_RE.search(path.read_text(encoding="utf-8")))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Verify every proof checker is documented in technical-proof-index.md.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable checker catalog summary.")
@@ -18,7 +28,7 @@ def main() -> int:
     checker_paths = sorted(SCRIPTS.glob("check_*.py"))
     checkers = [path.name for path in checker_paths]
     missing = [name for name in checkers if f"scripts/{name}" not in proof_text]
-    missing_json = [path.name for path in checker_paths if "--json" not in path.read_text(encoding="utf-8")]
+    missing_json = [path.name for path in checker_paths if not has_json_flag(path)]
     summary = {
         "proofIndex": PROOF_INDEX.relative_to(ROOT).as_posix(),
         "documented": not missing,

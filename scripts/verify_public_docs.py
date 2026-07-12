@@ -570,6 +570,7 @@ REQUIRED = {
         "scripts/check_checker_catalog.py",
         "including the catalog checker itself",
         "lacks `--json`",
+        "real argparse `--json` flag",
         "--json",
         "machine-readable link status",
         "the 10-second support router",
