@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -548,6 +550,8 @@ REQUIRED = {
         "rejects one-off profile self-check run links",
         "stable profile workflow links",
         "scripts/check_stable_profile_links.py",
+        "scripts/verify_public_docs.py",
+        "machine-readable file / required-marker / failure state",
         "machine-readable proof-link drift state",
         "supports `--json`",
         "--external-candidate-comments",
@@ -672,29 +676,31 @@ REQUIRED = {
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 
 
-def fail(message: str) -> None:
-    print(f"ERROR: {message}", file=sys.stderr)
-    raise SystemExit(1)
-
-
-def check_file(path: Path) -> None:
+def check_file(path: Path) -> dict[str, object]:
+    failures: list[str] = []
+    rel = path.relative_to(ROOT).as_posix()
     if not path.exists():
-        fail(f"missing file: {path.relative_to(ROOT)}")
+        return {
+            "path": rel,
+            "exists": False,
+            "requiredCount": len(REQUIRED.get(rel, [])),
+            "failures": [f"missing file: {rel}"],
+            "ok": False,
+        }
 
     text = path.read_text(encoding="utf-8")
-    rel = path.relative_to(ROOT).as_posix()
 
     for line_no, line in enumerate(text.splitlines(), 1):
         if line.rstrip() != line:
-            fail(f"{rel}:{line_no}: trailing whitespace")
+            failures.append(f"{rel}:{line_no}: trailing whitespace")
 
     for pattern in SENSITIVE_PATTERNS:
         if pattern.search(text):
-            fail(f"{rel}: sensitive-looking pattern matched: {pattern.pattern}")
+            failures.append(f"{rel}: sensitive-looking pattern matched: {pattern.pattern}")
 
     for needle in REQUIRED.get(rel, []):
         if needle not in text:
-            fail(f"{rel}: missing required text: {needle}")
+            failures.append(f"{rel}: missing required text: {needle}")
 
     for link in LINK_RE.findall(text):
         if link.startswith(("http://", "https://", "mailto:", "#")):
@@ -704,14 +710,42 @@ def check_file(path: Path) -> None:
             continue
         target = (path.parent / target_text).resolve()
         if not target.exists():
-            fail(f"{rel}: broken local link: {link}")
+            failures.append(f"{rel}: broken local link: {link}")
+
+    return {
+        "path": rel,
+        "exists": True,
+        "requiredCount": len(REQUIRED.get(rel, [])),
+        "failures": failures,
+        "ok": not failures,
+    }
 
 
-def main() -> None:
-    for path in DOCS:
-        check_file(path)
-    print(f"Verified {len(DOCS)} public markdown files")
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Verify public markdown docs for required proof/support text, local links, and sensitive patterns.")
+    parser.add_argument("--json", action="store_true", help="Emit machine-readable public-doc verification status.")
+    args = parser.parse_args()
+
+    files = [check_file(path) for path in DOCS]
+    failures = [failure for result in files for failure in result["failures"]]
+    summary = {
+        "ok": not failures,
+        "fileCount": len(DOCS),
+        "requiredCount": sum(int(result["requiredCount"]) for result in files),
+        "files": files,
+        "failures": failures,
+    }
+    if args.json:
+        print(json.dumps(summary, indent=2, ensure_ascii=False))
+    if failures:
+        if not args.json:
+            for failure in failures:
+                print(f"ERROR: {failure}", file=sys.stderr)
+        return 1
+    if not args.json:
+        print(f"Verified {len(DOCS)} public markdown files")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
