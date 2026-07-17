@@ -63,26 +63,44 @@ ALERT_DISPLAY = {
 
 run_gh = run_gh_json
 
-def latest_runs(repo: RepoCheck) -> dict[str, dict[str, Any]]:
-    runs = run_gh(
-        [
-            "run",
-            "list",
-            "-R",
-            repo.repo,
-            "--branch",
-            repo.branch,
-            "--limit",
-            "20",
-            "--json",
-            "workflowName,status,conclusion,headSha,createdAt,url,databaseId",
-        ]
-    )
+def collect_latest_runs(runs: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     latest: dict[str, dict[str, Any]] = {}
     for run in runs:
         name = run.get("workflowName")
         if name and name not in latest:
             latest[name] = run
+    return latest
+
+
+def list_runs(repo: RepoCheck, *, branch: bool) -> list[dict[str, Any]]:
+    command = [
+        "run",
+        "list",
+        "-R",
+        repo.repo,
+        "--limit",
+        "20",
+        "--json",
+        "workflowName,status,conclusion,headSha,createdAt,url,databaseId",
+    ]
+    if branch:
+        command[4:4] = ["--branch", repo.branch]
+    return run_gh(command)
+
+
+def latest_runs(repo: RepoCheck) -> dict[str, dict[str, Any]]:
+    # Some GitHub-generated workflows, especially Pages `dynamic` deployments,
+    # are not always returned by branch-filtered `gh run list` even when the
+    # workflow is successful for the current branch. Start with the stricter
+    # branch view, then fall back to the unfiltered run list only for missing
+    # configured workflows to avoid false negatives in the proof gate.
+    latest = collect_latest_runs(list_runs(repo, branch=True))
+    missing = [workflow for workflow in repo.workflows if workflow not in latest]
+    if missing:
+        fallback_latest = collect_latest_runs(list_runs(repo, branch=False))
+        for workflow in missing:
+            if workflow in fallback_latest:
+                latest[workflow] = fallback_latest[workflow]
     return latest
 
 
