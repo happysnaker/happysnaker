@@ -81,7 +81,7 @@ Tracked by:
 
 Do not comment on external PRs just to bump them. Use [external-follow-up-queue.md](external-follow-up-queue.md).
 
-Current planned review remains `2026-07-16 UTC` unless a maintainer or tester replies earlier. For scheduled review, run:
+Current planned review is now `2026-07-23 UTC` unless a maintainer/tester replies earlier or a real physical-host report lands. For scheduled review, run:
 
 ```bash
 python3 scripts/run_profile_preflight.py --link-scope profile --workers 12
@@ -92,7 +92,7 @@ python3 scripts/run_profile_preflight.py --external-only --action-class optional
 python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
 
-The optional-update JSON includes `qualification`, `scorecardAction`, `materials`, `candidateComment`, and `candidateGuardrails`; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The prepared comments are for `docker/awesome-compose#781`, `AwesomeHomelab#98`, and `jbesomi/awesome-autonomous-agents#20`; they must not be posted early or reused repeatedly.
+The optional-update JSON includes `qualification`, `scorecardAction`, `materials`, `candidateComment`, and `candidateGuardrails`; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The 2026-07-16 review posted only the RDLeader proof update to `jbesomi/awesome-autonomous-agents#20`; `docker/awesome-compose#781` and `AwesomeHomelab#98` stay quiet because prior author follow-ups already exist. Do not reuse prepared comments repeatedly.
 
 ## Automation guardrails
 

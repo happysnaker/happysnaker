@@ -19,7 +19,7 @@ Every outreach / reply should answer four questions:
 |---|---|---|---|---|
 | Homelab / CasaOS / NAS / SBC testers | `qq-ai-bot` multi-arch image, QEMU arm64 smoke, tester pack, homelab outreach kit | Ask for a real device report or fund one | `qq-ai-bot #26 arm64` | Do not claim physical ARM / CasaOS validation is complete until a real host report lands |
 | Bot / agent builders | `qq-ai-bot` project page, deploy-read sample, OneBot / NapCat / LLOneBot / Docker positioning | Buy a deploy read or quick read | `Deploy read` / `Quick read` | Do not request tokens, QR codes, raw logs, or private screenshots in public |
-| Curators / maintainers | Project pages, status snapshot, support router, compact external-follow-up comments | One concise scheduled-review update only when allowed | No payment ask in curator threads | Do not repeatedly bump external PRs before the 2026-07-16 UTC gate |
+| Curators / maintainers | Project pages, status snapshot, support router, compact external-follow-up comments | One concise scheduled-review update only when allowed | No payment ask in curator threads | Do not repeatedly bump external PRs before the 2026-07-23 UTC gate |
 | GitHub profile / README customers | Profile README, technical proof index, deploy-read sample, redacted examples | Buy `¥29.9 Quick read` or `¥99 Async review` | `Quick read` / `Async review` | Keep payment evidence private by email only, never in public issues |
 | Sponsor / funder | Current asks, proof-before-payment section, issue-backed sponsorware board | Fund a public issue with a specific note | `qq-ai-bot #26 arm64` or `RDLeader #27` | Tie receipts to public trackers, not vague private promises |
 | RDLeader evaluators | RDLeader project page, distribution kit, submission tracker, license-decision packet | Review public proof or fund submission follow-up | `RDLeader #27` | Do not imply reuse rights until `RDLeader#3` and root license posture are resolved |
@@ -46,9 +46,9 @@ Treat `check_support_routes.py --json` as the coverage source of truth for remot
 | Surface | Segment | Current action | Next allowed move |
 |---|---|---|---|
 | `qq-ai-bot#26` | Homelab / CasaOS / NAS / SBC testers | Keep open for a real physical-host report | Update only when a real tester report lands |
-| `docker/awesome-compose#781` | Curators / maintainers | Candidate scheduled-review comment prepared | Recheck on 2026-07-16 UTC, then post at most one short proof-path update if still review-required and no maintainer reply |
-| `AwesomeHomelab#98` | Homelab / CasaOS / NAS / SBC testers | Candidate homelab-focused update prepared | Recheck on 2026-07-16 UTC, then post at most one short update if still no feedback |
-| `jbesomi/awesome-autonomous-agents#20` | RDLeader evaluators / curators | Candidate RDLeader proof update prepared | Recheck on 2026-07-16 UTC, keep license caveat explicit |
+| `docker/awesome-compose#781` | Curators / maintainers | 2026-07-16 checked; no new comment because prior author follow-ups already exist | Stay quiet until maintainer reply or materially new Docker proof |
+| `AwesomeHomelab#98` | Homelab / CasaOS / NAS / SBC testers | 2026-07-16 checked; no new comment because prior author follow-ups already exist | Stay quiet until maintainer reply or real physical-host report |
+| `jbesomi/awesome-autonomous-agents#20` | RDLeader evaluators / curators | 2026-07-16 proof update posted once | Wait for maintainer feedback or state change |
 | `RDLeader#27` | RDLeader evaluators | Keep as public tracker for external submission review follow-up | Update only when external review state changes |
 
 ## Links to use
@@ -106,7 +106,7 @@ Current asks: https://happysnaker.github.io/support/#current-asks
 
 - Daily / heartbeat: audit current GitHub status and blockers before acting.
 - Before any external comment: run the external follow-up gate and obey the row-level action class.
-- Scheduled external review: 2026-07-16 UTC unless a maintainer/tester replies earlier.
+- Next scheduled external review: 2026-07-23 UTC unless a maintainer/tester replies earlier or a real physical-host report lands.
 - After any material change: record a compact evidence comment in <https://github.com/happysnaker/happysnaker/issues/2>.
 
 ## Verification commands

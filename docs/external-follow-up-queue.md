@@ -104,27 +104,37 @@ Submission tracker: https://github.com/happysnaker/RDLeader/blob/main/docs/publi
 Caveat: RDLeader reuse rights are still blocked on https://github.com/happysnaker/RDLeader/issues/3, so this is a review/proof update, not a license grant.
 ```
 
-## Next scheduled review: 2026-07-16
 
-Run this check on 2026-07-16 UTC, or earlier only if a maintainer/tester replies.
+## 2026-07-16 scheduled review outcome
+
+Current outcome:
+
+- Posted one RDLeader proof/support-router update to `jbesomi/awesome-autonomous-agents#20`: <https://github.com/jbesomi/awesome-autonomous-agents/pull/20#issuecomment-4986909580>.
+- Did **not** post new `qq-ai-bot` bumps to `docker/awesome-compose#781` or `AwesomeHomelab#98` because both already had previous author follow-ups and no maintainer reply or real physical ARM/CasaOS/NAS/SBC report had landed.
+- Kept `Cp0204/CasaOS-AppStore-Play#42`, `LLOneBot/LuckyLilliaDoc#20`, and `LLOneBot/llonebot.nix#22` in No-send / stay-quiet posture.
+- Next planned external review is `2026-07-23 UTC`, unless a maintainer/tester replies earlier or a real physical-host report lands.
+
+## Next scheduled review: 2026-07-23
+
+Run this check on 2026-07-23 UTC, or earlier only if a maintainer/tester replies or a real physical-host report lands.
 
 ### qq-ai-bot surfaces
 
-| Surface | Current state checked 2026-07-11 | Next action on 2026-07-16 | Follow-up material |
+| Surface | Current state checked 2026-07-16 | Next action on 2026-07-23 | Follow-up material |
 |---|---|---|---|
-| [docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781) | open / mergeable; DCO success; review required | If still review-required and no maintainer reply, one short update is acceptable only if it links the project page, stable image, latest Docker publish, and tester pack. Otherwise stay quiet. | [promo kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md), [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md), [project-page loop snippet](share-kit.md#project-page-closed-loop-update), [support router](https://happysnaker.github.io/support/#sponsor-router) |
+| [docker/awesome-compose#781](https://github.com/docker/awesome-compose/pull/781) | open / mergeable; DCO success; review required | Stay quiet after the 2026-07-16 review because two author follow-ups already exist. Reopen only if a maintainer replies or materially new Docker proof lands. | [promo kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md), [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md), [project-page loop snippet](share-kit.md#project-page-closed-loop-update), [support router](https://happysnaker.github.io/support/#sponsor-router) |
 | [Cp0204/CasaOS-AppStore-Play#42](https://github.com/Cp0204/CasaOS-AppStore-Play/pull/42) | open / mergeable; no checks; no maintainer feedback | If still open, update only if a real tester report lands or maintainer asks. Otherwise keep waiting because physical CasaOS validation is still missing. | [tester pack](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md) |
 | [getumbrel/umbrel-apps#5834](https://github.com/getumbrel/umbrel-apps/pull/5834) | open / mergeable; lint success; no maintainer feedback | Recheck lint / mergeability. Do not comment unless maintainer asks or checks regress. | [project page](https://happysnaker.github.io/qq-ai-bot/), [ecosystem tracker](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/ecosystem-tracker.md) |
-| [AwesomeHomelab#98](https://github.com/AwesomeHomelab/awesome-homelab/pull/98) | open / mergeable; no checks; no maintainer feedback | If still no feedback, one short homelab-focused update may be useful, but only after confirming the tester pack and project page still render. | [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md), [project-page loop snippet](share-kit.md#project-page-closed-loop-update) |
+| [AwesomeHomelab#98](https://github.com/AwesomeHomelab/awesome-homelab/pull/98) | open / mergeable; no checks; no maintainer feedback | Stay quiet after the 2026-07-16 review because prior author follow-ups already exist and no real physical-host report has landed. Reopen only if a maintainer replies or a real device report appears. | [homelab outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md), [project-page loop snippet](share-kit.md#project-page-closed-loop-update) |
 | [LLOneBot/LuckyLilliaDoc#20](https://github.com/LLOneBot/LuckyLilliaDoc/pull/20) | open / mergeable; Sourcery success; no maintainer feedback | Do not bump unless maintainer replies. This is docs, not a support emergency. | [promo kit LLOneBot snippet](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md) |
 | [LLOneBot/llonebot.nix#22](https://github.com/LLOneBot/llonebot.nix/pull/22) | open / mergeable; Sourcery success; no maintainer feedback | Do not bump unless maintainer replies or checks change. | [promo kit LLOneBot snippet](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/promo-kit.md) |
 | [qq-ai-bot#26](https://github.com/happysnaker/qq-ai-bot/issues/26) | open; QEMU smoke green; tester pack + outreach kit published; no physical-host report yet | Check for new issue/discussion reports. If none, keep issue open and avoid claiming completion. | [tester pack](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/arm64-casaos-tester-pack.md), [outreach kit](https://github.com/happysnaker/qq-ai-bot/blob/main/docs/public/homelab-outreach-kit.md) |
 
 ### RDLeader surfaces
 
-| Surface | Current state checked 2026-07-11 | Next action on 2026-07-16 | Follow-up material |
+| Surface | Current state checked 2026-07-16 | Next action on 2026-07-23 | Follow-up material |
 |---|---|---|---|
-| [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20) | open / mergeable; no checks; no maintainer feedback | If still open and no feedback, use the security-proof snippet only once, or stay quiet if the PR was recently touched by maintainers. | [RDLeader promo kit](https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md), [project page](https://happysnaker.github.io/rdleader/), [support router](https://happysnaker.github.io/support/#sponsor-router) |
+| [awesome-autonomous-agents#20](https://github.com/jbesomi/awesome-autonomous-agents/pull/20) | open / mergeable; no checks; no maintainer feedback | 2026-07-16 proof/support-router update posted once. Now wait for maintainer feedback or PR state change; do not repeat the same proof update. | [RDLeader promo kit](https://github.com/happysnaker/RDLeader/blob/main/docs/public/promo-kit.md), [project page](https://happysnaker.github.io/rdleader/), [support router](https://happysnaker.github.io/support/#sponsor-router) |
 | [awesome-coding-agents#13](https://github.com/kailiu42/awesome-coding-agents/pull/13) | merged; validate-catalog success | No action. Keep as proof surface only. | [submission tracker](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md) |
 | [RDLeader#27](https://github.com/happysnaker/RDLeader/issues/27) | open; copy kit and submission tracker updated | Update only when an external PR receives feedback or a scheduled recheck finds a meaningful status change. | [submission tracker](https://github.com/happysnaker/RDLeader/blob/main/docs/public/submission-tracker.md) |
 

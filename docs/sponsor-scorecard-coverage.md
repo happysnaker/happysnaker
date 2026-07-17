@@ -33,7 +33,7 @@ No-send wins over all conversion language when any of these is true:
 
 - a real physical ARM / CasaOS / NAS / SBC report has not landed for `qq-ai-bot #26 arm64`;
 - RDLeader license posture is unresolved in `RDLeader#3`;
-- the planned external review gate is not due yet (`2026-07-16 UTC`);
+- the planned external review gate is not due yet (`2026-07-23 UTC`);
 - the next action would be a generic donation bump with no new public proof;
 - the request would require private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output in public.
 

@@ -37,7 +37,7 @@ REQUIRED_TEXT = (
     "AwesomeHomelab#98",
     "jbesomi/awesome-autonomous-agents#20",
     "RDLeader#27",
-    "2026-07-16 UTC",
+    "2026-07-23 UTC",
     "## Links to use",
     "https://happysnaker.github.io/support/#proof-before-payment",
     "https://happysnaker.github.io/support/#sponsor-router",
@@ -59,7 +59,7 @@ REQUIRED_TEXT = (
 REQUIRED_GUARDRAILS = (
     "Do not claim physical ARM / CasaOS validation is complete",
     "Do not request tokens, QR codes, raw logs, or private screenshots in public",
-    "Do not repeatedly bump external PRs before the 2026-07-16 UTC gate",
+    "Do not repeatedly bump external PRs before the 2026-07-23 UTC gate",
     "Keep payment evidence private by email only, never in public issues",
     "Do not imply reuse rights until `RDLeader#3` and root license posture are resolved",
     "Do not send private logs, tokens, QR codes, payment screenshots, or internal URLs in public issues",

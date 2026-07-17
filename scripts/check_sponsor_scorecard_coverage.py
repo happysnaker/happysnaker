@@ -39,7 +39,7 @@ REQUIRED_TEXT = (
     "## No-send guardrails",
     "qq-ai-bot #26 arm64",
     "RDLeader#3",
-    "2026-07-16 UTC",
+    "2026-07-23 UTC",
     "generic donation bump",
     "private logs, credentials, QR codes, payment screenshots, internal URLs, or raw live integration output",
     "## Verification bundle",

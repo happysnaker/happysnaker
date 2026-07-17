@@ -42,8 +42,8 @@ PRS: tuple[PullRequestTarget, ...] = (
         781,
         "qq-ai-bot",
         "Docker Compose sample",
-        "optional-update",
-        "On scheduled review: one short update only if still review-required and no maintainer reply; if used, include project-page/support-router proof and avoid physical ARM completion claims. Otherwise stay quiet.",
+        "stay-quiet",
+        "2026-07-16 scheduled review checked; skip another author bump because two prior follow-ups already exist and no maintainer reply has landed. Stay quiet unless a maintainer replies or materially new Docker proof lands.",
         (
             "docs/external-follow-up-queue.md#dockerawesome-compose781",
             "docs/share-kit.md#project-page-closed-loop-update",
@@ -59,8 +59,8 @@ PRS: tuple[PullRequestTarget, ...] = (
         98,
         "qq-ai-bot",
         "homelab listing PR",
-        "optional-update",
-        "On scheduled review: one short homelab-focused update may be useful after tester pack/project page/support-router render; avoid physical ARM completion claims.",
+        "stay-quiet",
+        "2026-07-16 scheduled review checked; skip another author bump because prior follow-ups already exist and no maintainer reply or physical host report has landed. Stay quiet unless a maintainer replies or a real device report appears.",
         (
             "docs/external-follow-up-queue.md#awesomehomelab98",
             "docs/share-kit.md#project-page-closed-loop-update",
@@ -76,8 +76,8 @@ PRS: tuple[PullRequestTarget, ...] = (
         20,
         "RDLeader",
         "autonomous-agents listing PR",
-        "optional-update",
-        "On scheduled review: use security-proof/project-page/support-router snippet only once if still open/no feedback; keep RDLeader license caveat explicit.",
+        "recheck-only",
+        "2026-07-16 scheduled proof update posted; now wait for maintainer feedback or PR state change. Do not repeat the same proof/support-router comment.",
         (
             "docs/external-follow-up-queue.md#jbesomiawesome-autonomous-agents20",
             "docs/share-kit.md#project-page-closed-loop-update",
@@ -89,7 +89,7 @@ PRS: tuple[PullRequestTarget, ...] = (
     PullRequestTarget("kailiu42/awesome-coding-agents", 13, "RDLeader", "coding-agents listing PR", "no-action", "No action; keep as proof surface only."),
 )
 
-NEXT_REVIEW_DATE = date(2026, 7, 16)
+NEXT_REVIEW_DATE = date(2026, 7, 23)
 
 
 ISSUES: tuple[IssueTarget, ...] = (
@@ -455,7 +455,7 @@ def main() -> int:
     parser.add_argument("--summary", action="store_true", help="Emit a compact action-class summary instead of the full markdown table.")
     parser.add_argument("--candidate-comments", action="store_true", help="Render prepared candidate comments for selected rows without posting them.")
     parser.add_argument("--today", type=lambda value: parse_iso_date(value, "--today"), default=date.today(), help="Date used for scheduled-review gating, in YYYY-MM-DD. Default: today.")
-    parser.add_argument("--review-date", type=lambda value: parse_iso_date(value, "--review-date"), default=NEXT_REVIEW_DATE, help="Next scheduled review date in YYYY-MM-DD. Default: 2026-07-16.")
+    parser.add_argument("--review-date", type=lambda value: parse_iso_date(value, "--review-date"), default=NEXT_REVIEW_DATE, help="Next scheduled review date in YYYY-MM-DD. Default: 2026-07-23.")
     parser.add_argument("--enforce-review-due", action="store_true", help="Exit non-zero before --review-date to prevent premature external follow-up.")
     parser.add_argument(
         "--action-class",
