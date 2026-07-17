@@ -134,6 +134,24 @@ Caveat: RDLeader reuse rights are still blocked on https://github.com/happysnake
 }
 
 
+POSTED_FOLLOWUP_URLS: dict[tuple[str, int], str] = {
+    (
+        "jbesomi/awesome-autonomous-agents",
+        20,
+    ): "https://github.com/jbesomi/awesome-autonomous-agents/pull/20#issuecomment-4986909580",
+}
+
+
+def posted_followup_url(repo: str, number: int) -> str | None:
+    return POSTED_FOLLOWUP_URLS.get((repo, number))
+
+
+def active_candidate_comment(action_class: str, repo: str, number: int) -> str | None:
+    if action_class != "optional-update":
+        return None
+    return candidate_comment(repo, number)
+
+
 def candidate_comment(repo: str, number: int) -> str | None:
     return CANDIDATE_COMMENTS.get((repo, number))
 
@@ -218,22 +236,22 @@ def scorecard_for(action_class: str) -> dict[str, str]:
 
 def candidate_guardrails(repo: str, number: int, comment: str | None) -> dict[str, Any]:
     key = (repo, number)
-    if key not in CANDIDATE_REQUIRED_TEXT:
+    if key not in CANDIDATE_REQUIRED_TEXT or comment is None:
         return {
-            "requiredText": [],
+            "requiredText": list(CANDIDATE_REQUIRED_TEXT.get(key, ())),
             "missingRequiredText": [],
             "bannedTextHits": [],
-            "ok": comment is None,
+            "ok": True,
         }
     required = list(CANDIDATE_REQUIRED_TEXT[key])
-    missing = [needle for needle in required if not comment or needle not in comment]
-    lowered = (comment or "").lower()
+    missing = [needle for needle in required if needle not in comment]
+    lowered = comment.lower()
     banned_hits = [needle for needle in CANDIDATE_BANNED_TEXT if needle.lower() in lowered]
     return {
         "requiredText": required,
         "missingRequiredText": missing,
         "bannedTextHits": banned_hits,
-        "ok": bool(comment) and not missing and not banned_hits,
+        "ok": not missing and not banned_hits,
     }
 
 
@@ -280,6 +298,7 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "number,title,state,mergeable,updatedAt,url,reviewDecision,statusCheckRollup",
     ])
     scorecard = scorecard_for(target.action_class)
+    comment = active_candidate_comment(target.action_class, target.repo, target.number)
     return {
         "kind": "pr",
         "project": target.project,
@@ -298,8 +317,9 @@ def pr_summary(target: PullRequestTarget) -> dict[str, Any]:
         "scorecardAction": scorecard["scorecardAction"],
         "nextAction": target.next_action,
         "materials": list(target.materials),
-        "candidateComment": candidate_comment(target.repo, target.number),
-        "candidateGuardrails": candidate_guardrails(target.repo, target.number, candidate_comment(target.repo, target.number)),
+        "postedFollowupUrl": posted_followup_url(target.repo, target.number),
+        "candidateComment": comment,
+        "candidateGuardrails": candidate_guardrails(target.repo, target.number, comment),
     }
 
 
@@ -315,6 +335,7 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
     ])
     comments = data.get("comments") or []
     scorecard = scorecard_for(target.action_class)
+    comment = active_candidate_comment(target.action_class, target.repo, target.number)
     return {
         "kind": "issue",
         "project": target.project,
@@ -333,8 +354,9 @@ def issue_summary(target: IssueTarget) -> dict[str, Any]:
         "scorecardAction": scorecard["scorecardAction"],
         "nextAction": target.next_action,
         "materials": list(target.materials),
-        "candidateComment": candidate_comment(target.repo, target.number),
-        "candidateGuardrails": candidate_guardrails(target.repo, target.number, candidate_comment(target.repo, target.number)),
+        "postedFollowupUrl": posted_followup_url(target.repo, target.number),
+        "candidateComment": comment,
+        "candidateGuardrails": candidate_guardrails(target.repo, target.number, comment),
     }
 
 
@@ -445,7 +467,8 @@ def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = Non
     if blockers:
         lines.extend(["", "Default quiet / keep-open surfaces:"])
         for row in blockers:
-            lines.append(f"- {row['repo']}#{row['number']} ({row.get('actionClass')}, {row.get('qualification')}) — {row.get('nextAction')}")
+            posted = f" Posted: {row.get('postedFollowupUrl')}" if row.get("postedFollowupUrl") else ""
+            lines.append(f"- {row['repo']}#{row['number']} ({row.get('actionClass')}, {row.get('qualification')}) — {row.get('nextAction')}{posted}")
     return "\n".join(lines)
 
 
@@ -484,6 +507,11 @@ def main() -> int:
 
     for row in rows:
         guardrails = row.get("candidateGuardrails") or {}
+        if row.get("postedFollowupUrl") and row.get("actionClass") == "optional-update":
+            failures.append(
+                f"{row['repo']}#{row['number']}: already has posted follow-up {row.get('postedFollowupUrl')}; "
+                "do not leave as optional-update"
+            )
         if not guardrails.get("ok") and row.get("candidateComment") is not None:
             failures.append(
                 f"{row['repo']}#{row['number']}: candidate comment guardrails failed: "
