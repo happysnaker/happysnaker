@@ -32,7 +32,7 @@ jobs:
           python-version: '3.12'
 
       - name: Compile verification scripts
-        run: python3 -m py_compile scripts/github_cli.py scripts/verify_public_docs.py scripts/check_support_routes.py scripts/check_repo_metadata.py scripts/check_sponsor_release.py scripts/check_sponsor_issues.py scripts/check_review_funnel.py scripts/check_external_followups.py scripts/check_profile_pins.py scripts/check_rdleader_license.py scripts/check_manual_blockers.py scripts/run_profile_preflight.py scripts/check_readme_badges.py scripts/check_github_status.py scripts/check_public_links.py scripts/check_site_hygiene.py scripts/check_share_kit.py scripts/check_sponsor_pipeline.py scripts/check_sponsor_conversion_scorecard.py scripts/check_sponsor_scorecard_coverage.py scripts/check_ops_issue_log.py scripts/check_gh_usage.py scripts/check_issue_labels.py scripts/check_ci_workflow_contract.py scripts/check_stable_profile_links.py scripts/check_operator_handoff.py scripts/check_checker_catalog.py scripts/check_preflight_json_contract.py
+        run: python3 -m py_compile scripts/github_cli.py scripts/verify_public_docs.py scripts/check_support_routes.py scripts/check_repo_metadata.py scripts/check_sponsor_release.py scripts/check_sponsor_issues.py scripts/check_review_funnel.py scripts/check_external_followups.py scripts/check_profile_pins.py scripts/check_rdleader_license.py scripts/check_manual_blockers.py scripts/run_profile_preflight.py scripts/check_readme_badges.py scripts/check_github_status.py scripts/check_public_links.py scripts/check_site_hygiene.py scripts/check_share_kit.py scripts/check_offer_cards.py scripts/check_sponsor_pipeline.py scripts/check_sponsor_conversion_scorecard.py scripts/check_sponsor_scorecard_coverage.py scripts/check_ops_issue_log.py scripts/check_gh_usage.py scripts/check_issue_labels.py scripts/check_ci_workflow_contract.py scripts/check_stable_profile_links.py scripts/check_operator_handoff.py scripts/check_checker_catalog.py scripts/check_preflight_json_contract.py
 
       - name: Verify public docs
         run: python3 scripts/verify_public_docs.py --json
@@ -57,6 +57,9 @@ jobs:
 
       - name: Verify share kit
         run: python3 scripts/check_share_kit.py
+
+      - name: Verify offer cards
+        run: python3 scripts/check_offer_cards.py --site-root site/happysnaker.github.io
 
       - name: Verify sponsor prospect pipeline
         run: python3 scripts/check_sponsor_pipeline.py

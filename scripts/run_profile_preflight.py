@@ -83,6 +83,7 @@ def build_steps(args: argparse.Namespace) -> list[Step]:
         Step("Check checker catalog", ("python3", "scripts/check_checker_catalog.py", "--json")),
         Step("Check preflight JSON contract", maybe_json(("python3", "scripts/check_preflight_json_contract.py"), args)),
         Step("Check share kit", maybe_json(("python3", "scripts/check_share_kit.py"), args)),
+        Step("Check offer cards", maybe_json(("python3", "scripts/check_offer_cards.py"), args)),
         Step("Check sponsor prospect pipeline", maybe_json(("python3", "scripts/check_sponsor_pipeline.py"), args)),
         Step("Check sponsor conversion scorecard", maybe_json(("python3", "scripts/check_sponsor_conversion_scorecard.py"), args)),
         Step("Check sponsor scorecard coverage", maybe_json(("python3", "scripts/check_sponsor_scorecard_coverage.py"), args)),

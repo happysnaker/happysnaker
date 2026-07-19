@@ -20,6 +20,7 @@ CORE_JSON_SCRIPTS = (
     "scripts/check_checker_catalog.py",
     "scripts/check_preflight_json_contract.py",
     "scripts/check_share_kit.py",
+    "scripts/check_offer_cards.py",
     "scripts/check_sponsor_pipeline.py",
     "scripts/check_sponsor_conversion_scorecard.py",
     "scripts/check_sponsor_scorecard_coverage.py",
