@@ -68,6 +68,10 @@ REPO_REQUIREMENTS = {
         "Offer card — buy a deploy read",
         "Offer card — proof-first tip",
     ),
+    "docs/sponsor-one-pager.md": (
+        "## Productized offer cards",
+        "generic donation ask",
+    ),
     "docs/sponsor-scorecard-coverage.md": (
         "keep productized offer cards tied to concrete public outcomes",
         "support page productized offer cards",
@@ -159,7 +163,7 @@ def main() -> int:
     files: list[dict[str, object]] = []
     offer_card_needles = offer_needles()
     for rel, needles in REPO_REQUIREMENTS.items():
-        required = (*needles, *offer_card_needles) if rel == "docs/share-kit.md" else needles
+        required = (*needles, *offer_card_needles) if rel in {"docs/share-kit.md", "docs/sponsor-one-pager.md"} else needles
         files.append(check_file(ROOT / rel, required))
 
     support_needles = (*SUPPORT_PAGE_REQUIREMENTS, *support_page_offer_needles())

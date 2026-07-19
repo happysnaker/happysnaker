@@ -77,6 +77,17 @@ Use concrete payment notes instead of a vague donation label. If someone is not 
 | `open-source maintenance` | general docs, CI, dependency, security, and packaging upkeep | [operations cadence](operations-cadence.md) |
 | `Deploy read` | `¥29.9` bot / agent / infra repo first pass when the project runs but still looks toy-like | <https://happysnaker.github.io/review/deploy-read-sample/> |
 
+## Productized offer cards
+
+Use these when a sponsor, tester, or paid-review buyer needs a concrete package rather than a generic donation ask.
+
+| Offer card | Best fit | Support note | Public outcome | Guardrail |
+|---|---|---|---|---|
+| Fund a real host report | Homelab / CasaOS / NAS / SBC users | `qq-ai-bot #26 arm64` | one real physical ARM / CasaOS / NAS / SBC report added to the public tracker | Do not say physical ARM / CasaOS validation is complete before the report lands |
+| Fund curator follow-up | RDLeader evaluator / curator | `RDLeader #27` | one scheduled-review update or maintainer reply follow-up, logged publicly | keep the RDLeader license caveat visible; this is not a license grant |
+| Buy a deploy read | bot / agent / infra repos that run but still look toy-like | `Deploy read` / `Quick read` | one blunt first-impression pass with top 3 fixes | keep payment evidence private by email |
+| Tip with attribution | readers helped by a repo, checklist, or OSS fix | repo name, for example `happydb` | maintenance credit can be summarized in the operations log when material | do not turn educational repo threads into generic fundraising spam |
+
 ## Proof already shipped
 
 ### qq-ai-bot
