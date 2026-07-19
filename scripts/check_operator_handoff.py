@@ -35,6 +35,7 @@ REQUIRED_TEXT = (
     "candidateGuardrails",
     "candidateGuardrails.ok",
     "postedFollowupUrl",
+    "Posted follow-ups",
     "docker/awesome-compose#781",
     "AwesomeHomelab#98",
     "jbesomi/awesome-autonomous-agents#20",

@@ -92,7 +92,7 @@ python3 scripts/run_profile_preflight.py --external-only --action-class optional
 python3 scripts/run_profile_preflight.py --external-only --external-summary --enforce-review-due
 ```
 
-The optional-update JSON includes `qualification`, `scorecardAction`, `materials`, `postedFollowupUrl`, `candidateComment`, and `candidateGuardrails`; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The 2026-07-16 review posted only the RDLeader proof update to `jbesomi/awesome-autonomous-agents#20`; `docker/awesome-compose#781` and `AwesomeHomelab#98` stay quiet because prior author follow-ups already exist. Do not reuse prepared comments repeatedly.
+The optional-update / recheck JSON includes `qualification`, `scorecardAction`, `materials`, `postedFollowupUrl`, `candidateComment`, and `candidateGuardrails`; summary output also has a `Posted follow-ups` section when a tracked row has a posted URL; `--candidate-comments` (or preflight `--external-candidate-comments`) renders the prepared bodies without posting them. Only use a prepared candidate comment when `candidateGuardrails.ok` is true, the review gate is due, and the row guidance still allows a comment. The 2026-07-16 review posted only the RDLeader proof update to `jbesomi/awesome-autonomous-agents#20`; `docker/awesome-compose#781` and `AwesomeHomelab#98` stay quiet because prior author follow-ups already exist. Do not reuse prepared comments repeatedly.
 
 ## Automation guardrails
 

@@ -463,6 +463,13 @@ def format_summary(rows: list[dict[str, Any]], gate: dict[str, Any] | None = Non
             lines.append(f"- {row['repo']}#{row['number']} ({row.get('qualification')}) — {row.get('nextAction')}{suffix}{candidate}")
     else:
         lines.extend(["", "Optional-update surfaces: none"])
+    posted_rows = [row for row in rows if row.get("postedFollowupUrl")]
+    if posted_rows:
+        lines.extend(["", "Posted follow-ups:"])
+        for row in posted_rows:
+            lines.append(
+                f"- {row['repo']}#{row['number']} ({row.get('actionClass')}, {row.get('qualification')}) — {row.get('postedFollowupUrl')}"
+            )
     blockers = [row for row in rows if row.get("actionClass") in {"keep-open", "stay-quiet"}]
     if blockers:
         lines.extend(["", "Default quiet / keep-open surfaces:"])
