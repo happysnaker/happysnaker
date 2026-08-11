@@ -54,5 +54,4 @@ Open to:        Backend / infrastructure / systems engineering opportunities
 - Blog / project pages: [happysnaker.github.io](https://happysnaker.github.io/)
 - Technical proof index: [docs/technical-proof-index.md](docs/technical-proof-index.md)
 - Upstream contribution ledger: [docs/upstream-contribution-ledger.md](docs/upstream-contribution-ledger.md)
-- Support page, if my work saved you time: [happysnaker.github.io/support](https://happysnaker.github.io/support/)
 - Email: `happysnaker@foxmail.com`
