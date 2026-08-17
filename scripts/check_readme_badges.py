@@ -34,28 +34,17 @@ class BadgeExpectation:
 EXPECTATIONS = (
     BadgeExpectation("Profile docs CI", "happysnaker/happysnaker", "ci.yml"),
     BadgeExpectation("Profile CodeQL", "happysnaker/happysnaker", "codeql.yml"),
-    BadgeExpectation("qq-ai-bot CI", "happysnaker/qq-ai-bot", "ci.yml"),
-    BadgeExpectation("qq-ai-bot CodeQL", "happysnaker/qq-ai-bot", "codeql.yml"),
-    BadgeExpectation("RDLeader CI", "happysnaker/RDLeader", "ci.yml"),
-    BadgeExpectation("RDLeader CodeQL", "happysnaker/RDLeader", "codeql.yml"),
 )
 
 FIRST_SCREEN_REQUIRED_TEXT = (
-    "https://happysnaker.github.io/support/#sponsor-router",
-    "https://happysnaker.github.io/support/#current-asks",
-    "https://happysnaker.github.io/support/#offer-cards",
-    "Productized offer cards",
-    "https://happysnaker.github.io/support/#proof-before-payment",
-    "https://happysnaker.github.io/review/deploy-read-sample/",
-    "docs/sponsor-prospect-pipeline.md",
-    "Sponsor prospect pipeline",
-    "docs/sponsor-conversion-scorecard.md",
-    "Sponsor conversion scorecard",
-    "docs/sponsor-scorecard-coverage.md",
-    "Sponsor scorecard coverage",
-    "Tip / Proof / Review / Fund",
-    "qq-ai-bot #26 arm64",
-    "RDLeader #27",
+    "Backend / infrastructure engineer",
+    "Engineering focus",
+    "Technical projects",
+    "Open-source contributions",
+    "happydb",
+    "go-service-starter",
+    "go-http-middleware-kit",
+    "CSAPPLabsAndNotes",
 )
 
 BADGE_RE = re.compile(r"\[!\[(?P<label>[^\]]+)\]\((?P<image>[^)]+)\)\]\((?P<target>[^)]+)\)")
@@ -129,7 +118,7 @@ def main() -> int:
         return 1
 
     if not args.json:
-        print(f"Checked {len(EXPECTATIONS)} README workflow badges and {len(FIRST_SCREEN_REQUIRED_TEXT)} first-screen support/proof routes")
+        print(f"Checked {len(EXPECTATIONS)} README workflow badges and {len(FIRST_SCREEN_REQUIRED_TEXT)} first-screen technical markers")
     return 0
 
 if __name__ == "__main__":

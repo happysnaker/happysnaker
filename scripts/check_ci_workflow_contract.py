@@ -4,7 +4,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,45 +17,25 @@ REQUIRED_TEXT = (
     "- cron: '17 2 * * 1'",
     "permissions:",
     "contents: read",
-    "repository: happysnaker/happysnaker.github.io",
-    "path: site/happysnaker.github.io",
     "python-version: '3.12'",
-    "python3 -m py_compile",
+    "python3 -m py_compile scripts/*.py",
     "python3 scripts/verify_public_docs.py --json",
-    "python3 scripts/check_gh_usage.py",
-    "python3 scripts/check_preflight_json_contract.py --json",
-    "python3 scripts/check_share_kit.py",
-    "python3 scripts/check_offer_cards.py --site-root site/happysnaker.github.io",
-    "python3 scripts/check_sponsor_pipeline.py",
-    "python3 scripts/check_sponsor_conversion_scorecard.py",
-    "python3 scripts/check_sponsor_scorecard_coverage.py",
+    "python3 scripts/check_stable_profile_links.py",
     "python3 scripts/check_readme_badges.py",
-    "python3 scripts/check_support_routes.py",
-    "python3 scripts/check_repo_metadata.py",
-    "python3 scripts/check_sponsor_release.py",
-    "python3 scripts/check_sponsor_issues.py",
-    "python3 scripts/check_review_funnel.py --site-root site/happysnaker.github.io",
-    "python3 scripts/check_ops_issue_log.py",
-    "python3 scripts/check_issue_labels.py",
-    "python3 scripts/check_profile_pins.py",
-    "python3 scripts/check_rdleader_license.py",
-    "python3 scripts/check_manual_blockers.py",
-    "python3 scripts/check_site_hygiene.py --site-root site/happysnaker.github.io --timeout 8",
+    "python3 scripts/check_ci_workflow_contract.py",
 )
 
-GH_TOKEN_STEPS = (
-    "Verify README badges",
-    "Verify support routes",
-    "Verify repository metadata",
-    "Verify sponsor release",
-    "Verify sponsor issues",
-    "Verify operations log",
-    "Verify issue labels",
-    "Report profile pins",
-    "Report RDLeader license posture",
-    "Report manual blockers",
-    "Verify public site hygiene",
+FORBIDDEN_TEXT = (
+    "happysnaker/RDLeader",
+    "happysnaker/qq-ai-bot",
+    "check_rdleader_license.py",
+    "check_issue_labels.py",
+    "check_sponsor_issues.py",
+    "check_repo_metadata.py",
+    "check_site_hygiene.py",
 )
+
+GH_TOKEN_STEPS = ("Verify README badges",)
 
 
 def workflow_step_block(text: str, step: str) -> str | None:
@@ -68,7 +47,7 @@ def workflow_step_block(text: str, step: str) -> str | None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Verify the profile CI workflow proof-check contract.")
+    parser = argparse.ArgumentParser(description="Verify the lean profile CI workflow contract.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable CI workflow contract status.")
     args = parser.parse_args()
 
@@ -84,25 +63,21 @@ def main() -> int:
     if missing_text:
         failures.append(f"CI workflow missing required text: {missing_text}")
 
-    compile_line = None
+    forbidden_text_results = [{"needle": needle, "present": needle in text} for needle in FORBIDDEN_TEXT]
+    present_forbidden = [item["needle"] for item in forbidden_text_results if item["present"]]
+    if present_forbidden:
+        failures.append(f"CI workflow still references deleted or retired project checks: {present_forbidden}")
+
     compile_line_match = re.search(r"run: python3 -m py_compile (?P<scripts>.+)", text)
-    if not compile_line_match:
+    compile_line_present = compile_line_match is not None
+    if not compile_line_present:
         failures.append("CI workflow missing py_compile line")
-    else:
-        compile_line = compile_line_match.group("scripts")
 
     scripts_to_compile = [
         script.relative_to(ROOT).as_posix()
         for script in sorted(SCRIPTS.glob("*.py"))
         if script.name != "__init__.py"
     ]
-    missing_scripts = [
-        script
-        for script in scripts_to_compile
-        if compile_line is None or script not in compile_line
-    ]
-    if missing_scripts:
-        failures.append(f"CI py_compile line missing scripts: {missing_scripts}")
 
     gh_token_results: list[dict[str, object]] = []
     for step in GH_TOKEN_STEPS:
@@ -121,10 +96,9 @@ def main() -> int:
         "workflowPresent": workflow_present,
         "requiredTextCount": len(REQUIRED_TEXT),
         "requiredText": required_text_results,
-        "missingRequiredText": missing_text,
-        "compileLinePresent": compile_line is not None,
+        "forbiddenText": forbidden_text_results,
+        "compileLinePresent": compile_line_present,
         "compiledScriptCount": len(scripts_to_compile),
-        "missingCompiledScripts": missing_scripts,
         "ghTokenStepCount": len(GH_TOKEN_STEPS),
         "ghTokenSteps": gh_token_results,
         "failures": failures,
@@ -133,13 +107,13 @@ def main() -> int:
         print(json.dumps(summary, indent=2, ensure_ascii=False))
     if failures:
         if not args.json:
-            print("CI workflow contract failures:", file=sys.stderr)
+            print("CI workflow contract failures:")
             for failure in failures:
-                print(f"- {failure}", file=sys.stderr)
+                print(f"- {failure}")
         return 1
 
     if not args.json:
-        print("Checked CI workflow contract: schedule, scripts, helper gate, GH_TOKEN steps, and site checkout are present")
+        print("Checked CI workflow contract: lean profile documentation checks are present")
     return 0
 
 

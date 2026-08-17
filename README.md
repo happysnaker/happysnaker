@@ -3,27 +3,27 @@
 [![Profile docs CI](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml/badge.svg)](https://github.com/happysnaker/happysnaker/actions/workflows/ci.yml)
 [![Profile CodeQL](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml/badge.svg)](https://github.com/happysnaker/happysnaker/actions/workflows/codeql.yml)
 
-Backend / systems engineer focused on **Go**, **Java**, distributed systems, protocol infrastructure, storage, and practical developer tooling.
+Backend / infrastructure engineer focused on **Go**, **Java**, distributed systems, storage, networking, and practical developer tooling.
 
-I try to keep this profile centered on shipped code, upstream pull requests, and reusable engineering assets. Public forks are usually short-lived contribution workspaces for upstream fixes rather than portfolio projects.
+I keep this profile centered on code that can be read, run, and reviewed: reusable service foundations, database internals, systems notes, and small upstream fixes where behavior, API contracts, or documentation were ambiguous.
 
-## Current focus
+## Engineering focus
 
-- Reliable backend services, protocol bridges, and developer-facing infrastructure
-- Distributed systems, storage engines, RPC, observability, and performance-oriented engineering
-- Small, reviewable open-source fixes where behavior, API contracts, or documentation are ambiguous
-- Public projects that are easy to run, inspect, and evaluate
+- Backend service foundations: configuration, structured logging, health checks, graceful shutdown, Docker packaging, and CI hygiene.
+- Distributed systems and storage: database internals, indexing, recovery, query execution, replication experiments, RPC, and observability.
+- Open-source maintenance work: narrow fixes, reproducible reports, compatibility edge cases, and documentation that reduces reviewer ambiguity.
+- Developer-facing assets: templates, notes, checklists, and examples that are easy to run locally and inspect in public.
 
-## Highlighted projects
+## Technical projects
 
-- **[qq-ai-bot](https://github.com/happysnaker/qq-ai-bot)** — self-hosted QQ ↔ AI bridge for OneBot 11 / NapCat / LLOneBot and ACP-compatible agents, with sessions, streaming progress, Docker packaging, metrics, and public project docs.
-- **[RDLeader](https://github.com/happysnaker/RDLeader)** — local-first AI R&D worker control plane with ACP runtime dispatch, approval gates, public CI, and sanitized QA/runtime evidence.
 - **[happydb](https://github.com/happysnaker/happydb)** — Java database internals project covering storage, indexing, MVCC-style visibility, recovery, query execution, optimization, and replication experiments.
 - **[go-service-starter](https://github.com/happysnaker/go-service-starter)** — minimal production-minded Go HTTP service starter with config loading, structured logging, health checks, graceful shutdown, and Docker packaging.
 - **[go-http-middleware-kit](https://github.com/happysnaker/go-http-middleware-kit)** — reusable `net/http` middleware for request IDs, structured logging, panic recovery, timeouts, and real IP handling.
 - **[CSAPPLabsAndNotes](https://github.com/happysnaker/CSAPPLabsAndNotes)** — CS:APP lab notes and systems-learning material.
 
-## Selected upstream work
+## Open-source contributions
+
+Selected upstream work includes behavior fixes, compatibility cleanup, and documentation improvements across infrastructure projects:
 
 - HashiCorp `go-retryablehttp`: retry semantics, logger safety, request-body edge cases, deadline-aware waits, and zero-value client behavior.
 - Prometheus `client_golang` / `procfs`: timestamp limit handling, proc stat parser limits, and wrapped process counters.
@@ -35,16 +35,16 @@ I try to keep this profile centered on shipped code, upstream pull requests, and
 
 ## Reading guide
 
-- For current systems / infra direction: start with **qq-ai-bot**, **RDLeader**, **happydb**, **go-service-starter**, and **go-http-middleware-kit**.
-- For fundamentals and interview-style systems material: start with **CSAPPLabsAndNotes**, **happydb**, and the checklist repositories.
-- For contribution history: see the linked upstream PRs in project READMEs and repository activity.
+- For backend engineering style: start with **go-service-starter** and **go-http-middleware-kit**.
+- For storage and systems depth: start with **happydb** and **CSAPPLabsAndNotes**.
+- For upstream contribution history: see the linked contribution ledger and repository activity.
 
 ## Snapshot
 
 ```text
 Languages:      Go, Java, C/C++, SQL, TypeScript
-Interests:      Backend engineering, RPC, distributed systems, storage, networking
-Strengths:      CS fundamentals, hands-on implementation, reusable engineering assets
+Interests:      Backend infrastructure, RPC, distributed systems, storage, networking
+Strengths:      CS fundamentals, source-level debugging, reusable engineering assets
 Open to:        Backend / infrastructure / systems engineering opportunities
 ```
 
